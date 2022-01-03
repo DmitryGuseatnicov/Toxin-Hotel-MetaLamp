@@ -20,7 +20,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: entryPoints,
     output: {
-        filename: '[name]/assets/[name]/[name].[contenthash].js',
+        filename: '[name]/[name].[contenthash].js',
         assetModuleFilename: "assets/[hash][ext][query]",
         path: path.resolve(__dirname, 'dist'),
         clean: true,
@@ -37,7 +37,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name]/assets/[name]/[name].[contenthash].css'
+            filename: '[name]/[name].[contenthash].css'
         }),
         ...PAGES.map((page)=> new HtmlWebpackPlugin({
             filename: `${page}/${page}.html`,

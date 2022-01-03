@@ -1,0 +1,44 @@
+$color__darkShade-100: 	#1F2041;;
+$color__darkShade-75: 	rgba(31, 32, 65, 0.75);
+$color__darkShade-50: 	rgba(31, 32, 65, 0.5);
+$color__darkShade-25: 	rgba(31, 32, 65, 0.25);
+$color__darkShade-5: 	rgba(31, 32, 65, 0.05);
+$color__purple: 		#BC9CFF;
+$color__green:			#6FCF97;
+
+
+%widget_title-big{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	color: $color__darkShade-100;
+}
+
+%widget_title-medium{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 23px;
+	color: $color__darkShade-100;
+}
+
+%widget_title-small{
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: $color__darkShade-100;
+}
+
+%body_text{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}

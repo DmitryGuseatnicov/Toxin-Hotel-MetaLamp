@@ -1,0 +1,20 @@
+include ./../widget-title/widget-title.pug
+
+mixin input(options={})
+
+  -
+    const type = options.type ? options.type : ""
+    const placeholder = options.placeholder ? options.placeholder : ""
+    const value = options.value ? options.value : ""
+    const label = options.label ? options.label : false
+    const classes =  'input__text-field'
+
+  if (label)
+      label.input
+        +widget-title({text: label})
+        input(class = classes, type = type, placeholder = placeholder, value = value)
+
+  else 
+    .input
+      input(class = classes, type = type, placeholder = placeholder, value = value)
+  
