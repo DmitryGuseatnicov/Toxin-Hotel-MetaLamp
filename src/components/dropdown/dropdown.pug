@@ -1,0 +1,26 @@
+include ./../input/input.pug
+
+mixin dropdown(options={})
+
+  -
+    const { label, placeholder, items=[] } = options
+
+  .dropdown.js-dropdown
+    .dropdown__header
+      .dropdown__input
+        +input({type: "text", label: label, placeholder: placeholder, readonly: true})
+        .dropdown__icon 
+          span.material-icons expand_more
+    .dropdown__drop-items 
+      each item in items 
+        .dropdown__item.js-dropdown__item
+          p.dropdown__item-name= item.name
+          .dropdown__calculator
+            button.dropdown__calculator-action-minus -
+            span.dropdown__calculator-value= item.value
+            button.dropdown__calculator-action-plus +
+      
+     
+        
+        
+        

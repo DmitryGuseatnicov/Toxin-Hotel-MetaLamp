@@ -1,4 +1,5 @@
 include ./../../components/input/input.pug
+include ./../../components/dropdown/dropdown.pug
 
 doctype html
 html(lang="en")
@@ -11,5 +12,23 @@ html(lang="en")
     .wrapper 
         main.main
             .container-fluid
-              +input({label: "text-field"})
-        footer.footer f 
+              .ui-kit-form-elem
+                //colum
+                .ui-kit-form-elem__colum
+                  .ui-kit-form-elem__text-field
+                    +input({type: "mail", label: "text-field", placeholder: "Email",})
+                  .ui-kit-form-elem__text-field
+                    +input({type: "text", label: "text-field", value: "This is pretty awesome"})
+                  .ui-kit-form-elem__dropdown 
+                    +dropdown({label: "Dropdown", placeholder: "Сколько Гостей", items:[
+                      {name: "взрослые", value: "0"},
+                      {name: "дети", value: "0"},
+                       {name: "младенцы", value: "0"}
+                    ]})
+                
+                //colum
+                .ui-kit-form-elem__colum
+                //colum
+                .ui-kit-form-elem__colum
+                
+        footer.footer f   

@@ -6,6 +6,15 @@
   padding: 100px 0px;
 }
 
-.material-icons::before{
-  content: '\e5cf';
+.ui-kit-form-elem{
+  display: flex;
+  justify-content: space-between;
+
+  &__colum{
+    width: 33%;
+  }
+
+  &__text-field:nth-child(2){
+    margin-top: 20px;
+  }
 }

@@ -1,20 +1,31 @@
 include ./../widget-title/widget-title.pug
 
 mixin input(options={})
-
   -
-    const type = options.type ? options.type : ""
-    const placeholder = options.placeholder ? options.placeholder : ""
-    const value = options.value ? options.value : ""
-    const label = options.label ? options.label : false
-    const classes =  'input__text-field'
-
+    const {type, placeholder, value, label, mask, disabled, readonly} = options
+    const classes =  `input__text-field`
+    
+  
   if (label)
       label.input
         +widget-title({text: label})
-        input(class = classes, type = type, placeholder = placeholder, value = value)
+        input(class = classes, 
+              type = type, 
+              placeholder = placeholder, 
+              value = value, 
+              data-mask = mask, 
+              disabled = disabled, 
+              readonly = readonly
+              )
 
   else 
     .input
-      input(class = classes, type = type, placeholder = placeholder, value = value)
+      input(class = classes, 
+            type = type, 
+            placeholder = placeholder, 
+            value = value, 
+            data-mask = mask,
+            disabled = disabled, 
+            readonly = readonly
+          )
   

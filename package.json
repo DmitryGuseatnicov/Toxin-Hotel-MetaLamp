@@ -4,7 +4,7 @@
   "description": "Задание номер 2",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development  webpack serve --open",
+    "start": "NODE_ENV=development  webpack serve",
     "dev": "NODE_ENV=development webpack",
     "build": "NODE_ENV=production webpack"
   },
@@ -34,7 +34,7 @@
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.0.1",
     "pug": "^3.0.2",
-    "pug-html-loader": "^1.1.5",
+    "pug-html-loader": "^1.0.0",
     "pug-loader": "^2.4.0",
     "resolve-url-loader": "^4.0.0",
     "sass": "^1.43.5",
@@ -47,7 +47,8 @@
     "webpack-dev-server": "^4.6.0"
   },
   "dependencies": {
-    "@fontsource/montserrat": "^4.5.1",
+    "inputmask": "^5.0.7",
+    "jquery": "^3.6.0",
     "material-icons": "^1.10.4"
   }
 }

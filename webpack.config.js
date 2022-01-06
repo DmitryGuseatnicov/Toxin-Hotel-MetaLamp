@@ -20,14 +20,15 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: entryPoints,
     output: {
-        filename: '[name]/[name].[contenthash].js',
+        filename: '[name].[contenthash].js',
         assetModuleFilename: "assets/[hash][ext][query]",
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
     devServer: {
         static: './dist',
-        open: './ui-kit.html',
+        open : '/ui-kit-form-elements.html',
+        hot: false
     },
     devtool: 'source-map',
     optimization: {
@@ -37,10 +38,10 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name]/[name].[contenthash].css'
+            filename: '[name].[contenthash].css'
         }),
         ...PAGES.map((page)=> new HtmlWebpackPlugin({
-            filename: `${page}/${page}.html`,
+            filename: `${page}.html`,
             template: `${PAGES_DIR}/${page}/${page}.pug`,
             chunks:[page]
         }))
@@ -96,17 +97,14 @@ module.exports = {
             {
                 test: /\.pug$/,
                 use: [
+
                   {
-                    loader: "html-loader"
-                  },
-                  {
-                    loader: "pug-html-loader",
+                    loader: 'simple-pug-loader',
                     options: {
                       "pretty":true
                     }
                   }
                 ],
-                exclude: /(node_modules|bower_components)/,
             },
             {
                 test: /\.m?js$/,
