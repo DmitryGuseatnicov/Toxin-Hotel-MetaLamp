@@ -1,5 +1,6 @@
 include ./../../components/input/input.pug
 include ./../../components/dropdown/dropdown.pug
+include ./../../components/button/button.pug
 
 doctype html
 html(lang="en")
@@ -23,12 +24,27 @@ html(lang="en")
                     +dropdown({label: "Dropdown", placeholder: "Сколько Гостей", items:[
                       {name: "взрослые", value: "0"},
                       {name: "дети", value: "0"},
-                       {name: "младенцы", value: "0"}
+                      {name: "младенцы", value: "0"}
                     ]})
                 
                 //colum
                 .ui-kit-form-elem__colum
                 //colum
                 .ui-kit-form-elem__colum
-                
+                  .ui-kit-form-elem__buttons
+                    .ui-kit-form-elem__buttons-purple
+                      .ui-kit-form-elem__button
+                        +button({text:"click me", mod: "purple"})
+                      .ui-kit-form-elem__button
+                        +button({text:"click me", mod: "purple", disabled: true})
+                    .ui-kit-form-elem__buttons-purple-border
+                      .ui-kit-form-elem__button
+                        +button({text:"click me", mod: "purple-border"})
+                      .ui-kit-form-elem__button
+                        +button({text:"click me", mod: "purple-border", disabled: true})
+                    .ui-kit-form-elem__buttons-simple
+                      .ui-kit-form-elem__button
+                        +button({text:"click me", mod: "simple"})
+                      .ui-kit-form-elem__button
+                        +button({text:"click me", mod: "simple", disabled: true})
         footer.footer f   

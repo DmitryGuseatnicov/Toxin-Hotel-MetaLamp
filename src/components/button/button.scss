@@ -1,0 +1,69 @@
+@import './../../styles/vars.scss';
+
+.button{
+  border: none;
+  background-color: #FFF;
+  cursor: pointer;
+
+  &__text{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: inherit;
+  }
+
+}
+
+.button--simple{
+  color: $purple;
+
+  &:hover{
+    color: $darkShade-50;
+  }
+
+  &:disabled{
+    color: $darkShade-50;
+    cursor: default;
+  }
+  
+}
+
+.button--purple{
+  padding: 10px 20px;
+  border-radius: 22px;
+  background: $purple_gradient;
+  color: #FFF;
+
+  &:hover{
+    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%,  rgba($color: #8BA4F9, $alpha: 0.5) 100%);background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+  &:disabled{
+    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%,  rgba($color: #8BA4F9, $alpha: 0.5) 100%);background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    cursor: default;
+  }
+
+}
+
+.button--purple-border{
+  padding: 2px 2px;
+  border-radius: 22px;
+  background: $purple_gradient;
+  color: #FFF;
+
+  .button__text{
+    padding: 12.5px 18px;
+    border-radius: 22px;
+    background: #FFF;
+    color: $purple
+  }
+
+  &:hover{
+    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%,  rgba($color: #8BA4F9, $alpha: 0.5) 100%);background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+  &:disabled{
+    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%,  rgba($color: #8BA4F9, $alpha: 0.5) 100%);background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    cursor: default;
+  }
+}

@@ -7,22 +7,22 @@
     width: 100%;
     margin-top: 5px;
     padding: 12px 15px;
-    border: 1px solid $color__darkShade-25;
+    border: 1px solid $darkShade-25;
     border-radius: 4px;
     outline: none;
-    color: $color__darkShade-75;
+    color: $darkShade-75;
     line-height: 18px;
   }
 
   &__text-field::placeholder{
-    color: $color__darkShade-25;
+    color: $darkShade-25;
   }
 
   &__text-field:focus{
-    border: 1px solid $color__darkShade-50;
+    border: 1px solid $darkShade-50;
   }
 
   &__text-field:hover{
-    border: 1px solid $color__darkShade-50;
+    border: 1px solid $darkShade-50;
   }
 }

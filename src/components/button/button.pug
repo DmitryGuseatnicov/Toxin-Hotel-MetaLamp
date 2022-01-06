@@ -1,0 +1,11 @@
+mixin button(options = {})
+  -
+    const { text, mod, disabled} = options 
+    
+    let classes = `button`
+    if(mod === 'simple') classes+= ' button--simple'
+    if(mod === 'purple') classes+= ' button--purple'
+    if(mod === 'purple-border') classes+= ' button--purple-border'
+    
+  button(class=classes, disabled=disabled)
+    span.button__text= text

@@ -12,7 +12,7 @@
   }
 
   &__input input::placeholder{
-   color: $color__darkShade-75
+   color: $darkShade-75
   }
 
   &__icon{
@@ -24,9 +24,9 @@
 
   &__drop-items {
     padding: 7px 7px 7px 15px;
-    border: 1px solid $color__darkShade-50;
+    border: 1px solid $darkShade-50;
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 10px 20px $color__darkShade-5;
+    box-shadow: 0px 10px 20px $darkShade-5;
     display: none;
   }
 
