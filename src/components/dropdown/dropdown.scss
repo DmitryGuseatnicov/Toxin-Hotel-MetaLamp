@@ -2,6 +2,7 @@
 
 .dropdown{
   max-width: 320px;
+  position: relative;
 
   &__input{
     position: relative;
@@ -23,11 +24,16 @@
   }
 
   &__drop-items {
-    padding: 7px 7px 7px 15px;
+    padding: 5px 7px 7px 15px;
     border: 1px solid $darkShade-50;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 10px 20px $darkShade-5;
+    background-color: #FFF;
     display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+   
   }
 
   &__item{
@@ -54,8 +60,8 @@
   &__calculator-action-plus{
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-radius: 22px;
-    width: 33px;
-    height: 33px;
+    width: 30px;
+    height: 30px;
     color: rgba(31, 32, 65, 0.5);
     background-color: #FFF;
     font-size: 18px;
@@ -72,6 +78,13 @@
     display: inline-block;
     width: 32px;
     text-align: center;
+    @extend %widget_title-small;
+  }
+
+  &__buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0px 0px 0px;
   }
 
 }

@@ -1,8 +1,8 @@
 mixin button(options = {})
   -
-    const { text, mod, disabled} = options 
+    const { text, mod, js, disabled} = options 
     
-    let classes = `button`
+    let classes = `button js-button`
     if(mod === 'simple') classes+= ' button--simple'
     if(mod === 'purple') classes+= ' button--purple'
     if(mod === 'purple-border') classes+= ' button--purple-border'

@@ -3,9 +3,9 @@ include ./../widget-title/widget-title.pug
 mixin input(options={})
   -
     const {type, placeholder, value, label, mask, disabled, readonly} = options
-    const classes =  `input__text-field`
     
-  
+    let classes =  'input__text-field'
+
   if (label)
       label.input
         +widget-title({text: label})

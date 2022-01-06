@@ -1,26 +1,34 @@
 include ./../input/input.pug
+include ./../button/button.pug
 
 mixin dropdown(options={})
 
   -
-    const { label, placeholder, items=[] } = options
+    const { label, placeholder, open, items=[], actionButtons = true } = options
+    let classes = 'dropdown js-dropdown'
+    if(open === true) classes += 'dropdown--open'
 
-  .dropdown.js-dropdown
+  div(class=classes)
     .dropdown__header
-      .dropdown__input
-        +input({type: "text", label: label, placeholder: placeholder, readonly: true})
+      .dropdown__input.js-dropdown__input
+        +input({type: "text", label: label, placeholder: placeholder, js: true, readonly: true})
         .dropdown__icon 
           span.material-icons expand_more
     .dropdown__drop-items 
       each item in items 
         .dropdown__item.js-dropdown__item
-          p.dropdown__item-name= item.name
+          span.dropdown__item-name.js-dropdown__item-name= item.name
           .dropdown__calculator
-            button.dropdown__calculator-action-minus -
-            span.dropdown__calculator-value= item.value
-            button.dropdown__calculator-action-plus +
+            button.dropdown__calculator-action-minus.js-dropdown__calculator-action-minus -
+            span.dropdown__calculator-value.js-dropdown__calculator-value= item.value
+            button.dropdown__calculator-action-plus.js-dropdown__calculator-action-plus +
+      if (actionButtons)
+        .dropdown__buttons
+          .dropdown__button-clear.js-dropdown__button-clear
+            +button({text: "очиcтить", mod: "simple"})
+          .dropdown__button-apply.js-dropdown__button-apply
+            +button({text: "применить", mod: "simple"})
       
-     
         
         
         
