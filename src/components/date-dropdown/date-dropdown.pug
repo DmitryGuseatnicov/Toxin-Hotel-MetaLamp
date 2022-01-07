@@ -1,0 +1,16 @@
+include ./../input/input.pug
+include ./../calendar/calendar.pug
+
+mixin date-dropdown()
+  .date-dropdown.js-date-dropdown
+    .date-dropdown__header  
+      .date-dropdown__input 
+        +input({label:"date-dropdown", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
+        .date-dropdown__input-icon
+          snap.material-icons expand_more
+      .date-dropdown__input 
+        +input({label:"date-dropdown", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
+        .date-dropdown__input-icon
+          snap.material-icons expand_more
+    +calendar({root:"date-dropdown__calendar"})
+    

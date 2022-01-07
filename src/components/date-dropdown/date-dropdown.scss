@@ -1,0 +1,20 @@
+.date-dropdown{
+  max-width: 320px;
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input{
+    position: relative;
+    max-width: 150px;
+  }
+
+  &__input-icon{
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    cursor: pointer;
+  }
+}

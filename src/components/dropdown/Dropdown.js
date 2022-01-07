@@ -183,7 +183,6 @@ class ComfortsDropdown extends Dropdown{
     return calcResults
   }
 }
-//////////////////////////////
 
 
 export { Dropdown , ComfortsDropdown, GuestsDropdown}

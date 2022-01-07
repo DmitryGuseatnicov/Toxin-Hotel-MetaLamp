@@ -1,6 +1,8 @@
 include ./../../components/input/input.pug
 include ./../../components/dropdown/dropdown.pug
 include ./../../components/button/button.pug
+include ./../../components/date-dropdown/date-dropdown.pug
+include ./../../components/widget-title/widget-title.pug
 
 doctype html
 html(lang="en")
@@ -26,13 +28,16 @@ html(lang="en")
                       {name: "дети", value: "0"},
                       {name: "младенцы", value: "0"}
                     ]})
-                  .ui-kit-form-elem__text-field
+                  .ui-kit-form-elem__mask-text-field
                     +input({type: "text", label: "masked text field", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
+                  .ui-kit-form-elem__date-dropdown
+                    +date-dropdown()
                 //colum
                 .ui-kit-form-elem__colum
                 //colum
                 .ui-kit-form-elem__colum
                   .ui-kit-form-elem__buttons
+                    +widget-title({text: "Buttons"})
                     .ui-kit-form-elem__buttons-purple
                       .ui-kit-form-elem__button
                         +button({text:"click me", mod: "purple"})
