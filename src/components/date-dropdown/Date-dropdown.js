@@ -30,7 +30,7 @@ class DateDropdown{
 
   init(){
     try {
-      this.$rootInput = this.$dateDropdown.find('.calendar input')
+      this.$rootInput = this.$dateDropdown.find('.js-calendar input')
       this.id = `#${this.$rootInput.attr('id')}`
       this.$inputs = this.$dateDropdown.find('.js-date-dropdown__input input')
       this.calendar = new AirDatepicker(this.id, options)
@@ -53,7 +53,6 @@ class DateDropdown{
   }
 
   toggle(){
-    console.log(this.isOpen)
     this.isOpen ? this.close() : this.open()
   }
 

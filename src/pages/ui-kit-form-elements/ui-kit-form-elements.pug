@@ -3,6 +3,7 @@ include ./../../components/dropdown/dropdown.pug
 include ./../../components/button/button.pug
 include ./../../components/date-dropdown/date-dropdown.pug
 include ./../../components/widget-title/widget-title.pug
+include ./../../components/range-slider/range-slider.pug
 
 doctype html
 html(lang="en")
@@ -31,13 +32,15 @@ html(lang="en")
                   .ui-kit-form-elem__mask-text-field
                     +input({type: "text", label: "masked text field", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
                   .ui-kit-form-elem__date-dropdown
-                    +date-dropdown({root:"ui-kit-double-date-dropdown", mod:"double"})
+                    +date-dropdown({label: "date Dropdown", secondLabel:"date Dropdown",root:"ui-kit-double-date-dropdown", mod:"double"})
                   .ui-kit-form-elem__filter-date-dropdown
-                    +date-dropdown({root:"ui-kit-filter-date-dropdown", mod:"filter"})
+                    +date-dropdown({label: "filter date dropdown", root:"ui-kit-filter-date-dropdown", mod:"filter", value:"19 авг - 23 авг"})
                 //colum
                 .ui-kit-form-elem__colum
                 //colum
                 .ui-kit-form-elem__colum
+                  .ui-kit-form-elem__range-slider 
+                    +range-slider({label: "Range Slider", min:"0", max:"16000", start:"5000", end:"10000"})
                   .ui-kit-form-elem__buttons
                     +widget-title({text: "Buttons"})
                     .ui-kit-form-elem__buttons-purple

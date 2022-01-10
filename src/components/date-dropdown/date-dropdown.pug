@@ -3,16 +3,16 @@ include ./../calendar/calendar.pug
 
 mixin date-dropdown(options={})
   -
-    const { root,  mod = "filter"} = options
+    const { root, label, secondLabel, value, mod = "filter"} = options
   if (mod === "double")  
     div(class = "date-dropdown js-date-dropdown" data-type="double")
       .date-dropdown__header
         .date-dropdown__input.js-date-dropdown__input
-          +input({label:"date-dropdown", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
+          +input({label: label, mask: "data", placeholder: "ДД.ММ.ГГГГ" })
           .date-dropdown__input-icon
             snap.material-icons expand_more
         .date-dropdown__input.js-date-dropdown__input
-          +input({label:"date-dropdown", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
+          +input({label: secondLabel, mask: "data", placeholder: "ДД.ММ.ГГГГ"})
           .date-dropdown__input-icon
             snap.material-icons expand_more
       .date-dropdown__calendar
@@ -23,7 +23,7 @@ mixin date-dropdown(options={})
     div(class = "date-dropdown js-date-dropdown" data-type="filter")
       .date-dropdown__header
         .date-dropdown__input.js-date-dropdown__input
-          +input({label:"date-dropdown", placeholder: "Укажите Дату", readonly: true})
+          +input({label: label, placeholder: "выберите дату", readonly: true, value:value})
           .date-dropdown__input-icon
             snap.material-icons expand_more
       .date-dropdown__calendar
