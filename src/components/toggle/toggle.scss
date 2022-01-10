@@ -1,0 +1,58 @@
+@import './../../styles/vars.scss';
+
+.toggle__input{
+  opacity: 0;
+  appearance: none;
+}
+
+.toggle__label{
+  display: inline-block;
+  line-height: initial;;
+  height: 20px;
+
+
+  & > span{
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 50px;
+      height: 20px;
+  }
+  & > span::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      border:1px solid $darkShade-25;
+      border-radius: 10px
+  }
+
+  & > span::after{
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 10px;
+      background: $darkShade-25;
+      transition: 0.2s;
+  }
+
+  & > .toggle__input:not(:disabled):not(:checked) + span:hover::before{
+      border-color: $purple; 
+  }
+  & > .toggle__input:not(:disabled):active + span::before{
+      box-shadow: 0 0 0 1px $purple;
+  }
+  & > .toggle__input:not(:disabled):checked + span::before{
+      border-color: $purple; 
+  }
+  & > .toggle__input:not(:disabled):checked + span::after{
+      background: $purple_gradient;
+      transform: translateX(20px)
+  }
+}
