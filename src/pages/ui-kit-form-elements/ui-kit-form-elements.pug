@@ -6,6 +6,7 @@ include ./../../components/widget-title/widget-title.pug
 include ./../../components/range-slider/range-slider.pug
 include ./../../components/checkbox/checkbox.pug
 include ./../../components/radio/radio.pug
+include ./../../components/toggle/toggle.pug
 
 doctype html
 html(lang="en")
@@ -53,6 +54,7 @@ html(lang="en")
                         +checkbox({label :"Можно с питомцами", checked: true})
                       .ui-kit-form-elem__checkbox-item
                         +checkbox({label :"Можно пригласить гостей (до 10 человек)", checked: true})
+
                   .ui-kit-form-elem__radio
                     .ui-kit-form-elem__radio-title 
                       +widget-title({text:"Radio Buttons"})
@@ -61,8 +63,15 @@ html(lang="en")
                         +radio({label: "Мужчина", name:"sex", checked: true})
                       .ui-kit-form-elem__radio-item
                         +radio({label: "Женщина", name:"sex"})
-                
-                
+
+                  .ui-kit-form-elem__toggle
+                    .ui-kit-form-elem__toggle-title 
+                      +widget-title({text:"Toggle"})
+                    .ui-kit-form-elem__toggle-items
+                      .ui-kit-form-elem__toggle-item
+                        +toggle({label: "Получать спецпредложения", checked: true})
+                      .ui-kit-form-elem__toggle-item
+                        +toggle({label: "Получать спецпредложения"})
                 
                 //colum
                 .ui-kit-form-elem__colum
@@ -85,5 +94,6 @@ html(lang="en")
                         +button({text:"click me", mod: "simple"})
                       .ui-kit-form-elem__button
                         +button({text:"click me", mod: "simple", disabled: true})
-                    
+                    .ui-kit-form-elem__buttons-purple-link
+                        +button({text:'перейти к оплате', mod: "purple-link"})
         footer.footer f   

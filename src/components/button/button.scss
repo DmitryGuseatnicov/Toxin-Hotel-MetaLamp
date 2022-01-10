@@ -67,3 +67,25 @@
     cursor: default;
   }
 }
+
+.button--purple.button--link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 320px;
+  width: 100%;
+
+  .button__text{
+    flex-grow: 1;
+  }
+
+  .button__icon{
+    & > span{
+      color: #FFF;
+    }
+  }
+
+  &:hover{
+    background: $purple_gradient;
+  }
+}

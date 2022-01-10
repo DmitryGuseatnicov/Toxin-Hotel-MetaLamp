@@ -60,6 +60,18 @@
     margin-top: 16px;
   }
 
+  &__toggle{
+    margin-top: 40px;
+  }
+
+  &__toggle-items{
+    margin-top: 16px;
+  }
+
+  &__toggle-item{
+    margin-top: 10px;
+  }
+
 
   ///////////////////////////////////////////////////////////////////
 
@@ -89,5 +101,9 @@
 
   &__button{
     margin-right: 19px;
+  }
+
+  &__buttons-purple-link{
+    margin-top: 30px;
   }
 }

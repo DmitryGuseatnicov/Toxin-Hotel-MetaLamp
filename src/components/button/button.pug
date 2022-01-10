@@ -5,7 +5,15 @@ mixin button(options = {})
     let classes = `button js-button`
     if(mod === 'simple') classes+= ' button--simple'
     if(mod === 'purple') classes+= ' button--purple'
+    if(mod === 'purple-link') classes+= ' button--purple button--link'
     if(mod === 'purple-border') classes+= ' button--purple-border'
-    
-  button(class=classes, disabled=disabled)
-    span.button__text= text
+  if (mod === 'purple-link')
+
+    button(class=classes, disabled=disabled)
+      span.button__text= text
+      span.button__icon
+        span.material-icons arrow_forward
+      
+  else
+    button(class=classes, disabled=disabled)
+      span.button__text= text
