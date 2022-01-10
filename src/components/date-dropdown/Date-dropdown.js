@@ -1,5 +1,5 @@
-import AirDatepicker from 'air-datepicker'
 import $ from 'jquery'
+import AirDatepicker from 'air-datepicker'
 import  options  from './../calendar/calendar'
 
 

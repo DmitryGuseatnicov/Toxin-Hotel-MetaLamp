@@ -8,6 +8,7 @@ include ./../../components/checkbox/checkbox.pug
 include ./../../components/radio/radio.pug
 include ./../../components/toggle/toggle.pug
 include ./../../components/like-button/like-button.pug
+include ./../../components/rate-button/rate-button.pug
 
 doctype html
 html(lang="en")
@@ -25,18 +26,23 @@ html(lang="en")
                 .ui-kit-form-elem__colum
                   .ui-kit-form-elem__text-field
                     +input({type: "mail", label: "text field", placeholder: "Email",})
+
                   .ui-kit-form-elem__text-field
                     +input({type: "text", label: "text field", value: "This is pretty awesome"})
+
                   .ui-kit-form-elem__dropdown-guest
                     +dropdown({label: "Dropdown", placeholder: "Сколько гостей", items:[
                       {name: "взрослые", value: "0"},
                       {name: "дети", value: "0"},
                       {name: "младенцы", value: "0"}
                     ]})
+                    
                   .ui-kit-form-elem__mask-text-field
                     +input({type: "text", label: "masked text field", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
+                  
                   .ui-kit-form-elem__date-dropdown
                     +date-dropdown({label: "date Dropdown", secondLabel:"date Dropdown",root:"ui-kit-double-date-dropdown", mod:"double"})
+                  
                   .ui-kit-form-elem__filter-date-dropdown
                     +date-dropdown({label: "filter date dropdown", root:"ui-kit-filter-date-dropdown", mod:"filter", value:"19 авг - 23 авг"})
                 
@@ -82,6 +88,18 @@ html(lang="en")
                         +like-button({count: "2"})
                       .ui-kit-form-elem__like-button-item
                         +like-button({count: "12", like: "true"})
+
+                    .ui-kit-form-elem__rate-button
+                      +widget-title({text: "rate button"})
+                      .ui-kit-form-elem__rate-button-items
+                        .ui-kit-form-elem__rate-button-item
+                          +rate-button({rate:"4"})
+                        .ui-kit-form-elem__rate-button-item
+                          +rate-button({rate:"5"})
+
+
+
+
                 //colum
                 .ui-kit-form-elem__colum
                   .ui-kit-form-elem__range-slider 
