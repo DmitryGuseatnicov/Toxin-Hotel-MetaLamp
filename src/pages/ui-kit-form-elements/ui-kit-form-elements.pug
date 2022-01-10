@@ -7,6 +7,7 @@ include ./../../components/range-slider/range-slider.pug
 include ./../../components/checkbox/checkbox.pug
 include ./../../components/radio/radio.pug
 include ./../../components/toggle/toggle.pug
+include ./../../components/like-button/like-button.pug
 
 doctype html
 html(lang="en")
@@ -72,7 +73,15 @@ html(lang="en")
                         +toggle({label: "Получать спецпредложения", checked: true})
                       .ui-kit-form-elem__toggle-item
                         +toggle({label: "Получать спецпредложения"})
-                
+
+                  .ui-kit-form-elem__like-button
+                    .ui-kit-form-elem__like-button-title
+                      +widget-title({text:"like button"})
+                    .ui-kit-form-elem__like-button-items
+                      .ui-kit-form-elem__like-button-item
+                        +like-button({count: "2"})
+                      .ui-kit-form-elem__like-button-item
+                        +like-button({count: "12", like: "true"})
                 //colum
                 .ui-kit-form-elem__colum
                   .ui-kit-form-elem__range-slider 

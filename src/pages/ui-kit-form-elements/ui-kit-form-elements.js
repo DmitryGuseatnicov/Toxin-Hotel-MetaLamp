@@ -7,6 +7,7 @@ import './../../components/range-slider'
 import './../../components/checkbox'
 import './../../components/radio'
 import './../../components/toggle'
+import './../../components/like-button'
 
 import './ui-kit-form-elements.scss';
 

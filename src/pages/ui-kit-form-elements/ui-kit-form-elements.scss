@@ -61,17 +61,26 @@
   }
 
   &__toggle{
-    margin-top: 40px;
+    margin-top: 41px;
   }
 
   &__toggle-items{
-    margin-top: 16px;
+    margin-top: 15px;
   }
 
   &__toggle-item{
     margin-top: 10px;
   }
 
+  &__like-button{
+    margin-top: 41px;
+  }
+
+  &__like-button-items{
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+  }
 
   ///////////////////////////////////////////////////////////////////
 
@@ -96,7 +105,7 @@
   }
 
   &__buttons{
-    margin-top: 43px;
+    margin-top: 44px;
   }
 
   &__button{
@@ -104,6 +113,6 @@
   }
 
   &__buttons-purple-link{
-    margin-top: 30px;
+    margin-top: 25px;
   }
 }

@@ -47,6 +47,7 @@
   height: 15px;
   right: -6px;
   top: -6px;
+  box-shadow: none;
 } 
 .noUi-handle:before, .noUi-handle:after {
   display: none;
@@ -59,4 +60,5 @@
 
 .noUi-connect {
   background:  $green_gradient;
+  
 }
