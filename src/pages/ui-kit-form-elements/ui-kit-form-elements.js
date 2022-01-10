@@ -6,4 +6,20 @@ import 'material-icons'
 import './ui-kit-form-elements.scss';
 
 
+class LightOnCommand{
+  constructor(Light){
+    this.light = new Light()
+  }
+  execute(){
+    this.light.on()
+  }
+}
+
+class SimpleRemoteControl { 
+  constructor(Command){
+    this.slot = new Command()
+  }
+}
+
+
 

@@ -1,8 +1,8 @@
 import $ from 'jquery'
-import { DateDropdown } from './Date-dropdown'
+import {  DateDropdownFactory } from './Date-dropdown'
 import './../calendar/index'
 import './date-dropdown.scss'
 
-$('.date-dropdown').each((i, el)=> new DateDropdown(el))
+$('.date-dropdown').each((i, el)=> new DateDropdownFactory(el))
 
 

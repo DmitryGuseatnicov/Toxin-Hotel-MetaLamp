@@ -1,14 +1,23 @@
+@import './../../styles/vars.scss';
 .date-dropdown{
   max-width: 320px;
 
   &__header{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
   }
 
   &__input{
     position: relative;
-    max-width: 150px;
+    width: 100%;
+    min-width: 100px;
+  }
+
+
+
+  .input__text-field::placeholder{
+    color: $darkShade-75
   }
 
   &__input-icon{
@@ -16,5 +25,22 @@
     right: 6px;
     top: 50%;
     cursor: pointer;
+  }
+
+  &__calendar{
+    display: none;
+    margin-top: 5px;
+  }
+
+  
+}
+.date-dropdown[data-type=filter]{
+  .input__text-field{
+   cursor: pointer;
+  }
+}
+.date-dropdown--open{
+  .date-dropdown__calendar{
+    display: block;
   }
 }

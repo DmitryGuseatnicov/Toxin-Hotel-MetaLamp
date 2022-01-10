@@ -31,7 +31,9 @@ html(lang="en")
                   .ui-kit-form-elem__mask-text-field
                     +input({type: "text", label: "masked text field", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
                   .ui-kit-form-elem__date-dropdown
-                    +date-dropdown()
+                    +date-dropdown({root:"ui-kit-double-date-dropdown", mod:"double"})
+                  .ui-kit-form-elem__filter-date-dropdown
+                    +date-dropdown({root:"ui-kit-filter-date-dropdown", mod:"filter"})
                 //colum
                 .ui-kit-form-elem__colum
                 //colum
@@ -53,4 +55,5 @@ html(lang="en")
                         +button({text:"click me", mod: "simple"})
                       .ui-kit-form-elem__button
                         +button({text:"click me", mod: "simple", disabled: true})
+                    
         footer.footer f   

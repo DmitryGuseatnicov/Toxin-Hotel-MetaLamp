@@ -5,7 +5,7 @@
   background-color: #FFF;
   cursor: pointer;
 
-  &__text{
+  & > span{
     display: inline-block;
     font-weight: bold;
     font-size: 12px;
