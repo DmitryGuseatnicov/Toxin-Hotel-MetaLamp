@@ -1,0 +1,13 @@
+mixin checkbox(options={})
+  -
+    const { label, name, value, checked=false } = options
+  .checkbox
+    label.checkbox__label
+      input(
+          class = 'checkbox__input'
+          type =  "checkbox"
+          name = name
+          value = value
+          checked = checked
+          )
+      span.checkbox__label-text= label

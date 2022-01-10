@@ -4,6 +4,7 @@ include ./../../components/button/button.pug
 include ./../../components/date-dropdown/date-dropdown.pug
 include ./../../components/widget-title/widget-title.pug
 include ./../../components/range-slider/range-slider.pug
+include ./../../components/checkbox/checkbox.pug
 
 doctype html
 html(lang="en")
@@ -35,8 +36,27 @@ html(lang="en")
                     +date-dropdown({label: "date Dropdown", secondLabel:"date Dropdown",root:"ui-kit-double-date-dropdown", mod:"double"})
                   .ui-kit-form-elem__filter-date-dropdown
                     +date-dropdown({label: "filter date dropdown", root:"ui-kit-filter-date-dropdown", mod:"filter", value:"19 авг - 23 авг"})
+                
+                
+                
+                
                 //colum
                 .ui-kit-form-elem__colum
+                  .ui-kit-form-elem__checkbox
+                    .ui-kit-form-elem__checkbox-title 
+                      +widget-title({text:"Checkbox Buttons"})
+                    .ui-kit-form-elem__checkbox-items
+                      .ui-kit-form-elem__checkbox-item
+                        +checkbox({label :"Можно курить"})
+                      .ui-kit-form-elem__checkbox-item
+                        +checkbox({label :"Можно с питомцами", checked: true})
+                      .ui-kit-form-elem__checkbox-item
+                        +checkbox({label :"Можно пригласить гостей (до 10 человек)", checked: true})
+                
+                
+                
+                
+                
                 //colum
                 .ui-kit-form-elem__colum
                   .ui-kit-form-elem__range-slider 

@@ -3,6 +3,7 @@ import './../../components/dropdown'
 import './../../components/button'
 import './../../components/date-dropdown'
 import './../../components/range-slider'
+import '../../components/checkbox'
 import 'material-icons'
 import './ui-kit-form-elements.scss';
 

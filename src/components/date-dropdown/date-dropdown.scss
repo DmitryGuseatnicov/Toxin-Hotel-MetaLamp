@@ -22,7 +22,7 @@
 
   &__input-icon{
     position: absolute;
-    right: 6px;
+    right: 8px;
     top: 50%;
     cursor: pointer;
   }
@@ -30,6 +30,15 @@
   &__calendar{
     display: none;
     margin-top: 5px;
+    position: relative;
+    z-index: 100;
+    .calendar{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
   }
 
   
