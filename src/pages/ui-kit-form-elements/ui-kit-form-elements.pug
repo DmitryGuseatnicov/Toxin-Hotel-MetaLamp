@@ -5,6 +5,7 @@ include ./../../components/date-dropdown/date-dropdown.pug
 include ./../../components/widget-title/widget-title.pug
 include ./../../components/range-slider/range-slider.pug
 include ./../../components/checkbox/checkbox.pug
+include ./../../components/radio/radio.pug
 
 doctype html
 html(lang="en")
@@ -52,8 +53,14 @@ html(lang="en")
                         +checkbox({label :"Можно с питомцами", checked: true})
                       .ui-kit-form-elem__checkbox-item
                         +checkbox({label :"Можно пригласить гостей (до 10 человек)", checked: true})
-                
-                
+                  .ui-kit-form-elem__radio
+                    .ui-kit-form-elem__radio-title 
+                      +widget-title({text:"Radio Buttons"})
+                    .ui-kit-form-elem__radio-items
+                      .ui-kit-form-elem__radio-item
+                        +radio({label: "Мужчина", name:"sex", checked: true})
+                      .ui-kit-form-elem__radio-item
+                        +radio({label: "Женщина", name:"sex"})
                 
                 
                 

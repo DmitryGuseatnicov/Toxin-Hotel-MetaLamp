@@ -50,6 +50,17 @@
     margin-top: 10px;
   }
 
+  &__radio{
+    margin-top: 41px;
+  }
+
+  &__radio-items{
+    display: flex;
+    gap: 20px;
+    margin-top: 16px;
+  }
+
+
   ///////////////////////////////////////////////////////////////////
 
   &__filter-date-dropdown{
