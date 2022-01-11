@@ -6,7 +6,7 @@ mixin dropdown(options={})
   -
     const { label, placeholder, open, type = 'guests' ,items=[], actionButtons = true } = options
     let classes = 'dropdown js-dropdown'
-    if(open === true) classes += 'dropdown--open'
+    if(open === true) classes += ' dropdown--open'
 
 
   div(class=classes data-type=type)
@@ -24,7 +24,7 @@ mixin dropdown(options={})
             button.dropdown__calculator-action-minus.js-dropdown__calculator-action-minus -
             span.dropdown__calculator-value.js-dropdown__calculator-value= item.value
             button.dropdown__calculator-action-plus.js-dropdown__calculator-action-plus +
-            
+
       if (actionButtons === true)
         .dropdown__buttons
           .dropdown__button-clear.js-dropdown__button-clear

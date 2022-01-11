@@ -1,0 +1,21 @@
+include ./../widget-title/widget-title.pug
+include ./../checkbox/checkbox.pug
+
+mixin checkbox-list(options={})
+  -
+    const {title, open, items=[]} = options
+    let classes = 'checkbox-list js-checkbox-list'
+    if(open === true)
+      classes = `${classes} checkbox-list--open` 
+  div(class=classes)
+    .checkbox-list__header.js-checkbox-list__header
+      .checkbox-list__title   
+        +widget-title({text: title})
+      .checkbox-list__icon
+        span.material-icons expand_more
+    ul.checkbox-list__items 
+      each item in items 
+        li.checkbox-list__item
+          +checkbox(item)
+        
+      

@@ -35,7 +35,6 @@ class DropdownCalculator{
   clickHandler(e){
     if(e.target.closest(PLUS)) this.plus(e.currentTarget)
     if(e.target.closest(MINUS)) this.minus(e.currentTarget)
-   
   }
 
   changeHandler(e){

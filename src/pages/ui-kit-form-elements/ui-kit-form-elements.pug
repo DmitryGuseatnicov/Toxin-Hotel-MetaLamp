@@ -10,6 +10,7 @@ include ./../../components/toggle/toggle.pug
 include ./../../components/like-button/like-button.pug
 include ./../../components/rate-button/rate-button.pug
 include ./../../components/pagination/pagination.pug
+include ./../../components/checkbox-list/checkbox-list.pug
 
 doctype html
 html(lang="en")
@@ -48,15 +49,41 @@ html(lang="en")
                     +date-dropdown({label: "filter date dropdown", root:"ui-kit-filter-date-dropdown", mod:"filter", value:"19 авг - 23 авг"})
 
                   .ui-kit-form-elem__input-subscribe
-                    +input({label: "subscription text field",   placeholder: "Email" ,subscribe: true})
+                    +input({label: "subscription text field", placeholder: "Email" ,subscribe: true})
 
-                  .ui-kit-form-elem__dropdown-comforts 
+                  .ui-kit-form-elem__dropdown-comforts
                     +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts",items:[
                       {name: "спальни", value: "2"},
                       {name: "кровати", value: "2"},
                       {name: "ванные комнаты", value: "1"}
                     ]})
-                
+
+                  .ui-kit-form-elem__dropdown-comforts-open
+                    +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts", open: true, items:[
+                      {name: "спальни", value: "2"},
+                      {name: "кровати", value: "2"},
+                      {name: "ванные комнаты", value: "0"}
+                    ]})
+
+                  .ui-kit-form-elem__checkbox-list
+                    +checkbox-list({title: "expandable checkbox list", items:[
+                      {label: "Завтрак"},
+                      {label: "Письменный стол", checked: true},
+                      {label: "Стул для кормления", checked: true},
+                      {label: "Кроватка", checked: true},
+                      {label: "Телевизор"},
+                      {label: "Шампунь"},
+                    ]})
+
+                  .ui-kit-form-elem__checkbox-list-open
+                    +checkbox-list({title: "expandable checkbox list", open:true, items:[
+                      {label: "Завтрак"},
+                      {label: "Письменный стол", checked: true},
+                      {label: "Стул для кормления", checked: true},
+                      {label: "Кроватка", checked: true},
+                      {label: "Телевизор"},
+                      {label: "Шампунь"},
+                    ]})
                 
                 
                 //colum
