@@ -9,10 +9,9 @@
   display: flex;
   min-height: 20px;
   position: relative;
-  color: $darkShade-50;
   
   & > span{
-      
+      color: $darkShade-50;
       line-height: initial;
       padding-left: 30px;
   }

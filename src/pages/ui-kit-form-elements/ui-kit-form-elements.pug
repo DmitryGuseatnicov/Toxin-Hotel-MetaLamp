@@ -9,6 +9,7 @@ include ./../../components/radio/radio.pug
 include ./../../components/toggle/toggle.pug
 include ./../../components/like-button/like-button.pug
 include ./../../components/rate-button/rate-button.pug
+include ./../../components/pagination/pagination.pug
 
 doctype html
 html(lang="en")
@@ -99,28 +100,38 @@ html(lang="en")
 
 
 
-
                 //colum
                 .ui-kit-form-elem__colum
                   .ui-kit-form-elem__range-slider 
                     +range-slider({label: "Range Slider", min:"0", max:"16000", start:"5000", end:"10000"})
+
                   .ui-kit-form-elem__buttons
                     +widget-title({text: "Buttons"})
+
                     .ui-kit-form-elem__buttons-purple
                       .ui-kit-form-elem__button
                         +button({text:"click me", mod: "purple"})
                       .ui-kit-form-elem__button
                         +button({text:"click me", mod: "purple", disabled: true})
+                        
                     .ui-kit-form-elem__buttons-purple-border
                       .ui-kit-form-elem__button
                         +button({text:"click me", mod: "purple-border"})
                       .ui-kit-form-elem__button
                         +button({text:"click me", mod: "purple-border", disabled: true})
+
                     .ui-kit-form-elem__buttons-simple
                       .ui-kit-form-elem__button
                         +button({text:"click me", mod: "simple"})
                       .ui-kit-form-elem__button
                         +button({text:"click me", mod: "simple", disabled: true})
+
                     .ui-kit-form-elem__buttons-purple-link
                         +button({text:'перейти к оплате', mod: "purple-link"})
+
+                  .ui-kit-form-elem__pagination 
+                    .ui-kit-form-elem__pagination-title 
+                      +widget-title({text: "pagination"})
+                    .ui-kit-form-elem__pagination-content
+                      +pagination()
         footer.footer f   

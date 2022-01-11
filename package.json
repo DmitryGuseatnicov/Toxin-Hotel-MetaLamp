@@ -51,6 +51,7 @@
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
     "material-icons": "^1.10.4",
-    "nouislider": "^15.5.0"
+    "nouislider": "^15.5.0",
+    "paginationjs": "^2.1.5"
   }
 }

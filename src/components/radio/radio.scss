@@ -9,10 +9,11 @@
   display: flex;
   height: 20px;
   position: relative;
-  color: $darkShade-50;
+ 
   & > span{
       line-height: initial;
       padding-left: 30px;
+      color: $darkShade-50;
   }
 
   & > span::before{

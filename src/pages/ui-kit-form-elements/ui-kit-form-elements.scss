@@ -38,6 +38,11 @@
     margin-top: 40px;
   }
 
+
+  &__filter-date-dropdown{
+    margin-top: 40px;
+  }
+
   ///////////////////////////////////////////////////////////////////
   &__checkbox{
     max-width: 222px;
@@ -93,9 +98,6 @@
   }
   ///////////////////////////////////////////////////////////////////
 
-  &__filter-date-dropdown{
-    margin-top: 40px;
-  }
 
   &__buttons-purple{
     margin-top: 16px;
@@ -124,4 +126,13 @@
   &__buttons-purple-link{
     margin-top: 25px;
   }
+
+  &__pagination{
+    margin-top: 40px;
+  }
+
+  &__pagination-title{
+    margin-bottom: 16px;
+  }
+
 }

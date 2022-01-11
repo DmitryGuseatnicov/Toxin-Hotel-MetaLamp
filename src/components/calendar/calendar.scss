@@ -67,6 +67,7 @@
     font-weight: bold;
     color: #FFF;
     cursor: pointer;
+    z-index: 1;
   }
 
   &-cell.-day-.-focus-::before{

@@ -1,0 +1,49 @@
+@import './../../styles/vars.scss';
+
+.pagination{
+
+  &__nav-buttons{
+    display: flex;
+    align-items: center ;
+    
+  }
+
+  span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__action-next,
+  &__action-prev{
+    background: $green_gradient;
+    border-radius: 22px;
+    color: #FFF;
+    cursor: pointer;
+  }
+
+  &__page-number{
+    cursor: pointer;
+    border-radius: 22px;
+  }
+
+  &__page-number:hover{
+    background: $purple_gradient;
+    color: #FFF;
+    font-weight: 700;
+  }
+
+  &__current-page {
+    background: $purple_gradient;
+    color: #FFF;
+    font-weight: 700;
+  }
+  
+  &__description{
+    margin-top: 8px;
+    margin-left: 4px;
+  }
+
+}

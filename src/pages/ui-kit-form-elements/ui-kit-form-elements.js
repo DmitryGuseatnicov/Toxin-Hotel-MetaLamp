@@ -10,7 +10,11 @@ import './../../components/radio'
 import './../../components/toggle'
 import './../../components/like-button'
 import './../../components/rate-button'
+import './../../components/pagination'
 
-import './ui-kit-form-elements.scss';
+import './ui-kit-form-elements.scss'
+
+
+
 
 
