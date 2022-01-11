@@ -143,15 +143,28 @@ html(lang="en")
                       .ui-kit-form-elem__like-button-item
                         +like-button({count: "12", like: "true"})
 
-                    .ui-kit-form-elem__rate-button
-                      +widget-title({text: "rate button"})
-                      .ui-kit-form-elem__rate-button-items
-                        .ui-kit-form-elem__rate-button-item
-                          +rate-button({rate:"4"})
-                        .ui-kit-form-elem__rate-button-item
-                          +rate-button({rate:"5"})
+                  .ui-kit-form-elem__rate-button
+                    +widget-title({text: "rate button"})
+                    .ui-kit-form-elem__rate-button-items
+                      .ui-kit-form-elem__rate-button-item
+                        +rate-button({rate:"4"})
+                      .ui-kit-form-elem__rate-button-item
+                        +rate-button({rate:"5"})
 
-
+                  .ui-kit-form-elem__dropdown-guest-zero-value
+                    +dropdown({label: "Dropdown", placeholder: "Сколько гостей", open: true,items:[
+                      {name: "взрослые", value: "0"},
+                      {name: "дети", value: "0"},
+                      {name: "младенцы", value: "0"}
+                    ]})
+                  .ui-kit-form-elem__checkbox-rich
+                    .ui-kit-form-elem__checkbox-rich-title
+                      +widget-title({text:"rich Checkbox Buttons"})
+                    .ui-kit-form-elem__checkbox-rich-items
+                      .ui-kit-form-elem__checkbox-rich-item
+                        +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",mod:"rich"})
+                      .ui-kit-form-elem__checkbox-rich-item
+                        +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.",mod:"rich"})
 
                 //colum
                 .ui-kit-form-elem__colum
@@ -187,4 +200,11 @@ html(lang="en")
                       +widget-title({text: "pagination"})
                     .ui-kit-form-elem__pagination-content
                       +pagination()
+
+                  .ui-kit-form-elem__dropdown-guest-with-value
+                    +dropdown({label: "Dropdown", placeholder: "Сколько гостей", open: true, items:[
+                      {name: "взрослые", value: "2"},
+                      {name: "дети", value: "2"},
+                      {name: "младенцы", value: "0"}
+                    ]})
         footer.footer f   

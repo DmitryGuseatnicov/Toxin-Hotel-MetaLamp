@@ -122,8 +122,25 @@
 
   &__rate-button-items{
     display: flex;
-    margin-top: 20px;
+    margin-top: 18px;
     gap: 20px;
+  }
+
+  &__dropdown-guest-zero-value{
+    margin-top: 185px;
+  }
+
+  &__checkbox-rich{
+    margin-top: 257px;
+    max-width: 256px;
+  }
+
+  &__checkbox-rich-items{
+    margin-top: 17px;
+  }
+  &__checkbox-rich-item{
+    margin-top: 8px;
+
   }
   ///////////////////////////////////////////////////////////////////
 
@@ -163,5 +180,7 @@
   &__pagination-title{
     margin-bottom: 16px;
   }
-
+  &__dropdown-guest-with-value{
+    margin-top: 231px;
+  }
 }

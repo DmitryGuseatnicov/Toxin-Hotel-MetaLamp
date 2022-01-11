@@ -9,6 +9,24 @@
   display: flex;
   min-height: 20px;
   position: relative;
+
+  &-rich{
+    display: inline-flex;
+    flex-direction: column;
+    .checkbox__label-text{
+      color: $darkShade-75;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      
+    }
+    .checkbox__label-sub-text{
+      margin-top: 7px;
+      font-size: 12px;
+      line-height: 14px;
+      color: $darkShade-50;
+    }
+  }
   
   & > span{
       color: $darkShade-50;
