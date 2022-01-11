@@ -2,10 +2,12 @@ include ./../widget-title/widget-title.pug
 
 mixin input(options={})
   -
-    const {type, placeholder, value, label, mask, disabled, readonly} = options
+    const {type, placeholder, value, label, mask, disabled, 
+          readonly, subscribe = false,} = options
+
     let classes =  'input__text-field'
 
-  if (label)
+  if (label && subscribe === false)
       label.input
         +widget-title({text: label})
         input(class = classes, 
@@ -17,7 +19,24 @@ mixin input(options={})
               readonly = readonly
               )
 
-  else 
+  
+  if(subscribe === true)
+    label.input.input--subscribe
+      +widget-title({text: label})
+      .input__inner
+        input(class = classes, 
+              type = 'mail', 
+              placeholder = placeholder, 
+              value = value, 
+              disabled = disabled, 
+              readonly = readonly
+              )
+        button(class= "input__button" type="submit")
+          span.material-icons arrow_forward
+
+
+
+  if(label === '') 
     .input
       input(class = classes, 
             type = type, 

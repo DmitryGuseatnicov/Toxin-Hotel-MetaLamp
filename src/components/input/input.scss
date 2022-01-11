@@ -25,4 +25,23 @@
   &__text-field:hover{
     border: 1px solid $darkShade-50;
   }
+
+  &__inner{
+    position: relative;
+    max-width: 320px;
+  }
+
+  &__button{
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 24px;
+    border: none;
+    background: inherit;
+    cursor: pointer;
+    span{
+      color: $purple;
+    } 
+  }
 }
