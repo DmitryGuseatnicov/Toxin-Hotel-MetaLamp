@@ -13,6 +13,7 @@ import './../../components/rate-button'
 import './../../components/pagination'
 import './../../components/checkbox-list'
 import './../../components/benefits'
+import './../../components/bullet-list'
 
 import './ui-kit-form-elements.scss'
 

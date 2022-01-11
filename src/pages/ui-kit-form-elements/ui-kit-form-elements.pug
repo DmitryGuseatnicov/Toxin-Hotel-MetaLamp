@@ -12,6 +12,8 @@ include ./../../components/rate-button/rate-button.pug
 include ./../../components/pagination/pagination.pug
 include ./../../components/checkbox-list/checkbox-list.pug
 include ./../../components/benefits/benefits.pug
+include ./../../components/bullet-list/bullet-list.pug
+
 
 doctype html
 html(lang="en")
@@ -24,8 +26,7 @@ html(lang="en")
     .wrapper 
         main.main
             .container-fluid
-              .ui-kit-form-elem
-                //colum
+              .ui-kit-form-elem__buttons-and-inputs
                 .ui-kit-form-elem__colum
                   .ui-kit-form-elem__text-field
                     +input({type: "mail", label: "text field", placeholder: "Email",})
@@ -51,59 +52,8 @@ html(lang="en")
 
                   .ui-kit-form-elem__input-subscribe
                     +input({label: "subscription text field", placeholder: "Email" ,subscribe: true})
-
-                  .ui-kit-form-elem__dropdown-comforts
-                    +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts",items:[
-                      {name: "спальни", value: "2"},
-                      {name: "кровати", value: "2"},
-                      {name: "ванные комнаты", value: "1"}
-                    ]})
-
-                  .ui-kit-form-elem__dropdown-comforts-open
-                    +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts", open: true, items:[
-                      {name: "спальни", value: "2"},
-                      {name: "кровати", value: "2"},
-                      {name: "ванные комнаты", value: "0"}
-                    ]})
-
-                  .ui-kit-form-elem__checkbox-list
-                    +checkbox-list({title: "expandable checkbox list", items:[
-                      {label: "Завтрак"},
-                      {label: "Письменный стол", checked: true},
-                      {label: "Стул для кормления", checked: true},
-                      {label: "Кроватка", checked: true},
-                      {label: "Телевизор"},
-                      {label: "Шампунь"},
-                    ]})
-
-                  .ui-kit-form-elem__checkbox-list-open
-                    +checkbox-list({title: "expandable checkbox list", open:true, items:[
-                      {label: "Завтрак"},
-                      {label: "Письменный стол", checked: true},
-                      {label: "Стул для кормления", checked: true},
-                      {label: "Кроватка", checked: true},
-                      {label: "Телевизор"},
-                      {label: "Шампунь"},
-                    ]})
-
-                  .ui-kit-form-elem__benefits-list 
-                    .ui-kit-form-elem__benefits-item
-                      +benefits({
-                        title:"Комфорт", 
-                        description: "Шумопоглощающие стены", 
-                        src: require('./img/insert_emoticon.png'),
-                        underlined: true
-                        })
-                    .ui-kit-form-elem__benefits-item
-                      +benefits({
-                        title:"Удобство", 
-                        description: "Окно в каждой из спален", 
-                        src: require('./img/location_city.png'),
-                        underlined: true
-                        })
                 
-                
-                //colum
+
                 .ui-kit-form-elem__colum
                   .ui-kit-form-elem__checkbox
                     .ui-kit-form-elem__checkbox-title 
@@ -151,22 +101,7 @@ html(lang="en")
                       .ui-kit-form-elem__rate-button-item
                         +rate-button({rate:"5"})
 
-                  .ui-kit-form-elem__dropdown-guest-zero-value
-                    +dropdown({label: "Dropdown", placeholder: "Сколько гостей", open: true,items:[
-                      {name: "взрослые", value: "0"},
-                      {name: "дети", value: "0"},
-                      {name: "младенцы", value: "0"}
-                    ]})
-                  .ui-kit-form-elem__checkbox-rich
-                    .ui-kit-form-elem__checkbox-rich-title
-                      +widget-title({text:"rich Checkbox Buttons"})
-                    .ui-kit-form-elem__checkbox-rich-items
-                      .ui-kit-form-elem__checkbox-rich-item
-                        +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",mod:"rich"})
-                      .ui-kit-form-elem__checkbox-rich-item
-                        +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.",mod:"rich"})
 
-                //colum
                 .ui-kit-form-elem__colum
                   .ui-kit-form-elem__range-slider 
                     +range-slider({label: "Range Slider", min:"0", max:"16000", start:"5000", end:"10000"})
@@ -200,11 +135,100 @@ html(lang="en")
                       +widget-title({text: "pagination"})
                     .ui-kit-form-elem__pagination-content
                       +pagination()
+                  
+                  
+              .ui-kit-form-elem__dropdowns-behavior
+                .ui-kit-form-elem__colum
+                  .ui-kit-form-elem__dropdown-comforts
+                    +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts",items:[
+                      {name: "спальни", value: "2"},
+                      {name: "кровати", value: "2"},
+                      {name: "ванные комнаты", value: "1"}
+                    ]})
 
-                  .ui-kit-form-elem__dropdown-guest-with-value
+                  .ui-kit-form-elem__dropdown-comforts-open
+                    +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts", open: true, items:[
+                      {name: "спальни", value: "2"},
+                      {name: "кровати", value: "2"},
+                      {name: "ванные комнаты", value: "0"}
+                    ]})
+
+                .ui-kit-form-elem__colum
+                    .ui-kit-form-elem__dropdown-guest-open
+                    +dropdown({label: "Dropdown", placeholder: "Сколько гостей", open: true,items:[
+                      {name: "взрослые", value: "0"},
+                      {name: "дети", value: "0"},
+                      {name: "младенцы", value: "0"}
+                    ]})
+
+                .ui-kit-form-elem__colum
+                  .ui-kit-form-elem__dropdown-guest-open
                     +dropdown({label: "Dropdown", placeholder: "Сколько гостей", open: true, items:[
                       {name: "взрослые", value: "2"},
                       {name: "дети", value: "2"},
                       {name: "младенцы", value: "0"}
                     ]})
+
+
+              .ui-kit-form-elem__lists
+                .ui-kit-form-elem__colum
+                  .ui-kit-form-elem__checkbox-list
+                    +checkbox-list({title: "expandable checkbox list", items:[
+                      {label: "Завтрак"},
+                      {label: "Письменный стол", checked: true},
+                      {label: "Стул для кормления", checked: true},
+                      {label: "Кроватка", checked: true},
+                      {label: "Телевизор"},
+                      {label: "Шампунь"},
+                    ]})
+
+                  .ui-kit-form-elem__checkbox-list-open
+                    +checkbox-list({title: "expandable checkbox list", open:true, items:[
+                      {label: "Завтрак"},
+                      {label: "Письменный стол", checked: true},
+                      {label: "Стул для кормления", checked: true},
+                      {label: "Кроватка", checked: true},
+                      {label: "Телевизор"},
+                      {label: "Шампунь"},
+                    ]})
+
+                .ui-kit-form-elem__colum
+                  .ui-kit-form-elem__checkbox-rich
+                    .ui-kit-form-elem__checkbox-rich-title
+                      +widget-title({text:"rich Checkbox Buttons"})
+                    .ui-kit-form-elem__checkbox-rich-items
+                      .ui-kit-form-elem__checkbox-rich-item
+                        +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",mod:"rich"})
+                      .ui-kit-form-elem__checkbox-rich-item
+                        +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.",mod:"rich"})
+
+                .ui-kit-form-elem__colum
+                  .ui-kit-form-elem__bullet-list 
+                    +bullet-list({title: "bullet list", items:[
+                      {text: "Нельзя с питомцами"},
+                      {text: "Без вечеринок и мероприятий"},
+                      {text: "Время прибытия — после 13:00, а выезд до 12:00"},
+                    ]})
+
+
+              .ui-kit-form-elem__benefits-and-comments
+                .ui-kit-form-elem__colum
+                  .ui-kit-form-elem__benefits-list 
+                      .ui-kit-form-elem__benefits-item
+                        +benefits({
+                          title:"Комфорт", 
+                          description: "Шумопоглощающие стены", 
+                          src: require('./img/insert_emoticon.png'),
+                          underlined: true
+                          })
+                      .ui-kit-form-elem__benefits-item
+                        +benefits({
+                          title:"Удобство", 
+                          description: "Окно в каждой из спален", 
+                          src: require('./img/location_city.png'),
+                          underlined: true
+                          })
+                .ui-kit-form-elem__colum-big
+                  
+
         footer.footer f   

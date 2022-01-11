@@ -7,9 +7,22 @@
 }
 
 .ui-kit-form-elem{
-  display: flex;
-  justify-content: space-between;
+  &__buttons-and-inputs{
+    display: flex;
+    justify-content: space-between;
+  }
 
+  &__dropdowns-behavior{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  &__lists{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 170px;
+  }
   &__colum{
     width: 33%;
   }
@@ -50,17 +63,13 @@
   }
 
   &__dropdown-comforts{
-    margin-top: 100px;
+  
     max-width: 266px;
   }
 
   &__dropdown-comforts-open{
     margin-top: 20px;
     max-width: 266px;
-  }
-
-  &__checkbox-list{
-    margin-top: 170px;
   }
 
   &__checkbox-list-open{
@@ -72,7 +81,7 @@
   &__benefits-item{
     margin-top: 20px;
   }
-  ///////////////////////////////////////////////////////////////////
+
   &__checkbox{
     max-width: 222px;
   }
@@ -126,12 +135,8 @@
     gap: 20px;
   }
 
-  &__dropdown-guest-zero-value{
-    margin-top: 185px;
-  }
 
   &__checkbox-rich{
-    margin-top: 257px;
     max-width: 256px;
   }
 
@@ -142,8 +147,7 @@
     margin-top: 8px;
 
   }
-  ///////////////////////////////////////////////////////////////////
-
+  
 
   &__buttons-purple{
     margin-top: 16px;
@@ -182,5 +186,9 @@
   }
   &__dropdown-guest-with-value{
     margin-top: 231px;
+  }
+
+  &__bullet-list{
+    max-width: 260px;
   }
 }

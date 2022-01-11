@@ -1,0 +1,12 @@
+include ./../widget-title/widget-title.pug
+mixin bullet-list(options={})
+  -
+    const { title, items=[] } = options
+
+  .bullet-list
+    .bullet-list__title 
+      +widget-title({text: title})
+    ul.bullet-list__items
+      each item in items
+        li.bullet-list__item= item.text
+    
