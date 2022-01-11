@@ -1,0 +1,12 @@
+mixin benefits(options={})
+  -
+    const {src, title, description, underlined } = options
+    let classes = 'benefits'
+    if(underlined === true)  classes += ' benefits--underlined'
+     
+  div(class=classes)
+    .benefits__img 
+      img(src=src, alt=alt)
+    .benefits__description 
+      .benefits__title= title
+      .benefits__sub-title= description

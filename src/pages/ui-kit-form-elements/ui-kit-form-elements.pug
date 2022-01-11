@@ -11,6 +11,7 @@ include ./../../components/like-button/like-button.pug
 include ./../../components/rate-button/rate-button.pug
 include ./../../components/pagination/pagination.pug
 include ./../../components/checkbox-list/checkbox-list.pug
+include ./../../components/benefits/benefits.pug
 
 doctype html
 html(lang="en")
@@ -84,6 +85,22 @@ html(lang="en")
                       {label: "Телевизор"},
                       {label: "Шампунь"},
                     ]})
+
+                  .ui-kit-form-elem__benefits-list 
+                    .ui-kit-form-elem__benefits-item
+                      +benefits({
+                        title:"Комфорт", 
+                        description: "Шумопоглощающие стены", 
+                        src: require('./img/insert_emoticon.png'),
+                        underlined: true
+                        })
+                    .ui-kit-form-elem__benefits-item
+                      +benefits({
+                        title:"Удобство", 
+                        description: "Окно в каждой из спален", 
+                        src: require('./img/location_city.png'),
+                        underlined: true
+                        })
                 
                 
                 //colum

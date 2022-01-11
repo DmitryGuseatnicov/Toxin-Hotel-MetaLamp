@@ -12,6 +12,7 @@ import './../../components/like-button'
 import './../../components/rate-button'
 import './../../components/pagination'
 import './../../components/checkbox-list'
+import './../../components/benefits'
 
 import './ui-kit-form-elements.scss'
 
