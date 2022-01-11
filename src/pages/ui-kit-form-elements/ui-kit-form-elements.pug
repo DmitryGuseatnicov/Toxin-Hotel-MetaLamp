@@ -48,7 +48,14 @@ html(lang="en")
                     +date-dropdown({label: "filter date dropdown", root:"ui-kit-filter-date-dropdown", mod:"filter", value:"19 авг - 23 авг"})
 
                   .ui-kit-form-elem__input-subscribe
-                    +input({label: "subscription text field",subscribe: true})
+                    +input({label: "subscription text field",   placeholder: "Email" ,subscribe: true})
+
+                  .ui-kit-form-elem__dropdown-comforts 
+                    +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts",items:[
+                      {name: "спальни", value: "2"},
+                      {name: "кровати", value: "2"},
+                      {name: "ванные комнаты", value: "1"}
+                    ]})
                 
                 
                 

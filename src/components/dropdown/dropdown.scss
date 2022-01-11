@@ -9,7 +9,18 @@
   }
 
   &__input input{
+    padding-right: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     cursor: pointer;
+    
+  }
+
+  &__input input:focus{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__input input::placeholder{

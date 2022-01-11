@@ -1,20 +1,38 @@
 import $ from 'jquery'
+import { DropdownCalculator } from './DropdownCalculator'
 import './dropdown.scss'
+
+
+class DropdownFactory{
+  constructor(nodeElem){
+    this.init(nodeElem)
+  }
+  init(nodeElem){
+    switch($(nodeElem).data().type){
+      case 'guests':
+        return new GuestsDropdown(nodeElem)
+        
+      case 'comforts':
+        return new ComfortsDropdown(nodeElem)
+
+      default:
+        return
+    }
+  }
+}
+
 
 class Dropdown{
   constructor(nodeElem){
       this.$dropdown = $(nodeElem)
-      this.dropItems = []
       this.init()
   }
-
   init(){
     try {
       this.$input = this.$dropdown.find('.js-dropdown__input input')
-      this.$dropdown.find('.js-dropdown__item').map((i , el) => {
-        this.dropItems.push(new DropdownCalculator(el))
-      })
-
+      this.calculator = this.$dropdown.find('.dropdown__drop-items').map((i, el)=>{
+        return new DropdownCalculator(el)
+      })[0]
       this.bindEventListener()
 
     } catch (error) {
@@ -44,80 +62,13 @@ class Dropdown{
   }
 
   getValue(){
-    let itemsChecked = this.dropItems.filter(item => item.getValue().value > 0) 
-    let calcResults = itemsChecked.map(el => el.getValue())
-    return calcResults
+    return this.calculator.getValue()
   }
 
   get isOpen(){
     return this.$dropdown.hasClass('dropdown--open')
   }
 }
-
-class DropdownCalculator{
-  constructor(nodeElem){
-      this.$calculator = $(nodeElem)
-      this.init()
-  }
-
-  init(){
-    try {
-      this.$value = this.$calculator.find('.js-dropdown__calculator-value')
-      this.$btnMinus = this.$calculator.find('.js-dropdown__calculator-action-minus')
-      this.name = this.$calculator.find('.js-dropdown__item-name').text()
-      this.disabledButtonSwitcher()
-      this.bindEventListener()
-
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  bindEventListener(){
-    this.clickHandler = this.clickHandler.bind(this)
-    this.$calculator.on('click', this.clickHandler)
-  }
-
-  clickHandler(e){
-    if(e.target.closest('.js-dropdown__calculator-action-plus')) this.plus()
-    if(e.target.closest('.js-dropdown__calculator-action-minus')) this.minus()
-  }
-
-  plus(){
-    this.$value.text(+this.$value.text() + 1)
-    this.disabledButtonSwitcher()
-  }
-
-  minus(){
-    this.$value.text(+this.$value.text() - 1)
-    this.disabledButtonSwitcher()
-  }
-
-  disabledButtonSwitcher(){
-    if(this.isZeroValue){
-      this.$btnMinus.attr('disabled', 'disabled') 
-    }else{
-      this.$btnMinus.removeAttr('disabled')
-    }
-  }
-
-  get isZeroValue(){
-    return this.$value.text() <= 0
-  }
-
-  getValue(){
-    return{
-      name: this.name,
-      value: this.$value.text()
-    }
-  }
-
-  clearValue(){
-    this.$value.text('0')
-    this.disabledButtonSwitcher()
-  }
-}
-
 
 
 class GuestsDropdown extends Dropdown{
@@ -130,7 +81,7 @@ class GuestsDropdown extends Dropdown{
       super.init()
       this.$clearBtn = this.$dropdown.find('.js-dropdown__button-clear')
       this.$applyBtn = this.$dropdown.find('.js-dropdown__button-apply')
-     
+      this.showValue()
     } catch (error) {
       console.log(error)
     }
@@ -142,21 +93,18 @@ class GuestsDropdown extends Dropdown{
     if(e.target.closest('.js-dropdown__button-apply')) this.showValue()
   }
 
+
   clearValue(){
-    this.dropItems.forEach(el => el.clearValue())
+    this.calculator.clearValue()
     this.showValue()
   }
 
   showValue(){
-    this.$input.val(this.convertValueToString())
-  }
-
-  convertValueToString(){
-    let calcResults = this.getValue().reduce((prev, el )=>{
-      return parseInt(prev) + parseInt(el.value)
-    }, 0)
-    
-    return calcResults > 0 ? `${calcResults} гостя` : ''
+    let value = ''
+    this.getValue().forEach(el =>{
+      value +=`${el.value} ${el.name},`
+    })
+    this.$input.val(value.replace(/.$/, ''))
   }
 
 }
@@ -166,23 +114,29 @@ class ComfortsDropdown extends Dropdown{
     super(nodeElem)
   }
 
+  init(){
+    super.init()
+    this.showValue()
+  }
+
   close(){
     super.close()
     this.showValue()
   }
 
-  showValue(){
-    this.$input.val(this.convertValueToString())
+  clearValue(){
+    this.calculator.clearValue()
+    this.showValue()
   }
 
-  convertValueToString(){
-    calcResults = getValue().map(item =>{
-      let { name, value } = item.getValue()
-      return `${value} ${name}`
+  showValue(){
+    let value = ''
+    this.getValue().forEach(el =>{
+      value +=`${el.value} ${el.name},`
     })
-    return calcResults
+    this.$input.val(value.replace(/.$/, ''))
   }
 }
 
 
-export { Dropdown , ComfortsDropdown, GuestsDropdown}
+export { Dropdown , ComfortsDropdown, GuestsDropdown, DropdownFactory}
