@@ -23,6 +23,17 @@
     justify-content: space-between;
     margin-top: 170px;
   }
+
+  &__benefits-and-comments{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__colum-big{
+    width: 56%;
+  }
+
   &__colum{
     width: 33%;
   }
@@ -79,9 +90,6 @@
 
   &__checkbox-list-open{
     margin-top: 40px;
-  }
-  &__benefits-list {
-    margin-top: 100px;
   }
   &__benefits-item{
     margin-top: 20px;

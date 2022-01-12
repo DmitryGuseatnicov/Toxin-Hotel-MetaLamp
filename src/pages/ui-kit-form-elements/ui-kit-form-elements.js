@@ -14,6 +14,7 @@ import './../../components/pagination'
 import './../../components/checkbox-list'
 import './../../components/benefits'
 import './../../components/bullet-list'
+import './../../components/comment'
 
 import './ui-kit-form-elements.scss'
 

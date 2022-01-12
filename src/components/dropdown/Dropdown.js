@@ -146,4 +146,4 @@ class ComfortsDropdown extends Dropdown{
 
 
 
-export { Dropdown , ComfortsDropdown, GuestsDropdown, DropdownFactory}
+export { DropdownFactory}
