@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import { DropdownCalculator } from './DropdownCalculator'
+import { textHelper } from './utils/textHelper'
 import './dropdown.scss'
 
 
@@ -78,10 +79,11 @@ class GuestsDropdown extends Dropdown{
 
   init(){
     try {
-      super.init()
       this.$clearBtn = this.$dropdown.find('.js-dropdown__button-clear')
       this.$applyBtn = this.$dropdown.find('.js-dropdown__button-apply')
+      super.init()
       this.showValue()
+
     } catch (error) {
       console.log(error)
     }
@@ -93,20 +95,23 @@ class GuestsDropdown extends Dropdown{
     if(e.target.closest('.js-dropdown__button-apply')) this.showValue()
   }
 
-
   clearValue(){
     this.calculator.clearValue()
     this.showValue()
   }
 
   showValue(){
-    let value = ''
-    this.getValue().forEach(el =>{
-      value +=`${el.value} ${el.name},`
-    })
+    let guests = 0
+    let baby = 0
+
+    this.getValue().forEach(el => (el.name !== 'младенцы') ? guests += +el.value : baby += +el.value)
+
+    let value = `${guests > 0 
+      ? `${guests} ${textHelper('гости', guests)},`
+      : ''}${baby > 0 ? ` ${baby} ${textHelper('младенцы', baby)} ` : ''}`
+
     this.$input.val(value.replace(/.$/, ''))
   }
-
 }
 
 class ComfortsDropdown extends Dropdown{
@@ -132,11 +137,13 @@ class ComfortsDropdown extends Dropdown{
   showValue(){
     let value = ''
     this.getValue().forEach(el =>{
-      value +=`${el.value} ${el.name},`
+      console.log(el.name)
+      value +=` ${el.value} ${textHelper(el.name, el.value)},`
     })
     this.$input.val(value.replace(/.$/, ''))
   }
 }
+
 
 
 export { Dropdown , ComfortsDropdown, GuestsDropdown, DropdownFactory}

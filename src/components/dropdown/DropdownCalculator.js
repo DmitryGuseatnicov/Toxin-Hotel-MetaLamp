@@ -15,9 +15,8 @@ class DropdownCalculator{
   init(){
     try {
       this.$calcItems =  this.$calculator.find(CALC_ITEMS)
-      this.$calcItems.each((i, el) =>{
-        this.disabledButtonSwitcher(el)
-      })
+      this.$calcItems.each((i, el) => this.disabledButtonSwitcher(el))
+
       this.bindEventListener()
      
     } catch (error) {
@@ -51,16 +50,16 @@ class DropdownCalculator{
     $value.text(+ $value.text() - 1)
   }
 
-  disabledButtonSwitcher(target){
-    if(this.getIsZeroValue(target)){
-      $(target).find(MINUS).attr('disabled', 'disabled') 
+  disabledButtonSwitcher(nodeElem){
+    if(this.getIsZeroValue(nodeElem)){
+      $(nodeElem).find(MINUS).attr('disabled', 'disabled') 
       return
     }
-    $(target).find(MINUS).removeAttr('disabled')
+    $(nodeElem).find(MINUS).removeAttr('disabled')
   }
 
-  getIsZeroValue(target){
-    return $(target).find(VALUE).text() <= 0
+  getIsZeroValue(nodeElem){
+    return $(nodeElem).find(VALUE).text() <= 0
   }
 
   getValue(){
@@ -68,10 +67,9 @@ class DropdownCalculator{
 
     this.$calcItems.each((i, el) =>{
       if($(el).find(VALUE).text() > 0){
-        result.push({
-          name: $(el).find(NAME).text(), 
-          value: $(el).find(VALUE).text()
-        })
+        const name =  $(el).find(NAME).text()
+        const value = $(el).find(VALUE).text()
+        result.push({ name, value })
       }
     })
     return result

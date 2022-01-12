@@ -89,7 +89,6 @@ class DoubleDateDropdown extends DateDropdown{
 
   addValue(){
     const values = this.getValue().split(',')
-    console.log(values)
     this.$inputs[0].value = values[0] ?? '' 
     this.$inputs[1].value = values[1] ?? '' 
   }

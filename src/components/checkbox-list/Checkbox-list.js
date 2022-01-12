@@ -6,6 +6,7 @@ class CheckboxList{
     console.log(this.$checkboxList)
     this.init()
   }
+  
   init(){
     try {
       this.$toggleButton = this.$checkboxList.find('.checkbox-list__icon')
@@ -14,6 +15,7 @@ class CheckboxList{
       
     }
   }
+
   bindEventListener(){
     this.toggle = this.toggle.bind(this)
     this.$toggleButton.on('click', this.toggle)

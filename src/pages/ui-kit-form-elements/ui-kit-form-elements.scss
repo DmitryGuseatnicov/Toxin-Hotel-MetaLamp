@@ -49,12 +49,16 @@
 
   &__date-dropdown{
     margin-top: 40px;
+    position: relative;
+    z-index: 103;
   }
 
 
   &__filter-date-dropdown{
     margin-top: 40px;
     max-width: 266px;
+    position: relative;
+    z-index: 102;
   }
 
   &__input-subscribe{
@@ -63,7 +67,8 @@
   }
 
   &__dropdown-comforts{
-  
+    position: relative;
+    z-index: 101;
     max-width: 266px;
   }
 
