@@ -27,153 +27,153 @@ html(lang="en")
     .wrapper 
         main.main
             .container-fluid
-              .ui-kit-form-elem__buttons-and-inputs
-                .ui-kit-form-elem__colum
-                  .ui-kit-form-elem__text-field
+              .ui-kit__buttons-and-inputs
+                .ui-kit__colum
+                  .ui-kit__text-field
                     +input({type: "mail", label: "text field", placeholder: "Email",})
 
-                  .ui-kit-form-elem__text-field
+                  .ui-kit__text-field
                     +input({type: "text", label: "text field", value: "This is pretty awesome"})
 
-                  .ui-kit-form-elem__dropdown-guest
+                  .ui-kit__dropdown-guest
                     +dropdown({label: "Dropdown", placeholder: "Сколько гостей", items:[
                       {name: "взрослые", value: "0"},
                       {name: "дети", value: "0"},
                       {name: "младенцы", value: "0"}
                     ]})
                     
-                  .ui-kit-form-elem__mask-text-field
+                  .ui-kit__mask-text-field
                     +input({type: "text", label: "masked text field", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
                   
-                  .ui-kit-form-elem__date-dropdown
-                    +date-dropdown({label: "date Dropdown", secondLabel:"date Dropdown",root:"ui-kit-double-date-dropdown", mod:"double"})
+                  .ui-kit__date-dropdown
+                    +date-dropdown({label: "date Dropdown", secondLabel:"date Dropdown",root:"ui-kit-double-date-dropdown", mod:"double", secondValue:"19.08.2019"})
                   
-                  .ui-kit-form-elem__filter-date-dropdown
+                  .ui-kit__filter-date-dropdown
                     +date-dropdown({label: "filter date dropdown", root:"ui-kit-filter-date-dropdown", mod:"filter", value:"19 авг - 23 авг"})
 
-                  .ui-kit-form-elem__input-subscribe
+                  .ui-kit__input-subscribe
                     +input({label: "subscription text field", placeholder: "Email" ,subscribe: true})
                 
 
-                .ui-kit-form-elem__colum
-                  .ui-kit-form-elem__checkbox
-                    .ui-kit-form-elem__checkbox-title 
+                .ui-kit__colum
+                  .ui-kit__checkbox
+                    .ui-kit__checkbox-title 
                       +widget-title({text:"Checkbox Buttons"})
-                    .ui-kit-form-elem__checkbox-items
-                      .ui-kit-form-elem__checkbox-item
+                    .ui-kit__checkbox-items
+                      .ui-kit__checkbox-item
                         +checkbox({label :"Можно курить"})
-                      .ui-kit-form-elem__checkbox-item
+                      .ui-kit__checkbox-item
                         +checkbox({label :"Можно с питомцами", checked: true})
-                      .ui-kit-form-elem__checkbox-item
+                      .ui-kit__checkbox-item
                         +checkbox({label :"Можно пригласить гостей (до 10 человек)", checked: true})
 
-                  .ui-kit-form-elem__radio
-                    .ui-kit-form-elem__radio-title 
+                  .ui-kit__radio
+                    .ui-kit__radio-title 
                       +widget-title({text:"Radio Buttons"})
-                    .ui-kit-form-elem__radio-items
-                      .ui-kit-form-elem__radio-item
+                    .ui-kit__radio-items
+                      .ui-kit__radio-item
                         +radio({label: "Мужчина", name:"sex", checked: true})
-                      .ui-kit-form-elem__radio-item
+                      .ui-kit__radio-item
                         +radio({label: "Женщина", name:"sex"})
 
-                  .ui-kit-form-elem__toggle
-                    .ui-kit-form-elem__toggle-title 
+                  .ui-kit__toggle
+                    .ui-kit__toggle-title 
                       +widget-title({text:"Toggle"})
-                    .ui-kit-form-elem__toggle-items
-                      .ui-kit-form-elem__toggle-item
+                    .ui-kit__toggle-items
+                      .ui-kit__toggle-item
                         +toggle({label: "Получать спецпредложения", checked: true})
-                      .ui-kit-form-elem__toggle-item
+                      .ui-kit__toggle-item
                         +toggle({label: "Получать спецпредложения"})
 
-                  .ui-kit-form-elem__like-button
-                    .ui-kit-form-elem__like-button-title
+                  .ui-kit__like-button
+                    .ui-kit__like-button-title
                       +widget-title({text:"like button"})
-                    .ui-kit-form-elem__like-button-items
-                      .ui-kit-form-elem__like-button-item
+                    .ui-kit__like-button-items
+                      .ui-kit__like-button-item
                         +like-button({count: "2"})
-                      .ui-kit-form-elem__like-button-item
+                      .ui-kit__like-button-item
                         +like-button({count: "12", liked: "true"})
 
-                  .ui-kit-form-elem__rate-button
+                  .ui-kit__rate-button
                     +widget-title({text: "rate button"})
-                    .ui-kit-form-elem__rate-button-items
-                      .ui-kit-form-elem__rate-button-item
+                    .ui-kit__rate-button-items
+                      .ui-kit__rate-button-item
                         +rate-button({rate:"4"})
-                      .ui-kit-form-elem__rate-button-item
+                      .ui-kit__rate-button-item
                         +rate-button({rate:"5"})
 
 
-                .ui-kit-form-elem__colum
-                  .ui-kit-form-elem__range-slider 
+                .ui-kit__colum
+                  .ui-kit__range-slider 
                     +range-slider({label: "Range Slider", min:"0", max:"16000", start:"5000", end:"10000"})
 
-                  .ui-kit-form-elem__buttons
+                  .ui-kit__buttons
                     +widget-title({text: "Buttons"})
 
-                    .ui-kit-form-elem__buttons-purple
-                      .ui-kit-form-elem__button
+                    .ui-kit__buttons-purple
+                      .ui-kit__button
                         +button({text:"click me", mod: "purple"})
-                      .ui-kit-form-elem__button
+                      .ui-kit__button
                         +button({text:"click me", mod: "purple", disabled: true})
                         
-                    .ui-kit-form-elem__buttons-purple-border
-                      .ui-kit-form-elem__button
+                    .ui-kit__buttons-purple-border
+                      .ui-kit__button
                         +button({text:"click me", mod: "purple-border"})
-                      .ui-kit-form-elem__button
+                      .ui-kit__button
                         +button({text:"click me", mod: "purple-border", disabled: true})
 
-                    .ui-kit-form-elem__buttons-simple
-                      .ui-kit-form-elem__button
+                    .ui-kit__buttons-simple
+                      .ui-kit__button
                         +button({text:"click me", mod: "simple"})
-                      .ui-kit-form-elem__button
+                      .ui-kit__button
                         +button({text:"click me", mod: "simple", disabled: true})
 
-                    .ui-kit-form-elem__buttons-purple-link
+                    .ui-kit__buttons-purple-link
                         +button({text:'перейти к оплате', mod: "purple-link"})
 
-                  .ui-kit-form-elem__pagination 
-                    .ui-kit-form-elem__pagination-title 
+                  .ui-kit__pagination 
+                    .ui-kit__pagination-title 
                       +widget-title({text: "pagination"})
-                    .ui-kit-form-elem__pagination-content
+                    .ui-kit__pagination-content
                       +pagination()
                   
                   
-              .ui-kit-form-elem__dropdowns-behavior
-                .ui-kit-form-elem__colum
-                  .ui-kit-form-elem__dropdown-comforts
+              .ui-kit__dropdowns-behavior
+                .ui-kit__colum
+                  .ui-kit__dropdown-comforts
                     +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts",items:[
                       {name: "спальни", value: "2"},
                       {name: "кровати", value: "2"},
                       {name: "ванные комнаты", value: "1"}
                     ]})
 
-                  .ui-kit-form-elem__dropdown-comforts-open
+                  .ui-kit__dropdown-comforts-open
                     +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts", open: true, items:[
                       {name: "спальни", value: "2"},
                       {name: "кровати", value: "2"},
                       {name: "ванные комнаты", value: "0"}
                     ]})
 
-                .ui-kit-form-elem__colum
-                    .ui-kit-form-elem__dropdown-guest-open
+                .ui-kit__colum
+                    .ui-kit__dropdown-guest-open
                     +dropdown({label: "Dropdown", placeholder: "Сколько гостей", open: true,items:[
                       {name: "взрослые", value: "0"},
                       {name: "дети", value: "0"},
                       {name: "младенцы", value: "0"}
                     ]})
 
-                .ui-kit-form-elem__colum
-                  .ui-kit-form-elem__dropdown-guest-open
+                .ui-kit__colum
+                  .ui-kit__dropdown-guest-open
                     +dropdown({label: "Dropdown", placeholder: "Сколько гостей", open: true, items:[
                       {name: "взрослые", value: "2"},
-                      {name: "дети", value: "2"},
+                      {name: "дети", value: "1"},
                       {name: "младенцы", value: "0"}
                     ]})
 
 
-              .ui-kit-form-elem__lists
-                .ui-kit-form-elem__colum
-                  .ui-kit-form-elem__checkbox-list
+              .ui-kit__lists
+                .ui-kit__colum
+                  .ui-kit__checkbox-list
                     +checkbox-list({title: "expandable checkbox list", items:[
                       {label: "Завтрак"},
                       {label: "Письменный стол", checked: true},
@@ -183,7 +183,7 @@ html(lang="en")
                       {label: "Шампунь"},
                     ]})
 
-                  .ui-kit-form-elem__checkbox-list-open
+                  .ui-kit__checkbox-list-open
                     +checkbox-list({title: "expandable checkbox list", open:true, items:[
                       {label: "Завтрак"},
                       {label: "Письменный стол", checked: true},
@@ -193,18 +193,18 @@ html(lang="en")
                       {label: "Шампунь"},
                     ]})
 
-                .ui-kit-form-elem__colum
-                  .ui-kit-form-elem__checkbox-rich
-                    .ui-kit-form-elem__checkbox-rich-title
+                .ui-kit__colum
+                  .ui-kit__checkbox-rich
+                    .ui-kit__checkbox-rich-title
                       +widget-title({text:"rich Checkbox Buttons"})
-                    .ui-kit-form-elem__checkbox-rich-items
-                      .ui-kit-form-elem__checkbox-rich-item
+                    .ui-kit__checkbox-rich-items
+                      .ui-kit__checkbox-rich-item
                         +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",mod:"rich"})
-                      .ui-kit-form-elem__checkbox-rich-item
+                      .ui-kit__checkbox-rich-item
                         +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.",mod:"rich"})
 
-                .ui-kit-form-elem__colum
-                  .ui-kit-form-elem__bullet-list 
+                .ui-kit__colum
+                  .ui-kit__bullet-list 
                     +bullet-list({title: "bullet list", items:[
                       {text: "Нельзя с питомцами"},
                       {text: "Без вечеринок и мероприятий"},
@@ -212,17 +212,17 @@ html(lang="en")
                     ]})
 
 
-              .ui-kit-form-elem__benefits-and-comments
-                .ui-kit-form-elem__colum
-                  .ui-kit-form-elem__benefits-list 
-                      .ui-kit-form-elem__benefits-item
+              .ui-kit__benefits-and-comments
+                .ui-kit__colum
+                  .ui-kit__benefits-list 
+                      .ui-kit__benefits-item
                         +benefits({
                           title:"Комфорт", 
                           description: "Шумопоглощающие стены", 
                           src: require('./img/insert_emoticon.png'),
                           underlined: true
                           })
-                      .ui-kit-form-elem__benefits-item
+                      .ui-kit__benefits-item
                         +benefits({
                           title:"Удобство", 
                           description: "Окно в каждой из спален", 
@@ -230,8 +230,8 @@ html(lang="en")
                           underlined: true
                           })
 
-                .ui-kit-form-elem__colum-big
-                  .ui-kit-form-elem__comment
+                .ui-kit__colum-big
+                  .ui-kit__comment
                     +comment({
                       name: "Мурад Сарафанов", 
                       time: "5 дней назад",

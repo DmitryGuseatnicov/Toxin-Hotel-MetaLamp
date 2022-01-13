@@ -109,8 +109,8 @@ class Pagination{
   }
 
   showDescription(){
-    let interval = `${this.currentPage * this.itemsShowForPage - this.itemsShowForPage + 1} - ${this.currentPage * this.itemsShowForPage}`
-    let description = `${interval} из ${this.totalItems} выриантов аренды`
+    let interval = `${this.currentPage * this.itemsShowForPage - this.itemsShowForPage + 1} – ${this.currentPage * this.itemsShowForPage}`
+    let description = `${interval} из ${this.totalItems} вариантов аренды`
     this.$description.text(description)
   }
 
