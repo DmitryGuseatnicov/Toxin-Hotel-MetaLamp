@@ -8,10 +8,6 @@
 
 .ui-kit{
 
-  &__colum-big{
-    width: 56%;
-  }
-
   &__colum{
     width: 33%;
   }
@@ -128,7 +124,7 @@
   &__buttons-simple{
     display: flex;
     margin-top: 27px;
-    padding-left: 1px;
+    padding-left: 3px;
   }
 
   &__buttons{
@@ -136,7 +132,7 @@
   }
 
   &__button{
-    margin-right: 20px;
+    margin-right: 18px;
   }
 
   &__buttons-purple-link{
@@ -173,9 +169,12 @@
     max-width: 266px;
   }
 
+  &__dropdown-guest-open{
+    margin-left: 1px;
+  }
+
   &__dropdown-guest-with-value{
     margin-top: 231px;
-    //padding-left: -10px;
   }
 
   /**
@@ -185,11 +184,15 @@
   &__lists{
     display: flex;
     justify-content: space-between;
-    margin-top: 170px;
+    margin-top: 173px;
   }
 
   &__checkbox{
     max-width: 222px;
+  }
+
+  &__checkbox-list{
+    margin-top: -5px;
   }
 
   &__checkbox-list-open{
@@ -197,11 +200,12 @@
   }
 
   &__checkbox-rich{
-    max-width: 256px;
+    max-width: 260px;
+    margin-left: 1px;
   }
 
   &__checkbox-rich-items{
-    margin-top: 17px;
+    margin-top: 16px;
   }
 
   &__checkbox-rich-item{
@@ -210,6 +214,7 @@
   
   &__bullet-list{
     max-width: 260px;
+    margin-left: 1px;
   }
 
   /**
@@ -217,12 +222,21 @@
   **/  
 
   &__benefits-and-comments{
-    margin-top: 100px;
+    margin-top: 101px;
     display: flex;
-    justify-content: space-between;
   }
 
   &__benefits-item:nth-child(2){
     margin-top: 20px;
+  }
+
+  &__benefits-list{
+    min-width: 266px;
+  }
+
+  &__comment{
+    margin-left: 180px;
+    padding-right: 84px;
+    margin-top: 10px;
   }
 }
