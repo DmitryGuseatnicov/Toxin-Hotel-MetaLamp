@@ -21,7 +21,7 @@
   }
 
   &__colum:nth-child(3){
-    padding-left: 5px;
+    padding-left: 6px;
   }
 
   /**
@@ -39,6 +39,8 @@
 
   &__dropdown-guest{
     margin-top: 20px;
+    position: relative;
+    z-index: 104;
   }
 
   &__mask-text-field{
@@ -59,7 +61,7 @@
   }
 
   &__input-subscribe{
-    margin-top: 40px;
+    margin-top: 41px;
     max-width: 266px;
   }
 
@@ -86,7 +88,7 @@
   }
 
   &__toggle-items{
-    margin-top: 15px;
+    margin-top: 13px;
   }
 
   &__toggle-item{
@@ -94,7 +96,7 @@
   }
 
   &__like-button{
-    margin-top: 41px;
+    margin-top: 43px;
   }
 
   &__like-button-items{
@@ -109,7 +111,7 @@
 
   &__rate-button-items{
     display: flex;
-    margin-top: 18px;
+    margin-top: 17px;
     gap: 20px;
   }
 
@@ -134,7 +136,7 @@
   }
 
   &__button{
-    margin-right: 19px;
+    margin-right: 20px;
   }
 
   &__buttons-purple-link{
@@ -173,6 +175,7 @@
 
   &__dropdown-guest-with-value{
     margin-top: 231px;
+    //padding-left: -10px;
   }
 
   /**

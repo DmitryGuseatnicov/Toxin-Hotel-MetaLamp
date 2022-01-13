@@ -19,13 +19,12 @@ const template = {
   }
 }
 
-
 class Pagination{
   constructor(nodeElem){
     this.$pagination = $(nodeElem)
     this.itemsShowForPage = 12
-    this.totalItems
     this.currentPage = 1
+    this.totalItems
     this.init()
   }
   init(){
