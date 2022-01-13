@@ -92,7 +92,7 @@ class GuestsDropdown extends Dropdown{
   clickHandler(e){
     super.clickHandler(e)
     if(e.target.closest('.js-dropdown__button-clear')) this.clearValue()
-    if(e.target.closest('.js-dropdown__button-apply')) this.showValue()
+    if(e.target.closest('.js-dropdown__button-apply')) this.showValue(), this.close()
   }
 
   clearValue(){
@@ -111,6 +111,7 @@ class GuestsDropdown extends Dropdown{
       : ''}${baby > 0 ? ` ${baby} ${textHelper('младенцы', baby)} ` : ''}`
 
     this.$input.val(value.replace(/.$/, ''))
+
   }
 }
 
@@ -138,9 +139,9 @@ class ComfortsDropdown extends Dropdown{
     let value = ''
     this.getValue().forEach(el =>{
       console.log(el.name)
-      value +=` ${el.value} ${textHelper(el.name, el.value)},`
+      value += ` ${el.value} ${textHelper(el.name, el.value)},`
     })
-    this.$input.val(value.replace(/.$/, ''))
+    this.$input.val(value.slice(1, -1))
   }
 }
 
