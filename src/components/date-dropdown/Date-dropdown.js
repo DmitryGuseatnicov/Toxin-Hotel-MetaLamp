@@ -132,6 +132,8 @@ class FilterDateDropdown extends DateDropdown{
         .replace('.', '') 
       }
     this.$inputs.val(`${firstDate} ${secondDate ? `- ${secondDate}` : ''}`)
+
+    this.close()
   }
 
   clearValue(){
