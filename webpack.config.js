@@ -84,7 +84,7 @@ module.exports = {
                 test: /\.ico/i,
                 type: 'asset/resource',
                 generator: {
-                  filename: 'assets/images/favicon/[name][ext]',
+                  filename: 'assets/favicon/favicon/[name][ext]',
                 },
             },
             {
