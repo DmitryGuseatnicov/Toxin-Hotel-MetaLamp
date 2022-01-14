@@ -1,0 +1,52 @@
+.register-account-form{
+  max-width: 380px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 30px 30px 30px;
+  background: #FFFFFF;
+
+  &__name{
+    margin-top: 15px;
+  }
+
+  &__last-name{
+    margin-top: 5px;
+  }
+
+  &__checkboxes{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  &__date{
+    margin-top: 24px;
+  }
+
+  &__mail{
+    margin-top: 20px;
+  }
+
+  &__password{
+    margin-top: 5px;
+  }
+
+  &__special{
+    margin-top: 8px;
+  }
+
+  &__pay-button{
+    margin-top: 22px;
+  }
+
+  &__login-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    .button__text{
+      padding: 12.5px 24px;
+    }
+  }
+}

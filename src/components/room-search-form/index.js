@@ -1,4 +1,4 @@
-import './../widget-title'
+import '../widget-title'
 import './../dropdown'
 import './../date-dropdown'
 import './../button'

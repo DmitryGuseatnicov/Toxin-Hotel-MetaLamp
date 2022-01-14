@@ -2,8 +2,8 @@ include ./../widget-title/widget-title.pug
 
 mixin input(options={})
   -
-    const {type, placeholder, value, label, mask, disabled, 
-          readonly, subscribe = false,} = options
+    const {type, placeholder, value, mask, disabled, 
+          readonly, required ,subscribe = false, label = ""} = options
 
     let classes =  'input__text-field'
 
@@ -16,7 +16,8 @@ mixin input(options={})
               value = value, 
               data-mask = mask, 
               disabled = disabled, 
-              readonly = readonly
+              readonly = readonly,
+              required = required 
               )
 
   
@@ -30,6 +31,7 @@ mixin input(options={})
               value = value, 
               disabled = disabled, 
               readonly = readonly
+              required = required 
               )
         button(class= "input__button" type="submit")
           span.material-icons arrow_forward
@@ -45,5 +47,6 @@ mixin input(options={})
             data-mask = mask,
             disabled = disabled, 
             readonly = readonly
+            required = required 
           )
   

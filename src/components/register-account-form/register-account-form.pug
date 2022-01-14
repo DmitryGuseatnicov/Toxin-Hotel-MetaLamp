@@ -1,0 +1,32 @@
+include ./../widget-title/widget-title.pug
+include ./../input/input.pug
+include ./../button/button.pug
+include ./../radio/radio.pug
+include ./../toggle/toggle.pug
+
+mixin register-account-form()
+  form(class="register-account-form" action="#")
+    .register-account-form__title 
+      +widget-title({text: "Регистрация аккаунта", level:"1"})
+    .register-account-form__name 
+      +input({type: "text", placeholder: "Имя", required: true })
+    .register-account-form__last-name 
+      +input({type: "text", placeholder: "Фамилия", required: true })
+    .register-account-form__checkboxes
+      +radio({label: "Мужчина", name: "sex", checked: true})
+      +radio({label: "Женщина",name: "sex" })
+    .register-account-form__date  
+      +input({type: "text", label:"дата рождения", placeholder: "ДД.ММ.ГГГГ", mask: "data" , required: true})
+    .register-account-form__mail
+      +input({type: "mail" ,label: "данные для входа в сервис", placeholder:"Email", required: true })
+    .register-account-form__password
+      +input({type: "password", placeholder:"Пароль", required: true })
+    .register-account-form__special
+      +toggle({label: "Получать спецпредложения"})
+    .register-account-form__pay-button 
+      +button({text: "перейти к оплате", mod: "purple-link"})
+    .register-account-form__login-button
+      span.register-account-form__question Уже есть аккаунт на Toxin
+      +button({text: "войти", mod:"purple-border"})
+      
+

@@ -10,7 +10,7 @@ mixin room-search-form()
     .room-search-form__date-dropdown 
       +date-dropdown({ label:"прибытие", secondLabel:"выезд", mod: "double", root:"room-search-form__date-dropdown"})
     .room-search-form__guest-dropdown 
-      +dropdown({label: "Dropdown", placeholder: "Сколько гостей", items:[
+      +dropdown({label: "гости", placeholder: "Сколько гостей", items:[
           {name: "взрослые", value: "0"},
           {name: "дети", value: "0"},
           {name: "младенцы", value: "0"}

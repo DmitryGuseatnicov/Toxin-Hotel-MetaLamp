@@ -1,5 +1,6 @@
 include ./../../components/head/head.pug
 include ./../../components/room-search-form/room-search-form.pug
+include ./../../components/register-account-form/register-account-form.pug
 +head()
 body 
   header.header
@@ -8,7 +9,10 @@ body
       .container
         .ui-kit
           .ui-kit__colum
-             +room-search-form()
+              .ui-kit__search-form
+                +room-search-form()
+              .ui-kit__register-account-form
+                +register-account-form()
           .ui-kit__colum
           .ui-kit__colum 
 
