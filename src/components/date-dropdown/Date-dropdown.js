@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import AirDatepicker from 'air-datepicker'
-import  options  from './../calendar/calendar'
+import  options  from '../calendar/calendar'
 
 
 class DateDropdownFactory{
@@ -91,6 +91,7 @@ class DoubleDateDropdown extends DateDropdown{
     const values = this.getValue().split(',')
     this.$inputs[0].value = values[0] ?? '' 
     this.$inputs[1].value = values[1] ?? '' 
+    this.close()
   }
 
   clearValue(){

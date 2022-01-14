@@ -36,7 +36,7 @@
     "pug": "^3.0.2",
     "pug-html-loader": "^1.0.0",
     "pug-loader": "^2.4.0",
-    "resolve-url-loader": "^4.0.0",
+    "resolve-url-loader": "^2.3.2",
     "sass": "^1.43.5",
     "sass-loader": "^12.3.0",
     "simple-pug-loader": "^0.2.1",

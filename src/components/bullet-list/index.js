@@ -1,2 +1,2 @@
-import './../widget-title/widget-title'
+import './../widget-title'
 import './bullet-list.scss'

@@ -1,0 +1,20 @@
+include ./../../components/widget-title/widget-title.pug
+include ./../../components/date-dropdown/date-dropdown.pug
+include ./../../components/dropdown/dropdown.pug
+include ./../../components/button/button.pug
+
+mixin room-search-form()
+  form(class="room-search-form" action="#")
+    .room-search-form__title
+      +widget-title({text: "Найдём номера под ваши пожелания", level:"1"})
+    .room-search-form__date-dropdown 
+      +date-dropdown({ label:"прибытие", secondLabel:"выезд", mod: "double", root:"room-search-form__date-dropdown"})
+    .room-search-form__guest-dropdown 
+      +dropdown({label: "Dropdown", placeholder: "Сколько гостей", items:[
+          {name: "взрослые", value: "0"},
+          {name: "дети", value: "0"},
+          {name: "младенцы", value: "0"}
+        ]})
+    .room-search-form__submit-button
+      +button({text: "подобрать номер", mod:"purple-link", submit: true})
+      

@@ -1,10 +1,18 @@
 include ./../../components/head/head.pug
-
+include ./../../components/room-search-form/room-search-form.pug
 +head()
 body 
   header.header
   .wrapper 
     main.main
-      .container-fluid
-       
+      .container
+        .ui-kit
+          .ui-kit__colum
+             +room-search-form()
+          .ui-kit__colum
+          .ui-kit__colum 
+
+
+
+      
     footer.footer 

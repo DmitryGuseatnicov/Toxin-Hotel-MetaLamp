@@ -32,9 +32,7 @@ module.exports = {
     },
     devtool: 'source-map',
     optimization: {
-        splitChunks: {
-            chunks: 'all',
-        },
+        chunkIds: 'named',
     },
     plugins: [
         new MiniCssExtractPlugin({
