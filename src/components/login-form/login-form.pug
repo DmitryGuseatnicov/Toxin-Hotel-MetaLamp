@@ -1,0 +1,17 @@
+include ./../widget-title/widget-title.pug
+include ./../input/input.pug
+include ./../button/button.pug
+
+mixin login-form()
+  form(class="login-form" action="#")
+    .login-form__title
+      +widget-title({text: "Войти", level: "1"}) 
+    .login-form__mail 
+      +input({type: "mail", placeholder: "Email", required: true})
+    .login-form__password 
+      +input({type: "password", placeholder: "Пароль", required: true})
+    .login-form__button-login
+      +button({text: "войти", mod:"purple-link"})
+    .login-form__button-create 
+      span Нет аккаунта на Toxin?
+      +button({text: "создать", mod:"purple-border"})

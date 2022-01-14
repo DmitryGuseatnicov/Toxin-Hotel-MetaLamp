@@ -2,6 +2,7 @@ include ./../../components/head/head.pug
 include ./../../components/room-search-form/room-search-form.pug
 include ./../../components/register-account-form/register-account-form.pug
 include ./../../components/booking-form/booking-form.pug
+include ./../../components/login-form/login-form.pug
 
 +head()
 body 
@@ -26,6 +27,8 @@ body
                 baby: "0",
                 price: "9 000", 
                 days: "4"})
+            .ui-kit__login-form 
+              +login-form()
           .ui-kit__colum 
 
 
