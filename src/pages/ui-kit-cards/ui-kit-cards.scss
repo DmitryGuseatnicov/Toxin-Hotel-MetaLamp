@@ -5,7 +5,10 @@
 
 
 .ui-kit{
+  display: flex;
   padding: 80px 0px;
+  gap: 40px;
+  
   &__register-account-form{
     margin-top: 40px;
   }

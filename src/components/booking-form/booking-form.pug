@@ -1,0 +1,48 @@
+include ./../date-dropdown/date-dropdown.pug
+include ./../dropdown/dropdown.pug
+include ./../button/button.pug
+
+mixin booking-form(options={})
+  -
+    const { number, firsDate, secondDate , adult, child, baby,
+            price="0", days="0" } = options
+
+  form(class="booking-form" action="")
+    .booking-form__header 
+      .booking-form__number № 
+        span= number
+      .booking-form__type люкс
+      .booking-form__price-for-day= price
+        span в сутки
+    .booking-form__date-dropdown
+      +date-dropdown({label: "прибытие", secondLabel: "выезд", mod:"double", value: firsDate, secondValue: secondDate})
+    .booking-form__guest-dropdown
+      +dropdown({label: "гости", placeholder: "Сколько гостей", items:[
+        {name: "взрослые", value: adult},
+        {name: "дети", value: child},
+        {name: "младенцы", value: baby}
+      ]})
+
+    ul.booking-form__price-list
+      ul.booking-form__price-list-item
+        .booking-form__price-list-name=`${price} х ${days} суток`
+        .booking-form__price-list-info 
+        .booking-form__price-list-value 39 960₽
+
+      ul.booking-form__price-list-item.booking-form__price-list-item--hav-info
+        .booking-form__price-list-name Сбор за услуги: скидка 2 179₽
+        .booking-form__price-list-info i
+        .booking-form__price-list-value 0₽
+
+      ul.booking-form__price-list-item.booking-form__price-list-item--hav-info
+        .booking-form__price-list-name Сбор за дополнительные услуги
+        .booking-form__price-list-info i
+        .booking-form__price-list-value 300₽
+    
+    .booking-form__total
+      .booking-form__total-text Итого
+      .booking-form__total-dots
+      .booking-form__total-price 38 081₽
+    
+    .booking-form__booking-button
+      +button({text: "забронировать", mod: "purple-link"})

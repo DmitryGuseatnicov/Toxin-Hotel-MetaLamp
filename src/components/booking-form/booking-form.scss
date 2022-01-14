@@ -1,0 +1,126 @@
+@import './../../styles/vars.scss';
+
+
+.booking-form{
+  max-width: 380px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 47px 30px 30px 30px;
+  background: #FFFFFF;
+
+  &__header{
+    display: flex;
+  }
+
+  &__number{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $darkShade-100;
+    text-transform: uppercase;
+    & > span{
+      font-weight: bold;
+      font-size: 23px;
+      line-height: 18px;
+      color: $darkShade-100;
+      text-transform: uppercase;
+    }
+  }
+
+  &__type{
+    margin-left: 10px;
+    margin-top: 2px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $purple;
+    
+  }
+
+  &__price-for-day{
+    margin-top: 2px;
+    flex-grow: 1;
+    text-align: end;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darkShade-50;
+
+    & > span{
+      font-size: 12px;
+    }
+  }
+
+  &__date-dropdown{
+    margin-top: 18px;
+  }
+
+  &__guest-dropdown{
+    margin-top: 22px;
+  }
+
+  &__price-list{
+    margin-top: 20px;
+  }
+
+  &__price-list-item{
+    display: flex;
+    margin-top: 14px;
+  }
+
+  &__price-list-name{
+    max-width: 215px;
+    line-height: 18px;
+  }
+
+
+  &__price-list-value{
+    flex-grow: 1;
+    text-align: end;
+    line-height: 18px;
+  }
+
+  &__total{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+
+  &__total-dots{
+    flex-grow: 1;
+    border-bottom: 1px dashed $darkShade-25; 
+    height: 20px;
+  }
+
+  &__total-text,
+  &__total-price{
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    color: $darkShade-100
+  }
+
+  &__booking-button{
+    margin-top: 22px;
+  }
+}
+
+.booking-form__price-list-item--hav-info{
+  .booking-form{
+    &__price-list-info{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 4px;
+      border: 1px solid $darkShade-25;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 12px;
+      color: $darkShade-25;
+    }
+  }
+}
+
