@@ -27,7 +27,7 @@ module.exports = {
     },
     devServer: {
         static: './dist',
-        open : '/ui-kit-form-elements.html',
+        open : '/index-page.html',
         hot: false
     },
     devtool: 'source-map',
@@ -84,7 +84,7 @@ module.exports = {
                 test: /\.ico/i,
                 type: 'asset/resource',
                 generator: {
-                  filename: 'assets/favicon/favicon/[name][ext]',
+                  filename: 'assets/favicon/[name][ext]',
                 },
             },
             {
