@@ -1,0 +1,78 @@
+include ./../logo/logo.pug
+include ./../widget-title/widget-title.pug
+include ./../input/input.pug
+
+mixin footer()
+  footer.footer 
+    .container 
+      .footer__inner 
+        .footer__inner-item
+          .footer__info 
+            .footer__logo
+              +logo()
+            .footer__description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+
+        .footer__inner-item
+          .footer__widget
+            .footer__widget-title 
+              +widget-title({text: "навигация"})
+            ul.footer__widget-list
+              li.footer__widget-link
+                a(href="change-me") О нас
+              li.footer__widget-link
+                a(href="change-me") Новости
+              li.footer__widget-link
+                a(href="change-me") Служба поддержки
+              li.footer__widget-link
+                a(href="change-me") Услуги
+
+        .footer__inner-item
+          .footer__widget
+            .footer__widget-title 
+              +widget-title({text: "о нас"})
+            ul.footer__widget-list
+              li.footer__widget-link
+                a(href="change-me") О сервисе
+              li.footer__widget-link
+                a(href="change-me") Наша команда
+              li.footer__widget-link
+                a(href="change-me") Вакансии
+              li.footer__widget-link
+                a(href="change-me") Инвесторы
+
+
+        .footer__inner-item
+          .footer__widget
+            .footer__widget-title 
+              +widget-title({text: "Служба поддержки"})
+            ul.footer__widget-list
+              li.footer__widget-link
+                a(href="change-me") Соглашения
+              li.footer__widget-link
+                a(href="change-me") Сообщества
+              li.footer__widget-link
+                a(href="change-me") Связь с нами
+              
+
+        .footer__inner-item
+          .footer__special
+            .footer__special-title 
+              +widget-title({text: "Подписка"})
+            .footer__special-text Получайте специальные предложения и новости сервиса
+            form(class="footer__subscribe-form" action="#") 
+              +input({type: "mail", subscribe: true, placeholder: "Email"})
+            
+      .footer__copy-right
+        .footer__copy-right-text Copyright © 2018 Toxin отель. Все права защищены.
+        .footer__social
+          .footer__social-twitter
+            a(href="change-me")
+              img(src=require('./../../components/footer/images/twitter.png'), alt="twitter")
+          .footer__social-facebook
+            a(href="change-me")
+              img(src=require('./../../components/footer/images/facebook.png'), alt="facebook")
+          .footer__social-instagram  
+            a(href="change-me")
+              img(src=require('./../../components/footer/images/instagram.png'), alt="instagram")
+
+

@@ -1,35 +1,40 @@
 include ./../../components/head/head.pug
 include ./../../components/header/header.pug
+include ./../../components/footer/footer.pug
 +head({title: "Header & Footer"})
 body
-  .ui-kit-header
-    +header({items:[
-      {name: "О нас", active: true},
-      {name: "Услуги", childrens:[
-        {name:"Услуги 1"},
-        {name:"Услуги 2"},
-      ]},
-      {name: "Вакансии"},
-      {name: "Новости"},
-      {name: "Соглашения", childrens:[
-        {name:"Соглашения 1"},
-        {name:"Соглашения 2"},
-        {name:"Соглашения 3"},
-      ]},
-    ]})
-  .ui-kit-header-auth
-    +header({auth: "Юлий Цезарь", items:[
-      {name: "О нас", active: true},
-      {name: "Услуги", childrens:[
-        {name:"Услуги 1"},
-        {name:"Услуги 2"},
-      ]},
-      {name: "Вакансии"},
-      {name: "Новости"},
-      {name: "Соглашения", childrens:[
-        {name:"Соглашения 1"},
-        {name:"Соглашения 2"},
-        {name:"Соглашения 3"},
-      ]},
-    ]})
+  .wrapper
+    .ui-kit-header
+      +header({items:[
+        {name: "О нас", active: true},
+        {name: "Услуги", childrens:[
+          {name:"Услуги 1"},
+          {name:"Услуги 2"},
+        ]},
+        {name: "Вакансии"},
+        {name: "Новости"},
+        {name: "Соглашения", childrens:[
+          {name:"Соглашения 1"},
+          {name:"Соглашения 2"},
+          {name:"Соглашения 3"},
+        ]},
+      ]})
+    .ui-kit-header-auth
+      +header({auth: "Юлий Цезарь", items:[
+        {name: "О нас", active: true},
+        {name: "Услуги", childrens:[
+          {name:"Услуги 1"},
+          {name:"Услуги 2"},
+        ]},
+        {name: "Вакансии"},
+        {name: "Новости"},
+        {name: "Соглашения", childrens:[
+          {name:"Соглашения 1"},
+          {name:"Соглашения 2"},
+          {name:"Соглашения 3"},
+        ]},
+      ]})
+    main.main
+    +footer()
+  
     

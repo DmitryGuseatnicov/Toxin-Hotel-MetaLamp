@@ -38,7 +38,7 @@ mixin input(options={})
 
 
 
-  if(label === '') 
+  if(label === '' && subscribe === false) 
     .input
       input(class = classes, 
             type = type, 
