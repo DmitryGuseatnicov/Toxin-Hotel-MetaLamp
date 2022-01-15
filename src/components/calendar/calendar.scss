@@ -33,6 +33,10 @@
     display: none;
   }
 
+  &-body--day-names{
+    margin-top: 20px;
+  }
+
   &-body--day-names,
   &-body--cells.-days-{
     display: grid;
@@ -166,7 +170,7 @@
   &-buttons{
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 17px;
   }
 }
 
