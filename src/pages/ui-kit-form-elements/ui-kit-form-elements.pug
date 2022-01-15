@@ -17,7 +17,7 @@ include ./../../components/bullet-list/bullet-list.pug
 include ./../../components/comment/comment.pug
 
 
-+head()
++head({title: "Form elements"})
 body
   header.header
   .wrapper 
@@ -51,70 +51,95 @@ body
               .ui-kit__checkbox
                 .ui-kit__checkbox-title 
                   +widget-title({text:"Checkbox Buttons"})
+
                 .ui-kit__checkbox-items
                   .ui-kit__checkbox-item
                     +checkbox({label :"Можно курить"})
+
                   .ui-kit__checkbox-item
                     +checkbox({label :"Можно с питомцами", checked: true})
+
                   .ui-kit__checkbox-item
                     +checkbox({label :"Можно пригласить гостей (до 10 человек)", checked: true})
+
               .ui-kit__radio
                 .ui-kit__radio-title 
                   +widget-title({text:"Radio Buttons"})
+
                 .ui-kit__radio-items
                   .ui-kit__radio-item
                     +radio({label: "Мужчина", name:"sex", checked: true})
+
                   .ui-kit__radio-item
                     +radio({label: "Женщина", name:"sex"})
+
               .ui-kit__toggle
                 .ui-kit__toggle-title 
                   +widget-title({text:"Toggle"})
+
                 .ui-kit__toggle-items
                   .ui-kit__toggle-item
                     +toggle({label: "Получать спецпредложения", checked: true})
+
                   .ui-kit__toggle-item
                     +toggle({label: "Получать спецпредложения"})
+
               .ui-kit__like-button
                 .ui-kit__like-button-title
                   +widget-title({text:"like button"})
+
                 .ui-kit__like-button-items
                   .ui-kit__like-button-item
                     +like-button({count: "2"})
+
                   .ui-kit__like-button-item
                     +like-button({count: "12", liked: "true"})
+
               .ui-kit__rate-button
                 +widget-title({text: "rate button"})
+
                 .ui-kit__rate-button-items
                   .ui-kit__rate-button-item
                     +rate-button({rate:"4"})
+
                   .ui-kit__rate-button-item
                     +rate-button({rate:"5"})
+
             .ui-kit__colum
               .ui-kit__range-slider 
                 +range-slider({label: "Range Slider", min:"0", max:"15500", start:"5000", end:"10000"})
+
               .ui-kit__buttons
                 +widget-title({text: "Buttons"})
+
                 .ui-kit__buttons-purple
                   .ui-kit__button
                     +button({text:"click me", mod: "purple"})
+
                   .ui-kit__button
                     +button({text:"click me", mod: "purple", disabled: true})
                     
                 .ui-kit__buttons-purple-border
                   .ui-kit__button
                     +button({text:"click me", mod: "purple-border"})
+
                   .ui-kit__button
                     +button({text:"click me", mod: "purple-border", disabled: true})
+
                 .ui-kit__buttons-simple
                   .ui-kit__button
                     +button({text:"click me", mod: "simple"})
+
                   .ui-kit__button
                     +button({text:"click me", mod: "simple", disabled: true})
+
                 .ui-kit__buttons-purple-link
                     +button({text:'перейти к оплате', mod: "purple-link"})
+
               .ui-kit__pagination 
                 .ui-kit__pagination-title 
                   +widget-title({text: "pagination"})
+
                 .ui-kit__pagination-content
                   +pagination()
               
@@ -127,12 +152,14 @@ body
                   {name: "кровати", value: "2"},
                   {name: "ванные комнаты", value: "1"}
                 ]})
+
               .ui-kit__dropdown-comforts-open
                 +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts", open: true, items:[
                   {name: "спальни", value: "2"},
                   {name: "кровати", value: "2"},
                   {name: "ванные комнаты", value: "0"}
                 ]})
+
             .ui-kit__colum
                 .ui-kit__dropdown-guest-open
                   +dropdown({label: "Dropdown", placeholder: "Сколько гостей", open: true,items:[
@@ -140,6 +167,7 @@ body
                     {name: "дети", value: "0"},
                     {name: "младенцы", value: "0"}
                   ]})
+
             .ui-kit__colum
               .ui-kit__dropdown-guest-open
                 +dropdown({label: "Dropdown", placeholder: "Сколько гостей", open: true, items:[
@@ -147,6 +175,7 @@ body
                   {name: "дети", value: "1"},
                   {name: "младенцы", value: "0"}
                 ]})
+
           .ui-kit__lists
             .ui-kit__colum
               .ui-kit__checkbox-list
@@ -158,6 +187,7 @@ body
                   {label: "Телевизор"},
                   {label: "Шампунь"},
                 ]})
+
               .ui-kit__checkbox-list-open
                 +checkbox-list({title: "expandable checkbox list", open:true, items:[
                   {label: "Завтрак"},
@@ -167,15 +197,19 @@ body
                   {label: "Телевизор"},
                   {label: "Шампунь"},
                 ]})
+
             .ui-kit__colum
               .ui-kit__checkbox-rich
                 .ui-kit__checkbox-rich-title
                   +widget-title({text:"rich Checkbox Buttons"})
+
                 .ui-kit__checkbox-rich-items
                   .ui-kit__checkbox-rich-item
                     +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",mod:"rich"})
+
                   .ui-kit__checkbox-rich-item
                     +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.",mod:"rich"})
+
             .ui-kit__colum
               .ui-kit__bullet-list 
                 +bullet-list({title: "bullet list", items:[
@@ -183,6 +217,7 @@ body
                   {text: "Без вечеринок и мероприятий"},
                   {text: "Время прибытия — после 13:00, а выезд до 12:00"},
                 ]})
+
           .ui-kit__benefits-and-comments
             .ui-kit__colum
               .ui-kit__benefits-list 
@@ -193,6 +228,7 @@ body
                       src: require('./img/insert_emoticon.png'),
                       underlined: true
                       })
+
                   .ui-kit__benefits-item
                     +benefits({
                       title:"Удобство", 
@@ -200,6 +236,7 @@ body
                       src: require('./img/location_city.png'),
                       underlined: true
                       })
+                      
             .ui-kit__comment
               +comment({
                 name: "Мурад Сарафанов", 

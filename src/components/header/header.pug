@@ -1,0 +1,21 @@
+include ./../logo/logo.pug
+include ./../button/button.pug
+include ./../nav-menu/nav-menu.pug
+
+mixin header(options={})
+  -
+    const {auth = false, items = [] } = options
+
+  header.header 
+    .container
+      .header__inner
+        .header__logo
+          +logo()
+        .header__nav
+          +nav-menu({items: items})
+        .header__login
+          if(auth !== false)
+            .header__login-name= auth
+          else    
+            +button({text: "войти", mod: "purple-border"})
+            +button({text: "зарегистрироваться", mod: "purple"})

@@ -1,8 +1,35 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body 
+include ./../../components/head/head.pug
+include ./../../components/header/header.pug
++head({title: "Header & Footer"})
+body
+  .ui-kit-header
+    +header({items:[
+      {name: "О нас", active: true},
+      {name: "Услуги", childrens:[
+        {name:"Услуги 1"},
+        {name:"Услуги 2"},
+      ]},
+      {name: "Вакансии"},
+      {name: "Новости"},
+      {name: "Соглашения", childrens:[
+        {name:"Соглашения 1"},
+        {name:"Соглашения 2"},
+        {name:"Соглашения 3"},
+      ]},
+    ]})
+  .ui-kit-header-auth
+    +header({auth: "Юлий Цезарь", items:[
+      {name: "О нас", active: true},
+      {name: "Услуги", childrens:[
+        {name:"Услуги 1"},
+        {name:"Услуги 2"},
+      ]},
+      {name: "Вакансии"},
+      {name: "Новости"},
+      {name: "Соглашения", childrens:[
+        {name:"Соглашения 1"},
+        {name:"Соглашения 2"},
+        {name:"Соглашения 3"},
+      ]},
+    ]})
+    
