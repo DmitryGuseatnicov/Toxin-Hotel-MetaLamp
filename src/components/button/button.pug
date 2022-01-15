@@ -1,6 +1,6 @@
 mixin button(options = {})
   -
-    const { text, mod, js, disabled, submit = false} = options 
+    const { text, mod, js, disabled, short=false, submit = false} = options 
     let classes = `button js-button`
     let type
     if(submit===true) type = "submit"
@@ -8,6 +8,7 @@ mixin button(options = {})
     if(mod === 'purple') classes+= ' button--purple'
     if(mod === 'purple-link') classes+= ' button--purple button--link'
     if(mod === 'purple-border') classes+= ' button--purple-border'
+    if(short === true) classes+= ' button--short'
 
   if (mod === 'purple-link')
     button(class=classes, disabled=disabled type=type)

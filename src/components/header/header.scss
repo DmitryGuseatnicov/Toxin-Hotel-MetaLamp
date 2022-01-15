@@ -5,11 +5,42 @@
   &__inner{
     display: flex;
     align-items: center;
-    padding: 18px 0px;
+    height: 70px;
   }
 
   &__logo{
     flex-grow: 1;
+  }
+
+
+  &__burger-button{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__burger-line{
+    height: 3px;
+    width: 70%;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    margin: 2px 0px;
+  }
+
+  &__close-button{
+    display: none;
+    border: none;
+    background: #FFF;
+    font-size: 40px;
+    transform: rotate(45deg);
+  }
+
+  &__panel{
+    display: flex;
+    align-items: center;
+
   }
 
   &__login{
@@ -21,6 +52,65 @@
     padding-left: 20px;
     border-left: 1px solid rgba(31, 32, 65, 0.1);
     color: rgba(31, 32, 65, 0.5);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header{
+
+    &__inner{
+      padding: 10px 0px;
+    }
+    &__panel{
+      display: none;
+    }
+
+    &__burger-button{ 
+      display: flex;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      border-radius: 22px;
+      border: none
+    }
+
+    &__panel{
+      width: 300px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      background: #FFF;
+    }
+
+    &__close-button{
+      display: block;
+      margin: 10px 10px 10px auto;
+    }
+
+    &__nav{
+      display: flex;
+      margin: 40px auto;
+      width: fit-content;
+    }
+
+    &__login{
+      flex-wrap: wrap;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    &__login-name{
+      padding: 10px 20px;
+      border-left: none;
+      border-top: 1px solid rgba(31, 32, 65, 0.1);
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+
+  .header__panel-visible{
+    display: block;
   }
 }
 
