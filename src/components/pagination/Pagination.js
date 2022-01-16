@@ -1,6 +1,10 @@
 import $ from 'jquery'
 
+//js селекторы для работы с DOM элементами
+const BUTTONS = '.js-pagination__nav-buttons'
+const DESCRIPTION = '.js-pagination__description'
 
+//temlate для рендера элементов пагинации
 const template = {
   getPrev(){
     return `<span class="pagination__action-prev material-icons">arrow_back</span>`
@@ -29,8 +33,8 @@ class Pagination{
   }
   init(){
     try {
-      this.$nav = this.$pagination.find('.js-pagination__nav-buttons')
-      this.$description = this.$pagination.find('.js-pagination__description')
+      this.$nav = this.$pagination.find(BUTTONS)
+      this.$description = this.$pagination.find(DESCRIPTION)
       this.renderPagination()
       this.showDescription()
 

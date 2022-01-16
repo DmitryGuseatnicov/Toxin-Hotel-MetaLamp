@@ -1,0 +1,32 @@
+@import './../../styles/reset.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/global.scss';
+
+
+.landing{
+  background: url('./img/lending-img.png') 100% 100%;
+
+  &__search-form{
+    padding-top: 70px;
+  }
+
+  &__description{
+    max-width: 300px;
+    margin: 320px 0px 0px auto;
+    padding-bottom: 18px;
+  }
+}
+
+.footer-mobile{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    font-display: none;
+  }
+
+  .footer-mobile{
+    display: block;
+  }
+}

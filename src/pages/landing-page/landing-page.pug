@@ -1,0 +1,32 @@
+include ./../../components/head/head.pug
+include ./../../components/header/header.pug
+include ./../../components/footer/footer.pug
+include ./../../components/footer-mobile/footer-mobile.pug
+include ./../../components/room-search-form/room-search-form.pug
+
++head({title: "Landing page"})
+body
+  +header({items:[
+        {name: "О нас"},
+        {name: "Услуги", childrens:[
+          {name:"Услуги 1"},
+          {name:"Услуги 2"},
+        ]},
+        {name: "Вакансии"},
+        {name: "Новости"},
+        {name: "Соглашения", childrens:[
+          {name:"Соглашения 1"},
+          {name:"Соглашения 2"},
+          {name:"Соглашения 3"},
+        ]},
+      ]})
+  .wrapper
+    main.main
+      .landing
+        .container
+          .landing__search-form
+            +room-search-form()
+          .landing__description Лучшие номера для вашей работы, отдыха и просто вдохновения
+    +footer()
+    +footer-mobile()
+    

@@ -1,5 +1,3 @@
-import 'material-icons'
-
 import '../../components/input'
 import './../../components/dropdown'
 import './../../components/button'

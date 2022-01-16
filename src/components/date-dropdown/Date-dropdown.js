@@ -3,6 +3,32 @@ import AirDatepicker from 'air-datepicker'
 import  options  from '../calendar/calendar'
 
 
+/**
+ * В данном файле описаты классы для date-dropdown
+ * 
+ * Бозовам классом являеться DateDropdown в котором происходит инициализация его инстанса 
+ * по DOM элементу и инициализация календаря по id. В данном классе описана логика открытия и закрытия 
+ * данного элемента и получения выбраной даты из календаря
+ * 
+ * DoubleDateDropdown и FilterDateDropdown являются его потомками и расширяют его методами вывода 
+ * получиными значениям из календаря 
+ *
+ * DateDropdownFactory фабрика которая возращает интстанс определеного Datedropdown взависимотии
+ * от его типа
+ */
+
+// js селекторы для работы с дом элементами
+const ROOT__INPUT = '.js-calendar input'
+const INPUTS = '.js-date-dropdown__input input'
+const INPUT = '.js-date-dropdown__input'
+const ICON = '.js-date-dropdown__input-icon'
+const APPLY = '.js-button-action-apply'
+const CLEAR = '.js-button-action-clear'
+
+//Типы Dropdown
+const DOUBLE = 'double'
+const FILTER = 'filter'
+
 class DateDropdownFactory{
   constructor(nodeElem){
     this.createDateDropdown(nodeElem, nodeElem.dataset.type)
@@ -10,10 +36,10 @@ class DateDropdownFactory{
 
   createDateDropdown(nodeElem, type){
     switch(type){
-      case 'double':
+      case DOUBLE:
         return new DoubleDateDropdown(nodeElem)
 
-      case 'filter':
+      case FILTER:
         return new FilterDateDropdown(nodeElem)
 
       default:
@@ -30,9 +56,9 @@ class DateDropdown{
 
   init(){
     try {
-      this.$rootInput = this.$dateDropdown.find('.js-calendar input')
+      this.$rootInput = this.$dateDropdown.find(ROOT__INPUT)
       this.id = `#${this.$rootInput.attr('id')}`
-      this.$inputs = this.$dateDropdown.find('.js-date-dropdown__input input')
+      this.$inputs = this.$dateDropdown.find(INPUTS)
       this.calendar = new AirDatepicker(this.id, options)
       this.bindEventListener()
 
@@ -47,9 +73,9 @@ class DateDropdown{
   }
 
   clickHandler(e){
-    if(e.target.closest('.date-dropdown__input-icon')) this.toggle()
-    if(e.target.closest('.js-button-action-apply')) this.addValue()
-    if(e.target.closest('.js-button-action-clear')) this.clearValue()
+    if(e.target.closest(ICON)) this.toggle()
+    if(e.target.closest(APPLY)) this.addValue()
+    if(e.target.closest(CLEAR)) this.clearValue()
   }
 
   toggle(){
@@ -107,9 +133,9 @@ class FilterDateDropdown extends DateDropdown{
   }
 
   clickHandler(e){
-    if(e.target.closest('.js-date-dropdown__input')) this.toggle()
-    if(e.target.closest('.js-button-action-apply')) this.addValue()
-    if(e.target.closest('.js-button-action-clear')) this.clearValue()
+    if(e.target.closest(INPUT)) this.toggle()
+    if(e.target.closest(APPLY)) this.addValue()
+    if(e.target.closest(CLEAR)) this.clearValue()
   }
 
   addValue(){

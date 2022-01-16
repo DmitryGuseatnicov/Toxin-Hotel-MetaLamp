@@ -1,5 +1,10 @@
 import $ from 'jquery'
 
+//js классы для работы с DOM элементами
+const BURGER = '.js-header__burger-button'
+const CLOSE = '.js-header__close-button'
+const MENU = '.js-header__panel'
+
 class Header{
   constructor(nodeElem){
     this.$header = $(nodeElem)
@@ -7,9 +12,9 @@ class Header{
   }
 
   init(){
-    this.$burgerButton = this.$header.find('.js-header__burger-button')
-    this.$closeButton = this.$header.find('.js-header__close-button')
-    this.$menu = this.$header.find('.js-header__panel')
+    this.$burgerButton = this.$header.find(BURGER)
+    this.$closeButton = this.$header.find(CLOSE)
+    this.$menu = this.$header.find(MENU)
     this.bindEventListener()
   }
 

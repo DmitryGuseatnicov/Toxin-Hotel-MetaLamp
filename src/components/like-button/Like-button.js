@@ -1,5 +1,9 @@
 import $ from 'jquery'
 
+//классы для работы с DOM элементами
+const ICON = '.js-like-button__icon'
+const COUNT = '.js-like-button__count'
+
 class LikeButton{
   constructor(nodeElem){
     this.$likeButton = $(nodeElem)
@@ -8,8 +12,8 @@ class LikeButton{
 
   init(){
     try {
-      this.$icon = this.$likeButton.find('.js-like-button__icon')
-      this.$count = this.$likeButton.find('.js-like-button__count')
+      this.$icon = this.$likeButton.find(ICON)
+      this.$count = this.$likeButton.find(COUNT)
       this.bindEventListener()
     } catch (error) {
       console.log(error)

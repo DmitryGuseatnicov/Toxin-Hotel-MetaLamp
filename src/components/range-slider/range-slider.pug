@@ -8,7 +8,20 @@ mixin range-slider(options={})
       .range-slider__title 
         +widget-title({text:label})
       .range-slider__values
+
         span.range-slider__value!= `${start}₽ - ${end}₽` 
-        input(class="range-slider__input-start" type="range" name ="start" min=min value = start readonly="true")
-        input(class="range-slider__input-end" type="range" name ="end" max=max value = end readonly="true")
+        input(class="range-slider__input-start js-range-slider__input-start" 
+              type="range" 
+              name ="start" 
+              min=min 
+              value = start 
+              readonly="true")
+
+        input(class="range-slider__input-end js-range-slider__input-end" 
+              type="range" 
+              name ="end" 
+              max=max 
+              value = end 
+              readonly="true")
+              
     .range-slider__slider 
