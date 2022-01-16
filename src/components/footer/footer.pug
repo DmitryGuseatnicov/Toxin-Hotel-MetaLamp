@@ -2,7 +2,9 @@ include ./../logo/logo.pug
 include ./../widget-title/widget-title.pug
 include ./../input/input.pug
 
-mixin footer()
+mixin footer(options={})
+  -
+    
   footer.footer 
     .container 
       .footer__inner 
@@ -62,17 +64,19 @@ mixin footer()
             form(class="footer__subscribe-form" action="#") 
               +input({type: "mail", subscribe: true, placeholder: "Email"})
             
-      .footer__copy-right
-        .footer__copy-right-text Copyright © 2018 Toxin отель. Все права защищены.
-        .footer__social
-          .footer__social-twitter
-            a(href="change-me")
-              img(src=require('./../../components/footer/images/twitter.png'), alt="twitter")
-          .footer__social-facebook
-            a(href="change-me")
-              img(src=require('./../../components/footer/images/facebook.png'), alt="facebook")
-          .footer__social-instagram  
-            a(href="change-me")
-              img(src=require('./../../components/footer/images/instagram.png'), alt="instagram")
+    .footer__copy-right
+      .container
+        .footer__copy-right-inner
+          .footer__copy-right-text Copyright © 2018 Toxin отель. Все права защищены.
+          .footer__social
+            .footer__social-twitter
+              a(href="change-me")
+                img(src=require('./../../components/footer/images/twitter.png'), alt="twitter")
+            .footer__social-facebook
+              a(href="change-me")
+                img(src=require('./../../components/footer/images/facebook.png'), alt="facebook")
+            .footer__social-instagram  
+              a(href="change-me")
+                img(src=require('./../../components/footer/images/instagram.png'), alt="instagram")
 
 

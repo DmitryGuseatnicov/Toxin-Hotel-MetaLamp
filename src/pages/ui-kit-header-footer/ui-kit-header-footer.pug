@@ -1,6 +1,8 @@
 include ./../../components/head/head.pug
 include ./../../components/header/header.pug
 include ./../../components/footer/footer.pug
+include ./../../components/footer-mobile/footer-mobile.pug
+
 +head({title: "Header & Footer"})
 body
   .wrapper
@@ -35,6 +37,13 @@ body
         ]},
       ]})
     main.main
-    +footer()
+    .footer-in-desktop
+      +footer()
+    
+    .footer-in-mobile
+      +footer-mobile()
+
+    
+
   
     
