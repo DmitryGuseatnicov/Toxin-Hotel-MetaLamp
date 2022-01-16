@@ -82,6 +82,7 @@ class GuestsDropdown extends Dropdown{
       this.$clearBtn = this.$dropdown.find('.js-dropdown__button-clear')
       this.$applyBtn = this.$dropdown.find('.js-dropdown__button-apply')
       super.init()
+      this.hiddenButtonSwitcher()
       this.showValue()
 
     } catch (error) {
@@ -93,11 +94,28 @@ class GuestsDropdown extends Dropdown{
     super.clickHandler(e)
     if(e.target.closest('.js-dropdown__button-clear')) this.clearValue()
     if(e.target.closest('.js-dropdown__button-apply')) this.showValue(), this.close()
+    this.hiddenButtonSwitcher()
   }
 
   clearValue(){
     this.calculator.clearValue()
     this.showValue()
+  }
+
+  hiddenButtonSwitcher(){
+    if(this.isZeroTotalCount){
+      this.$clearBtn.addClass('dropdown__button-clear--hidden')
+      return
+    } 
+    this.$clearBtn.removeClass('dropdown__button-clear--hidden')
+  }
+
+  get isZeroTotalCount(){
+    let totalCount = 0
+    this.getValue().forEach(el =>{
+      totalCount += +el.value
+    })
+    return totalCount === 0
   }
 
   showValue(){
