@@ -1,0 +1,52 @@
+include ./../../components/head/head.pug
+include ./../../components/widget-title/widget-title.pug
+
+mixin color(options={})
+  -
+    const { name, className, hex } = options
+    let classes = "ui-kit-color " + className
+  div(class=classes)
+    .ui-kit-color__square
+    .ui-kit-color__description 
+      .ui-kit-color__name
+        +widget-title({text: name, level:"2"})
+      .ui-kit-color__hex= hex
+  
++head({title: "Colors & type"})
+body 
+  header.header 
+    main.main 
+      .container
+        .ui-kit-colors-type
+          .ui-kit-colors
+            +color({name: "Dark Shade 100%", className: "dark-shade-100",hex: "#1F2041"})
+            +color({name: "Dark Shade 75%", className: "dark-shade-75", hex: "#1F2041"})
+            +color({name: "Dark Shade 50%", className: "dark-shade-50", hex: "#1F2041"})
+            +color({name: "Dark Shade 25%", className: "dark-shade-25", hex: "#1F2041"})
+            +color({name: "Dark Shade 5%", className: "dark-shade-5", hex: "#1F2041"})
+            +color({name: "Purple", className: "purple", hex: "#BC9CFF"})
+            +color({name: "Green", className: "green", hex: "#6FCF97"})
+          .ui-kit-typography
+            .ui-kit-typography__container 
+              .ui-kit-typography__type.ui-kit-typography__type--h1 h1
+              .ui-kit-typography__text
+                +widget-title({text: "This one is the sub-section or widget title", level: "1"})
+            .ui-kit-typography__container 
+              .ui-kit-typography__type.ui-kit-typography__type--h2 h2
+              .ui-kit-typography__text
+                +widget-title({text: "Next one is the item title inside widgets", level: "2"})
+            .ui-kit-typography__container 
+              .ui-kit-typography__type.ui-kit-typography__type--h3 h3
+              .ui-kit-typography__text
+                +widget-title({text: "This is a label or CTA text"})
+            .ui-kit-typography__container 
+              .ui-kit-typography__type Body
+              .ui-kit-typography__text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+                
+            
+  footer.footer
+
+
+
+
+  

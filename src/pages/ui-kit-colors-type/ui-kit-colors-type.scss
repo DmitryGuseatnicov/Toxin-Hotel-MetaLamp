@@ -1,0 +1,121 @@
+@import './../../styles/reset.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/global.scss';
+@import './../../styles/vars.scss';
+
+body{
+  padding: 100px 0px;
+}
+.ui-kit-colors-type{
+  display: flex;
+  justify-content: space-between;
+}
+.ui-kit-color{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+
+  &__square{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+
+  &__description{
+    margin-left: 40px;
+  }
+
+  &__hex{
+    margin-top: 3px;
+    font-size: 19px;
+    line-height: 28px;
+  }
+  
+}
+
+.ui-kit-color.dark-shade-100{
+  .ui-kit-color__square{
+    background-color: $darkShade-100;
+  }
+}
+
+.ui-kit-color.dark-shade-75{
+  .ui-kit-color__square{
+    background-color: $darkShade-75;
+  }
+}
+
+.ui-kit-color.dark-shade-50{
+  .ui-kit-color__square{
+    background-color: $darkShade-50;
+  }
+}
+
+.ui-kit-color.dark-shade-25{
+  .ui-kit-color__square{
+    background-color: $darkShade-25;
+  }
+}
+
+.ui-kit-color.dark-shade-5{
+  .ui-kit-color__square{
+    background-color: $darkShade-5;
+  }
+}
+
+.ui-kit-color.purple{
+  .ui-kit-color__square{
+    background-color: $purple;
+  }
+}
+
+.ui-kit-color.green{
+  .ui-kit-color__square{
+    background-color: $green;
+  }
+}
+
+.ui-kit-typography{
+  max-width: 440px;
+  margin-right: 25px;
+  &__container{
+    display: flex;
+    margin-top: 51px;
+  }
+  &__container:first-child{
+    margin-top: 20px;
+  }
+
+  &__container:last-child{
+    margin-top: 48px;
+    max-width: 380px;
+  }
+
+ 
+
+  &__type{
+    min-width: 37px;
+    text-align: right;
+    color: rgba(31, 32, 65, 0.25);
+    text-transform: capitalize;
+
+    &--h1{
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &--h2{
+      font-size: 19px;
+      line-height: 23px;
+    }
+
+    &--h3{
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &__text{
+    margin-left: 30px;
+  }
+}
