@@ -3,12 +3,9 @@
 
 .booking-form{
   max-width: 380px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
   padding: 47px 30px 30px 30px;
   background: #FFFFFF;
-
+  @extend %card-border-shadow;
   &__header{
     display: flex;
   }

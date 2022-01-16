@@ -1,4 +1,6 @@
 
+@import './../../styles/vars.scss';
+
 .comment{
   &__header{
     display: flex;
@@ -7,7 +9,7 @@
   &__img{
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
-    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+    filter: drop-shadow(0px 10px 20px $darkShade-1);
     border-radius: 32px;
     max-width: 48px;
     height: 48px;
@@ -25,7 +27,7 @@
 
   &__person-name{
     font-weight: bold;
-    color: rgba(31, 32, 65, 0.75);
+    color: $darkShade-75;
   }
 
   &__content{

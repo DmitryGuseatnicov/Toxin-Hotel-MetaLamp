@@ -1,3 +1,5 @@
+@import './../../styles/vars.scss'; 
+
 .nav{
   margin-right: 20px;
   &__list{
@@ -12,7 +14,7 @@
   }
 
   &__item-link:hover{
-    color: rgba(31, 32, 65, 100);
+    color: $darkShade-100;
   }
 
   &__item-childrens{
@@ -23,11 +25,11 @@
     padding: 0px 20px 20px 20px;
     background: #FFF;
     white-space: nowrap;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    box-shadow: 0px 10px 20px $darkShade-50;
   }
 
   &__item-children:hover{
-    color: rgba(31, 32, 65, 100);
+    color: $darkShade-100;
   }
 
   &__item-name{
@@ -50,7 +52,7 @@
 .nav__item--active{
   .nav__item-link{
     font-weight: bold;
-    color: rgba(31, 32, 65, 0.75);
+    color: $darkShade-75;
   }
 }
 
