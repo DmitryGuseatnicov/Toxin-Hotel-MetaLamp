@@ -45,7 +45,7 @@
 
   &-body--day-name,
   &-cell{
-    width: 40px;
+    width: 100%;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -173,8 +173,7 @@
 }
 
 .calendar{
-
-  width: 320px;
+  max-width: 320px;
   &___input{
     position: absolute;
     z-index: -1;
@@ -185,5 +184,14 @@
     position: absolute;
     top: 0;
     z-index: -1;
+  }
+}
+
+@media screen and(max-width: 420px) {
+  .air-datepicker{
+    &-body--day-name,
+    &-cell{
+    height: 30px;
+    }
   }
 }

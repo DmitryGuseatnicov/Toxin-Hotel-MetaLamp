@@ -8,6 +8,8 @@
   
   &__search-form{
     padding-top: 70px;
+    position: relative;
+    z-index: 101;
   }
 
   &__description{
@@ -22,7 +24,17 @@
   display: none;
 }
 
+
+
 @media screen and (max-width: 768px) {
+
+ .landing{
+    &__description{
+      margin: 150px 0px 0px auto;
+      
+    }
+  }
+
   .footer {
     display: none;
   }

@@ -80,8 +80,10 @@
       top: 0;
       right: 0;
       bottom: 0;
-      z-index: 101;
+      z-index: 200;
       height: 100vh;
+      padding-bottom: 20px;
+      overflow: scroll;
       background: #FFF;
       box-shadow: -17px 0px 12px 3px rgba(0, 0, 0, 0.23);
     }

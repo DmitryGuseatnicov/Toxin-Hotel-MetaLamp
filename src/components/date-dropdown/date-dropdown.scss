@@ -40,7 +40,6 @@
     }
   }
 
-  
 }
 .date-dropdown[data-type=filter]{
   .input__text-field{
@@ -53,3 +52,25 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .date-dropdown{
+    &__header{
+      flex-wrap: wrap;
+    }
+
+    &__calendar{
+
+      .calendar{
+        position: fixed;
+        top: 80px;
+        left: 30px;
+        right: auto;
+        bottom: 0;
+        width: 80%;
+        margin-right: 15px;
+        overflow: scroll;
+      }
+      
+    }
+  }
+}
