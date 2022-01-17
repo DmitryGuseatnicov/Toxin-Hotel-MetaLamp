@@ -5,17 +5,22 @@ mixin nav-menu(options={})
     ul.nav__list 
       each item in items
         -
-          const { name, active = false, childrens = [] } = item
+          const { link = [], active = false, childrens = [] } = item
           let classes = 'nav__item js-nav__item'
           if (active === true) classes += ' nav__item--active'
           if (childrens.length > 0) classes += ' nav__item--hav-childrens'
+
         if (childrens.length > 0)
           li(class=classes)
-            .nav__item-link= name 
+            .nav__item-link
+              a(href=link.href)= link.name
               span.material-icons
+              
             .nav__item-childrens
               each children in childrens
-                .nav__item-children= children.name
+                .nav__item-children
+                  a(href= children.href)= children.name 
         else
           li(class=classes)
-            .nav__item-link= item.name
+            .nav__item-link
+              a(href=link.href)=link.name  

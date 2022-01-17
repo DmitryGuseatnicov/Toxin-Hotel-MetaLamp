@@ -20,6 +20,7 @@ const options = {
   navTitles: template.titles,
   range:true,
   inline: true,
+  mobile: true,
   buttons: [ template.buttonClearValue, template.buttonAddValue ] 
 }
 

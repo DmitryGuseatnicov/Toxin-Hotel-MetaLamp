@@ -3,6 +3,9 @@ import noUiSlider from 'nouislider'
 import 'nouislider/dist/nouislider.css'
 
 
+//js селекторы для работы с DOM элементами
+
+
 class rangeSlider{
   constructor(nodeElem){
     this.$rangeSlider = $(nodeElem)

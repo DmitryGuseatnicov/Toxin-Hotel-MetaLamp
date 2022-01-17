@@ -2,6 +2,10 @@
 
 .nav{
   margin-right: 20px;
+  & a{
+    text-decoration: none;
+  }
+
   &__list{
     display: flex;
     gap: 20px;
@@ -35,6 +39,7 @@
   &__item-name{
     display: flex;
   }
+
 }
 
 .nav__item--hav-childrens{

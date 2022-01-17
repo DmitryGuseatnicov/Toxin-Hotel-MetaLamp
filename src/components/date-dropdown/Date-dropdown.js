@@ -3,21 +3,7 @@ import AirDatepicker from 'air-datepicker'
 import  options  from '../calendar/calendar'
 
 
-/**
- * В данном файле описаты классы для date-dropdown
- * 
- * Бозовам классом являеться DateDropdown в котором происходит инициализация его инстанса 
- * по DOM элементу и инициализация календаря по id. В данном классе описана логика открытия и закрытия 
- * данного элемента и получения выбраной даты из календаря
- * 
- * DoubleDateDropdown и FilterDateDropdown являются его потомками и расширяют его методами вывода 
- * получиными значениям из календаря 
- *
- * DateDropdownFactory фабрика которая возращает интстанс определеного Datedropdown взависимотии
- * от его типа
- */
-
-// js селекторы для работы с дом элементами
+// js селекторы для работы с DOM элементами
 const ROOT__INPUT = '.js-calendar input'
 const INPUTS = '.js-date-dropdown__input input'
 const INPUT = '.js-date-dropdown__input'

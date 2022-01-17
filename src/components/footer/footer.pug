@@ -4,7 +4,7 @@ include ./../input/input.pug
 
 mixin footer(options={})
   -
-    
+    const {items = []} = options
   footer.footer 
     .container 
       .footer__inner 
@@ -14,47 +14,16 @@ mixin footer(options={})
               +logo()
             .footer__description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
-        .footer__inner-item
-          .footer__widget
-            .footer__widget-title 
-              +widget-title({text: "навигация"})
-            ul.footer__widget-list
-              li.footer__widget-link
-                a(href="change-me") О нас
-              li.footer__widget-link
-                a(href="change-me") Новости
-              li.footer__widget-link
-                a(href="change-me") Служба поддержки
-              li.footer__widget-link
-                a(href="change-me") Услуги
-
-        .footer__inner-item
-          .footer__widget
-            .footer__widget-title 
-              +widget-title({text: "о нас"})
-            ul.footer__widget-list
-              li.footer__widget-link
-                a(href="change-me") О сервисе
-              li.footer__widget-link
-                a(href="change-me") Наша команда
-              li.footer__widget-link
-                a(href="change-me") Вакансии
-              li.footer__widget-link
-                a(href="change-me") Инвесторы
-
-
-        .footer__inner-item
-          .footer__widget
-            .footer__widget-title 
-              +widget-title({text: "Служба поддержки"})
-            ul.footer__widget-list
-              li.footer__widget-link
-                a(href="change-me") Соглашения
-              li.footer__widget-link
-                a(href="change-me") Сообщества
-              li.footer__widget-link
-                a(href="change-me") Связь с нами
-              
+        each item in items
+          - const {title, links = [] } = item
+          .footer__inner-item
+            .footer__widget
+              .footer__widget-title 
+                +widget-title({text: title})
+              ul.footer__widget-list
+                each link in links 
+                  li.footer__widget-link
+                    a(href=link.href)= link.name
 
         .footer__inner-item
           .footer__special

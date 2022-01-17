@@ -4,8 +4,8 @@
 
 
 .landing{
-  background: url('./img/lending-img.png') 100% 100%;
-
+  background: url('./img/lending-img.png') center bottom/cover no-repeat;
+  
   &__search-form{
     padding-top: 70px;
   }
@@ -14,6 +14,7 @@
     max-width: 300px;
     margin: 320px 0px 0px auto;
     padding-bottom: 18px;
+    text-align: right;
   }
 }
 
@@ -23,7 +24,7 @@
 
 @media screen and (max-width: 768px) {
   .footer {
-    font-display: none;
+    display: none;
   }
 
   .footer-mobile{
