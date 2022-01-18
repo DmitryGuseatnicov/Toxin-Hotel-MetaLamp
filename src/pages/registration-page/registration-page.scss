@@ -1,0 +1,14 @@
+@import './../../styles/reset.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/global.scss';
+
+.main{
+  background: url('./img/registration-page.png') center bottom no-repeat;
+}
+
+.registration-form{
+  max-width: 380px;
+  width: 100%;
+  padding: 10px;
+  margin: 19px auto;
+}

@@ -66,13 +66,13 @@ body
                 +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.",mod:"rich"})
 
             .sidebar__comforts-dropdown
-              +dropdown({label: "Dropdown", placeholder: "Выберете удобства", actionButtons: false, type:"comforts",items:[
+              +dropdown({label: "удобства номера", placeholder: "Выберете удобства", actionButtons: false, type:"comforts",items:[
                     {name: "спальни", value: "2"},
                     {name: "кровати", value: "2"},
                     {name: "ванные комнаты", value: "1"}
                   ]})
             .sidebar__checkbox-list
-              +checkbox-list({title: "expandable checkbox list", items:[
+              +checkbox-list({title: "дополнительные удобства", items:[
                   {label: "Завтрак"},
                   {label: "Письменный стол", checked: true},
                   {label: "Стул для кормления", checked: true},
