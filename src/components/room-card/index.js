@@ -10,5 +10,7 @@ $('.room-card__images').slick({
   prevArrow: `<button type="button" class="slick-prev">
                 <span class="material-icons">expand_more</span>
               </button>`,
-  dots: true
+  dots: true,
 })
+
+  

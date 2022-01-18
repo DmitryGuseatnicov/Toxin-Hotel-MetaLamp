@@ -53,6 +53,7 @@
     "material-icons": "^1.10.4",
     "nouislider": "^15.5.0",
     "paginationjs": "^2.1.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^7.4.1"
   }
 }

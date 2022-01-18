@@ -84,3 +84,20 @@
 .footer__inner-item:nth-child(5){
   margin-left: 51px;
 }
+
+
+.footer-mobile{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .footer{
+    display: none;
+  }
+ 
+  .footer-mobile{
+   display: block ;
+  }
+
+ }

@@ -1,6 +1,7 @@
 include ./../logo/logo.pug
 include ./../widget-title/widget-title.pug
 include ./../input/input.pug
+include ./../footer-mobile/footer-mobile.pug
 
 mixin footer(options={})
   -
@@ -48,4 +49,5 @@ mixin footer(options={})
               a(href="change-me")
                 img(src=require('./../../components/footer/images/instagram.png'), alt="instagram")
 
+  +footer-mobile()
 
