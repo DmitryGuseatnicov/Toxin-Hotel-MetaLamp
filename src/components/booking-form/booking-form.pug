@@ -5,7 +5,7 @@ include ./../button/button.pug
 mixin booking-form(options={})
   -
     const { number, firsDate, secondDate , adult, child, baby,
-            price="0", days="0" } = options
+            price="0", days="0", root="id" } = options
 
   form(class="booking-form" action="")
     .booking-form__header 
@@ -15,7 +15,7 @@ mixin booking-form(options={})
       .booking-form__price-for-day= price
         span в сутки
     .booking-form__date-dropdown
-      +date-dropdown({label: "прибытие", secondLabel: "выезд", mod:"double", value: firsDate, secondValue: secondDate})
+      +date-dropdown({label: "прибытие", secondLabel: "выезд", mod:"double", value: firsDate, secondValue: secondDate, root:root})
     .booking-form__guest-dropdown
       +dropdown({label: "гости", placeholder: "Сколько гостей", items:[
         {name: "взрослые", value: adult},

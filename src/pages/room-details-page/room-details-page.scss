@@ -1,0 +1,68 @@
+@import './../../styles/reset.scss';
+@import './../../styles/fonts.scss';
+@import './../../styles/global.scss';
+
+.room-gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 226);
+
+  &__img--big{
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 3;
+
+  }
+  
+  &__img{
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.room-content{
+  margin-top: 70px;
+}
+
+.room-content__container{
+ 
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+.room-description{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.room-benefits__items{
+  margin-top: 20px;
+}
+
+.room-benefits__item{
+  margin-top: 20px;
+}
+.room-reviews{
+  margin-top: 13px;
+}
+.room-reviews-item{
+  margin-top: 22px;
+}
+
+.room-booking-form{
+    min-width: 380px;
+}
+
+.room-grade__title{
+  margin-left: 30px;
+}
+
+.room-grade__chart{
+  margin-right: 29px;
+  margin-top: 20px;
+}

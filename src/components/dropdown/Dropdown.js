@@ -169,7 +169,6 @@ class ComfortsDropdown extends Dropdown{
   showValue(){
     let value = ''
     this.getValue().forEach(el =>{
-      console.log(el.name)
       value += ` ${el.value} ${textHelper(el.name, el.value)},`
     })
     this.$input.val(value.slice(1, -1))

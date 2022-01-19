@@ -1,0 +1,119 @@
+include ./../../components/head/head.pug
+include ./../../components/header/header.pug
+include ./../../components/footer/footer.pug
+include ./../../components/benefits/benefits.pug
+include ./../../components/comment/comment.pug
+include ./../../components/booking-form/booking-form.pug
+include ./../../components/bullet-list/bullet-list.pug
+include ./../../components/widget-title/widget-title.pug
+include ./../../components/chart/chart.pug
+
++head({title: "Room details"})
+body
+  +header({items:[
+    {link:{ name: "О нас" }, active: true},
+    {link:{ name: "Услуги" }, childrens:[
+      {name:"Услуги 1", href:"/change-me"},
+      {name:"Услуги 2", href:"/change-me"},
+    ]},
+    {link: {name: "Вакансии", href: "/change-me"}},
+    {link: {name: "Новости", href: "/change-me"}},
+    {link:{ name: "Соглашения"}, childrens:[
+      {name:"Соглашения 1", href: "/change-me"},
+      {name:"Соглашения 2", href: "/change-me"},
+      {name:"Соглашения 3", href: "/change-me"},
+    ]},
+  ]})
+  .wrapper
+    main.main
+      .room-gallery 
+        .room-gallery__img.room-gallery__img--big
+          img(src=require('./img/room-img-2.png'), alt="room-photo")
+        .room-gallery__img 
+          img(src=require('./img/room-img.png'), alt="room-photo")
+        .room-gallery__img 
+          img(src=require('./img/room-img-3.png'), alt="room-photo")
+      .container
+        .room-content
+          .room-content__container
+            .room-description
+              .room-benefits 
+                .room-benefits__title 
+                  +widget-title({text: "Сведения о номере", level:"2"})
+                .room-benefits__items
+                  .room-benefits__item
+                    +benefits({title: "комфорт", 
+                              description: "Шумопоглощающие стены", 
+                              src:require("./img/insert_emoticon.png"),
+                              underlined: true
+                              })
+                  .room-benefits__item
+                    +benefits({title: "Удобство", 
+                              description: "Окно в каждой из спален", 
+                              src:require("./img/location_city.png"),
+                              underlined: true
+                              })   
+                  .room-benefits__item
+                    +benefits({title: "Уют", 
+                              description: "Номер оснащён камином", 
+                              src:require("./img/whatshot.png"),
+                              underlined: true
+                              })
+
+              .room-grade
+                .room-grade__title 
+                  +widget-title({text: "Впечатления от номера", level: "2"})
+                .room-grade__chart 
+                  +chart()
+
+              .room-reviews
+                .room-reviews__title
+                  +widget-title({text: "Отзывы посетителей номера", level: "2"}) 
+                .room-reviews-items
+                  .room-reviews-item
+                    +comment({
+                      name: "Мурад Сарафанов",
+                      time: " 5 дней назад",
+                      comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                      count: "12",
+                      liked: true,
+                      src : require("./img/avatar-1.png")
+                    })
+                  .room-reviews-item
+                    +comment({
+                      name: "Патрисия Стёклышкова",
+                      time: "Неделю назад",
+                      comment: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент",
+                      count: "2",
+                      src : require("./img/avatar-2.png")
+                    })
+              .room-rules 
+                +bullet-list({title: "правила", items:[
+                  {text: "Нельзя с питомцами"},
+                  {text: "Без вечеринок и мероприятий"},
+                  {text: "Время прибытия — после 13:00, а выезд до 12:00"},
+                ]})
+
+            .room-booking-form 
+              +booking-form()
+    +footer({items: [
+      {title: "навигация", links: [
+        {name: "О нас", href: "/change-me"},
+        {name: "Новости", href: "/change-me"},
+        {name: "Служба поддержки", href: "/change-me"},
+        {name: "Услуги", href: "/change-me"},
+      ]},
+      {title: "о нас", links: [
+        {name: "О сервисе", href: "/change-me"},
+        {name: "Новости", href: "/change-me"},
+        {name: "Наша команда", href: "/change-me"},
+        {name: "Вакансии", href: "/change-me"},
+      ]},
+      {title: "Служба поддержки", links: [
+        {name: "Соглашения", href: "/change-me"},
+        {name: "Сообщества", href: "/change-me"},
+        {name: "Связь с нами", href: "/change-me"},
+      ]},
+    ]})
+    
+    
