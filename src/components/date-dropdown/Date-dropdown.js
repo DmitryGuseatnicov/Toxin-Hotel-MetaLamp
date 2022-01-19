@@ -11,7 +11,7 @@ const ICON = '.js-date-dropdown__input-icon'
 const APPLY = '.js-button-action-apply'
 const CLEAR = '.js-button-action-clear'
 
-//Типы Dropdown
+//Типы DateDropdown
 const DOUBLE = 'double'
 const FILTER = 'filter'
 
@@ -120,7 +120,7 @@ class FilterDateDropdown extends DateDropdown{
 
   clickHandler(e){
     if(e.target.closest(INPUT)) this.toggle()
-    if(e.target.closest(APPLY)) this.addValue()
+    if(e.target.closest(APPLY)) this.addValue(), this.close()
     if(e.target.closest(CLEAR)) this.clearValue()
   }
 
@@ -145,8 +145,6 @@ class FilterDateDropdown extends DateDropdown{
         .replace('.', '') 
       }
     this.$inputs.val(`${firstDate} ${secondDate ? `- ${secondDate}` : ''}`)
-
-    this.close()
   }
 
   clearValue(){

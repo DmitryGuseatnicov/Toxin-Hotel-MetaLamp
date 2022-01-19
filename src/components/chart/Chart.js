@@ -1,9 +1,11 @@
 import Chart from 'chart.js/auto';
 
 
-const createChart = (rating = [], id='') =>{  
+const createChart = (rating = []) =>{  
+
   let totalVotes = 0
   rating.forEach(el => totalVotes +=el)
+
   const counter = {
     id: 'counter',
     beforeDraw(chart){
@@ -80,16 +82,10 @@ const createChart = (rating = [], id='') =>{
             },
           },
         },
-
-
       },
       plugins:[counter]
   });
 }
-
-window.addEventListener('resize', (e)=>{
-  console.log(window.width)
-})
 
 export default createChart
 

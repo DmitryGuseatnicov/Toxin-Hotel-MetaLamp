@@ -6,7 +6,7 @@ include ./../../components/room-search-form/room-search-form.pug
 +head({title: "Landing page"})
 body
   +header({items:[
-    {link:{ name: "О нас" }, active: true},
+    {link:{ name: "О нас", href: "/change-me" }},
     {link:{ name: "Услуги" }, childrens:[
       {name:"Услуги 1", href:"/change-me"},
       {name:"Услуги 2", href:"/change-me"},
@@ -35,9 +35,9 @@ body
       ]},
       {title: "о нас", links: [
         {name: "О сервисе", href: "/change-me"},
-        {name: "Новости", href: "/change-me"},
         {name: "Наша команда", href: "/change-me"},
         {name: "Вакансии", href: "/change-me"},
+        {name: "Инвесторы", href: "/change-me"},
       ]},
       {title: "Служба поддержки", links: [
         {name: "Соглашения", href: "/change-me"},

@@ -13,7 +13,7 @@ include ./../../components/pagination/pagination.pug
 +head({title: "Search room"})
 body
   +header({items:[
-    {link:{ name: "О нас" }, active: true},
+    {link:{ name: "О нас", href: "/change-me" }},
     {link:{ name: "Услуги" }, childrens:[
       {name:"Услуги 1", href:"/change-me"},
       {name:"Услуги 2", href:"/change-me"},
@@ -43,9 +43,9 @@ body
                   {name: "младенцы", value: "1"}
                 ]})
 
-            .sidebar__price-range-slider
+            .sidebar__range-slider
               +range-slider({label: "диапазон цены", min:"0", max:"15500", start:"5000", end:"10000"})
-
+              .sidebar__range-slider-description Стоимость за сутки пребывания в номере
             .sidebar__rules
               +widget-title({text: "правила дома"})
               .sidebar__rules-item
@@ -87,26 +87,34 @@ body
               .search-room__items 
                 .search-room__item
                   +room-card({number: "888", price:"9 990", reviews:"145", rate:"5", type:"люкс", links:[
-                    src=require('./img/image.png'),
-                    src=require('./img/image.png'),
-                    src=require('./img/image.png'),
-                    src=require('./img/image.png'),
+                    src=require('./img/image-1.png'),
+                    src=require('./img/image-1.png'),
+                    src=require('./img/image-1.png'),
+                    src=require('./img/image-1.png'),
                   ]})
 
                 .search-room__item
-                  +room-card({number: "980", price:"8 500", reviews:"35", rate:"3", links:[
-                    src=require('./img/image-1.png'),
-                    src=require('./img/image-1.png'),
-                    src=require('./img/image-1.png'),
-                    src=require('./img/image-1.png'),
+                  +room-card({number: "840", price:"9 900", reviews:"65", rate:"4" ,links:[
+                    src=require('./img/image.png'),
+                    src=require('./img/image.png'),
+                    src=require('./img/image.png'),
+                    src=require('./img/image.png'),
                 ]})
                 .search-room__item
-                  +room-card({number: "856", price:"7 300", reviews:"19", rate:"5", links:[
+                  +room-card({number: "980", price:"8 500", reviews:"35", rate:"3", type:"люкс", links:[
                     src=require('./img/image-2.png'),
                     src=require('./img/image-2.png'),
                     src=require('./img/image-2.png'),
                     src=require('./img/image-2.png'),
                   ]})
+
+                .search-room__item
+                  +room-card({number: "856", price:"7 300", reviews:"19", rate:"5", links:[
+                    src=require('./img/image-5.png'),
+                    src=require('./img/image-5.png'),
+                    src=require('./img/image-5.png'),
+                    src=require('./img/image-5.png'),
+                ]})
 
                 .search-room__item
                   +room-card({number: "740", price:"6 000", reviews:"44", rate:"4", links:[
@@ -114,30 +122,30 @@ body
                     src=require('./img/image-3.png'),
                     src=require('./img/image-3.png'),
                     src=require('./img/image-3.png'),
-                ]})
-
-                .search-room__item
-                  +room-card({number: "982", price:"5 800", reviews:"56", rate:"3", links:[
-                    src=require('./img/image-4.png'),
-                    src=require('./img/image-4.png'),
-                    src=require('./img/image-4.png'),
-                    src=require('./img/image-4.png'),
                   ]})
 
                 .search-room__item
-                  +room-card({number: "768", price:"5 500", reviews:"45", rate:"5", links:[
-                    src=require('./img/image-5.png'),
-                    src=require('./img/image-5.png'),
-                    src=require('./img/image-5.png'),
-                    src=require('./img/image-5.png'),
+                  +room-card({number: "982", price:"5 800", reviews:"65", rate:"3", links:[
+                    src=require('./img/image-4.png'),
+                    src=require('./img/image-4.png'),
+                    src=require('./img/image-4.png'),
+                    src=require('./img/image-4.png'),
                 ]})
+                .search-room__item
+                  +room-card({number: "678", price:"5 500", reviews:"45", rate:"5", links:[
+                    src=require('./img/image-8.png'),
+                    src=require('./img/image-8.png'),
+                    src=require('./img/image-8.png'),
+                    src=require('./img/image-8.png'),
+                  ]})
+
                 .search-room__item
                   +room-card({number: "450", price:"5 300", reviews:"39", rate:"4", links:[
                     src=require('./img/image-6.png'),
                     src=require('./img/image-6.png'),
                     src=require('./img/image-6.png'),
                     src=require('./img/image-6.png'),
-                  ]})
+                ]})
 
                 .search-room__item
                   +room-card({number: "350", price:"5 000", reviews:"77", rate:"3", links:[
@@ -145,33 +153,25 @@ body
                     src=require('./img/image-7.png'),
                     src=require('./img/image-7.png'),
                     src=require('./img/image-7.png'),
-                ]})
-
-                .search-room__item
-                  +room-card({number: "666", price:"5 000", reviews:"25", rate:"3", links:[
-                    src=require('./img/image-8.png'),
-                    src=require('./img/image-8.png'),
-                    src=require('./img/image-8.png'),
-                    src=require('./img/image-8.png'),
                   ]})
 
+                .search-room__item
+                  +room-card({number: "666", price:"5 000", reviews:"25", rate:"5", links:[
+                    src=require('./img/image-10.png'),
+                    src=require('./img/image-10.png'),
+                    src=require('./img/image-10.png'),
+                    src=require('./img/image-10.png'),
+                ]})
                 .search-room__item
                   +room-card({number: "444", price:"5 000", reviews:"15", rate:"3", links:[
                     src=require('./img/image-9.png'),
                     src=require('./img/image-9.png'),
                     src=require('./img/image-9.png'),
                     src=require('./img/image-9.png'),
-                ]})
-                .search-room__item
-                  +room-card({number: "352", price:"5 000", reviews:"55", rate:"3", links:[
-                    src=require('./img/image-10.png'),
-                    src=require('./img/image-10.png'),
-                    src=require('./img/image-10.png'),
-                    src=require('./img/image-10.png'),
                   ]})
 
                 .search-room__item
-                  +room-card({number: "840", price:"9 900", reviews:"65", rate:"3", links:[
+                  +room-card({number: "352", price:"5 000", reviews:"55", rate:"3", links:[
                     src=require('./img/image-11.png'),
                     src=require('./img/image-11.png'),
                     src=require('./img/image-11.png'),
