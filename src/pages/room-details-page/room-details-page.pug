@@ -42,7 +42,7 @@ body
                   +widget-title({text: "Сведения о номере", level:"2"})
                 .room-benefits__items
                   .room-benefits__item
-                    +benefits({title: "комфорт", 
+                    +benefits({title: "Комфорт", 
                               description: "Шумопоглощающие стены", 
                               src:require("./img/insert_emoticon.png"),
                               underlined: true
@@ -88,14 +88,26 @@ body
                       src : require("./img/avatar-2.png")
                     })
               .room-rules 
-                +bullet-list({title: "правила", items:[
+                +bullet-list({title:{text:"Правила", level: "2"}, listStyle: true ,items:[
                   {text: "Нельзя с питомцами"},
                   {text: "Без вечеринок и мероприятий"},
                   {text: "Время прибытия — после 13:00, а выезд до 12:00"},
                 ]})
+              .room-cancel
+                .room-cancel__title 
+                  +widget-title({text:"Отмена", level: "2"})
+                .room-cancel__description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
             .room-booking-form 
-              +booking-form()
+              +booking-form({number: "888", 
+                            firstDate:"19.08.2019", 
+                            secondDate:"23.08.2019",
+                            adult: "2", 
+                            child: "1", 
+                            baby: "0", 
+                            price: "9 990",
+                            days: 4
+                            })
     +footer({items: [
       {title: "навигация", links: [
         {name: "О нас", href: "/change-me"},

@@ -87,6 +87,9 @@ const createChart = (rating = [], id='') =>{
   });
 }
 
+window.addEventListener('resize', (e)=>{
+  console.log(window.width)
+})
 
 export default createChart
 

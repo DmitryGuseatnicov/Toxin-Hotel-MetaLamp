@@ -3,7 +3,7 @@
 
 .booking-form{
   max-width: 380px;
-  padding: 47px 30px 30px 30px;
+  padding: 45px 30px 30px 30px;
   background: #FFFFFF;
   @extend %card-border-shadow;
   &__header{
@@ -75,6 +75,7 @@
   &__price-list-value{
     flex-grow: 1;
     text-align: end;
+    min-width: 40px;
     line-height: 18px;
   }
 
@@ -109,11 +110,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: 4px;
-      border: 1px solid $darkShade-25;
+      margin: 0px 4px;
+      min-width: 20px;
       width: 20px;
       height: 20px;
       border-radius: 50%;
+      border: 1px solid $darkShade-25;
       font-weight: bold;
       font-size: 12px;
       color: $darkShade-25;

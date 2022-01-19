@@ -23,3 +23,12 @@
     background: $darkShade-25;
   }
 }
+
+.bullet-list--listStyle{
+  .bullet-list__title {
+    padding-left: 21px ;
+  }
+  .bullet-list__items{
+    margin-top: 20px;
+  }
+}

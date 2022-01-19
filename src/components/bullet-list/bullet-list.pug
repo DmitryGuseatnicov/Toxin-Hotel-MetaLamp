@@ -1,11 +1,13 @@
 include ./../widget-title/widget-title.pug
 mixin bullet-list(options={})
   -
-    const { title, items=[] } = options
+    const { title: { text = "", level="3" }, items=[], listStyle=false } = options
+    let classes = 'bullet-list'
+    if(listStyle === true) classes += ' bullet-list--listStyle'
 
-  .bullet-list
+  div(class = classes)
     .bullet-list__title 
-      +widget-title({text: title})
+      +widget-title({text:text, level:level})
     ul.bullet-list__items
       each item in items
         li.bullet-list__item= item.text
