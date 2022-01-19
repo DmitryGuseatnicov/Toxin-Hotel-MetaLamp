@@ -173,7 +173,7 @@
 }
 
 .calendar{
-  max-width: 320px;
+  width: 320px;
   &___input{
     position: absolute;
     z-index: -1;
@@ -188,6 +188,9 @@
 }
 
 @media screen and(max-width: 420px) {
+  .calendar{
+    width: 100%;
+  }
   .air-datepicker{
     &-body--day-name,
     &-cell{
