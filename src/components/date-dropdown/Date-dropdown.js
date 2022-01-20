@@ -123,16 +123,18 @@ class FilterDateDropdown extends DateDropdown{
     if(e.target.closest(APPLY)) this.addValue(), this.close()
     if(e.target.closest(CLEAR)) this.clearValue()
   }
-
+  
   addValue(){
-    const values = this.getValue().split(',')
+    const values = this.getValue().replace(' ', '').split(',')
     let firstDate = ''
     let secondDate = ''
+  
+   
     if(values[0]){
       firstDate = new Date(values[0]
         .split('.')
         .reverse()
-        .join('.'))
+        .join('-'))
         .toLocaleString('ru-RU', { day: 'numeric', month: 'short'})
         .replace('.', '') 
     } 
@@ -140,7 +142,7 @@ class FilterDateDropdown extends DateDropdown{
       secondDate = new Date(values[1]
         .split('.')
         .reverse()
-        .join('.'))
+        .join('-'))
         .toLocaleString('ru-RU', { day: 'numeric', month: 'short'}) 
         .replace('.', '') 
       }
