@@ -17,8 +17,10 @@
 
 .slick-arrow{
   position: absolute;
-  top: 50%;
-  bottom: 50%;
+  top: 0;
+  bottom: 0;
+  width: 42px;
+  height: calc(100% - 6px);
   z-index: 10;
   border: none;
   background: transparent;
@@ -30,13 +32,21 @@
 }
 
 .slick-arrow.slick-prev{
-  left: 12px;
-  transform: rotate(90deg);
+  left: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0) 100%);
+  span{
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
 }
 
 .slick-arrow.slick-next{
-  right: 12px;
-  transform: rotate(-90deg);
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  span{
+    transform: rotate(-90deg);
+    cursor: pointer;
+  }
 }
 
 .slick-dots{
@@ -47,6 +57,7 @@
   bottom: 9px;
   right: 15px;
   list-style: none;
+  cursor: pointer;
 }
 
 .slick-dots li.slick-active{
