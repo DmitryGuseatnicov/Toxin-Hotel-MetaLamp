@@ -61,7 +61,6 @@ module.exports = {
                                     [   
                                         "autoprefixer",
                                         { 'overrideBrowserslist': ['> 1%', 'last 2 versions']},
-                                        "flex-gap-polyfill",
                                         "postcss-preset-env",
                                     ],
                                 ],

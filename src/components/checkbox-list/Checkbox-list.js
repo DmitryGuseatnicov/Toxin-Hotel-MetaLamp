@@ -12,7 +12,7 @@ class CheckboxList{
       this.$toggleButton = this.$checkboxList.find('.checkbox-list__icon')
       this.bindEventListener()
     } catch (error) {
-      
+      console.log(error)
     }
   }
 

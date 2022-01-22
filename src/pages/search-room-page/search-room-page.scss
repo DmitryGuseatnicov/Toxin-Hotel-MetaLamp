@@ -1,10 +1,11 @@
 @import './../../styles/reset.scss';
 @import './../../styles/fonts.scss';
 @import './../../styles/global.scss';
+@import './../../styles/vars.scss';
 
 .main{
   padding-bottom: 70px;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom: 1px solid $darkShade-25;
 
 }
 
@@ -22,60 +23,67 @@
   & > div {
     width: 266px;
   }
-}
 
-.sidebar__guest-dropdown{
-  margin-top: 20px;
-}
-.sidebar__range-slider{
-  margin-top: 30px;
-  &-description{
-    font-size: 12px;
+  &__guest-dropdown{
+    margin-top: 20px;
+  }
+  
+  &__range-slider{
+    margin-top: 30px;
+    &-description{
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  }
+  
+  &__rules{
+    margin-top: 26px;
+    max-width: 225px;
+    .widget-title{
+      margin-bottom: 17px;
+    }
+  }
+  
+  &__rules-item{
     margin-top: 10px;
   }
-}
+  
+  &__availability{
+    margin-top: 31px;
 
-.sidebar__rules{
-  margin-top: 26px;
-  .widget-title{
-    margin-bottom: 17px;
+    .widget-title{
+      margin-bottom: 17px;
+    }
+  }
+  
+  
+  &__availability-item{
+   margin-top: 9px;
+  }
+  
+  &__comforts-dropdown{
+    margin-top: 29px;
+  }
+  
+  &__checkbox-list{
+    margin-top: 25px;
   }
 }
 
-.sidebar__rules-item{
-  margin-top: 10px;
-}
 
-.sidebar__availability{
-  margin-top: 31px;
-  .widget-title{
-    margin-bottom: 17px;
+.search-room{
+  &__items{
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__item{
+    margin-top: 8.5px;
   }
 }
 
-
-.sidebar__availability-item{
- margin-top: 9px;
-}
-
-.sidebar__comforts-dropdown{
-  margin-top: 29px;
-}
-
-.sidebar__checkbox-list{
-  margin-top: 25px;
-}
-
-.search-room__items{
-  margin-top: 14px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.search-room__item{
-  margin-top: 8.5px;
-}
 
 .search-room__pagination{
   width: fit-content;

@@ -3,6 +3,9 @@
 @import './../../styles/global.scss';
 
 
+body{
+  min-width: 1200px;
+}
 
 .ui-kit{
   display: flex;
@@ -20,5 +23,9 @@
   &__room-card{
     max-width: 270px;
     margin-top: 40px;
+  }
+
+  &__calendar{
+    width: 320px;
   }
 }

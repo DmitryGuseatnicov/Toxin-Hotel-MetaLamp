@@ -111,9 +111,17 @@ class Pagination{
     this.$nav.html(fragment)
   }
 
+  getCountOfItems(){
+
+    if(this.totalItems > 100){
+      return ` ${Math.floor(this.totalItems / 100) * 100}+ `
+    }
+    return this.totalItems
+  }
+
   showDescription(){
     let interval = `${this.currentPage * this.itemsShowForPage - this.itemsShowForPage + 1} – ${this.currentPage * this.itemsShowForPage}`
-    let description = `${interval} из ${this.totalItems} вариантов аренды`
+    let description = `${interval} из ${this.getCountOfItems()} вариантов аренды`
     this.$description.text(description)
   }
 

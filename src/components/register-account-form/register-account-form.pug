@@ -4,7 +4,10 @@ include ./../button/button.pug
 include ./../radio/radio.pug
 include ./../toggle/toggle.pug
 
-mixin register-account-form()
+mixin register-account-form(options ={})
+  -
+    const { buttonText = '' } = options
+
   form(class="register-account-form" action="#")
     .register-account-form__title 
       +widget-title({text: "Регистрация аккаунта", level:"1"})
@@ -24,7 +27,7 @@ mixin register-account-form()
     .register-account-form__special
       +toggle({label: "Получать спецпредложения"})
     .register-account-form__pay-button 
-      +button({text: "перейти к оплате", mod: "purple-link"})
+      +button({text: buttonText, mod: "purple-link"})
     .register-account-form__login-button
       span.register-account-form__question Уже есть аккаунт на Toxin
       +button({text: "войти", mod:"purple-border"})

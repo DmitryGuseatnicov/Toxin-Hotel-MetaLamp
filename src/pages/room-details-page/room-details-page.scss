@@ -6,19 +6,18 @@
 .main{
   border-bottom: 1px solid $darkShade-25;
 }
+
 .room-gallery{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   max-height: 485px;
  
-
   &__img--big{
    grid-column-start: 1;
    grid-column-end: 3;
    grid-row-start: 1;
    grid-row-end: 3;
-
   }
   
   &__img{
@@ -119,11 +118,13 @@
       flex-wrap: wrap;
     }
   }
+
   .room-description{
     display: flex;
     justify-content: space-between;  
     flex-wrap: wrap;
   }
+  
   .room-grade{
    &__title{
      margin-left: 0px;

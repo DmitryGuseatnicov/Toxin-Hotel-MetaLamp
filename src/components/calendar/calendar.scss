@@ -174,16 +174,10 @@
 
 .calendar{
   width: 320px;
-  &___input{
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
   &__input{
-    opacity: 0;
     position: absolute;
-    top: 0;
     z-index: -1;
+    opacity: 0;
   }
 }
 

@@ -39,7 +39,6 @@ class NavMenu{
   toggle(target){
     this.bindWindowEventListener()
     $(target).toggleClass('nav__item--open')
-    
   }
 }
 

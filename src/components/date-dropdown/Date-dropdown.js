@@ -37,6 +37,7 @@ class DateDropdownFactory{
 class DateDropdown{
   constructor(nodeElem){
     this.$dateDropdown = $(nodeElem)
+   
     this.init()
   }
 
@@ -62,6 +63,7 @@ class DateDropdown{
     if(e.target.closest(ICON)) this.toggle()
     if(e.target.closest(APPLY)) this.addValue()
     if(e.target.closest(CLEAR)) this.clearValue()
+    if(!e.target.closest('.js-date-dropdown')) this.toggle()
   }
 
   toggle(){
