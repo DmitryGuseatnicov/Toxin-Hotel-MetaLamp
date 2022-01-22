@@ -1,4 +1,62 @@
 canvas{
-  width: 350px;
-  height: 125px;
+  width: 140px;
+  max-height: 125px;
+}
+
+.chart{
+  max-width: 160px;
+  display: flex
+}
+
+.chart__label{
+  &-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    list-style: none;
+    position: relative;
+    right: 7px;
+  }
+
+  &-item{
+    padding-left: 15px;
+    position: relative;
+    line-height: 24px;
+  }
+
+  &-item:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  &-item:nth-child(1)::before{
+   background:  linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  }
+
+  &-item:nth-child(2)::before{
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+
+  &-item:nth-child(3)::before{
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+  }
+  &-item:nth-child(4)::before{
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  .chart__label{
+    &-list{
+      right: 30px;
+    }
+  }
 }
