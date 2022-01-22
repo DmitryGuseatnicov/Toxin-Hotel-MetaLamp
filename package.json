@@ -27,7 +27,6 @@
     "eslint": "^8.6.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
-    "flex-gap-polyfill": "^4.1.0",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.5",
@@ -35,8 +34,6 @@
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.0.1",
     "pug": "^3.0.2",
-    "pug-html-loader": "^1.0.0",
-    "pug-loader": "^2.4.0",
     "resolve-url-loader": "^4.0.0",
     "sass": "^1.43.5",
     "sass-loader": "^12.3.0",
@@ -54,8 +51,6 @@
     "jquery": "^3.6.0",
     "material-icons": "^1.10.4",
     "nouislider": "^15.5.0",
-    "paginationjs": "^2.1.5",
-    "slick-carousel": "^1.8.1",
-    "swiper": "^7.4.1"
+    "slick-carousel": "^1.8.1"
   }
 }
