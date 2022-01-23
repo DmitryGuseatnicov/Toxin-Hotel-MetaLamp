@@ -1,5 +1,5 @@
-import '../../components/header'
-import '../../components/footer'
-import '../../components/login-form'
+import '../../components/header';
+import '../../components/footer';
+import '../../components/login-form';
 
-import './sing-in-page.scss'
+import './sing-in-page.scss';

@@ -1,2 +1,2 @@
-import './../../components/widget-title'
-import './ui-kit-colors-type.scss'
+import '../../components/widget-title';
+import './ui-kit-colors-type.scss';

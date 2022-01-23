@@ -1,1 +1,1 @@
-import './widget-title.scss'
+import './widget-title.scss';

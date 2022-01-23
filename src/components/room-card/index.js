@@ -1,7 +1,8 @@
-import $ from 'jquery'
-import slick from 'slick-carousel'
-import './../rate-button'
-import './room-card.scss'
+/* eslint-disable no-unused-vars */
+import $ from 'jquery';
+import slick from 'slick-carousel';
+import '../rate-button';
+import './room-card.scss';
 
 $('.room-card__images').slick({
   nextArrow: `<button type="button" class="slick-next">
@@ -11,6 +12,4 @@ $('.room-card__images').slick({
                 <span class="material-icons">expand_more</span>
               </button>`,
   dots: true,
-})
-
-  
+});
