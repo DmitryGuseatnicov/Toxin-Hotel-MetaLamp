@@ -1,2 +1,2 @@
 import '../../components/widget-title';
-import './index-page.scss';
+import './index.scss';

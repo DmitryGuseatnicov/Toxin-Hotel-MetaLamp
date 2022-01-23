@@ -27,13 +27,10 @@ module.exports = {
     },
     devServer: {
         static: './dist',
-        open : '/index-page.html',
+        open : '/index.html',
         hot: false
     },
     devtool: 'source-map',
-    optimization: {
-        chunkIds: 'named',
-    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
