@@ -1,5 +1,5 @@
-import $ from 'jquery'
-import { NavMenu } from './NavMenu'
-import './nav-menu.scss'
+import $ from 'jquery';
+import NavMenu from './Classes/NavMenu';
+import './nav-menu.scss';
 
-new NavMenu($('.js-nav'))
+$('.js-nav').each((i, el) => new NavMenu($(el)));

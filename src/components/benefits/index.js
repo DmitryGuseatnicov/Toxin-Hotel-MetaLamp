@@ -1,1 +1,1 @@
-import './benefits.scss'
+import './benefits.scss';

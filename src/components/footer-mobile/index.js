@@ -1,1 +1,1 @@
-import './footer-mobile.scss'
+import './footer-mobile.scss';

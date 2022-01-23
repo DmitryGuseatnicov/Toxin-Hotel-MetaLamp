@@ -1,5 +1,5 @@
-import './../widget-title'
-import './../input'
-import './../button'
+import '../widget-title';
+import '../input';
+import '../button';
 
-import './login-form.scss'
+import './login-form.scss';

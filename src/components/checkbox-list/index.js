@@ -1,8 +1,7 @@
-import $ from 'jquery'
-import './../widget-title'
-import { CheckboxList } from './Checkbox-list'
-import './checkbox-list.scss'
+import $ from 'jquery';
+import CheckboxList from './CheckboxList';
+import '../widget-title';
 
-$('.js-checkbox-list').each((i, el)=>{
-  new CheckboxList(el)
-})
+import './checkbox-list.scss';
+
+$('.js-checkbox-list').each((i, el) => new CheckboxList(el));
