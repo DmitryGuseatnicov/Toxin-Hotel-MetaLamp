@@ -1,31 +1,39 @@
 include ./../../components/head/head.pug
+include ./../../components/widget-title/widget-title.pug
 
-+head()
+
++head({title: "index page"})
 body 
   header.header
     .container 
   .wrapper 
     main.main
-      .container Страницы Сайта TOXIN 
-        .page
+      .container
+        .pages
+          .pages__title
+            +widget-title({text: "Страницы сайта TOXIN"})
+        .pages__link
           a(href="/landing-page.html") landing-page
-        .page
+        .pages__link
           a(href="/search-room-page.html") search-room-page
-        .page
+        .pages__link
           a(href="/registration-page.html") registration-page
-        .page
+        .pages__link
           a(href="/sing-in-page.html") sign-in-page
-        .page
+        .pages__link
           a(href="/room-details-page.html") room-details-page
           
-      .container Страницы ui-kit
-        .ui-kit-form-elements
+      .container 
+        .ui-kit
+          .ui-kit__title
+            +widget-title({text: "Страницы ui-kit"})
+        .ui-kit__link
           a(href="/ui-kit-colors-type.html") ui-kit-colors-type
-        .ui-kit-form-elements
+        .ui-kit__link
           a(href="/ui-kit-form-elements.html") ui-kit-form-elements
-        .ui-kit-cards
+        .ui-kit__link
           a(href="./ui-kit-cards.html") ui-kit-cards
-        .ui-kit-header-footer
+        .ui-kit__link
           a(href="./ui-kit-header-footer.html") ui-kit-header-footer
          
     footer.footer 
