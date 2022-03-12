@@ -104,9 +104,12 @@
     min-width: 100%;
     gap: 20px;
 
+    & > div {
+      min-width: 266px;
+    }
+
     & > div:nth-child(1n+1){
       margin-top: 10px;
-      gap: 0
     }
   }
   .main-content{
