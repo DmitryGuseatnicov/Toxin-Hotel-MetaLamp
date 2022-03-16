@@ -35,14 +35,11 @@
 ```
   npm start
 ```
+ * ##### Development сборка 
 ```
   npm run dev
 ```
- * ##### Development зборка 
-```
-  npm run dev
-```
- * ##### Production зборка
+ * ##### Production сборка
 ```
   npm run build
 ```
