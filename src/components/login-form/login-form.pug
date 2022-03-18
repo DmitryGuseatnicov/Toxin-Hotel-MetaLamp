@@ -2,8 +2,8 @@ include ./../widget-title/widget-title.pug
 include ./../input/input.pug
 include ./../button/button.pug
 
-mixin login-form()
-  form(class="login-form" action="#")
+mixin login-form
+  form.login-form(action="#")
     .login-form__title
       +widget-title({text: "Войти", level: "1"}) 
     .login-form__mail 

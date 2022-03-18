@@ -14,45 +14,24 @@ body
         .ui-kit
           .ui-kit__colum
             .ui-kit__search-form
-              +room-search-form()
+              +room-search-form
 
             .ui-kit__register-account-form
               +register-account-form({buttonText: "перейти к оплате"})
 
           .ui-kit__colum
             .ui-kit__booking-form
-              +booking-form({
-                number: "888", 
-                firsDate: "19.08.2019", 
-                secondDate: "23.08.2019" , 
-                adult: "2", 
-                child: "1", 
-                baby: "0",
-                price: "9 000", 
-                days: "4"})
+              +booking-form({ number: "888", firsDate: "19.08.2019", secondDate: "23.08.2019" , adult: "2", child: "1", baby: "0", price: "9 000", days: "4"})
 
             .ui-kit__login-form 
-              +login-form()
-              
+              +login-form
+
           .ui-kit__colum 
             .ui-kit__calendar
             .ui-kit__room-card
-              +room-card({number: "888",  type:"люкс", price:"9 990", reviews:"145", rate:"5", links:[
-                src=require('./images/room-2.png'),
-                src=require('./images/room-1.png'),
-                src=require('./images/room-2.png'),
-                src=require('./images/room-1.png'),
-              ]})
+              +room-card({number: "888", type:"люкс", price:"9 990", reviews:"145", rate:"5", links:[ src=require('./images/room-2.png'), src=require('./images/room-1.png'), src=require('./images/room-2.png'), src=require('./images/room-1.png'), ]})
 
             .ui-kit__room-card
-              +room-card({number: "840", price:"9 900", reviews:"65", rate:"3", links:[
-                src=require('./images/room-1.png'),
-                src=require('./images/room-2.png'),
-                src=require('./images/room-1.png'),
-                src=require('./images/room-2.png'),
-              ]})
+              +room-card({number: "840", price:"9 900", reviews:"65", rate:"3", links:[ src=require('./images/room-1.png'), src=require('./images/room-2.png'), src=require('./images/room-1.png'), src=require('./images/room-2.png'), ]})
 
-
-
-      
     footer.footer 

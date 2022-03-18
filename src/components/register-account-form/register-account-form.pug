@@ -8,7 +8,7 @@ mixin register-account-form(options ={})
   -
     const { buttonText = '' } = options
 
-  form(class="register-account-form" action="#")
+  form.register-account-form(action="#")
     .register-account-form__title 
       +widget-title({text: "Регистрация аккаунта", level:"1"})
     .register-account-form__name 
@@ -18,7 +18,7 @@ mixin register-account-form(options ={})
     .register-account-form__checkboxes
       +radio({label: "Мужчина", name: "sex", checked: true})
       +radio({label: "Женщина",name: "sex" })
-    .register-account-form__date  
+    .register-account-form__date 
       +input({type: "text", label:"дата рождения", placeholder: "ДД.ММ.ГГГГ", mask: "data" , required: true})
     .register-account-form__mail
       +input({type: "mail" ,label: "данные для входа в сервис", placeholder:"Email", required: true })
@@ -31,5 +31,3 @@ mixin register-account-form(options ={})
     .register-account-form__login-button
       span.register-account-form__question Уже есть аккаунт на Toxin
       +button({text: "войти", mod:"purple-border"})
-      
-

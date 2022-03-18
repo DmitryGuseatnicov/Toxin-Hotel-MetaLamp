@@ -3,11 +3,5 @@ mixin radio(options={})
     const { label, name, value, checked=false } = options
   .radio
     label.radio__label
-      input(
-          class = 'radio__input'
-          type =  "radio"
-          name = name
-          value = value
-          checked = checked
-          )
+      input.radio__input(type="radio", name=name, value=value, checked=checked)
       span.checkbox__label-text= label

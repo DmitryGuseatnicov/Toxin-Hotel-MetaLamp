@@ -8,45 +8,44 @@ mixin input(options={})
     let classes =  'input__text-field'
 
   if (label && subscribe === false)
-      label.input
-        +widget-title({text: label})
-        input(class = classes, 
-              type = type, 
-              placeholder = placeholder, 
-              value = value, 
-              data-mask = mask, 
-              disabled = disabled, 
-              readonly = readonly,
-              required = required 
-              )
+    label.input
+      +widget-title({text: label})
+      input(
+        class=classes,
+        type=type,
+        placeholder=placeholder,
+        value=value,
+        data-mask=mask,
+        disabled=disabled,
+        readonly=readonly,
+        required=required
+      )
 
-  
-  if(subscribe === true)
+  if (subscribe === true)
     label.input.input--subscribe
       +widget-title({text: label})
       .input__inner
-        input(class = classes, 
-              type = 'mail', 
-              placeholder = placeholder, 
-              value = value, 
-              disabled = disabled, 
-              readonly = readonly
-              required = required 
-              )
-        button(class= "input__button" type="submit")
+        input(
+          class=classes,
+          type="mail",
+          placeholder=placeholder,
+          value=value,
+          disabled=disabled,
+          readonly=readonly,
+          required=required
+        )
+        button.input__button(type="submit")
           span.material-icons arrow_forward
 
-
-
-  if(label === '' && subscribe === false) 
+  if (label === '' && subscribe === false)
     .input
-      input(class = classes, 
-            type = type, 
-            placeholder = placeholder, 
-            value = value, 
-            data-mask = mask,
-            disabled = disabled, 
-            readonly = readonly
-            required = required 
-          )
-  
+      input(
+        class=classes,
+        type=type,
+        placeholder=placeholder,
+        value=value,
+        data-mask=mask,
+        disabled=disabled,
+        readonly=readonly,
+        required=required
+      )

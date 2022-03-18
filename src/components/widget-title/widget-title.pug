@@ -5,10 +5,10 @@ mixin widget-title(options={})
 
 
   if (level === '1')
-    h1(class='widget-title widget-title--big')= text
-  
+    h1.widget-title.widget-title--big= text
+
   if (level === '2')
-    h2(class='widget-title widget-title--medium')= text
+    h2.widget-title.widget-title--medium= text
 
   if (level >= '3')
-    h3(class='widget-title widget-title--small')= text
+    h3.widget-title.widget-title--small= text

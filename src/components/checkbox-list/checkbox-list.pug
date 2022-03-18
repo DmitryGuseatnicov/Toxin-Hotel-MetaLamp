@@ -9,7 +9,7 @@ mixin checkbox-list(options={})
       classes = `${classes} checkbox-list--open` 
   div(class=classes)
     .checkbox-list__header.js-checkbox-list__header
-      .checkbox-list__title   
+      .checkbox-list__title 
         +widget-title({text: title})
       .checkbox-list__icon
         span.material-icons expand_more
@@ -17,5 +17,3 @@ mixin checkbox-list(options={})
       each item in items 
         li.checkbox-list__item
           +checkbox(item)
-        
-      

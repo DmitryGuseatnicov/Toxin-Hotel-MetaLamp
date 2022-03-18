@@ -4,8 +4,8 @@ include ./../calendar/calendar.pug
 mixin date-dropdown(options={})
   -
     const { root, label, secondLabel, value, secondValue ,mod = "filter"} = options
-  if (mod === "double")  
-    div(class = "date-dropdown js-date-dropdown" data-type="double")
+  if (mod === "double")
+    .date-dropdown.js-date-dropdown(data-type="double")
       .date-dropdown__header
         .date-dropdown__input.js-date-dropdown__input
           +input({label: label, mask: "data",value: value, placeholder: "ДД.ММ.ГГГГ" })
@@ -18,9 +18,8 @@ mixin date-dropdown(options={})
       .date-dropdown__calendar
         +calendar({root:root})
 
-
   if (mod === "filter")
-    div(class = "date-dropdown js-date-dropdown" data-type="filter")
+    .date-dropdown.js-date-dropdown(data-type="filter")
       .date-dropdown__header
         .date-dropdown__input.js-date-dropdown__input
           +input({label: label, value:value, placeholder: "выберите дату", readonly: true})
@@ -28,4 +27,3 @@ mixin date-dropdown(options={})
             snap.material-icons expand_more
       .date-dropdown__calendar
         +calendar({root:root})
-  

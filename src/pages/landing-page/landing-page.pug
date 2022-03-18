@@ -5,45 +5,12 @@ include ./../../components/room-search-form/room-search-form.pug
 
 +head({title: "Landing page"})
 body
-  +header({items:[
-    {link:{ name: "О нас", href: "/change-me" }},
-    {link:{ name: "Услуги" }, childrens:[
-      {name:"Услуги 1", href:"/change-me"},
-      {name:"Услуги 2", href:"/change-me"},
-    ]},
-    {link: {name: "Вакансии", href: "/change-me"}},
-    {link: {name: "Новости", href: "/change-me"}},
-    {link:{ name: "Соглашения"}, childrens:[
-      {name:"Соглашения 1", href: "/change-me"},
-      {name:"Соглашения 2", href: "/change-me"},
-      {name:"Соглашения 3", href: "/change-me"},
-    ]},
-  ]})
+  +header({items:[ {link:{ name: "О нас", href: "/change-me" }}, {link:{ name: "Услуги" }, childrens:[ {name:"Услуги 1", href:"/change-me"}, {name:"Услуги 2", href:"/change-me"}, ]}, {link: {name: "Вакансии", href: "/change-me"}}, {link: {name: "Новости", href: "/change-me"}}, {link:{ name: "Соглашения"}, childrens:[ {name:"Соглашения 1", href: "/change-me"}, {name:"Соглашения 2", href: "/change-me"}, {name:"Соглашения 3", href: "/change-me"}, ]}, ]})
   .wrapper
     main.main
       .landing
         .container
           .landing__search-form
-            +room-search-form()
+            +room-search-form
           .landing__description Лучшие номера для вашей работы, отдыха и просто вдохновения
-    +footer({items: [
-      {title: "навигация", links: [
-        {name: "О нас", href: "/change-me"},
-        {name: "Новости", href: "/change-me"},
-        {name: "Служба поддержки", href: "/change-me"},
-        {name: "Услуги", href: "/change-me"},
-      ]},
-      {title: "о нас", links: [
-        {name: "О сервисе", href: "/change-me"},
-        {name: "Наша команда", href: "/change-me"},
-        {name: "Вакансии", href: "/change-me"},
-        {name: "Инвесторы", href: "/change-me"},
-      ]},
-      {title: "Служба поддержки", links: [
-        {name: "Соглашения", href: "/change-me"},
-        {name: "Сообщества", href: "/change-me"},
-        {name: "Связь с нами", href: "/change-me"},
-      ]},
-    ]})
-    
-    
+    +footer({items: [ {title: "навигация", links: [ {name: "О нас", href: "/change-me"}, {name: "Новости", href: "/change-me"}, {name: "Служба поддержки", href: "/change-me"}, {name: "Услуги", href: "/change-me"}, ]}, {title: "о нас", links: [ {name: "О сервисе", href: "/change-me"}, {name: "Наша команда", href: "/change-me"}, {name: "Вакансии", href: "/change-me"}, {name: "Инвесторы", href: "/change-me"}, ]}, {title: "Служба поддержки", links: [ {name: "Соглашения", href: "/change-me"}, {name: "Сообщества", href: "/change-me"}, {name: "Связь с нами", href: "/change-me"}, ]}, ]})

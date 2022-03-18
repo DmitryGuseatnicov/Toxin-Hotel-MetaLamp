@@ -2,20 +2,19 @@ include ./../input/input.pug
 include ./../button/button.pug
 
 mixin dropdown(options={})
-
   -
     const { label, placeholder, open, type = 'guests' ,items=[], actionButtons = true } = options
     let classes = 'dropdown js-dropdown'
     if(open === true) classes += ' dropdown--open'
 
 
-  div(class=classes data-type=type)
+  div(class=classes, data-type=type)
     .dropdown__header
       .dropdown__input.js-dropdown__input
         +input({type: "text", label: label, placeholder: placeholder, js: true, readonly: true})
         .dropdown__icon 
           span.material-icons expand_more
-          
+
     .dropdown__drop-items.js-dropdown__drop-items 
       each item in items 
         .dropdown__item.js-dropdown__item
@@ -31,7 +30,3 @@ mixin dropdown(options={})
             +button({text: "очиcтить", mod: "simple"})
           .dropdown__button-apply.js-dropdown__button-apply
             +button({text: "применить", mod: "simple"})
-      
-        
-        
-        

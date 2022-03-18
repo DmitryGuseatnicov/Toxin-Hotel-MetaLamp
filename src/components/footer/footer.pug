@@ -12,11 +12,11 @@ mixin footer(options={})
         .footer__inner-item
           .footer__info 
             .footer__logo
-              +logo()
+              +logo
             .footer__description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
         each item in items
-          - const {title, links = [] } = item
+          - const { title, links = [] } = item;
           .footer__inner-item
             .footer__widget
               .footer__widget-title 
@@ -31,9 +31,9 @@ mixin footer(options={})
             .footer__special-title 
               +widget-title({text: "Подписка"})
             .footer__special-text Получайте специальные предложения и новости сервиса
-            form(class="footer__subscribe-form" action="#") 
+            form.footer__subscribe-form(action="#") 
               +input({type: "mail", subscribe: true, placeholder: "Email"})
-            
+
     .footer__copy-right
       .container
         .footer__copy-right-inner
@@ -41,13 +41,21 @@ mixin footer(options={})
           .footer__social
             .footer__social-twitter
               a(href="change-me")
-                img(src=require('./../../components/footer/images/twitter.png'), alt="twitter")
+                img(
+                  src=require("./../../components/footer/images/twitter.png"),
+                  alt="twitter"
+                )
             .footer__social-facebook
               a(href="change-me")
-                img(src=require('./../../components/footer/images/facebook.png'), alt="facebook")
-            .footer__social-instagram  
+                img(
+                  src=require("./../../components/footer/images/facebook.png"),
+                  alt="facebook"
+                )
+            .footer__social-instagram 
               a(href="change-me")
-                img(src=require('./../../components/footer/images/instagram.png'), alt="instagram")
+                img(
+                  src=require("./../../components/footer/images/instagram.png"),
+                  alt="instagram"
+                )
 
-  +footer-mobile()
-
+  +footer-mobile

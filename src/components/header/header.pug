@@ -10,18 +10,18 @@ mixin header(options={})
     .container
       .header__inner
         .header__logo
-          +logo()
+          +logo
         button.header__burger-button.js-header__burger-button
-            span.header__burger-line
-            span.header__burger-line
-            span.header__burger-line
+          span.header__burger-line
+          span.header__burger-line
+          span.header__burger-line
         .header__panel.js-header__panel
           button.header__close-button.js-header__close-button +
           .header__nav
             +nav-menu({items: items})
           .header__login
-            if(auth !== false)
+            if (auth !== false)
               .header__login-name= auth
-            else 
-              +button({text: "войти", mod: "purple-border", short: true})  
+            else
+              +button({text: "войти", mod: "purple-border", short: true}) 
               +button({text: "зарегистрироваться", mod: "purple", short: true})

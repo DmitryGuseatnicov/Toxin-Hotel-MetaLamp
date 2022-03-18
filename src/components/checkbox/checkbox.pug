@@ -1,17 +1,16 @@
 mixin checkbox(options={})
   -
     const { label, name, value, checked=false , mod, description} = options
-  
+
   if (mod === 'rich')
     .checkbox
       label.checkbox__label
-        input(
-            class = 'checkbox__input'
-            type =  "checkbox"
-            name = name
-            value = value
-            checked = checked
-            )
+        input.checkbox__input(
+          type="checkbox",
+          name=name,
+          value=value,
+          checked=checked
+        )
         span.checkbox__label-rich
           span.checkbox__label-text= label
           span.checkbox__label-sub-text= description
@@ -19,11 +18,10 @@ mixin checkbox(options={})
   else
     .checkbox
       label.checkbox__label
-        input(
-            class = 'checkbox__input'
-            type =  "checkbox"
-            name = name
-            value = value
-            checked = checked
-            )
+        input.checkbox__input(
+          type="checkbox",
+          name=name,
+          value=value,
+          checked=checked
+        )
         span.checkbox__label-text= label

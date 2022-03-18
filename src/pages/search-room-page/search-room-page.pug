@@ -12,21 +12,7 @@ include ./../../components/pagination/pagination.pug
 
 +head({title: "Search room"})
 body
-  +header({items:[
-    {link:{ name: "О нас", href: "/change-me" }},
-    {link:{ name: "Услуги" }, childrens:[
-      {name:"Услуги 1", href:"/change-me"},
-      {name:"Услуги 2", href:"/change-me"},
-    ]},
-    {link: {name: "Вакансии", href: "/change-me"}},
-    {link: {name: "Новости", href: "/change-me"}},
-    {link:{ name: "Соглашения"}, childrens:[
-      {name:"Соглашения 1", href: "/change-me"},
-      {name:"Соглашения 2", href: "/change-me"},
-      {name:"Соглашения 3", href: "/change-me"},
-    ]},
-  ]}) 
-
+  +header({items:[ {link:{ name: "О нас", href: "/change-me" }}, {link:{ name: "Услуги" }, childrens:[ {name:"Услуги 1", href:"/change-me"}, {name:"Услуги 2", href:"/change-me"}, ]}, {link: {name: "Вакансии", href: "/change-me"}}, {link: {name: "Новости", href: "/change-me"}}, {link:{ name: "Соглашения"}, childrens:[ {name:"Соглашения 1", href: "/change-me"}, {name:"Соглашения 2", href: "/change-me"}, {name:"Соглашения 3", href: "/change-me"}, ]}, ]}) 
 
   .wrapper
     main.main
@@ -35,13 +21,9 @@ body
           .sidebar
             .sidebar__date-dropdown 
               +date-dropdown({label: "даты пребывания в отеле", root:"ui-kit-filter-date-dropdown", mod:"filter", value:"19 авг - 23 авг"})
-            
+
             .sidebar__guest-dropdown
-              +dropdown({label: "гости", placeholder: "Сколько гостей", items:[
-                  {name: "взрослые", value: "2"},
-                  {name: "дети", value: "1"},
-                  {name: "младенцы", value: "1"}
-                ]})
+              +dropdown({label: "гости", placeholder: "Сколько гостей", items:[ {name: "взрослые", value: "2"}, {name: "дети", value: "1"}, {name: "младенцы", value: "1"} ]})
 
             .sidebar__range-slider
               +range-slider({label: "диапазон цены", min:"0", max:"15500", start:"5000", end:"10000"})
@@ -64,140 +46,51 @@ body
                 +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",mod:"rich"})
 
               .sidebar__availability-item
-                +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.",mod:"rich"})
+                +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера.",mod:"rich"})
 
             .sidebar__comforts-dropdown
-              +dropdown({label: "удобства номера", placeholder: "Выберете удобства", actionButtons: false, type:"comforts",items:[
-                    {name: "спальни", value: "2"},
-                    {name: "кровати", value: "2"},
-                    {name: "ванные комнаты", value: "1"}
-                  ]})
-                  
+              +dropdown({label: "удобства номера", placeholder: "Выберете удобства", actionButtons: false, type:"comforts",items:[ {name: "спальни", value: "2"}, {name: "кровати", value: "2"}, {name: "ванные комнаты", value: "1"} ]})
+
             .sidebar__checkbox-list
-              +checkbox-list({title: "дополнительные удобства", items:[
-                  {label: "Завтрак"},
-                  {label: "Письменный стол", checked: true},
-                  {label: "Стул для кормления", checked: true},
-                  {label: "Кроватка", checked: true},
-                  {label: "Телевизор"},
-                  {label: "Шампунь"},
-                  ]})
+              +checkbox-list({title: "дополнительные удобства", items:[ {label: "Завтрак"}, {label: "Письменный стол", checked: true}, {label: "Стул для кормления", checked: true}, {label: "Кроватка", checked: true}, {label: "Телевизор"}, {label: "Шампунь"}, ]})
 
           .search-room 
-              .search-room__title
-                +widget-title({text: "Номера, которые мы для вас подобрали", level: "1"})
-              .search-room__items 
-                .search-room__item
-                  +room-card({number: "888", price:"9 990", reviews:"145", rate:"5", type:"люкс", links:[
-                    src=require('./img/image-1.png'),
-                    src=require('./img/image-1.png'),
-                    src=require('./img/image-1.png'),
-                    src=require('./img/image-1.png'),
-                  ]})
+            .search-room__title
+              +widget-title({text: "Номера, которые мы для вас подобрали", level: "1"})
+            .search-room__items 
+              .search-room__item
+                +room-card({number: "888", price:"9 990", reviews:"145", rate:"5", type:"люкс", links:[ src=require('./img/image-1.png'), src=require('./img/image-1.png'), src=require('./img/image-1.png'), src=require('./img/image-1.png'), ]})
 
-                .search-room__item
-                  +room-card({number: "840", price:"9 900", reviews:"65", rate:"4" ,links:[
-                    src=require('./img/image.png'),
-                    src=require('./img/image.png'),
-                    src=require('./img/image.png'),
-                    src=require('./img/image.png'),
-                ]})
-                .search-room__item
-                  +room-card({number: "980", price:"8 500", reviews:"35", rate:"3", type:"люкс", links:[
-                    src=require('./img/image-2.png'),
-                    src=require('./img/image-2.png'),
-                    src=require('./img/image-2.png'),
-                    src=require('./img/image-2.png'),
-                  ]})
+              .search-room__item
+                +room-card({number: "840", price:"9 900", reviews:"65", rate:"4" ,links:[ src=require('./img/image.png'), src=require('./img/image.png'), src=require('./img/image.png'), src=require('./img/image.png'), ]})
+              .search-room__item
+                +room-card({number: "980", price:"8 500", reviews:"35", rate:"3", type:"люкс", links:[ src=require('./img/image-2.png'), src=require('./img/image-2.png'), src=require('./img/image-2.png'), src=require('./img/image-2.png'), ]})
 
-                .search-room__item
-                  +room-card({number: "856", price:"7 300", reviews:"19", rate:"5", links:[
-                    src=require('./img/image-5.png'),
-                    src=require('./img/image-5.png'),
-                    src=require('./img/image-5.png'),
-                    src=require('./img/image-5.png'),
-                ]})
+              .search-room__item
+                +room-card({number: "856", price:"7 300", reviews:"19", rate:"5", links:[ src=require('./img/image-5.png'), src=require('./img/image-5.png'), src=require('./img/image-5.png'), src=require('./img/image-5.png'), ]})
 
-                .search-room__item
-                  +room-card({number: "740", price:"6 000", reviews:"44", rate:"4", links:[
-                    src=require('./img/image-3.png'),
-                    src=require('./img/image-3.png'),
-                    src=require('./img/image-3.png'),
-                    src=require('./img/image-3.png'),
-                  ]})
+              .search-room__item
+                +room-card({number: "740", price:"6 000", reviews:"44", rate:"4", links:[ src=require('./img/image-3.png'), src=require('./img/image-3.png'), src=require('./img/image-3.png'), src=require('./img/image-3.png'), ]})
 
-                .search-room__item
-                  +room-card({number: "982", price:"5 800", reviews:"65", rate:"3", links:[
-                    src=require('./img/image-4.png'),
-                    src=require('./img/image-4.png'),
-                    src=require('./img/image-4.png'),
-                    src=require('./img/image-4.png'),
-                ]})
-                .search-room__item
-                  +room-card({number: "678", price:"5 500", reviews:"45", rate:"5", links:[
-                    src=require('./img/image-8.png'),
-                    src=require('./img/image-8.png'),
-                    src=require('./img/image-8.png'),
-                    src=require('./img/image-8.png'),
-                  ]})
+              .search-room__item
+                +room-card({number: "982", price:"5 800", reviews:"65", rate:"3", links:[ src=require('./img/image-4.png'), src=require('./img/image-4.png'), src=require('./img/image-4.png'), src=require('./img/image-4.png'), ]})
+              .search-room__item
+                +room-card({number: "678", price:"5 500", reviews:"45", rate:"5", links:[ src=require('./img/image-8.png'), src=require('./img/image-8.png'), src=require('./img/image-8.png'), src=require('./img/image-8.png'), ]})
 
-                .search-room__item
-                  +room-card({number: "450", price:"5 300", reviews:"39", rate:"4", links:[
-                    src=require('./img/image-6.png'),
-                    src=require('./img/image-6.png'),
-                    src=require('./img/image-6.png'),
-                    src=require('./img/image-6.png'),
-                ]})
+              .search-room__item
+                +room-card({number: "450", price:"5 300", reviews:"39", rate:"4", links:[ src=require('./img/image-6.png'), src=require('./img/image-6.png'), src=require('./img/image-6.png'), src=require('./img/image-6.png'), ]})
 
-                .search-room__item
-                  +room-card({number: "350", price:"5 000", reviews:"77", rate:"3", links:[
-                    src=require('./img/image-7.png'),
-                    src=require('./img/image-7.png'),
-                    src=require('./img/image-7.png'),
-                    src=require('./img/image-7.png'),
-                  ]})
+              .search-room__item
+                +room-card({number: "350", price:"5 000", reviews:"77", rate:"3", links:[ src=require('./img/image-7.png'), src=require('./img/image-7.png'), src=require('./img/image-7.png'), src=require('./img/image-7.png'), ]})
 
-                .search-room__item
-                  +room-card({number: "666", price:"5 000", reviews:"25", rate:"5", links:[
-                    src=require('./img/image-10.png'),
-                    src=require('./img/image-10.png'),
-                    src=require('./img/image-10.png'),
-                    src=require('./img/image-10.png'),
-                ]})
-                .search-room__item
-                  +room-card({number: "444", price:"5 000", reviews:"15", rate:"3", links:[
-                    src=require('./img/image-9.png'),
-                    src=require('./img/image-9.png'),
-                    src=require('./img/image-9.png'),
-                    src=require('./img/image-9.png'),
-                  ]})
+              .search-room__item
+                +room-card({number: "666", price:"5 000", reviews:"25", rate:"5", links:[ src=require('./img/image-10.png'), src=require('./img/image-10.png'), src=require('./img/image-10.png'), src=require('./img/image-10.png'), ]})
+              .search-room__item
+                +room-card({number: "444", price:"5 000", reviews:"15", rate:"3", links:[ src=require('./img/image-9.png'), src=require('./img/image-9.png'), src=require('./img/image-9.png'), src=require('./img/image-9.png'), ]})
 
-                .search-room__item
-                  +room-card({number: "352", price:"5 000", reviews:"55", rate:"3", links:[
-                    src=require('./img/image-11.png'),
-                    src=require('./img/image-11.png'),
-                    src=require('./img/image-11.png'),
-                    src=require('./img/image-11.png'),
-                ]})
-              .search-room__pagination
-                +pagination()
+              .search-room__item
+                +room-card({number: "352", price:"5 000", reviews:"55", rate:"3", links:[ src=require('./img/image-11.png'), src=require('./img/image-11.png'), src=require('./img/image-11.png'), src=require('./img/image-11.png'), ]})
+            .search-room__pagination
+              +pagination
 
-    +footer({items: [
-      {title: "навигация", links: [
-        {name: "О нас", href: "/change-me"},
-        {name: "Новости", href: "/change-me"},
-        {name: "Служба поддержки", href: "/change-me"},
-        {name: "Услуги", href: "/change-me"},
-      ]},
-      {title: "о нас", links: [
-        {name: "О сервисе", href: "/change-me"},
-        {name: "Новости", href: "/change-me"},
-        {name: "Наша команда", href: "/change-me"},
-        {name: "Вакансии", href: "/change-me"},
-      ]},
-      {title: "Служба поддержки", links: [
-        {name: "Соглашения", href: "/change-me"},
-        {name: "Сообщества", href: "/change-me"},
-        {name: "Связь с нами", href: "/change-me"},
-      ]},
-    ]})
+    +footer({items: [ {title: "навигация", links: [ {name: "О нас", href: "/change-me"}, {name: "Новости", href: "/change-me"}, {name: "Служба поддержки", href: "/change-me"}, {name: "Услуги", href: "/change-me"}, ]}, {title: "о нас", links: [ {name: "О сервисе", href: "/change-me"}, {name: "Новости", href: "/change-me"}, {name: "Наша команда", href: "/change-me"}, {name: "Вакансии", href: "/change-me"}, ]}, {title: "Служба поддержки", links: [ {name: "Соглашения", href: "/change-me"}, {name: "Сообщества", href: "/change-me"}, {name: "Связь с нами", href: "/change-me"}, ]}, ]})

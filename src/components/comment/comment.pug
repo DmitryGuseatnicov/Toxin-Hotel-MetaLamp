@@ -9,9 +9,9 @@ mixin comment(options={})
       .comment__img
         img(src=src, alt="avatar")
       .comment__info 
-        .comment__person-name= name 
+        .comment__person-name= name
         .comment__time= time
     .comment__content 
       .comment__like
         +like-button({count, liked})
-      .comment__text= comment 
+      .comment__text= comment

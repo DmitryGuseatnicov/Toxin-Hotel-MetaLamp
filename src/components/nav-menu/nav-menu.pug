@@ -15,12 +15,12 @@ mixin nav-menu(options={})
             .nav__item-link
               a(href=link.href)= link.name
               span.material-icons
-              
+
             .nav__item-childrens
               each children in childrens
                 .nav__item-children
-                  a(href= children.href)= children.name 
+                  a(href=children.href)= children.name
         else
           li(class=classes)
             .nav__item-link
-              a(href=link.href)=link.name  
+              a(href=link.href)= link.name

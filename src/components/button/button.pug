@@ -11,11 +11,11 @@ mixin button(options = {})
     if(short === true) classes+= ' button--short'
 
   if (mod === 'purple-link')
-    button(class=classes, disabled=disabled type=type)
+    button(class=classes, disabled=disabled, type=type)
       span.button__text= text
       span.button__icon
         span.material-icons arrow_forward
-      
+
   else
     button(class=classes, disabled=disabled)
       span.button__text= text

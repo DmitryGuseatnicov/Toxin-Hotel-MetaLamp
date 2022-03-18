@@ -5,10 +5,9 @@ mixin bullet-list(options={})
     let classes = 'bullet-list'
     if(listStyle === true) classes += ' bullet-list--listStyle'
 
-  div(class = classes)
+  div(class=classes)
     .bullet-list__title 
       +widget-title({text:text, level:level})
     ul.bullet-list__items
       each item in items
         li.bullet-list__item= item.text
-    
