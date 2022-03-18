@@ -1,7 +1,6 @@
-@import './../../styles/vars.scss';
+@import "./../../styles/vars.scss";
 
-
-.slick-slider{
+.slick-slider {
   position: relative;
 }
 
@@ -9,13 +8,12 @@
   overflow: hidden;
 }
 
-.slick-track{
+.slick-track {
   display: flex;
   min-height: 42px;
 }
 
-
-.slick-arrow{
+.slick-arrow {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -26,30 +24,38 @@
   background: transparent;
   opacity: 0;
   transition: 0.5s;
-  span{
-    color: #FFF;
+  span {
+    color: #fff;
   }
 }
 
-.slick-arrow.slick-prev{
+.slick-arrow.slick-prev {
   left: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0) 100%);
-  span{
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  span {
     transform: rotate(90deg);
     cursor: pointer;
   }
 }
 
-.slick-arrow.slick-next{
+.slick-arrow.slick-next {
   right: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  span{
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  span {
     transform: rotate(-90deg);
     cursor: pointer;
   }
 }
 
-.slick-dots{
+.slick-dots {
   display: flex;
   position: absolute;
   z-index: 11;
@@ -60,56 +66,55 @@
   cursor: pointer;
 }
 
-.slick-dots li.slick-active{
-  button{
-    background: #FFFFFF;
+.slick-dots li.slick-active {
+  button {
+    background: #ffffff;
     box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
   }
 }
 
-.slick-dots li button{
+.slick-dots li button {
   width: 7.5px;
   height: 7.5px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 50%;
   background: transparent;
   filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
   font-size: 0;
 }
 
-.slick-slider:hover{
-  .slick-arrow{
+.slick-slider:hover {
+  .slick-arrow {
     opacity: 1;
   }
 }
 
-.room-card{
+.room-card {
   box-shadow: 0px 10px 20px $darkShade-5;
   border-radius: 4px;
-  background: #FFFFFF;
- 
+  background: #ffffff;
 
-  &__images{
+  &__images {
     min-height: 42px;
 
-    img{
+    img {
       width: 100%;
     }
   }
-  &__info{
+  &__info {
     display: flex;
     padding: 15px 0px 7px 0px;
     margin: 0px 20px 0px 18px;
     border-bottom: 1px solid $darkShade-1;
   }
 
-  &__number{
+  &__number {
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
     color: $darkShade-100;
 
-    & > span{
+    & > span {
       font-weight: bold;
       font-size: 20px;
       line-height: 17px;
@@ -117,7 +122,7 @@
     }
   }
 
-  &__type{
+  &__type {
     margin-left: 7px;
     font-weight: bold;
     font-size: 12px;
@@ -126,7 +131,7 @@
     color: $purple;
   }
 
-  &__price{
+  &__price {
     flex-grow: 1;
     text-align: end;
     width: 90px;
@@ -134,19 +139,19 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
-    background: #FFF;
+    background: #fff;
     color: $darkShade-50;
 
-    & > span{
+    & > span {
       color: $darkShade-50;
       font-size: 12px;
     }
   }
 
-  &__reviews-items{
+  &__reviews-items {
     padding: 8px 20px 13px 20px;
     display: flex;
     justify-content: space-between;
-    background: #FFF;
+    background: #fff;
   }
 }

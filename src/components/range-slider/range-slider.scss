@@ -1,64 +1,64 @@
-@import './../../styles/vars.scss';
+@import "./../../styles/vars.scss";
 
-.range-slider{
+.range-slider {
   max-width: 266px;
-  &__header{
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
   }
-  &__values{
+  &__values {
     display: flex;
     align-items: center;
-    
-    
   }
   &__input-start,
-  &__input-end{ 
+  &__input-end {
     position: absolute;
     z-index: -100;
     opacity: 0;
   }
-  &__value{
+  &__value {
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
   }
 
-  &__slider{
+  &__slider {
     margin-top: 22px;
   }
 }
 
-.noUi-horizontal{
+.noUi-horizontal {
   height: 6px;
 }
-.noUi-target{
-    background: #FAFAFA;
-    border-radius: 3px;
-    border: 1px solid $darkShade-25;
+
+.noUi-target {
+  background: #fafafa;
+  border-radius: 3px;
+  border: 1px solid $darkShade-25;
 }
+
 .noUi-horizontal .noUi-handle {
   background: $green_gradient;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   width: 15px;
   height: 15px;
   right: -6px;
   top: -6px;
   box-shadow: none;
-} 
-.noUi-handle:before, .noUi-handle:after {
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
   display: none;
 }
 
-.noUi-touch-area{
+.noUi-touch-area {
   background: $green_gradient;
   border-radius: 10px;
 }
 
 .noUi-connect {
-  background:  $green_gradient;
-  
+  background: $green_gradient;
 }

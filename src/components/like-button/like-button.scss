@@ -1,6 +1,6 @@
 @import './../../styles/vars.scss';
 
-.like-button{
+.like-button {
   width: 40px;
   height: 20px;
   display: flex;
@@ -10,20 +10,22 @@
   border-radius: 10px;
   background: #FFFFFF;
 
-  span{
+  span {
     width: 20px;
     font-size: 12px;
     font-size: 10px;
     line-height: 12px;
-   
+
   }
-  &__count{
+
+  &__count {
     padding-right: 5px;
   }
 
-  &--liked{
+  &--liked {
     border: 1px solid $purple;
-    span{
+
+    span {
       color: $purple
     }
   }

@@ -4,8 +4,17 @@ include ./../button/button.pug
 
 mixin booking-form(options={})
   -
-    const { number, firstDate, secondDate , adult, child, baby,
-            price="0", days="0", root="id" } = options
+    const { 
+      number,
+      firstDate,
+      secondDate,
+      adult,
+      child,
+      baby,
+      price="0",
+      days="0",
+      root="id" 
+      } = options
 
   form.booking-form(action="")
     .booking-form__header 

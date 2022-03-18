@@ -1,15 +1,15 @@
-@import './../../styles//vars.scss';
+@import "./../../styles//vars.scss";
 
-.widget-title{
-  &--small{
-      @extend %widget_title-small
-  };
+.widget-title {
+  &--small {
+    @extend %widget_title-small;
+  }
 
-  &--medium{
-      @extend %widget_title-medium
-  };
+  &--medium {
+    @extend %widget_title-medium;
+  }
 
-  &--big{
-      @extend %widget_title-big
+  &--big {
+    @extend %widget_title-big;
   }
 }

@@ -1,14 +1,13 @@
 @import './../../styles/vars.scss';
 
-.pagination{
+.pagination {
 
-  &__nav-buttons{
+  &__nav-buttons {
     display: flex;
-    align-items: center ;
-    
+    align-items: center;
   }
 
-  span{
+  span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -17,20 +16,20 @@
   }
 
   &__action-next,
-  &__action-prev{
+  &__action-prev {
     background: $green_gradient;
     border-radius: 22px;
     color: #FFF;
     cursor: pointer;
   }
 
-  &__page-number{
+  &__page-number {
     cursor: pointer;
     border-radius: 22px;
     font-size: 12px;
   }
 
-  &__page-number:hover{
+  &__page-number:hover {
     background: $purple_gradient;
     color: #FFF;
     font-weight: 700;
@@ -41,16 +40,16 @@
     color: #FFF;
     font-weight: 700;
   }
-  
-  &__description{
+
+  &__description {
     margin-top: 8px;
     margin-left: 6px;
   }
 }
 
 @media screen and (max-width: 420px) {
-  .pagination{
-    span{
+  .pagination {
+    span {
       height: 30px;
       width: 30px;
     }

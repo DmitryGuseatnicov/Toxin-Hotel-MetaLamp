@@ -1,71 +1,71 @@
 @import './../../styles/vars.scss';
-
-.footer{
+.footer {
   background: #FFFFFF;
   box-shadow: 0px 1px 0px $darkShade-1;
-  & a{
+
+  & a {
     text-decoration: none;
   }
 
-
-
-  &__inner{
+  &__inner {
     display: flex;
     padding: 100px 0 95px 0;
   }
 
-  &__info{
+  &__info {
     max-width: 260px;
   }
 
-  &__description{
+  &__description {
     margin-top: 18px;
   }
 
-  &__widget{
+  &__widget {
     margin-top: 4px;
   }
 
-  &__widget-list{
+  &__widget-list {
     margin-top: 18px;
     list-style: none;
   }
 
-  &__widget-link{
+  &__widget-link {
     margin-top: 14px;
   }
 
-  &__special{
+  &__special {
     margin-top: 4px;
     max-width: 260px;
   }
 
-  &__special-text{
+  &__special-text {
     margin-top: 19px;
   }
-  &__subscribe-form{
+
+  &__subscribe-form {
     margin-top: 18px;
   }
 
-  &__copy-right{
+  &__copy-right {
     border-top: 1px solid $darkShade-25;
   }
 
-  &__copy-right-inner{
+  &__copy-right-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 26px 0px;
   }
 
-  &__social{
+  &__social {
     display: flex;
-    
+
     gap: 20px;
     height: 24px;
-    &  a{
+
+    & a {
       display: flex;
-      align-items: center ;
+      align-items: center;
       width: 24px;
       height: 24px;
     }
@@ -73,35 +73,33 @@
 
 }
 
-.footer__inner-item:nth-child(2){
+.footer__inner-item:nth-child(2) {
   margin-left: 40px;
 }
 
-.footer__inner-item:nth-child(3){
+.footer__inner-item:nth-child(3) {
   margin-left: 57px;
 }
 
-.footer__inner-item:nth-child(4){
+.footer__inner-item:nth-child(4) {
   margin-left: 93px;
 }
 
-.footer__inner-item:nth-child(5){
+.footer__inner-item:nth-child(5) {
   margin-left: 52px;
 }
 
 
-.footer-mobile{
+.footer-mobile {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
- 
-  .footer{
+  .footer {
     display: none;
   }
- 
-  .footer-mobile{
-   display: block ;
-  }
 
+  .footer-mobile {
+    display: block;
+  }
 }

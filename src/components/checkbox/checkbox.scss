@@ -50,7 +50,7 @@
   & > .checkbox__input:not(:disabled):active+span::before {
       box-shadow: 0 0 0 1px $purple;
   }
- 
+
   & > .checkbox__input:checked+span::before {
       border-color: $purple;
       background: url('./checked.png') no-repeat center;
