@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import DoubleDateDropdown from './Classes/DoubleDateDropdown';
 import FilterDateDropdown from './Classes/FilterDateDropdown';
 import constants from './utils/constants';
@@ -19,4 +20,5 @@ const dateDropdownCreator = (nodeElem) => {
       return null;
   }
 };
+
 $('.date-dropdown').each((i, el) => dateDropdownCreator(el));

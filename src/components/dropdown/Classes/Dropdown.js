@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import DropdownCalculator from './DropdownCalculator';
 import constants from '../utils/constants';
 import '../dropdown.scss';
@@ -10,14 +11,10 @@ class Dropdown {
   }
 
   init() {
-    try {
-      this.$input = this.$dropdown.find(constants.INPUT);
-      [this.calculator] = this.$dropdown.find(constants.CALCULATOR)
-        .map((i, el) => new DropdownCalculator(el));
-      this.bindEventListener();
-    } catch (error) {
-      console.log(error);
-    }
+    this.$input = this.$dropdown.find(constants.INPUT);
+    [this.calculator] = this.$dropdown.find(constants.CALCULATOR)
+      .map((i, el) => new DropdownCalculator(el));
+    this.bindEventListener();
   }
 
   bindEventListener() {

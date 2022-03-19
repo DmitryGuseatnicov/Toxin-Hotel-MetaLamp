@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import LikeButton from './Classes/Like-button';
 import './like-button.scss';
 

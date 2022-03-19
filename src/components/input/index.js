@@ -1,5 +1,7 @@
 import $ from 'jquery';
+
 import InputMaskCreator from './Classes/InputMaskCreator';
+
 import '../widget-title';
 import './input.scss';
 

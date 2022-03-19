@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import $ from 'jquery';
 import slick from 'slick-carousel';
+
 import '../rate-button';
 import './room-card.scss';
 

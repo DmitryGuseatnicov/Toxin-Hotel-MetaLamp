@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import '../../components/header';
 import '../../components/footer';
 import '../../components/room-search-form';

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import constants from '../utils/constants';
 
 class Header {

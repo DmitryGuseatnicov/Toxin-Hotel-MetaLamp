@@ -3,17 +3,12 @@ import $ from 'jquery';
 class CheckboxList {
   constructor(nodeElem) {
     this.$checkboxList = $(nodeElem);
-    console.log(this.$checkboxList);
     this.init();
   }
 
   init() {
-    try {
-      this.$toggleButton = this.$checkboxList.find('.checkbox-list__icon');
-      this.bindEventListener();
-    } catch (error) {
-      console.log(error);
-    }
+    this.$toggleButton = this.$checkboxList.find('.checkbox-list__icon');
+    this.bindEventListener();
   }
 
   bindEventListener() {

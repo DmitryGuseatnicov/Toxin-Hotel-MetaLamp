@@ -3,13 +3,9 @@ import Inputmask from 'inputmask';
 
 class InputMaskCreator {
   constructor(nodeElem) {
-    try {
-      this.$input = nodeElem;
-      this.mask = $(this.$input).data().mask;
-      this.init();
-    } catch (error) {
-      console.log(error);
-    }
+    this.$input = nodeElem;
+    this.mask = $(this.$input).data().mask;
+    this.init();
   }
 
   init() {

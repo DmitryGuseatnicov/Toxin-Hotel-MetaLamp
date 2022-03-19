@@ -1,5 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import $ from 'jquery';
+
 import constants from '../utils/constants';
 
 class DropdownCalculator {
@@ -9,13 +10,9 @@ class DropdownCalculator {
   }
 
   init() {
-    try {
-      this.$calcItems = this.$calculator.find(constants.CALC_ITEMS);
-      this.$calcItems.each((i, el) => this.disabledButtonSwitcher(el));
-      this.bindEventListener();
-    } catch (error) {
-      console.log(error);
-    }
+    this.$calcItems = this.$calculator.find(constants.CALC_ITEMS);
+    this.$calcItems.each((i, el) => this.disabledButtonSwitcher(el));
+    this.bindEventListener();
   }
 
   bindEventListener() {

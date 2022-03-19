@@ -4,15 +4,11 @@ import constants from '../utils/constants';
 
 class GuestsDropdown extends Dropdown {
   init() {
-    try {
-      this.$clearBtn = this.$dropdown.find(constants.CLEAR);
-      this.$applyBtn = this.$dropdown.find(constants.APPLY);
-      super.init();
-      this.hiddenButtonSwitcher();
-      this.showValue();
-    } catch (error) {
-      console.log(error);
-    }
+    this.$clearBtn = this.$dropdown.find(constants.CLEAR);
+    this.$applyBtn = this.$dropdown.find(constants.APPLY);
+    super.init();
+    this.hiddenButtonSwitcher();
+    this.showValue();
   }
 
   clickHandler(e) {

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import NavMenu from './Classes/NavMenu';
 import './nav-menu.scss';
 

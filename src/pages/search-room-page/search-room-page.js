@@ -10,7 +10,6 @@ import '../../components/range-slider';
 import '../../components/checkbox';
 import '../../components/checkbox-list';
 import '../../components/pagination';
-
 import './search-room-page.scss';
 
 $('form').on('submit', (e) => e.preventDefault());

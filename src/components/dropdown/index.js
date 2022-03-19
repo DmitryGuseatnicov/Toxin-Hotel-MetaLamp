@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import GuestsDropdown from './Classes/GuestsDropdown';
 import ComfortsDropdown from './Classes/ComfortsDropdown';
 import constants from './utils/constants';

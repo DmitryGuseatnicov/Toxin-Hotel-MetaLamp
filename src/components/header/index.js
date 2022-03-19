@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import Header from './Classes/Header';
 import '../logo';
 import '../button';
