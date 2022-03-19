@@ -1,4 +1,3 @@
-/* eslint-disable radix */
 import $ from 'jquery';
 import noUiSlider from 'nouislider';
 
@@ -19,8 +18,8 @@ class rangeSlider {
       start: [this.$start.attr('value'), this.$end.attr('value')],
       step: 5,
       range: {
-        min: [parseInt(this.$start.attr('min'))],
-        max: [parseInt(this.$end.attr('max'))],
+        min: [parseInt(this.$start.attr('min'), 10)],
+        max: [parseInt(this.$end.attr('max'), 10)],
       },
       connect: true,
     });

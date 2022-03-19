@@ -1,4 +1,3 @@
-/* eslint-disable no-continue */
 import $ from 'jquery';
 
 const BUTTONS = '.js-pagination__nav-buttons';
@@ -78,7 +77,7 @@ class Pagination {
 
       for (let page = before; page <= after; page += 1) {
         if (page > this.totalPages) {
-          continue;
+          break;
         }
         if (page === 0) {
           page += 1;

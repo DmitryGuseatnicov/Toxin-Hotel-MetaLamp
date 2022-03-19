@@ -1,10 +1,10 @@
-/* eslint-disable no-shadow */
-/* eslint-disable no-return-assign */
 import Chart from 'chart.js/auto';
 
 const createChart = (rating = []) => {
   let totalVotes = 0;
-  rating.forEach((el) => totalVotes += el);
+  rating.forEach((el) => {
+    totalVotes += el;
+  });
 
   const ctx = document.getElementById('room-chart').getContext('2d');
   const yellowGradient = ctx.createLinearGradient(0, 0, 0, 125);
@@ -26,6 +26,7 @@ const createChart = (rating = []) => {
   const counter = {
     id: 'counter',
     beforeDraw(chart) {
+      // eslint-disable-next-line no-shadow
       const { ctx, chartArea: { top, width, height } } = chart;
       ctx.save();
       ctx.font = 'bold 24px Montserrat';
