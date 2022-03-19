@@ -1,4 +1,3 @@
-/* eslint-disable no-return-assign */
 import Dropdown from './Dropdown';
 import textHelper from '../utils/textHelper';
 import constants from '../utils/constants';
@@ -43,7 +42,13 @@ class GuestsDropdown extends Dropdown {
     let guests = 0;
     let baby = 0;
 
-    this.getValue().forEach((el) => ((el.name !== 'младенцы') ? guests += +el.value : baby += +el.value));
+    this.getValue().forEach((el) => {
+      if (el.name !== 'младенцы') {
+        guests += +el.value;
+      } else {
+        baby += +el.value;
+      }
+    });
 
     const value = `${guests > 0
       ? `${guests} ${textHelper('гости', guests)},`
