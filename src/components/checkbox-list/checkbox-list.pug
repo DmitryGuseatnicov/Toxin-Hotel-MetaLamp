@@ -4,9 +4,10 @@ include ./../checkbox/checkbox.pug
 mixin checkbox-list(options={})
   -
     const {title, open, items=[]} = options
-    let classes = 'checkbox-list js-checkbox-list'
+    let classes = "checkbox-list js-checkbox-list"
     if(open === true)
-      classes = `${classes} checkbox-list--open` 
+      classes += " checkbox-list--open" 
+
   div(class=classes)
     .checkbox-list__header.js-checkbox-list__header
       .checkbox-list__title 

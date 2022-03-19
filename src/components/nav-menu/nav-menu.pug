@@ -6,9 +6,9 @@ mixin nav-menu(options={})
       each item in items
         -
           const { link = [], active = false, childrens = [] } = item
-          let classes = 'nav__item js-nav__item'
-          if (active === true) classes += ' nav__item--active'
-          if (childrens.length > 0) classes += ' nav__item--hav-childrens'
+          let classes = "nav__item js-nav__item"
+          if (active === true) classes += " nav__item--active"
+          if (childrens.length > 0) classes += " nav__item--hav-childrens"
 
         if (childrens.length > 0)
           li(class=classes)

@@ -3,9 +3,9 @@ include ./../button/button.pug
 
 mixin dropdown(options={})
   -
-    const { label, placeholder, open, type = 'guests' ,items=[], actionButtons = true } = options
-    let classes = 'dropdown js-dropdown'
-    if(open === true) classes += ' dropdown--open'
+    const { label, placeholder, open, type = "guests" ,items=[], actionButtons = true } = options
+    let classes = "dropdown js-dropdown"
+    if(open === true) classes += " dropdown--open"
 
 
   div(class=classes, data-type=type)

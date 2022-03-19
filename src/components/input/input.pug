@@ -5,7 +5,7 @@ mixin input(options={})
     const {type, placeholder, value, mask, disabled, 
           readonly, required ,subscribe = false, label = ""} = options
 
-    let classes =  'input__text-field'
+    let classes =  "input__text-field"
 
   if (label && subscribe === false)
     label.input
@@ -37,7 +37,7 @@ mixin input(options={})
         button.input__button(type="submit")
           span.material-icons arrow_forward
 
-  if (label === '' && subscribe === false)
+  if (label === "" && subscribe === false)
     .input
       input(
         class=classes,

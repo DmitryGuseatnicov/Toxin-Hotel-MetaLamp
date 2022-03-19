@@ -1,14 +1,14 @@
 mixin widget-title(options={})
   -
-    let level = options.level ? options.level : '3'
-    let text = options.text ? options.text : ''
+    let level = options.level ? options.level : "3"
+    let text = options.text ? options.text : ""
 
 
-  if (level === '1')
+  if (level === "1")
     h1.widget-title.widget-title--big= text
 
-  if (level === '2')
+  if (level === "2")
     h2.widget-title.widget-title--medium= text
 
-  if (level >= '3')
+  if (level >= "3")
     h3.widget-title.widget-title--small= text
