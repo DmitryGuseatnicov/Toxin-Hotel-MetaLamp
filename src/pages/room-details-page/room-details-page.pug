@@ -1,6 +1,4 @@
-include ./../../components/head/head.pug
-include ./../../components/header/header.pug
-include ./../../components/footer/footer.pug
+extends ./../../page-layout/page-template.pug
 include ./../../components/benefits/benefits.pug
 include ./../../components/comment/comment.pug
 include ./../../components/booking-form/booking-form.pug
@@ -8,55 +6,101 @@ include ./../../components/bullet-list/bullet-list.pug
 include ./../../components/widget-title/widget-title.pug
 include ./../../components/chart/chart.pug
 
-+head({title: "Room details"})
-body
-  +header({items:[ {link:{ name: "О нас" , href: "/change-me"}}, {link:{ name: "Услуги" }, childrens:[ {name:"Услуги 1", href:"/change-me"}, {name:"Услуги 2", href:"/change-me"}, ]}, {link: {name: "Вакансии", href: "/change-me"}}, {link: {name: "Новости", href: "/change-me"}}, {link:{ name: "Соглашения"}, childrens:[ {name:"Соглашения 1", href: "/change-me"}, {name:"Соглашения 2", href: "/change-me"}, {name:"Соглашения 3", href: "/change-me"}, ]}, ]})
-  .wrapper
-    main.main
-      .room-gallery 
-        .room-gallery__img.room-gallery__img--big
-          img(src=require("./assets/img/room-img-2.png"), alt="room-photo")
-        .room-gallery__img 
-          img(src=require("./assets/img/room-img.png"), alt="room-photo")
-        .room-gallery__img 
-          img(src=require("./assets/img/room-img-3.png"), alt="room-photo")
-      .container
-        .room-content
-          .room-content__container
-            .room-description
-              .room-benefits 
-                .room-benefits__title 
-                  +widget-title({text: "Сведения о номере", level:"2"})
-                .room-benefits__items
-                  .room-benefits__item
-                    +benefits({title: "Комфорт", description: "Шумопоглощающие стены", src:require("./assets/img/insert_emoticon.png"), underlined: true })
-                  .room-benefits__item
-                    +benefits({title: "Удобство", description: "Окно в каждой из спален", src:require("./assets/img/location_city.png"), underlined: true }) 
-                  .room-benefits__item
-                    +benefits({title: "Уют", description: "Номер оснащён камином", src:require("./assets/img/whatshot.png"), underlined: true })
+block head-title 
+  -
+    const title = "room-details-page"
 
-              .room-grade
-                .room-grade__title 
-                  +widget-title({text: "Впечатления от номера", level: "2"})
-                .room-grade__chart 
-                  +chart
+block content
+  .room-gallery 
+    .room-gallery__img.room-gallery__img--big
+      img(src=require("./assets/img/room-img-2.png"), alt="room-photo")
+    .room-gallery__img 
+      img(src=require("./assets/img/room-img.png"), alt="room-photo")
+    .room-gallery__img 
+      img(src=require("./assets/img/room-img-3.png"), alt="room-photo")
 
-              .room-reviews
-                .room-reviews__title
-                  +widget-title({text: "Отзывы посетителей номера", level: "2"}) 
-                  .room-reviews__count 2 отзыва
-                .room-reviews-items
-                  .room-reviews-item
-                    +comment({ name: "Мурад Сарафанов", time: " 5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", count: "12", liked: true, src : require("./assets/img/avatar-1.png") })
-                  .room-reviews-item
-                    +comment({ name: "Патрисия Стёклышкова", time: "Неделю назад", comment: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", count: "2", src : require("./assets/img/avatar-2.png") })
-              .room-rules 
-                +bullet-list({title:{text:"Правила", level: "2"}, listStyle: true ,items:[ {text: "Нельзя с питомцами"}, {text: "Без вечеринок и мероприятий"}, {text: "Время прибытия — после 13:00, а выезд до 12:00"}, ]})
-              .room-cancel
-                .room-cancel__title 
-                  +widget-title({text:"Отмена", level: "2"})
-                .room-cancel__description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+  .container
+    .room-content
+      .room-content__container
+        .room-description
+          .room-benefits 
+            .room-benefits__title 
+              +widget-title({text: "Сведения о номере", level:"2"})
+            .room-benefits__items
+              .room-benefits__item
+                +benefits({
+                  title: "Комфорт", 
+                  description: "Шумопоглощающие стены", 
+                  src:require("./assets/img/insert_emoticon.png"), 
+                  underlined: true 
+                })
+              .room-benefits__item
+                +benefits({
+                  title: "Удобство",
+                  description: "Окно в каждой из спален", 
+                  src:require("./assets/img/location_city.png"), 
+                  underlined: true 
+                }) 
+              .room-benefits__item
+                +benefits({
+                  title: "Уют", 
+                  description: "Номер оснащён камином", 
+                  src:require("./assets/img/whatshot.png"), 
+                  underlined: true 
+                })
 
-            .room-booking-form 
-              +booking-form({number: "888", firstDate:"19.08.2019", secondDate:"23.08.2019", adult: "2", child: "1", baby: "0", price: "9 990", days: 4 })
-    +footer({items: [ {title: "навигация", links: [ {name: "О нас", href: "/change-me"}, {name: "Новости", href: "/change-me"}, {name: "Служба поддержки", href: "/change-me"}, {name: "Услуги", href: "/change-me"}, ]}, {title: "о нас", links: [ {name: "О сервисе", href: "/change-me"}, {name: "Наша команда", href: "/change-me"}, {name: "Вакансии", href: "/change-me"}, {name: "Инвесторы", href: "/change-me"}, ]}, {title: "Служба поддержки", links: [ {name: "Соглашения", href: "/change-me"}, {name: "Сообщества", href: "/change-me"}, {name: "Связь с нами", href: "/change-me"}, ]}, ]})
+          .room-grade
+            .room-grade__title 
+              +widget-title({text: "Впечатления от номера", level: "2"})
+            .room-grade__chart 
+              +chart
+
+          .room-reviews
+            .room-reviews__title
+              +widget-title({text: "Отзывы посетителей номера", level: "2"}) 
+              .room-reviews__count 2 отзыва
+            .room-reviews-items
+              .room-reviews-item
+                +comment({ 
+                  name: "Мурад Сарафанов", 
+                  time: " 5 дней назад", 
+                  comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+                  count: "12", 
+                  liked: true, 
+                  src : require("./assets/img/avatar-1.png") 
+                })
+              .room-reviews-item
+                +comment({ 
+                  name: "Патрисия Стёклышкова", 
+                  time: "Неделю назад", 
+                  comment: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", 
+                  count: "2", 
+                  src : require("./assets/img/avatar-2.png") 
+                })
+
+          .room-rules 
+            +bullet-list({
+              title:{text:"Правила", level: "2"}, 
+              listStyle: true ,items:[ 
+                {text: "Нельзя с питомцами"}, 
+                {text: "Без вечеринок и мероприятий"}, 
+                {text: "Время прибытия — после 13:00, а выезд до 12:00"}, 
+                ]
+              })
+
+          .room-cancel
+            .room-cancel__title 
+              +widget-title({text:"Отмена", level: "2"})
+            .room-cancel__description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+        .room-booking-form 
+          +booking-form({
+            number: "888", 
+            firstDate:"19.08.2019", 
+            secondDate:"23.08.2019", 
+            adult: "2", 
+            child: "1", 
+            baby: "0", 
+            price: "9 990", 
+            days: 4 
+          })

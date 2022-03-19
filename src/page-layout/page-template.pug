@@ -1,0 +1,48 @@
+include ./../components/head/head.pug
+include ./../components/header/header.pug
+include ./../components/footer/footer.pug
+include ./../components/room-search-form/room-search-form.pug
+
+block head-title 
+
++head({title: title})
+body
+  block header
+    +header({items:[ 
+      {link:{name: "О нас", href: "/change-me" }},
+      {link:{name: "Услуги" }, childrens:[ 
+        {name: "Услуги 1", href: "/change-me"}, 
+        {name:"Услуги 2", href:"/change-me"}, 
+        ]},
+      {link:{name: "Вакансии", href: "/change-me"}},
+      {link:{name: "Новости", href: "/change-me"}},
+      {link:{name: "Соглашения"}, childrens:[ 
+        {name:"Соглашения 1", href: "/change-me"}, 
+        {name:"Соглашения 2", href: "/change-me"}, 
+        {name:"Соглашения 3", href: "/change-me"}, 
+        ]}, 
+      ]})
+
+    .wrapper
+      main.main
+        block content
+      
+
+  block footer
+    +footer({items:[ 
+      {title: "навигация", links:[ 
+        {name: "О нас", href: "/change-me"}, 
+        {name: "Новости", href: "/change-me"}, 
+        {name: "Служба поддержки", href: "/change-me"}, 
+        {name: "Услуги", href: "/change-me"}, 
+      ]}, 
+      {title: "о нас", links: [ 
+        {name: "О сервисе", href: "/change-me"}, 
+        {name: "Наша команда", href: "/change-me"}, 
+        {name: "Вакансии", href: "/change-me"}, 
+        {name: "Инвесторы", href: "/change-me"}, 
+      ]}, 
+      {title: "Служба поддержки", links: [ 
+        {name: "Соглашения", href: "/change-me"}, 
+        {name: "Сообщества", href: "/change-me"}, 
+        {name: "Связь с нами", href: "/change-me"}, ]}, ]})

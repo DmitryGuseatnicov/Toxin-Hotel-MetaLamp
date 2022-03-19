@@ -1,0 +1,15 @@
+include ./../components/head/head.pug
+
+block page-title
+  -
+
++head({title: title})
+body 
+  header.header
+  .wrapper 
+    main.main
+      .container
+
+        block content
+
+    footer.footer 
