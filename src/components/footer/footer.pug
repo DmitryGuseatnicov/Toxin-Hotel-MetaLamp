@@ -16,7 +16,7 @@ mixin footer(options={})
             .footer__description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
         each item in items
-          - const { title, links = [] } = item;
+          - const {title, links = []} = item;
           .footer__inner-item
             .footer__widget
               .footer__widget-title 
