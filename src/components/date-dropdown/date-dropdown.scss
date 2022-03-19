@@ -1,74 +1,75 @@
 @import './../../styles/vars.scss';
 
-.date-dropdown{
+.date-dropdown {
   max-width: 320px;
 
-  &__header{
+  &__header {
     display: flex;
     justify-content: space-between;
     gap: 20px;
   }
 
-  &__input{
+  &__input {
     position: relative;
     width: 100%;
     min-width: 100px;
   }
 
-  .input__text-field::placeholder{
-    color: $darkShade-75
+  .input__text-field::placeholder {
+    color: $darkShade-75;
   }
 
-  &__input-icon{
+  &__input-icon {
     position: absolute;
     right: 8px;
     top: 50%;
     cursor: pointer;
   }
 
-  &__calendar{
-    display: none;
-    margin-top: 5px;
+  &__calendar {
     position: relative;
     z-index: 100;
-    .calendar{
+    display: none;
+    margin-top: 5px;
+
+    .calendar {
       position: absolute;
+      left: 0;
+      right: 0;
       top: 0;
       bottom: 0;
-      right: 0;
-      left: 0;
     }
   }
-
 }
-.date-dropdown[data-type=filter]{
-  .input__text-field{
+
+.date-dropdown[data-type='filter'] {
+  .input__text-field {
     cursor: pointer;
   }
 }
-.date-dropdown--open{
-  .date-dropdown__calendar{
+
+.date-dropdown--open {
+  .date-dropdown__calendar {
     display: block;
   }
 }
 
 @media screen and (max-width: 420px) {
-  .date-dropdown{
-    &__header{
+  .date-dropdown {
+    &__header {
       flex-wrap: wrap;
     }
 
-    &__calendar{
-
-      .calendar{
+    &__calendar {
+      .calendar {
         position: fixed;
-        top: 80px;
         left: 30px;
         right: auto;
+        top: 80px;
         bottom: 0;
-        width: 80%;
-        margin-right: 15px;
         overflow: scroll;
+        margin-right: 15px;
+        width: 80%;
       }
     }
   }

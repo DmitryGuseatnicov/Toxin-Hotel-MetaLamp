@@ -1,21 +1,20 @@
 @import './../../styles/vars.scss';
 
 .like-button {
-  width: 40px;
-  height: 20px;
   display: flex;
   align-items: center;
   border: 1px solid $darkShade-25;
-  box-sizing: border-box;
   border-radius: 10px;
-  background: #FFFFFF;
+  width: 40px;
+  height: 20px;
+  box-sizing: border-box;
+  background: #FFF;
 
   span {
     width: 20px;
     font-size: 12px;
     font-size: 10px;
     line-height: 12px;
-
   }
 
   &__count {
@@ -26,7 +25,7 @@
     border: 1px solid $purple;
 
     span {
-      color: $purple
+      color: $purple;
     }
   }
 }

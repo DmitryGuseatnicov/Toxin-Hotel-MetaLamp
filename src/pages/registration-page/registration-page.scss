@@ -2,18 +2,18 @@
 @import './../../styles/fonts.scss';
 @import './../../styles/global.scss';
 
-.main{
+.main {
   background: url('./img/registration-page.png') center center/cover no-repeat;
 }
 
-.registration-form{
-  max-width: 380px;
-  width: 100%;
+.registration-form {
   margin: 19px auto;
+  width: 100%;
+  max-width: 380px;
 }
 
-@media screen and (max-width: 420px){
-  .registration-form{
+@media screen and (max-width: 420px) {
+  .registration-form {
     padding: 5px;
   }
 }

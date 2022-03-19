@@ -2,12 +2,12 @@
 @import './../../styles/fonts.scss';
 @import './../../styles/global.scss';
 
-.main{
+.main {
   background: url('./img/registration-page.png') center bottom no-repeat;
 }
 
-.main__login-form{
-  max-width: 380px;
-  width: 100%;
+.main__login-form {
   margin: 172px auto;
+  width: 100%;
+  max-width: 380px;
 }

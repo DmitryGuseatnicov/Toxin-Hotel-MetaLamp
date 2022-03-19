@@ -3,121 +3,121 @@
 @import './../../styles/global.scss';
 @import './../../styles/vars.scss';
 
-body{
-  padding: 100px 0px;
+body {
+  padding: 100px 0;
   min-width: 1200px;
 }
 
-.ui-kit-colors-type{
+.ui-kit-colors-type {
   display: flex;
   justify-content: space-between;
 }
-.ui-kit-color{
-  margin-top: 20px;
+
+.ui-kit-color {
   display: flex;
   align-items: center;
+  margin-top: 20px;
 
-  &__square{
+  &__square {
+    border-radius: 6px;
     width: 70px;
     height: 70px;
-    border-radius: 6px;
   }
 
-  &__description{
+  &__description {
     margin-left: 40px;
   }
 
-  &__hex{
+  &__hex {
     margin-top: 3px;
     font-size: 19px;
     line-height: 28px;
   }
-  
 }
 
-.ui-kit-color.dark-shade-100{
-  .ui-kit-color__square{
+.ui-kit-color.dark-shade-100 {
+  .ui-kit-color__square {
     background-color: $darkShade-100;
   }
 }
 
-.ui-kit-color.dark-shade-75{
-  .ui-kit-color__square{
+.ui-kit-color.dark-shade-75 {
+  .ui-kit-color__square {
     background-color: $darkShade-75;
   }
 }
 
-.ui-kit-color.dark-shade-50{
-  .ui-kit-color__square{
+.ui-kit-color.dark-shade-50 {
+  .ui-kit-color__square {
     background-color: $darkShade-50;
   }
 }
 
-.ui-kit-color.dark-shade-25{
-  .ui-kit-color__square{
+.ui-kit-color.dark-shade-25 {
+  .ui-kit-color__square {
     background-color: $darkShade-25;
   }
 }
 
-.ui-kit-color.dark-shade-5{
-  .ui-kit-color__square{
+.ui-kit-color.dark-shade-5 {
+  .ui-kit-color__square {
     background-color: $darkShade-5;
   }
 }
 
-.ui-kit-color.purple{
-  .ui-kit-color__square{
+.ui-kit-color.purple {
+  .ui-kit-color__square {
     background-color: $purple;
   }
 }
 
-.ui-kit-color.green{
-  .ui-kit-color__square{
+.ui-kit-color.green {
+  .ui-kit-color__square {
     background-color: $green;
   }
 }
 
-.ui-kit-typography{
-  max-width: 440px;
+.ui-kit-typography {
   margin-right: 25px;
-  &__container{
+  max-width: 440px;
+
+  &__container {
     display: flex;
     margin-top: 51px;
   }
-  &__container:first-child{
+
+  &__container:first-child {
     margin-top: 20px;
   }
 
-  &__container:last-child{
+  &__container:last-child {
     margin-top: 48px;
     max-width: 380px;
   }
 
- 
-
-  &__type{
+  &__type {
     min-width: 37px;
     text-align: right;
-    color: rgba(31, 32, 65, 0.25);
     text-transform: capitalize;
+    color: rgba(31, 32, 65, 0.25);
 
-    &--h1{
+    &--h1 {
       font-size: 24px;
       line-height: 29px;
     }
 
-    &--h2{
+    &--h2 {
       font-size: 19px;
       line-height: 23px;
     }
 
-    &--h3{
+    &--h3 {
       font-size: 12px;
       line-height: 15px;
     }
   }
 
-  &__text{
+  &__text {
     margin-left: 30px;
   }
 }

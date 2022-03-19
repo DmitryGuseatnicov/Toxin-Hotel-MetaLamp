@@ -1,48 +1,49 @@
 
 @import './../../styles/vars.scss';
 
-.comment{
-  &__header{
+.comment {
+  &__header {
     display: flex;
   }
 
-  &__img{
-    border: 2px solid #FFFFFF;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 10px 20px $darkShade-1);
+  &__img {
+    border: 2px solid #FFF;
     border-radius: 32px;
-    max-width: 48px;
     height: 48px;
+    max-width: 48px;
+    box-sizing: border-box;
+    filter: drop-shadow(0 10px 20px $darkShade-1);
 
-    img{
+    img {
+      border-radius: 32px;
       width: 100%;
       height: 100%;
-      border-radius: 32px;
       object-fit: cover;
     }
   }
+
   &__info {
     padding-left: 10px;
   }
 
-  &__person-name{
+  &__person-name {
     font-weight: bold;
     color: $darkShade-75;
   }
 
-  &__content{
+  &__content {
     display: flex;
     margin-top: 10px;
   }
 
-  &__like{
-    margin-top: 2px;
+  &__like {
     display: flex;
     justify-content: center;
+    margin-top: 2px;
     min-width: 48px;
   }
 
-  &__text{
+  &__text {
     padding-left: 10px;
   }
 }

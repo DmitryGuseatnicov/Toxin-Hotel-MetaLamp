@@ -2,30 +2,27 @@
 @import './../../styles/fonts.scss';
 @import './../../styles/global.scss';
 
-
-.landing{
+.landing {
   background: url('./img/lending-img.png') center bottom no-repeat;
-  
-  &__search-form{
-    padding-top: 70px;
+
+  &__search-form {
     position: relative;
     z-index: 101;
+    padding-top: 70px;
   }
 
-  &__description{
-    max-width: 300px;
-    margin: 320px 0px 0px auto;
+  &__description {
+    margin: 320px 0 0 auto;
     padding-bottom: 18px;
+    max-width: 300px;
     text-align: right;
   }
 }
 
-
 @media screen and (max-width: 768px) {
-
- .landing{
-    &__description{
-      margin: 150px 0px 0px auto;
+  .landing {
+    &__description {
+      margin: 150px 0 0 auto;
     }
   }
 }

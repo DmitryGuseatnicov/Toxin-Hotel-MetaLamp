@@ -1,21 +1,22 @@
-@import './../../styles/vars.scss'; 
+@import './../../styles/vars.scss';
 
-.room-search-form{
+.room-search-form {
+  padding: 40px 30px 30px;
   max-width: 380px;
-  @extend %card-border-shadow;
-  padding: 40px 30px 30px 30px;
   background: #FFF;
 
-  &__date-dropdown{
-    margin-top: 21px;
+  &__date-dropdown {
     z-index: 105;
+    margin-top: 21px;
   }
 
-  &__guest-dropdown{
+  &__guest-dropdown {
     margin-top: 20px;
   }
 
-  &__submit-button{
+  &__submit-button {
     margin-top: 31px;
   }
+
+  @extend %card-border-shadow;
 }

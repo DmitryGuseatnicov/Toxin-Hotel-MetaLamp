@@ -2,26 +2,24 @@
 @import './../../styles/global.scss';
 @import './../../styles/reset.scss';
 
-
-body{
+body {
   min-width: 1200px;
 }
 
-.main{
-  padding: 100px 0px;
+.main {
+  padding: 100px 0;
 }
 
-.ui-kit{
-
-  &__colum{
+.ui-kit {
+  &__colum {
     width: 33%;
   }
 
-  &__colum:nth-child(2){
+  &__colum:nth-child(2) {
     padding-left: 30px;
   }
 
-  &__colum:nth-child(3){
+  &__colum:nth-child(3) {
     padding-left: 6px;
   }
 
@@ -29,127 +27,127 @@ body{
   *** BUTTONS AND INPUTS
   **/
 
-  &__buttons-and-inputs{
+  &__buttons-and-inputs {
     display: flex;
     justify-content: space-between;
   }
 
-  &__text-field:nth-child(2){
+  &__text-field:nth-child(2) {
     margin-top: 20px;
   }
 
-  &__dropdown-guest{
-    margin-top: 20px;
+  &__dropdown-guest {
     position: relative;
     z-index: 104;
+    margin-top: 20px;
   }
 
-  &__mask-text-field{
+  &__mask-text-field {
     margin-top: 22px;
   }
 
-  &__date-dropdown{
-    margin-top: 40px;
+  &__date-dropdown {
     position: relative;
     z-index: 103;
+    margin-top: 40px;
   }
 
-  &__filter-date-dropdown{
-    margin-top: 41px;
-    max-width: 266px;
+  &__filter-date-dropdown {
     position: relative;
     z-index: 102;
-  }
-
-  &__input-subscribe{
     margin-top: 41px;
     max-width: 266px;
   }
 
-  &__checkbox-items{
+  &__input-subscribe {
+    margin-top: 41px;
+    max-width: 266px;
+  }
+
+  &__checkbox-items {
     margin-top: 17px;
   }
 
-  &__checkbox-item{
+  &__checkbox-item {
     margin-top: 10px;
   }
 
-  &__radio{
+  &__radio {
     margin-top: 41px;
   }
 
-  &__radio-items{
+  &__radio-items {
     display: flex;
-    gap: 20px;
     margin-top: 16px;
+    gap: 20px;
   }
 
-  &__toggle{
+  &__toggle {
     margin-top: 41px;
   }
 
-  &__toggle-items{
+  &__toggle-items {
     margin-top: 13px;
   }
 
-  &__toggle-item{
+  &__toggle-item {
     margin-top: 10px;
   }
 
-  &__like-button{
+  &__like-button {
     margin-top: 43px;
   }
 
-  &__like-button-items{
-    margin-top: 16px;
+  &__like-button-items {
     display: flex;
+    margin-top: 16px;
     gap: 10px;
   }
 
-  &__rate-button{
+  &__rate-button {
     margin-top: 40px;
   }
 
-  &__rate-button-items{
+  &__rate-button-items {
     display: flex;
     margin-top: 17px;
     gap: 20px;
   }
 
-  &__buttons-purple{
-    margin-top: 16px;
+  &__buttons-purple {
     display: flex;
+    margin-top: 16px;
   }
 
-  &__buttons-purple-border{
+  &__buttons-purple-border {
     display: flex;
     margin-top: 30px;
   }
 
-  &__buttons-simple{
+  &__buttons-simple {
     display: flex;
     margin-top: 27px;
     padding-left: 3px;
   }
 
-  &__buttons{
+  &__buttons {
     margin-top: 44px;
   }
 
-  &__button{
+  &__button {
     margin-right: 18px;
   }
 
-  &__buttons-purple-link{
+  &__buttons-purple-link {
     margin-top: 25px;
   }
 
-  &__pagination{
+  &__pagination {
     margin-top: 40px;
     margin-left: 3px;
   }
 
-  &__pagination-title{
+  &__pagination-title {
     margin-bottom: 16px;
   }
 
@@ -157,91 +155,91 @@ body{
   *** DROPDOWN'S WITH THIS BEHAVIORS
   **/
 
-  &__dropdowns-behavior{
+  &__dropdowns-behavior {
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
   }
 
-  &__dropdown-comforts{
+  &__dropdown-comforts {
     position: relative;
     z-index: 101;
     max-width: 266px;
   }
 
-  &__dropdown-comforts-open{
+  &__dropdown-comforts-open {
     margin-top: 20px;
     max-width: 266px;
   }
 
-  &__dropdown-guest-open{
+  &__dropdown-guest-open {
     margin-left: 1px;
   }
 
-  &__dropdown-guest-with-value{
+  &__dropdown-guest-with-value {
     margin-top: 231px;
   }
 
   /**
   *** BULLET, CHECKBOX AND RICH LISTS
-  **/  
+  **/
 
-  &__lists{
+  &__lists {
     display: flex;
     justify-content: space-between;
     margin-top: 173px;
   }
 
-  &__checkbox{
+  &__checkbox {
     max-width: 222px;
   }
 
-  &__checkbox-list{
+  &__checkbox-list {
     margin-top: -5px;
   }
 
-  &__checkbox-list-open{
+  &__checkbox-list-open {
     margin-top: 40px;
   }
 
-  &__checkbox-rich{
-    max-width: 260px;
+  &__checkbox-rich {
     margin-left: 1px;
+    max-width: 260px;
   }
 
-  &__checkbox-rich-items{
+  &__checkbox-rich-items {
     margin-top: 16px;
   }
 
-  &__checkbox-rich-item{
+  &__checkbox-rich-item {
     margin-top: 8px;
   }
-  
-  &__bullet-list{
-    max-width: 260px;
+
+  &__bullet-list {
     margin-left: 1px;
+    max-width: 260px;
   }
 
   /**
   *** BENEFITS AND COMMENT
-  **/  
+  **/
 
-  &__benefits-and-comments{
-    margin-top: 101px;
+  &__benefits-and-comments {
     display: flex;
+    margin-top: 101px;
   }
 
-  &__benefits-item:nth-child(2){
+  &__benefits-item:nth-child(2) {
     margin-top: 20px;
   }
 
-  &__benefits-list{
+  &__benefits-list {
     min-width: 266px;
   }
 
-  &__comment{
+  &__comment {
+    margin-top: 10px;
     margin-left: 180px;
     padding-right: 84px;
-    margin-top: 10px;
   }
 }

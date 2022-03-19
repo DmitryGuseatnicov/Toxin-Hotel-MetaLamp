@@ -1,11 +1,11 @@
 @import './../../styles/vars.scss';
 
-.button{
+.button {
   border: none;
   background-color: #FFF;
   cursor: pointer;
 
-  & > span{
+  & > span {
     display: inline-block;
     font-weight: bold;
     font-size: 12px;
@@ -13,92 +13,97 @@
     text-transform: uppercase;
     color: inherit;
   }
-
 }
 
-.button--simple{
+.button--simple {
   color: $purple;
 
-  &:hover{
+  &:hover {
     color: $darkShade-50;
   }
 
-  &:disabled{
+  &:disabled {
     color: $darkShade-50;
     cursor: default;
   }
-  
 }
 
-.button--purple{
+.button--purple {
+  border-radius: 22px;
   padding: 10px 20px;
-  border-radius: 22px;
-  background: $purple_gradient;
   color: #FFF;
+  background: $purple_gradient;
 
-  &:hover{
-    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%,  rgba($color: #8BA4F9, $alpha: 0.5) 100%);background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  &:hover {
+    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
+    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   }
-  &:disabled{
-    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%,  rgba($color: #8BA4F9, $alpha: 0.5) 100%);background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+  &:disabled {
+    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
+    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     cursor: default;
   }
 }
 
-.button--purple.button--short{
+.button--purple.button--short {
+  padding: 0 20px;
   height: 34px;
-  padding: 0px 20px;
 }
 
-.button--purple-border{
-  padding: 2px 2px;
+.button--purple-border {
   border-radius: 22px;
-  background: $purple_gradient;
+  padding: 2px;
   color: #FFF;
+  background: $purple_gradient;
 
-  .button__text{
-    padding: 12.5px 18px;
+  .button__text {
     border-radius: 22px;
+    padding: 12.5px 18px;
+    color: $purple;
     background: #FFF;
-    color: $purple
   }
 
-  &:hover{
-    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%,  rgba($color: #8BA4F9, $alpha: 0.5) 100%);background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  &:hover {
+    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
+    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   }
-  &:disabled{
-    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%,  rgba($color: #8BA4F9, $alpha: 0.5) 100%);background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+  &:disabled {
+    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
+    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     cursor: default;
   }
 }
 
-.button--purple-border.button--short{
+.button--purple-border.button--short {
   height: 34px;
+
   & > span {
     padding: 7.5px 18px;
   }
 }
 
-.button--purple.button--link{
+.button--purple.button--link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 320px;
-  width: 100%;
   padding: 8.5px 8px;
+  width: 100%;
+  max-width: 320px;
 
-  .button__text{
+  .button__text {
     flex-grow: 1;
     padding-left: 25px;
   }
 
-  .button__icon{
-    & > span{
+  .button__icon {
+    & > span {
       color: #FFF;
     }
   }
 
-  &:hover{
+  &:hover {
     background: $purple_gradient;
   }
 }

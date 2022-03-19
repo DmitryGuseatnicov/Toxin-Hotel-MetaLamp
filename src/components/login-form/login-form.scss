@@ -1,31 +1,33 @@
 @import './../../styles/vars.scss';
 
-.login-form{
-  padding: 40px 30px 30px 30px;
-  @extend %card-border-shadow;
-  background: #FFFFFF;
+.login-form {
+  padding: 40px 30px 30px;
+  background: #FFF;
 
-  &__mail{
+  &__mail {
     margin-top: 16px;
   }
 
-  &__password{
+  &__password {
     margin-top: 5px;
   }
 
-  &__button-login{
+  &__button-login {
     margin-top: 20px;
   }
 
-  &__button-create{
+  &__button-create {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-top: 30px;
   }
-  .button--purple-border{
-    .button__text{
+
+  .button--purple-border {
+    .button__text {
       padding: 12.5px 16px;
     }
-  } 
+  }
+
+  @extend %card-border-shadow;
 }

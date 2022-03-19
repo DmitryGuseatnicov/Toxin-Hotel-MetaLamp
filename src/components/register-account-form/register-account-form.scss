@@ -1,10 +1,9 @@
-@import "./../../styles/vars.scss";
+@import './../../styles/vars.scss';
 
 .register-account-form {
+  padding: 40px 30px 30px;
   max-width: 380px;
-  @extend %card-border-shadow;
-  padding: 40px 30px 30px 30px;
-  background: #ffffff;
+  background: #fff;
 
   &__name {
     margin-top: 15px;
@@ -16,8 +15,8 @@
 
   &__checkboxes {
     display: flex;
-    gap: 20px;
     margin-top: 10px;
+    gap: 20px;
   }
 
   &__date {
@@ -42,11 +41,14 @@
 
   &__login-button {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-top: 30px;
+
     .button__text {
       padding: 12.5px 24px;
     }
   }
+
+  @extend %card-border-shadow;
 }

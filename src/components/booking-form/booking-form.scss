@@ -1,125 +1,124 @@
 @import './../../styles/vars.scss';
 
-
-.booking-form{
+.booking-form {
+  padding: 45px 30px 30px;
   max-width: 380px;
-  padding: 45px 30px 30px 30px;
-  background: #FFFFFF;
-  @extend %card-border-shadow;
-  &__header{
+  background: #FFF;
+
+  &__header {
     display: flex;
   }
 
-  &__number{
+  &__number {
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
-    color: $darkShade-100;
     text-transform: uppercase;
-    & > span{
+    color: $darkShade-100;
+
+    & > span {
       font-weight: bold;
       font-size: 23px;
       line-height: 18px;
-      color: $darkShade-100;
       text-transform: uppercase;
+      color: $darkShade-100;
     }
   }
 
-  &__type{
-    margin-left: 10px;
+  &__type {
     margin-top: 2px;
+    margin-left: 10px;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
     color: $purple;
-    
   }
 
-  &__price-for-day{
-    margin-top: 2px;
+  &__price-for-day {
     flex-grow: 1;
-    text-align: end;
+    margin-top: 2px;
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
+    text-align: end;
     color: $darkShade-50;
 
-    & > span{
+    & > span {
       font-size: 12px;
     }
   }
 
-  &__date-dropdown{
+  &__date-dropdown {
     margin-top: 18px;
   }
 
-  &__guest-dropdown{
+  &__guest-dropdown {
     margin-top: 22px;
   }
 
-  &__price-list{
+  &__price-list {
     margin-top: 20px;
   }
 
-  &__price-list-item{
+  &__price-list-item {
     display: flex;
     margin-top: 14px;
   }
 
-  &__price-list-name{
+  &__price-list-name {
     max-width: 215px;
     line-height: 18px;
   }
 
-
-  &__price-list-value{
+  &__price-list-value {
     flex-grow: 1;
-    text-align: end;
     min-width: 40px;
     line-height: 18px;
+    text-align: end;
   }
 
-  &__total{
+  &__total {
     display: flex;
-    margin-top: 30px;
     justify-content: space-between;
+    margin-top: 30px;
   }
 
-  &__total-dots{
+  &__total-dots {
     flex-grow: 1;
-    border-bottom: 1px dashed $darkShade-25; 
+    border-bottom: 1px dashed $darkShade-25;
     height: 20px;
   }
 
+  &__booking-button {
+    margin-top: 22px;
+  }
+
   &__total-text,
-  &__total-price{
+  &__total-price {
     font-weight: bold;
     font-size: 19px;
     line-height: 23px;
-    color: $darkShade-100
+    color: $darkShade-100;
   }
 
-  &__booking-button{
-    margin-top: 22px;
-  }
+  @extend %card-border-shadow;
 }
 
-.booking-form__price-list-item--hav-info{
-  .booking-form{
-    &__price-list-info{
+.booking-form__price-list-item--hav-info {
+  .booking-form {
+    &__price-list-info {
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin: 0px 4px;
-      min-width: 20px;
+      justify-content: center;
+      margin: 0 4px;
+      border: 1px solid $darkShade-25;
+      border-radius: 50%;
       width: 20px;
       height: 20px;
-      border-radius: 50%;
-      border: 1px solid $darkShade-25;
+      min-width: 20px;
       font-weight: bold;
       font-size: 12px;
       color: $darkShade-25;
     }
   }
 }
-

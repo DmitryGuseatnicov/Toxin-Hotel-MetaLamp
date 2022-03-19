@@ -1,34 +1,35 @@
 @import './../../styles/vars.scss';
 
-.bullet-list{
-  &__items{
-    margin-top: 12px;
+.bullet-list {
+  &__items {
     list-style: none;
+    margin-top: 12px;
   }
 
-  &__item{
+  &__item {
+    position: relative;
     margin-top: 10px;
     padding-left: 21px;
-    position: relative;
   }
 
-  &__item::before{
+  &__item::before {
     content: '';
     position: absolute;
     left: 0;
     top: 8px;
+    border-radius: 50%;
     width: 10px;
     height: 10px;
-    border-radius: 50%;
     background: $darkShade-25;
   }
 }
 
-.bullet-list--listStyle{
+.bullet-list--listStyle {
   .bullet-list__title {
-    padding-left: 21px ;
+    padding-left: 21px;
   }
-  .bullet-list__items{
+
+  .bullet-list__items {
     margin-top: 20px;
   }
 }

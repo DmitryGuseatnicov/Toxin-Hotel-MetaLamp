@@ -1,29 +1,29 @@
 @import './../../styles/vars.scss';
 
-.benefits{
+.benefits {
   display: flex;
   align-items: center;
   padding-bottom: 20px;
   max-width: 280px;
 
-  &__img{
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 48px;
     height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-  
-  &__title{
+
+  &__title {
     font-weight: bold;
     color: $darkShade-75;
   }
-  &__description{
+
+  &__description {
     margin-left: 10px;
   }
 }
 
-.benefits.benefits--underlined{
-    border-bottom:1px solid $darkShade-1;
+.benefits.benefits--underlined {
+  border-bottom: 1px solid $darkShade-1;
 }
-

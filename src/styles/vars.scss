@@ -1,39 +1,39 @@
-$darkShade-100:   #1F2041;;
-$darkShade-75:  rgba(31, 32, 65, 0.75);
-$darkShade-50:  rgba(31, 32, 65, 0.5);
-$darkShade-25:  rgba(31, 32, 65, 0.25);
-$darkShade-5:   rgba(31, 32, 65, 0.05);
-$darkShade-1:   rgba(31, 32, 65, 0.01);
-$purple:    #BC9CFF;
-$green:     #6FCF97;
+$darkShade-100: #1F2041;
+$darkShade-75: rgba(31, 32, 65, 0.75);
+$darkShade-50: rgba(31, 32, 65, 0.5);
+$darkShade-25: rgba(31, 32, 65, 0.25);
+$darkShade-5: rgba(31, 32, 65, 0.05);
+$darkShade-1: rgba(31, 32, 65, 0.01);
+$purple: #BC9CFF;
+$green: #6FCF97;
 $purple_gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $green_gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
-%card-border-shadow{
+%card-border-shadow {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
-%widget_title-big{
+%widget_title-big {
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-size: 24px;
   line-height: 29px;
   color: $darkShade-100;
 }
 
-%widget_title-medium{
+%widget_title-medium {
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-size: 19px;
   line-height: 23px;
   color: $darkShade-100;
 }
 
-%widget_title-small{
+%widget_title-small {
   font-family: 'Montserrat';
   font-weight: 700;
   font-size: 12px;
@@ -42,10 +42,10 @@ $green_gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   color: $darkShade-100;
 }
 
-%body_text{
+%body_text {
   font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-size: 14px;
   line-height: 24px;
   color: $darkShade-75;

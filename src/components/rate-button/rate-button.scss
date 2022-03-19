@@ -1,8 +1,9 @@
 @import './../../styles/vars.scss';
 
-.rate-button{
+.rate-button {
   min-width: 120px;
-  & > span{
+
+  & > span {
     -webkit-text-fill-color: transparent;
     background: $purple_gradient;
     background-clip: text;

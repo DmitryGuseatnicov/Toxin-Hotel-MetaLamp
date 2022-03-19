@@ -1,64 +1,64 @@
 @import './../../styles/vars.scss';
 
 .radio__input {
-  opacity: 0;
   appearance: none;
+  opacity: 0;
 }
 
 .radio__label {
+  position: relative;
   display: flex;
   height: 20px;
-  position: relative;
 
-  &>span {
-    line-height: initial;
+  & > span {
     padding-left: 30px;
+    line-height: initial;
     color: $darkShade-50;
   }
 
-  &>span::before {
-    position: absolute;
+  & > span::before {
     content: '';
+    position: absolute;
     left: 0;
-    width: 20px;
-    height: 20px;
     border: 1px solid $darkShade-25;
     border-radius: 10px;
+    width: 20px;
+    height: 20px;
   }
 
-  &>span::after {
-    position: absolute;
+  & > span::after {
     content: '';
+    position: absolute;
     left: 4px;
     top: 4px;
+    display: none;
+    border-radius: 10px;
     width: 12px;
     height: 12px;
     background: $purple_gradient;
-    border-radius: 10px;
-    display: none;
   }
 
-  &>.radio__input:not(:disabled):not(:checked)+span:hover::before {
+  & > .radio__input:not(:disabled):not(:checked) + span:hover::before {
     border-color: $purple;
   }
 
-  &>.radio__input:not(:disabled):active+span::before {
+  & > .radio__input:not(:disabled):active + span::before {
     box-shadow: 0 0 0 1px $purple;
   }
 
-  &>.radio__input:checked+span::before {
+  & > .radio__input:checked + span::before {
     border-color: $purple;
   }
 
-  &>.radio__input:checked+span {
-    color: $darkShade-75
+  & > .radio__input:checked + span {
+    color: $darkShade-75;
   }
 
-  &>.radio__input:checked+span::after {
+  & > .radio__input:checked + span::after {
     display: block;
   }
 
-  &>.radio__input:disabled+span::before {
-    background-color: rgba($darkShade-25, $alpha: 0.4)
+  & > .radio__input:disabled + span::before {
+    background-color: rgba($darkShade-25, $alpha: 0.4);
   }
 }

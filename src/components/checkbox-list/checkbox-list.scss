@@ -1,35 +1,36 @@
-.checkbox-list{
+.checkbox-list {
   max-width: 266px;
 
-  &__header{
+  &__header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
-  &__icon{
-    height: 24px;
+  &__icon {
     margin-right: 8px;
+    height: 24px;
     transition: 0.4s;
     cursor: pointer;
   }
 
-  &__items{
+  &__items {
     display: none;
     margin-top: 13px;
   }
 
-  &__item{
-    margin-top: 10px;
+  &__item {
     list-style: none;
+    margin-top: 10px;
   }
 }
 
-.checkbox-list--open{
-  .checkbox-list__items{
+.checkbox-list--open {
+  .checkbox-list__items {
     display: block;
   }
-  .checkbox-list__icon{
-   transform: rotate(180deg);
+
+  .checkbox-list__icon {
+    transform: rotate(180deg);
   }
 }

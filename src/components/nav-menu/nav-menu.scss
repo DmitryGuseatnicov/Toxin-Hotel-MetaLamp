@@ -1,100 +1,101 @@
-@import './../../styles/vars.scss'; 
+@import './../../styles/vars.scss';
 
-.nav{
+.nav {
   margin-right: 20px;
-  & a{
+
+  & a {
     font-weight: inherit;
-    color: inherit;
     text-decoration: none;
+    color: inherit;
   }
 
-  &__list{
+  &__list {
     display: flex;
-    gap: 21px;
     list-style: none;
+    gap: 21px;
   }
 
-  &__item{
+  &__item {
     position: relative;
     white-space: nowrap;
     cursor: pointer;
   }
 
-  &__item-link{
+  &__item-link {
     color: $darkShade-50;
-    & > span{
+
+    & > span {
       color: inherit;
     }
   }
 
-  &__item-link:hover{
+  &__item-link:hover {
     color: $darkShade-75;
   }
 
-  &__item-childrens{
-    display: none;
+  &__item-childrens {
     position: absolute;
-    top: 25px;
     left: -20px;
-    padding: 0px 20px 20px 20px;
-    background: #FFF;
+    top: 25px;
+    display: none;
+    padding: 0 20px 20px;
+    box-shadow: 0 10px 20px $darkShade-50;
     white-space: nowrap;
-    box-shadow: 0px 10px 20px $darkShade-50;
+    background: #FFF;
   }
 
-  &__item-children:hover{
+  &__item-children:hover {
     color: $darkShade-100;
   }
 
-  &__item-name{
-   color: inherit
+  &__item-name {
+    color: inherit;
   }
-
 }
 
-.nav__item--hav-childrens{
-  .nav__item-link{
+.nav__item--hav-childrens {
+  .nav__item-link {
     display: flex;
   }
-  span{
+
+  span {
     position: relative;
   }
-  span::before{
+
+  span::before {
     content: '\e5cf';
   }
 }
 
-.nav__item--active{
-  .nav__item-link{
+.nav__item--active {
+  .nav__item-link {
     font-weight: bold;
     color: $darkShade-75;
   }
 }
 
-.nav__item--open{
-  .nav__item-childrens{
+.nav__item--open {
+  .nav__item-childrens {
     display: block;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .nav{
-    &__list{
+  .nav {
+    &__list {
       display: block;
     }
 
-    &__item{
+    &__item {
       margin-top: 10px;
     }
 
-    &__item-childrens{
+    &__item-childrens {
       position: relative;
-      top: 0px;
       left: 10px;
+      top: 0;
       padding: 0;
       box-shadow: none;
     }
   }
 }
-
-

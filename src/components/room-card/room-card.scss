@@ -1,4 +1,4 @@
-@import "./../../styles/vars.scss";
+@import './../../styles/vars.scss';
 
 .slick-slider {
   position: relative;
@@ -17,13 +17,14 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 42px;
-  height: calc(100% - 6px);
   z-index: 10;
   border: none;
+  width: 42px;
+  height: calc(100% - 6px);
   background: transparent;
   opacity: 0;
   transition: 0.5s;
+
   span {
     color: #fff;
   }
@@ -31,11 +32,13 @@
 
 .slick-arrow.slick-prev {
   left: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
   span {
     transform: rotate(90deg);
     cursor: pointer;
@@ -44,11 +47,13 @@
 
 .slick-arrow.slick-next {
   right: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+
   span {
     transform: rotate(-90deg);
     cursor: pointer;
@@ -56,31 +61,31 @@
 }
 
 .slick-dots {
-  display: flex;
   position: absolute;
-  z-index: 11;
-  gap: 4px;
-  bottom: 9px;
   right: 15px;
+  bottom: 9px;
+  z-index: 11;
+  display: flex;
   list-style: none;
   cursor: pointer;
+  gap: 4px;
 }
 
 .slick-dots li.slick-active {
   button {
-    background: #ffffff;
-    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    box-shadow: 0 5px 5px rgba(31, 32, 65, 0.3);
+    background: #fff;
   }
 }
 
 .slick-dots li button {
+  border: 1px solid #fff;
+  border-radius: 50%;
   width: 7.5px;
   height: 7.5px;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  background: transparent;
-  filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
   font-size: 0;
+  background: transparent;
+  filter: drop-shadow(0 5px 5px rgba(31, 32, 65, 0.3));
 }
 
 .slick-slider:hover {
@@ -90,9 +95,9 @@
 }
 
 .room-card {
-  box-shadow: 0px 10px 20px $darkShade-5;
   border-radius: 4px;
-  background: #ffffff;
+  box-shadow: 0 10px 20px $darkShade-5;
+  background: #fff;
 
   &__images {
     min-height: 42px;
@@ -101,11 +106,12 @@
       width: 100%;
     }
   }
+
   &__info {
     display: flex;
-    padding: 15px 0px 7px 0px;
-    margin: 0px 20px 0px 18px;
+    margin: 0 20px 0 18px;
     border-bottom: 1px solid $darkShade-1;
+    padding: 15px 0 7px;
   }
 
   &__number {
@@ -133,25 +139,25 @@
 
   &__price {
     flex-grow: 1;
-    text-align: end;
     width: 90px;
-    text-align: right;
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
-    background: #fff;
+    text-align: end;
+    text-align: right;
     color: $darkShade-50;
+    background: #fff;
 
     & > span {
-      color: $darkShade-50;
       font-size: 12px;
+      color: $darkShade-50;
     }
   }
 
   &__reviews-items {
-    padding: 8px 20px 13px 20px;
     display: flex;
     justify-content: space-between;
+    padding: 8px 20px 13px;
     background: #fff;
   }
 }

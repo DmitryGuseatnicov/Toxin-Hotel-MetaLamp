@@ -1,62 +1,64 @@
 @import './../../styles/vars.scss';
 
-.checkbox__input{
-  opacity: 0;
+.checkbox__input {
   appearance: none;
+  opacity: 0;
 }
 
-.checkbox__label{
+.checkbox__label {
+  position: relative;
   display: flex;
   min-height: 20px;
-  position: relative;
 
-  &-rich{
+  &-rich {
     display: inline-flex;
     flex-direction: column;
-    .checkbox__label-text{
-      color: $darkShade-75;
+
+    .checkbox__label-text {
       font-weight: bold;
       font-size: 14px;
       line-height: 18px;
-      
+      color: $darkShade-75;
     }
-    .checkbox__label-sub-text{
+
+    .checkbox__label-sub-text {
       margin-top: 7px;
       font-size: 12px;
       line-height: 14px;
       color: $darkShade-50;
     }
   }
-  
-  & > span{
-      color: $darkShade-50;
-      line-height: initial;
-      padding-left: 30px;
+
+  & > span {
+    padding-left: 30px;
+    line-height: initial;
+    color: $darkShade-50;
   }
 
-  & > span::before{
-      position: absolute;
-      content: '';
-      left:0;
-      width: 20px;
-      height: 20px;
-      border: 1px solid $darkShade-25;
-      border-radius: 4px;
-  }
-  & > .checkbox__input:not(:disabled):not(:checked)+span:hover::before {
-      border-color: $purple;
+  & > span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    border: 1px solid $darkShade-25;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
   }
 
-  & > .checkbox__input:not(:disabled):active+span::before {
-      box-shadow: 0 0 0 1px $purple;
+  & > .checkbox__input:not(:disabled):not(:checked) + span:hover::before {
+    border-color: $purple;
   }
 
-  & > .checkbox__input:checked+span::before {
-      border-color: $purple;
-      background: url('./checked.png') no-repeat center;
+  & > .checkbox__input:not(:disabled):active + span::before {
+    box-shadow: 0 0 0 1px $purple;
   }
 
-  & > .checkbox__input:disabled+span::before {
-      background-color: rgba($darkShade-25, $alpha: 0.4)
+  & > .checkbox__input:checked + span::before {
+    border-color: $purple;
+    background: url('./checked.png') no-repeat center;
+  }
+
+  & > .checkbox__input:disabled + span::before {
+    background-color: rgba($darkShade-25, $alpha: 0.4);
   }
 }

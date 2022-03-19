@@ -3,101 +3,102 @@
 @import './../../styles/global.scss';
 @import './../../styles/vars.scss';
 
-.main{
-  padding-bottom: 70px;
+.main {
   border-bottom: 1px solid $darkShade-25;
-
+  padding-bottom: 70px;
 }
 
-.main-content{
-  margin-top: 30px;
+.main-content {
   display: flex;
   justify-content: space-between;
-  gap: 60px
+  margin-top: 30px;
+  gap: 60px;
 }
 
-.sidebar{
-  max-width: 266px;
-  min-width: 266px;
+.sidebar {
   width: 100%;
+  min-width: 266px;
+  max-width: 266px;
+
   & > div {
     width: 266px;
   }
 
-  &__guest-dropdown{
+  &__guest-dropdown {
     margin-top: 20px;
   }
-  
-  &__range-slider{
+
+  &__range-slider {
     margin-top: 30px;
-    &-description{
-      font-size: 12px;
+
+    &-description {
       margin-top: 10px;
+      font-size: 12px;
     }
   }
-  
-  &__rules{
+
+  &__rules {
     margin-top: 26px;
     max-width: 225px;
-    .widget-title{
+
+    .widget-title {
       margin-bottom: 17px;
     }
   }
-  
-  &__rules-item{
+
+  &__rules-item {
     margin-top: 10px;
   }
-  
-  &__availability{
+
+  &__availability {
     margin-top: 31px;
 
-    .widget-title{
+    .widget-title {
       margin-bottom: 17px;
     }
   }
-  
-  
-  &__availability-item{
-   margin-top: 9px;
+
+  &__availability-item {
+    margin-top: 9px;
   }
-  
-  &__comforts-dropdown{
+
+  &__comforts-dropdown {
     margin-top: 29px;
   }
-  
-  &__checkbox-list{
+
+  &__checkbox-list {
     margin-top: 25px;
   }
 }
 
-
-.search-room{
-  &__items{
-    margin-top: 14px;
+.search-room {
+  &__items {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 14px;
     gap: 12px;
   }
 
-  &__item{
+  &__item {
     margin-top: 8.5px;
   }
 }
 
-
-.search-room__pagination{
+.search-room__pagination {
+  margin: 40px auto 0;
   width: fit-content;
-  margin: 40px auto 0 auto;
-  .pagination{
+
+  .pagination {
     margin-right: 15px;
   }
 }
 
-.search-room__item{
+.search-room__item {
   max-width: 270px;
-} 
-@media screen and (max-width:920px) {
-  .sidebar{
+}
+
+@media screen and (max-width: 920px) {
+  .sidebar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -108,34 +109,35 @@
       min-width: 266px;
     }
 
-    & > div:nth-child(1n+1){
+    & > div:nth-child(1n+1) {
       margin-top: 10px;
     }
   }
-  .main-content{
+
+  .main-content {
     flex-direction: column;
     justify-content: center;
-    gap: 60px
+    gap: 60px;
   }
-  .search-room__title{
+
+  .search-room__title {
     text-align: center;
   }
 
-  .search-room__items{
-    justify-content: center;
+  .search-room__items {
     align-items: center;
+    justify-content: center;
   }
 }
 
-@media screen and (max-width:585px){
-  .search-room__item{
+@media screen and (max-width: 585px) {
+  .search-room__item {
     max-width: 400px;
-  } 
-  
-} 
+  }
+}
 
-@media screen and (max-width:420px){
-  .search-room__item{
+@media screen and (max-width: 420px) {
+  .search-room__item {
     max-width: 300px;
-  } 
-} 
+  }
+}

@@ -1,5 +1,6 @@
 @import './vars.scss';
-*{
+
+* {
   @extend %body_text;
 }
 
@@ -12,24 +13,25 @@
 .main {
   flex: 1 0 auto;
 }
+
 .footer {
   flex: 0 0 auto;
 }
 
-.container{
-  max-width: 1200px;
+.container {
   margin: 0 auto;
   padding: 0 20px;
+  max-width: 1200px;
 }
 
-.container-fluid{
-  max-width: 1440px;
+.container-fluid {
   margin: 0 auto;
   padding: 0 20px;
+  max-width: 1440px;
 }
 
 @media screen and (max-width: 420px) {
-  .container{
+  .container {
     padding: 0 5px;
   }
 }

@@ -1,47 +1,47 @@
 @import './../../styles/vars.scss';
 
-.input{
-  
-  &__text-field{
-    max-width: 320px;
-    width: 100%;
+.input {
+  &__text-field {
     margin-top: 5px;
-    padding: 12px 14px;
+    outline: none;
     border: 1px solid $darkShade-25;
     border-radius: 4px;
-    outline: none;
-    color: $darkShade-75;
+    padding: 12px 14px;
+    width: 100%;
+    max-width: 320px;
     line-height: 18px;
+    color: $darkShade-75;
   }
 
-  &__text-field::placeholder{
+  &__text-field::placeholder {
     color: $darkShade-25;
   }
 
-  &__text-field:focus{
+  &__text-field:focus {
     border: 1px solid $darkShade-50;
   }
 
-  &__text-field:hover{
+  &__text-field:hover {
     border: 1px solid $darkShade-50;
   }
 
-  &__inner{
+  &__inner {
     position: relative;
     max-width: 320px;
   }
 
-  &__button{
+  &__button {
     position: absolute;
     right: 9px;
     top: 50%;
-    transform: translateY(-45%);
-    height: 24px;
     border: none;
+    height: 24px;
     background: inherit;
+    transform: translateY(-45%);
     cursor: pointer;
-    span{
+
+    span {
       color: $purple;
-    } 
+    }
   }
 }

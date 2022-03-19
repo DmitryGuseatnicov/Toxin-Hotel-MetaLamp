@@ -1,7 +1,6 @@
 @import './../../styles/vars.scss';
 
 .pagination {
-
   &__nav-buttons {
     display: flex;
     align-items: center;
@@ -9,49 +8,49 @@
 
   span {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
   }
 
-  &__action-next,
-  &__action-prev {
-    background: $green_gradient;
-    border-radius: 22px;
-    color: #FFF;
-    cursor: pointer;
-  }
-
   &__page-number {
-    cursor: pointer;
     border-radius: 22px;
     font-size: 12px;
+    cursor: pointer;
   }
 
   &__page-number:hover {
-    background: $purple_gradient;
-    color: #FFF;
     font-weight: 700;
+    color: #FFF;
+    background: $purple_gradient;
   }
 
   &__current-page {
-    background: $purple_gradient;
-    color: #FFF;
     font-weight: 700;
+    color: #FFF;
+    background: $purple_gradient;
   }
 
   &__description {
     margin-top: 8px;
     margin-left: 6px;
   }
+
+  &__action-next,
+  &__action-prev {
+    border-radius: 22px;
+    color: #FFF;
+    background: $green_gradient;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .pagination {
     span {
-      height: 30px;
       width: 30px;
+      height: 30px;
     }
   }
 }
