@@ -2,7 +2,7 @@ mixin chart
   .chart
     canvas#room-chart
     ul.chart__label-list
-      li.chart__label-item Великолепно
-      li.chart__label-item Хорошо
-      li.chart__label-item Удовлетворительно
-      li.chart__label-item Разочарован
+      -
+        const params = ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован']
+      each param in params
+        li.chart__label-item= param

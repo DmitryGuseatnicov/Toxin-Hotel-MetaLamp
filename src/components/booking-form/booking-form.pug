@@ -26,7 +26,13 @@ mixin booking-form(options={})
     .booking-form__date-dropdown
       +date-dropdown({label: "прибытие", secondLabel: "выезд", mod:"double", value: firstDate, secondValue: secondDate, root:root})
     .booking-form__guest-dropdown
-      +dropdown({label: "гости", placeholder: "Сколько гостей", items:[ {name: "взрослые", value: adult}, {name: "дети", value: child}, {name: "младенцы", value: baby} ]})
+      +dropdown({
+        label: "гости", placeholder: "Сколько гостей", items:[ 
+          {name: "взрослые", value: adult}, 
+          {name: "дети", value: child}, 
+          {name: "младенцы", value: baby} 
+        ]
+      })
 
     ul.booking-form__price-list
       ul.booking-form__price-list-item
