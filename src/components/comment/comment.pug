@@ -1,8 +1,8 @@
 include ./../like-button/like-button.pug
 
-mixin comment(options={})
+mixin comment(options = {})
   -
-    const { src, name, time, comment, count ,liked=false } = options
+    const { src, name, time, comment, count ,liked = false } = options
 
   .comment
     .comment__header 
@@ -11,7 +11,6 @@ mixin comment(options={})
       .comment__info 
         .comment__person-name= name
         .comment__time= time
-
     .comment__content 
       .comment__like
         +like-button({ count, liked })

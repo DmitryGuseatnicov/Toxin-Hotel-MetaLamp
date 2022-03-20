@@ -1,9 +1,9 @@
 include ./../input/input.pug
 include ./../calendar/calendar.pug
 
-mixin date-dropdown(options={})
+mixin date-dropdown(options = {})
   -
-    const { root, label, secondLabel, value, secondValue ,mod="filter" } = options
+    const { root, label, secondLabel, value, secondValue ,mod = "filter" } = options
 
   if (mod === "double")
     .date-dropdown.js-date-dropdown(data-type="double")
@@ -17,7 +17,7 @@ mixin date-dropdown(options={})
           .date-dropdown__input-icon.js-date-dropdown__input-icon
             snap.material-icons expand_more
       .date-dropdown__calendar
-        +calendar({root:root})
+        +calendar({ root:root })
 
   if (mod === "filter")
     .date-dropdown.js-date-dropdown(data-type="filter")

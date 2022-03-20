@@ -1,8 +1,7 @@
-mixin widget-title(options={})
+mixin widget-title(options = {})
   -
     let level = options.level ? options.level : "3"
     let text = options.text ? options.text : ""
-
 
   if (level === "1")
     h1.widget-title.widget-title--big= text

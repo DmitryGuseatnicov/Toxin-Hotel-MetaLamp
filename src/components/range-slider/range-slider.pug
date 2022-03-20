@@ -1,12 +1,12 @@
 include ./../widget-title/widget-title.pug
 
-mixin range-slider(options={})
+mixin range-slider(options = {})
   -
-    const {label , min=0, max=100, start = 0, end=100 } = options 
+    const { label , min = 0, max = 100, start = 0, end = 100 } = options 
   .range-slider.js-range-slider
     .range-slider__header 
       .range-slider__title 
-        +widget-title({text:label})
+        +widget-title({ text:label })
       .range-slider__values
         span.range-slider__value!= `${start}₽ - ${end}₽`
         input.range-slider__input-start.js-range-slider__input-start(
@@ -16,7 +16,6 @@ mixin range-slider(options={})
           value=start,
           readonly="true"
         )
-
         input.range-slider__input-end.js-range-slider__input-end(
           type="range",
           name="end",
@@ -24,5 +23,4 @@ mixin range-slider(options={})
           value=end,
           readonly="true"
         )
-
     .range-slider__slider 

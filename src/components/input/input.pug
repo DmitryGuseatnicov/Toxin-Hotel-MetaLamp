@@ -1,9 +1,10 @@
 include ./../widget-title/widget-title.pug
 
-mixin input(options={})
+mixin input(options = {})
   -
-    const {type, placeholder, value, mask, disabled, 
-          readonly, required ,subscribe = false, label = ""} = options
+    const {
+      type, placeholder, value, mask, disabled, readonly, required ,subscribe = false, label = ""
+        } = options
 
     let classes =  "input__text-field"
 

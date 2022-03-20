@@ -4,7 +4,7 @@ include ./../button/button.pug
 include ./../radio/radio.pug
 include ./../toggle/toggle.pug
 
-mixin register-account-form(options ={})
+mixin register-account-form(options = {})
   -
     const { buttonText = "" } = options
 
@@ -12,22 +12,22 @@ mixin register-account-form(options ={})
     .register-account-form__title 
       +widget-title({text: "Регистрация аккаунта", level:"1"})
     .register-account-form__name 
-      +input({type: "text", placeholder: "Имя", required: true })
+      +input({ type: "text", placeholder: "Имя", required: true })
     .register-account-form__last-name 
-      +input({type: "text", placeholder: "Фамилия", required: true })
+      +input({ type: "text", placeholder: "Фамилия", required: true })
     .register-account-form__checkboxes
-      +radio({label: "Мужчина", name: "sex", checked: true})
-      +radio({label: "Женщина",name: "sex" })
+      +radio({ label: "Мужчина", name: "sex", checked: true })
+      +radio({ label: "Женщина",name: "sex" })
     .register-account-form__date 
-      +input({type: "text", label:"дата рождения", placeholder: "ДД.ММ.ГГГГ", mask: "data" , required: true})
+      +input({ type: "text", label:"дата рождения", placeholder: "ДД.ММ.ГГГГ", mask: "data" , required: true })
     .register-account-form__mail
-      +input({type: "mail" ,label: "данные для входа в сервис", placeholder:"Email", required: true })
+      +input({ type: "mail" ,label: "данные для входа в сервис", placeholder:"Email", required: true })
     .register-account-form__password
-      +input({type: "password", placeholder:"Пароль", required: true })
+      +input({ type: "password", placeholder:"Пароль", required: true })
     .register-account-form__special
-      +toggle({label: "Получать спецпредложения"})
+      +toggle({ label: "Получать спецпредложения" })
     .register-account-form__pay-button 
-      +button({text: buttonText, mod: "purple-link"})
+      +button({ text: buttonText, mod: "purple-link" })
     .register-account-form__login-button
       span.register-account-form__question Уже есть аккаунт на Toxin
-      +button({text: "войти", mod:"purple-border"})
+      +button({ text: "войти", mod:"purple-border" })

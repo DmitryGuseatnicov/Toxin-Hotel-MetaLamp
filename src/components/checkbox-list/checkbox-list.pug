@@ -1,9 +1,9 @@
 include ./../widget-title/widget-title.pug
 include ./../checkbox/checkbox.pug
 
-mixin checkbox-list(options={})
+mixin checkbox-list(options = {})
   -
-    const {title, open, items=[]} = options
+    const { title, open, items = [] } = options
     let classes = "checkbox-list js-checkbox-list"
     if(open === true)
       classes += " checkbox-list--open" 
@@ -14,7 +14,6 @@ mixin checkbox-list(options={})
         +widget-title({text: title})
       .checkbox-list__icon
         span.material-icons expand_more
-
     ul.checkbox-list__items 
       each item in items 
         li.checkbox-list__item

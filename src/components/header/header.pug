@@ -2,9 +2,9 @@ include ./../logo/logo.pug
 include ./../button/button.pug
 include ./../nav-menu/nav-menu.pug
 
-mixin header(options={})
+mixin header(options = {})
   -
-    const {auth = false, items = [] } = options
+    const { auth = false, items = [] } = options
 
   header.header.js-header 
     .container
@@ -18,10 +18,10 @@ mixin header(options={})
         .header__panel.js-header__panel
           button.header__close-button.js-header__close-button +
           .header__nav
-            +nav-menu({items: items})
+            +nav-menu({ items: items })
           .header__login
             if (auth !== false)
               .header__login-name= auth
             else
-              +button({text: "войти", mod: "purple-border", short: true}) 
-              +button({text: "зарегистрироваться", mod: "purple", short: true})
+              +button({ text: "войти", mod: "purple-border", short: true }) 
+              +button({ text: "зарегистрироваться", mod: "purple", short: true })

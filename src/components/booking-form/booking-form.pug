@@ -2,10 +2,10 @@ include ./../date-dropdown/date-dropdown.pug
 include ./../dropdown/dropdown.pug
 include ./../button/button.pug
 
-mixin booking-form(options={})
+mixin booking-form(options = {})
   -
     const {
-      number, firstDate, secondDate, adult, child, baby, price ="0", days="0", root="id",
+      number, firstDate, secondDate, adult, child, baby, price = "0", days = "0", root = "id",
       } = options
 
   form.booking-form(action="")
@@ -15,12 +15,10 @@ mixin booking-form(options={})
       .booking-form__type люкс
       .booking-form__price-for-day= `${price}₽ `
         span.booking-form__price-name в сутки
-
     .booking-form__date-dropdown
       +date-dropdown({
-        label: "прибытие", secondLabel: "выезд", mod:"double", value: firstDate, secondValue: secondDate, root:root
+        label: "прибытие", secondLabel: "выезд", mod: "double", value: firstDate, secondValue: secondDate, root:root
         })
-
     .booking-form__guest-dropdown
       +dropdown({
         label: "гости", placeholder: "Сколько гостей", items:[ 
@@ -29,22 +27,18 @@ mixin booking-form(options={})
           {name: "младенцы", value: baby} 
         ]
       })
-
     ul.booking-form__price-list
       ul.booking-form__price-list-item
         .booking-form__price-list-name= `${price}₽ х ${days} суток`
         .booking-form__price-list-value 39 960₽
-
       ul.booking-form__price-list-item
         .booking-form__price-list-name Сбор за услуги: скидка 2 179₽
         .booking-form__price-list-info i
         .booking-form__price-list-value 0₽
-
       ul.booking-form__price-list-item
         .booking-form__price-list-name Сбор за дополнительные услуги
         .booking-form__price-list-info i
         .booking-form__price-list-value 300₽
-
     .booking-form__total
       .booking-form__total-text Итого
       .booking-form__total-dots

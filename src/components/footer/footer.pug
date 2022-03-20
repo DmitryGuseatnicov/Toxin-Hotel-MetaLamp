@@ -3,7 +3,7 @@ include ./../widget-title/widget-title.pug
 include ./../input/input.pug
 include ./../footer-mobile/footer-mobile.pug
 
-mixin footer(options={})
+mixin footer(options = {})
   -
     const {items = []} = options
 
@@ -26,15 +26,13 @@ mixin footer(options={})
                 each link in links 
                   li.footer__widget-list-item
                     a.footer__widget-link(href=link.href)= link.name
-
         .footer__inner-item
           .footer__special
             .footer__special-title 
               +widget-title({text: "Подписка"})
             .footer__special-text Получайте специальные предложения и новости сервиса
             form.footer__subscribe-form(action="#") 
-              +input({type: "mail", subscribe: true, placeholder: "Email"})
-
+              +input({ type: "mail", subscribe: true, placeholder: "Email" })
     .footer__copy-right
       .container
         .footer__copy-right-inner
@@ -58,5 +56,4 @@ mixin footer(options={})
                   src=require("./../../components/footer/images/instagram.png"),
                   alt="instagram"
                 )
-
   +footer-mobile

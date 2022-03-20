@@ -1,7 +1,8 @@
 include ./../widget-title/widget-title.pug
-mixin bullet-list(options={})
+
+mixin bullet-list(options = {})
   -
-    const { title: { text="", level="3" }, items=[], listStyle=false } = options
+    const { title: { text = "", level = "3" }, items = [], listStyle = false } = options
     let classes = "bullet-list"
     if(listStyle === true) classes += " bullet-list--list-style"
 
