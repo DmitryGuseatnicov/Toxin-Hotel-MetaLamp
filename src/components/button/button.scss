@@ -5,7 +5,8 @@
   background-color: #FFF;
   cursor: pointer;
 
-  & > span {
+  &__text,
+  &__icon {
     display: inline-block;
     font-weight: bold;
     font-size: 12px;
@@ -17,6 +18,15 @@
 
 .button--simple {
   color: $purple;
+
+  span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: inherit;
+  }
 
   &:hover {
     color: $darkShade-50;
@@ -79,7 +89,7 @@
 .button--purple-border.button--short {
   height: 34px;
 
-  & > span {
+  .button__text {
     padding: 7.5px 18px;
   }
 }
@@ -97,10 +107,8 @@
     padding-left: 25px;
   }
 
-  .button__icon {
-    & > span {
-      color: #FFF;
-    }
+  .button__icon > span {
+    color: #FFF;
   }
 
   &:hover {

@@ -1,6 +1,7 @@
 mixin nav-menu(options={})
   -
     const { items = [] } = options
+
   nav.nav.js-nav
     ul.nav__list 
       each item in items
@@ -13,14 +14,13 @@ mixin nav-menu(options={})
         if (childrens.length > 0)
           li(class=classes)
             .nav__item-link
-              a(href=link.href)= link.name
-              span.material-icons
-
+              a.nav__item-href(href=link.href)= link.name
+              span.material-icons.nav__item-arrow
             .nav__item-childrens
               each children in childrens
                 .nav__item-children
-                  a(href=children.href)= children.name
+                  a.nav__item-children-href(href=children.href)= children.name
         else
           li(class=classes)
             .nav__item-link
-              a(href=link.href)= link.name
+              a.nav__item-href(href=link.href)= link.name

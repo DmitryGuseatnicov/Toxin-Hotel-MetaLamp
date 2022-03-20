@@ -3,6 +3,23 @@
 .toggle__input {
   appearance: none;
   opacity: 0;
+
+  &:not(:disabled):not(:checked) + span:hover::before {
+    border-color: $purple;
+  }
+
+  &:not(:disabled):active + span::before {
+    box-shadow: 0 0 0 1px $purple;
+  }
+
+  &:not(:disabled):checked + span::before {
+    border-color: $purple;
+  }
+
+  &:not(:disabled):checked + span::after {
+    background: $purple_gradient;
+    transform: translateX(20px);
+  }
 }
 
 .toggle__label {
@@ -10,7 +27,7 @@
   height: 20px;
   line-height: initial;
 
-  & > span {
+  &-text {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -18,7 +35,7 @@
     height: 20px;
   }
 
-  & > span::before {
+  &-text::before {
     content: '';
     position: absolute;
     left: 0;
@@ -29,7 +46,7 @@
     height: 20px;
   }
 
-  & > span::after {
+  &-text::after {
     content: '';
     position: absolute;
     left: 4px;
@@ -40,22 +57,5 @@
     height: 12px;
     background: $darkShade-25;
     transition: 0.2s;
-  }
-
-  & > .toggle__input:not(:disabled):not(:checked) + span:hover::before {
-    border-color: $purple;
-  }
-
-  & > .toggle__input:not(:disabled):active + span::before {
-    box-shadow: 0 0 0 1px $purple;
-  }
-
-  & > .toggle__input:not(:disabled):checked + span::before {
-    border-color: $purple;
-  }
-
-  & > .toggle__input:not(:disabled):checked + span::after {
-    background: $purple_gradient;
-    transform: translateX(20px);
   }
 }

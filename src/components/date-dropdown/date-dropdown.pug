@@ -3,16 +3,17 @@ include ./../calendar/calendar.pug
 
 mixin date-dropdown(options={})
   -
-    const { root, label, secondLabel, value, secondValue ,mod = "filter"} = options
+    const { root, label, secondLabel, value, secondValue ,mod="filter" } = options
+
   if (mod === "double")
     .date-dropdown.js-date-dropdown(data-type="double")
       .date-dropdown__header
         .date-dropdown__input.js-date-dropdown__input
-          +input({label: label, mask: "data",value: value, placeholder: "ДД.ММ.ГГГГ" })
+          +input({ label: label, mask: "data",value: value, placeholder: "ДД.ММ.ГГГГ" })
           .date-dropdown__input-icon.js-date-dropdown__input-icon
             snap.material-icons expand_more
         .date-dropdown__input.js-date-dropdown__input
-          +input({label: secondLabel, mask: "data", value: secondValue ,placeholder: "ДД.ММ.ГГГГ"})
+          +input({ label: secondLabel, mask: "data", value: secondValue ,placeholder: "ДД.ММ.ГГГГ" })
           .date-dropdown__input-icon.js-date-dropdown__input-icon
             snap.material-icons expand_more
       .date-dropdown__calendar
@@ -22,7 +23,7 @@ mixin date-dropdown(options={})
     .date-dropdown.js-date-dropdown(data-type="filter")
       .date-dropdown__header
         .date-dropdown__input.js-date-dropdown__input
-          +input({label: label, value:value, placeholder: "выберите дату", readonly: true})
+          +input({ label: label, value:value, placeholder: "выберите дату", readonly: true })
           .date-dropdown__input-icon.js-date-dropdown__input-icon
             snap.material-icons expand_more
       .date-dropdown__calendar

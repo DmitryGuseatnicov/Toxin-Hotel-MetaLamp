@@ -18,12 +18,9 @@
     @extend %widget_title-medium;
   }
 
-  &-nav--action {
+  &-nav--action > span {
+    color: $purple;
     cursor: pointer;
-
-    & > span {
-      color: $purple;
-    }
   }
 
   &-body.-hidden- {

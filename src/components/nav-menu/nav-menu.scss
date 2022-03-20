@@ -3,7 +3,7 @@
 .nav {
   margin-right: 20px;
 
-  & a {
+  &__item-href {
     font-weight: inherit;
     text-decoration: none;
     color: inherit;
@@ -23,10 +23,10 @@
 
   &__item-link {
     color: $darkShade-50;
+  }
 
-    & > span {
-      color: inherit;
-    }
+  &__item-link > span {
+    color: inherit;
   }
 
   &__item-link:hover {
@@ -48,6 +48,12 @@
     color: $darkShade-100;
   }
 
+  &__item-children-href {
+    font-weight: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+
   &__item-name {
     color: inherit;
   }
@@ -58,11 +64,11 @@
     display: flex;
   }
 
-  span {
+  .nav__item-arrow {
     position: relative;
   }
 
-  span::before {
+  .nav__item-arrow::before {
     content: '\e5cf';
   }
 }

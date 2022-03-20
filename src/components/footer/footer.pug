@@ -6,6 +6,7 @@ include ./../footer-mobile/footer-mobile.pug
 mixin footer(options={})
   -
     const {items = []} = options
+
   footer.footer 
     .container 
       .footer__inner 
@@ -23,8 +24,8 @@ mixin footer(options={})
                 +widget-title({text: title})
               ul.footer__widget-list
                 each link in links 
-                  li.footer__widget-link
-                    a(href=link.href)= link.name
+                  li.footer__widget-list-item
+                    a.footer__widget-link(href=link.href)= link.name
 
         .footer__inner-item
           .footer__special
@@ -40,19 +41,19 @@ mixin footer(options={})
           .footer__copy-right-text Copyright © 2018 Toxin отель. Все права защищены.
           .footer__social
             .footer__social-twitter
-              a(href="change-me")
+              a.footer__social-link(href="change-me")
                 img(
                   src=require("./../../components/footer/images/twitter.png"),
                   alt="twitter"
                 )
             .footer__social-facebook
-              a(href="change-me")
+              a.footer__social-link(href="change-me")
                 img(
                   src=require("./../../components/footer/images/facebook.png"),
                   alt="facebook"
                 )
             .footer__social-instagram 
-              a(href="change-me")
+              a.footer__social-link(href="change-me")
                 img(
                   src=require("./../../components/footer/images/instagram.png"),
                   alt="instagram"

@@ -8,10 +8,10 @@ mixin room-card(options={})
           img(src=src, alt="room-photo")
     .room-card__info 
       .room-card__number №
-        span= number
+        span.room-card__number-value= number
       .room-card__type= type
       .room-card__price= `${price}₽`
-        span в сутки
+        span.room-card__price-name в сутки
     .room-card__reviews-items
       +rate-button({rate: rate})
       .room-card__reviews= `${reviews} Отзывов`

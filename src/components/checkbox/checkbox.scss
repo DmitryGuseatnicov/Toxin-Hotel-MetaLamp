@@ -3,6 +3,23 @@
 .checkbox__input {
   appearance: none;
   opacity: 0;
+
+  &:not(:disabled):not(:checked) + span:hover::before {
+    border-color: $purple;
+  }
+
+  &:not(:disabled):active + span::before {
+    box-shadow: 0 0 0 1px $purple;
+  }
+
+  &:checked + span::before {
+    border-color: $purple;
+    background: url('data:image/svg+xml,%3Csvg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M1.46439 2.40768L5.70703 6.65032L4.29282 8.06453L0.0501771 3.82189L1.46439 2.40768Z" fill="url(%23paint0_linear_18443_16)"/%3E%3Cpath d="M8.53546 0.993466L9.94967 2.40768L4.29282 8.06453L2.8786 6.65032L8.53546 0.993466Z" fill="url(%23paint1_linear_18443_16)"/%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_18443_16" x1="7.82835" y1="0.286359" x2="2.1715" y2="5.94321" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%23BC9CFF"/%3E%3Cstop offset="1" stop-color="%238BA4F9"/%3E%3C/linearGradient%3E%3ClinearGradient id="paint1_linear_18443_16" x1="7.82835" y1="0.286359" x2="2.1715" y2="5.94321" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%23BC9CFF"/%3E%3Cstop offset="1" stop-color="%238BA4F9"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A') no-repeat center;
+  }
+
+  &:disabled + span::before {
+    background-color: rgba($darkShade-25, $alpha: 0.4);
+  }
 }
 
 .checkbox__label {
@@ -29,13 +46,13 @@
     }
   }
 
-  & > span {
+  &-text {
     padding-left: 30px;
     line-height: initial;
     color: $darkShade-50;
   }
 
-  & > span::before {
+  &-text::before {
     content: '';
     position: absolute;
     left: 0;
@@ -43,22 +60,5 @@
     border-radius: 4px;
     width: 20px;
     height: 20px;
-  }
-
-  & > .checkbox__input:not(:disabled):not(:checked) + span:hover::before {
-    border-color: $purple;
-  }
-
-  & > .checkbox__input:not(:disabled):active + span::before {
-    box-shadow: 0 0 0 1px $purple;
-  }
-
-  & > .checkbox__input:checked + span::before {
-    border-color: $purple;
-    background: url('data:image/svg+xml,%3Csvg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M1.46439 2.40768L5.70703 6.65032L4.29282 8.06453L0.0501771 3.82189L1.46439 2.40768Z" fill="url(%23paint0_linear_18443_16)"/%3E%3Cpath d="M8.53546 0.993466L9.94967 2.40768L4.29282 8.06453L2.8786 6.65032L8.53546 0.993466Z" fill="url(%23paint1_linear_18443_16)"/%3E%3Cdefs%3E%3ClinearGradient id="paint0_linear_18443_16" x1="7.82835" y1="0.286359" x2="2.1715" y2="5.94321" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%23BC9CFF"/%3E%3Cstop offset="1" stop-color="%238BA4F9"/%3E%3C/linearGradient%3E%3ClinearGradient id="paint1_linear_18443_16" x1="7.82835" y1="0.286359" x2="2.1715" y2="5.94321" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%23BC9CFF"/%3E%3Cstop offset="1" stop-color="%238BA4F9"/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A') no-repeat center;
-  }
-  
-  & > .checkbox__input:disabled + span::before {
-    background-color: rgba($darkShade-25, $alpha: 0.4);
   }
 }

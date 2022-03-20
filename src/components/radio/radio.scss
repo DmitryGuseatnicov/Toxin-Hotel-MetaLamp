@@ -3,6 +3,30 @@
 .radio__input {
   appearance: none;
   opacity: 0;
+
+  &:not(:disabled):not(:checked) + span:hover::before {
+    border-color: $purple;
+  }
+
+  &:not(:disabled):active + span::before {
+    box-shadow: 0 0 0 1px $purple;
+  }
+
+  &:checked + span::before {
+    border-color: $purple;
+  }
+
+  &:checked + span {
+    color: $darkShade-75;
+  }
+
+  &:checked + span::after {
+    display: block;
+  }
+
+  &:disabled + span::before {
+    background-color: rgba($darkShade-25, $alpha: 0.4);
+  }
 }
 
 .radio__label {
@@ -10,13 +34,13 @@
   display: flex;
   height: 20px;
 
-  & > span {
+  &-text {
     padding-left: 30px;
     line-height: initial;
     color: $darkShade-50;
   }
 
-  & > span::before {
+  &-text::before {
     content: '';
     position: absolute;
     left: 0;
@@ -26,7 +50,7 @@
     height: 20px;
   }
 
-  & > span::after {
+  &-text::after {
     content: '';
     position: absolute;
     left: 4px;
@@ -36,29 +60,5 @@
     width: 12px;
     height: 12px;
     background: $purple_gradient;
-  }
-
-  & > .radio__input:not(:disabled):not(:checked) + span:hover::before {
-    border-color: $purple;
-  }
-
-  & > .radio__input:not(:disabled):active + span::before {
-    box-shadow: 0 0 0 1px $purple;
-  }
-
-  & > .radio__input:checked + span::before {
-    border-color: $purple;
-  }
-
-  & > .radio__input:checked + span {
-    color: $darkShade-75;
-  }
-
-  & > .radio__input:checked + span::after {
-    display: block;
-  }
-
-  & > .radio__input:disabled + span::before {
-    background-color: rgba($darkShade-25, $alpha: 0.4);
   }
 }

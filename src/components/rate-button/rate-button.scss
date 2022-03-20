@@ -3,7 +3,7 @@
 .rate-button {
   min-width: 120px;
 
-  & > span {
+  &__star {
     -webkit-text-fill-color: transparent;
     background: $purple_gradient;
     background-clip: text;
