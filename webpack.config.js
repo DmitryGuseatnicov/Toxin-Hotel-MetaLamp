@@ -16,7 +16,6 @@ const entryPoints = Object.assign({}, ...PAGES.map(page =>
     [page]: `${PAGES_DIR}/${page}/${page}.js`,
   })));
 
-
 module.exports = {
   mode: mode,
   context: path.resolve(__dirname, 'src'),
@@ -43,7 +42,6 @@ module.exports = {
       chunks: [page],
       inject: 'body'
     }))
-
   ],
   module: {
     rules: [{
@@ -91,7 +89,6 @@ module.exports = {
         generator: {
           filename: 'assets/fonts/[name][ext]',
         },
-
       },
       {
         test: /\.pug$/,

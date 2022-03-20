@@ -27,7 +27,6 @@ class DateDropdown {
     if (e.target.closest(constants.ICON)) this.toggle();
     if (e.target.closest(constants.APPLY)) this.addValue();
     if (e.target.closest(constants.CLEAR)) this.clearValue();
-    if (!e.target.closest('.js-date-dropdown')) this.toggle();
   }
 
   toggle() {
