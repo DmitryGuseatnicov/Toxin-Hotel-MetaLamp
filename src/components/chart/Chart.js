@@ -26,8 +26,7 @@ const createChart = (rating = []) => {
   const counter = {
     id: 'counter',
     beforeDraw(chart) {
-      // eslint-disable-next-line no-shadow
-      const { ctx, chartArea: { top, width, height } } = chart;
+      const { chartArea: { top, width, height } } = chart;
       ctx.save();
       ctx.font = 'bold 24px Montserrat';
       ctx.textAlign = 'center';

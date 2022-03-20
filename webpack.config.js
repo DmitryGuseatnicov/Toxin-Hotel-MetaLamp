@@ -29,7 +29,7 @@ module.exports = {
   devServer: {
     static: './dist',
     open: '/index.html',
-    hot: false
+    hot: true
   },
   devtool: 'source-map',
   plugins: [
