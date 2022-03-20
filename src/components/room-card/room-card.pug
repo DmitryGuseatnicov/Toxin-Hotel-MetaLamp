@@ -3,7 +3,7 @@ include ./../rate-button/rate-button.pug
 mixin room-card(options = {})
   - const { number, price, reviews = "0", rate = "0", type, links = [] } = options;
   .room-card
-    .room-card__images
+    .room-card__images.js-room-card__images
       each src in links 
         .room-card__image
           img(src=src, alt="room-photo")

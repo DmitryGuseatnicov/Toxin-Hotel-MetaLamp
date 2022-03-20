@@ -5,4 +5,7 @@ import '../../components/footer';
 import '../../components/register-account-form';
 import './registration-page.scss';
 
-$('form').on('submit', (e) => e.preventDefault());
+function stopSubmit(e) {
+  e.preventDefault();
+}
+$('form').on('submit', stopSubmit);

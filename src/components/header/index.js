@@ -6,4 +6,4 @@ import '../button';
 import '../nav-menu';
 import './header.scss';
 
-$('.header').each((i, el) => new Header(el));
+$('.js-header').each((i, el) => new Header(el));

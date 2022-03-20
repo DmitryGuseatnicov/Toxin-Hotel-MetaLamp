@@ -12,4 +12,7 @@ import '../../components/checkbox-list';
 import '../../components/pagination';
 import './search-room-page.scss';
 
-$('form').on('submit', (e) => e.preventDefault());
+function stopSubmit(e) {
+  e.preventDefault();
+}
+$('form').on('submit', stopSubmit);

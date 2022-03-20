@@ -9,4 +9,7 @@ import '../../components/comment';
 import '../../components/chart';
 import './room-details-page.scss';
 
-$('form').on('submit', (e) => e.preventDefault());
+function stopSubmit(e) {
+  e.preventDefault();
+}
+$('form').on('submit', stopSubmit);

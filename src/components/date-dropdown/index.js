@@ -21,4 +21,4 @@ const dateDropdownCreator = (nodeElem) => {
   }
 };
 
-$('.date-dropdown').each((i, el) => dateDropdownCreator(el));
+$('.js-date-dropdown').each((i, el) => dateDropdownCreator(el));

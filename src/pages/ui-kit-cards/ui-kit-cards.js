@@ -7,4 +7,7 @@ import '../../components/login-form';
 import '../../components/room-card';
 import './ui-kit-cards.scss';
 
-$('form').on('submit', (e) => e.preventDefault());
+function stopSubmit(e) {
+  e.preventDefault();
+}
+$('form').on('submit', stopSubmit);
