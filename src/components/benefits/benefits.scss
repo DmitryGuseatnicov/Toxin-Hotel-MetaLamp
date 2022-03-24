@@ -22,8 +22,8 @@
   &__description {
     margin-left: 10px;
   }
-}
 
-.benefits.benefits--underlined {
-  border-bottom: 1px solid $darkShade-1;
+  &--underlined {
+    border-bottom: 1px solid $darkShade-1;
+  }
 }
