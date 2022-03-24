@@ -26,24 +26,24 @@
   position: relative;
   display: flex;
   min-height: 20px;
+}
 
-  &-rich {
-    display: inline-flex;
-    flex-direction: column;
+.checkbox__rich-label {
+  display: inline-flex;
+  flex-direction: column;
 
-    .checkbox__label-text {
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 18px;
-      color: $darkShade-75;
-    }
+  &-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darkShade-75;
+  }
 
-    .checkbox__label-sub-text {
-      margin-top: 7px;
-      font-size: 12px;
-      line-height: 14px;
-      color: $darkShade-50;
-    }
+  &-sub-text {
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $darkShade-50;
   }
 }
 

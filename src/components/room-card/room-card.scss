@@ -24,10 +24,10 @@
   background: transparent;
   opacity: 0;
   transition: 0.5s;
+}
 
-  span {
-    color: #fff;
-  }
+.slick-arrow > span {
+  color: #fff;
 }
 
 .slick-arrow.slick-prev {
@@ -38,11 +38,11 @@
       rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0) 100%
     );
+}
 
-  span {
-    transform: rotate(90deg);
-    cursor: pointer;
-  }
+.slick-arrow.slick-prev > span {
+  transform: rotate(90deg);
+  cursor: pointer;
 }
 
 .slick-arrow.slick-next {
@@ -53,11 +53,11 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.5) 100%
     );
+}
 
-  span {
-    transform: rotate(-90deg);
-    cursor: pointer;
-  }
+.slick-arrow.slick-next > span {
+  transform: rotate(-90deg);
+  cursor: pointer;
 }
 
 .slick-dots {
@@ -71,14 +71,14 @@
   gap: 4px;
 }
 
-.slick-dots li.slick-active {
+.slick-dots .slick-active {
   button {
     box-shadow: 0 5px 5px rgba(31, 32, 65, 0.3);
     background: #fff;
   }
 }
 
-.slick-dots li button {
+.slick-dots button {
   border: 1px solid #fff;
   border-radius: 50%;
   width: 7.5px;

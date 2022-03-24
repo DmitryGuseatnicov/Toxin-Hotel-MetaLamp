@@ -62,7 +62,18 @@
     }
 
     &__panel {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 200;
       display: none;
+      overflow: scroll;
+      padding-bottom: 20px;
+      width: 300px;
+      height: 100vh;
+      box-shadow: -17px 0 12px 3px rgba(0, 0, 0, 0.23);
+      background: #FFF;
     }
 
     &__burger-button {
@@ -72,20 +83,6 @@
       width: 40px;
       height: 40px;
       background: $purple_gradient;
-    }
-
-    &__panel {
-      position: fixed;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 200;
-      overflow: scroll;
-      padding-bottom: 20px;
-      width: 300px;
-      height: 100vh;
-      box-shadow: -17px 0 12px 3px rgba(0, 0, 0, 0.23);
-      background: #FFF;
     }
 
     &__close-button {

@@ -8,24 +8,6 @@
     position: relative;
   }
 
-  &__input input {
-    overflow: hidden;
-    padding-right: 90px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    cursor: pointer;
-  }
-
-  &__input input:focus {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  &__input input::placeholder {
-    color: $darkShade-75;
-  }
-
   &__icon {
     position: absolute;
     right: 12px;

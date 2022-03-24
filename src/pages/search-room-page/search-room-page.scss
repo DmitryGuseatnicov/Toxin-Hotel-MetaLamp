@@ -20,10 +20,6 @@
   min-width: 266px;
   max-width: 266px;
 
-  & > div {
-    width: 266px;
-  }
-
   &__guest-dropdown {
     margin-top: 20px;
   }
@@ -41,7 +37,7 @@
     margin-top: 26px;
     max-width: 225px;
 
-    .widget-title {
+    &-title {
       margin-bottom: 17px;
     }
   }
@@ -53,7 +49,7 @@
   &__availability {
     margin-top: 31px;
 
-    .widget-title {
+    &-title {
       margin-bottom: 17px;
     }
   }
@@ -71,6 +67,10 @@
   }
 }
 
+.sidebar > div {
+  width: 266px;
+}
+
 .search-room {
   &__items {
     display: flex;
@@ -81,6 +81,7 @@
 
   &__item {
     margin-top: 8.5px;
+    max-width: 270px;
   }
 }
 
@@ -93,10 +94,6 @@
   }
 }
 
-.search-room__item {
-  max-width: 270px;
-}
-
 @media screen and (max-width: 920px) {
   .sidebar {
     display: flex;
@@ -104,14 +101,14 @@
     justify-content: space-evenly;
     min-width: 100%;
     gap: 20px;
+  }
 
-    & > div {
-      min-width: 266px;
-    }
+  .sidebar > div {
+    min-width: 266px;
+  }
 
-    & > div:nth-child(1n+1) {
-      margin-top: 10px;
-    }
+  .sidebar > div:nth-child(1n+1) {
+    margin-top: 10px;
   }
 
   .main-content {

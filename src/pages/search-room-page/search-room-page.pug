@@ -40,7 +40,8 @@ block content
           .sidebar__range-slider-description Стоимость за сутки пребывания в номере
 
         .sidebar__rules
-          +widget-title({text: "правила дома"})
+          .sidebar__rules-title
+            +widget-title({text: "правила дома"})
           .sidebar__rules-item
             +checkbox({label :"Можно курить"})
 
@@ -52,7 +53,8 @@ block content
 
         .sidebar__availability
           .sidebar__availability-item
-            +widget-title({text: "доступность"})
+            .sidebar__availability-title
+              +widget-title({text: "доступность"})
             +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",mod:"rich"})
 
           .sidebar__availability-item

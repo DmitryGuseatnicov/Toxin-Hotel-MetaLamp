@@ -10,12 +10,6 @@
   box-sizing: border-box;
   background: #FFF;
 
-  & > span {
-    width: 20px;
-    font-size: 10px;
-    line-height: 12px;
-  }
-
   &__count {
     padding-right: 5px;
     width: 20px;
@@ -25,9 +19,15 @@
 
   &--liked {
     border: 1px solid $purple;
-
-    span {
-      color: $purple;
-    }
   }
+}
+
+.like-button > span {
+  width: 20px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.like-button--liked > span {
+  color: $purple;
 }

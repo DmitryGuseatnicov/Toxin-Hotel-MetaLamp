@@ -1,26 +1,21 @@
 include ./../logo/logo.pug
 
-mixin footer-mobile
+mixin footer-mobile(options = {})
+  -
+    const { socials = [] } = options 
+    let classes = 'footer-mobile__social'
+
   footer.footer-mobile
     .footer-mobile__logo
       +logo
     .footer-mobile__copy-right Copyright © 2018 Toxin отель. Все права защищены.
     .footer-mobile__social 
-      .footer-mobile__social-twitter
-        a(href="change-me")
-          img(
-            src=require("./../../components/footer/images/twitter.png"),
-            alt="twitter"
-          )
-      .footer-mobile__social-facebook
-        a(href="change-me")
-          img(
-            src=require("./../../components/footer/images/facebook.png"),
-            alt="facebook"
-          )
-      .footer-mobile__social-instagram 
-        a(href="change-me")
-          img(
-            src=require("./../../components/footer/images/instagram.png"),
-            alt="instagram"
-          )
+      each social in socials 
+        - classes +=`-${social.name}`
+        div(class=classes)
+          a(href='#')
+            img(
+              src=social.src,
+              alt=social.name
+            )
+

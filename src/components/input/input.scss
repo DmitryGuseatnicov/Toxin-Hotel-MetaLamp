@@ -44,4 +44,12 @@
   &__button > span {
     color: $purple;
   }
+
+  &__text-field--text-ellipsis {
+    overflow: hidden;
+    padding-right: 90px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
 }
