@@ -24,14 +24,14 @@ class NavMenu {
   }
 
   windowClickHandler(e) {
-    if (!e.target.closest('.nav__item--hav-childrens')) {
-      this.$navItems.removeClass('nav__item--open');
+    if (!e.target.closest('.nav__item_hav-childrens')) {
+      this.$navItems.removeClass('nav__item_open');
       $(window).off('click', this.windowClickHandler);
     }
   }
 
   clickHandler(e) {
-    if (e.target.closest('.nav__item--hav-childrens')) {
+    if (e.target.closest('.nav__item_hav-childrens')) {
       if (e.target.closest('.nav__item-link')) {
         this.toggle(e.currentTarget);
       }
@@ -40,7 +40,7 @@ class NavMenu {
 
   toggle(target) {
     this.bindWindowEventListener();
-    $(target).toggleClass('nav__item--open');
+    $(target).toggleClass('nav__item_open');
   }
 }
 
