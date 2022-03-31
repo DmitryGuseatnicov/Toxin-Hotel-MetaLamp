@@ -44,7 +44,7 @@ mixin footer(options = {})
               - classes += `-${social.name}`
               div(class=classes)
                 a.footer__social-link(href=social.href)
-                  img(
+                  img.footer__social-img(
                     src=social.src,
                     alt=social.name
                   )

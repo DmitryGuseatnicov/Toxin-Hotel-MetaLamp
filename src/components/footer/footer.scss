@@ -32,6 +32,15 @@
 
   &__widget-link {
     text-decoration: none;
+    color: $darkShade-50;
+
+    &:hover {
+      color: $darkShade-75;
+    }
+  }
+
+  &__social-link:hover {
+    opacity: 0.7;
   }
 
   &__special {
