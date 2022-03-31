@@ -20,8 +20,8 @@ mixin header(options = {})
           .header__nav
             +nav-menu({ items: items })
           .header__login
-            if (auth !== false)
+            if (auth)
               .header__login-name= auth
             else
-              +button({ text: "войти", mod: "purple-border", short: true }) 
-              +button({ text: "зарегистрироваться", mod: "purple", short: true })
+              +button({ text: "войти", modification: "purple-border", short: true }) 
+              +button({ text: "зарегистрироваться", modification: "purple", short: true })

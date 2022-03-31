@@ -27,7 +27,7 @@ mixin register-account-form(options = {})
     .register-account-form__special
       +toggle({ label: "Получать спецпредложения" })
     .register-account-form__pay-button 
-      +button({ text: buttonText, mod: "purple-link" })
+      +button({ text: buttonText, modification: "purple-link" })
     .register-account-form__login-button
       span.register-account-form__question Уже есть аккаунт на Toxin
-      +button({ text: "войти", mod:"purple-border" })
+      +button({ text: "войти", modification:"purple-border" })

@@ -3,9 +3,9 @@ include ./../calendar/calendar.pug
 
 mixin date-dropdown(options = {})
   -
-    const { root, label, secondLabel, value, secondValue ,mod = "filter" } = options
+    const { root, label, secondLabel, value, secondValue ,modification = "filter" } = options
 
-  if (mod === "double")
+  if (modification === "double")
     .date-dropdown.js-date-dropdown(data-type="double")
       .date-dropdown__header
         .date-dropdown__input.js-date-dropdown__input
@@ -19,7 +19,7 @@ mixin date-dropdown(options = {})
       .date-dropdown__calendar
         +calendar({ root:root })
 
-  if (mod === "filter")
+  if (modification === "filter")
     .date-dropdown.js-date-dropdown(data-type="filter")
       .date-dropdown__header
         .date-dropdown__input.js-date-dropdown__input

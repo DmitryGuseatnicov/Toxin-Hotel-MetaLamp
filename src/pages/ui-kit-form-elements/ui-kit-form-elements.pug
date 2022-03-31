@@ -35,10 +35,10 @@ block content
           +input({type: "text", label: "masked text field", mask: "data", placeholder: "ДД.ММ.ГГГГ"})
 
         .ui-kit__date-dropdown
-          +date-dropdown({label: "date Dropdown", secondLabel:"date Dropdown",root:"ui-kit-double-date-dropdown", mod:"double", secondValue:"19.08.2019"})
+          +date-dropdown({label: "date Dropdown", secondLabel:"date Dropdown",root:"ui-kit-double-date-dropdown",  modification:"double", secondValue:"19.08.2019"})
 
         .ui-kit__filter-date-dropdown
-          +date-dropdown({label: "filter date dropdown", root:"ui-kit-filter-date-dropdown", mod:"filter", value:"19 авг - 23 авг"})
+          +date-dropdown({label: "filter date dropdown", root:"ui-kit-filter-date-dropdown",  modification:"filter", value:"19 авг - 23 авг"})
 
         .ui-kit__input-subscribe
           +input({label: "subscription text field", placeholder: "Email" ,subscribe: true})
@@ -110,27 +110,27 @@ block content
 
           .ui-kit__buttons-purple
             .ui-kit__button
-              +button({text:"click me", mod: "purple"})
+              +button({text:"click me",  modification: "purple"})
 
             .ui-kit__button
-              +button({text:"click me", mod: "purple", disabled: true})
+              +button({text:"click me",  modification: "purple", disabled: true})
 
           .ui-kit__buttons-purple-border
             .ui-kit__button
-              +button({text:"click me", mod: "purple-border"})
+              +button({text:"click me",  modification: "purple-border"})
 
             .ui-kit__button
-              +button({text:"click me", mod: "purple-border", disabled: true})
+              +button({text:"click me",  modification: "purple-border", disabled: true})
 
           .ui-kit__buttons-simple
             .ui-kit__button
-              +button({text:"click me", mod: "simple"})
+              +button({text:"click me",  modification: "simple"})
 
             .ui-kit__button
-              +button({text:"click me", mod: "simple", disabled: true})
+              +button({text:"click me",  modification: "simple", disabled: true})
 
           .ui-kit__buttons-purple-link
-            +button({text:'перейти к оплате', mod: "purple-link"})
+            +button({text:'перейти к оплате',  modification: "purple-link"})
 
         .ui-kit__pagination 
           .ui-kit__pagination-title 
@@ -210,10 +210,10 @@ block content
 
           .ui-kit__checkbox-rich-items
             .ui-kit__checkbox-rich-item
-              +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",mod:"rich"})
+              +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.", modification:"rich"})
 
             .ui-kit__checkbox-rich-item
-              +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера.",mod:"rich"})
+              +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера.", modification:"rich"})
 
       .ui-kit__colum
         .ui-kit__bullet-list 

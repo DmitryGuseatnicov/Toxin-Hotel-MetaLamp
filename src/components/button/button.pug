@@ -1,16 +1,17 @@
 mixin button(options = {})
   -
-    const { text, mod, js, disabled, short = false, submit = false} = options 
-    let classes = "button js-button"
+    const { text, modification, disabled, short = false, submit = false} = options 
+    let classes = "button"
+    const variantModifiers = ["simple", "purple", "purple-link", "purple-border"]
     let type
-    if(submit === true) type = "submit"
-    if(mod === "simple") classes+= " button--simple"
-    if(mod === "purple") classes+= " button--purple"
-    if(mod === "purple-link") classes+= " button--purple button--link"
-    if(mod === "purple-border") classes+= " button--purple-border"
-    if(short === true) classes+= " button--short"
 
-  if (mod === "purple-link")
+    if(submit) type = "submit"
+    if(short) classes+= " button--short"
+    if (variantModifiers.includes(modification)) {
+      classes += ` button--${modification}`;
+    }
+
+  if (modification === "purple-link")
     button(class=classes, disabled=disabled, type=type)
       span.button__text= text
       span.button__icon

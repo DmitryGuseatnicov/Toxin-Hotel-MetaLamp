@@ -1,8 +1,8 @@
 mixin checkbox(options={})
   -
-    const { label, name, value, checked = false , mod, description } = options
+    const { label, name, value, checked = false , modification, description } = options
 
-  if (mod === "rich")
+  if (modification === "rich")
     .checkbox
       label.checkbox__label
         input.checkbox__input(

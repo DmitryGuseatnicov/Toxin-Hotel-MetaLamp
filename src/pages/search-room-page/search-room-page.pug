@@ -20,7 +20,7 @@ block content
           +date-dropdown({
             label: "даты пребывания в отеле", 
             root:"ui-kit-filter-date-dropdown", 
-            mod:"filter",
+            modification:"filter",
             value:"19 авг - 23 авг"
           })
 
@@ -55,10 +55,10 @@ block content
           .sidebar__availability-item
             .sidebar__availability-title
               +widget-title({text: "доступность"})
-            +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",mod:"rich"})
+            +checkbox({label:"Широкий коридор", description: "Ширина коридоров в номере не менее 91 см.",modification:"rich"})
 
           .sidebar__availability-item
-            +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера.",mod:"rich"})
+            +checkbox({label:"Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера.",modification:"rich"})
 
         .sidebar__comforts-dropdown
           +dropdown({

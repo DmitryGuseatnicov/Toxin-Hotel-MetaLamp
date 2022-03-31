@@ -8,7 +8,7 @@ mixin room-search-form
     .room-search-form__title
       +widget-title({ text: "Найдём номера под ваши пожелания", level:"1" })
     .room-search-form__date-dropdown 
-      +date-dropdown({ label:"прибытие", secondLabel:"выезд", mod: "double", root:"room-search-form__date-dropdown" })
+      +date-dropdown({ label:"прибытие", secondLabel:"выезд", modification: "double", root:"room-search-form__date-dropdown" })
     .room-search-form__guest-dropdown 
       +dropdown({ 
         label: "гости", placeholder: "Сколько гостей", items:[ 
@@ -17,4 +17,4 @@ mixin room-search-form
           { name: "младенцы", value: "0" } 
         ]})
     .room-search-form__submit-button
-      +button({ text: "подобрать номер", mod:"purple-link", submit: true })
+      +button({ text: "подобрать номер", modification:"purple-link", submit: true })

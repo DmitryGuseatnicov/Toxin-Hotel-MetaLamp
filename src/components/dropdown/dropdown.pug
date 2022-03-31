@@ -5,7 +5,7 @@ mixin dropdown(options = {})
   -
     const { label, placeholder, open, type = "guests" ,items = [], actionButtons = true } = options
     let classes = "dropdown js-dropdown"
-    if(open === true) classes += " dropdown--open"
+    if(open) classes += " dropdown--open"
 
 
   div(class=classes, data-type=type)
@@ -26,6 +26,6 @@ mixin dropdown(options = {})
       if (actionButtons === true)
         .dropdown__buttons
           .dropdown__button-clear.js-dropdown__button-clear
-            +button({text: "очиcтить", mod: "simple"})
+            +button({text: "очиcтить", modification: "simple"})
           .dropdown__button-apply.js-dropdown__button-apply
-            +button({text: "применить", mod: "simple"})
+            +button({text: "применить", modification: "simple"})

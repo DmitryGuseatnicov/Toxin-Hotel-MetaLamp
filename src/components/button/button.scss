@@ -19,15 +19,6 @@
 .button--simple {
   color: $purple;
 
-  .button__text {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: inherit;
-  }
-
   &:hover {
     color: $darkShade-50;
   }
@@ -36,6 +27,15 @@
     color: $darkShade-50;
     cursor: default;
   }
+}
+
+.button--simple > span {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: inherit;
 }
 
 .button--purple {
@@ -54,11 +54,10 @@
     background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     cursor: default;
   }
-}
 
-.button--short {
-  padding: 0 20px;
-  height: 34px;
+  &.button--short {
+    padding: 0 20px;
+  }
 }
 
 .button--purple-border {
@@ -74,31 +73,35 @@
     background: #FFF;
   }
 
-  &:hover {
+  &:hover,
+  &:disabled {
     background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
     background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   }
 
   &:disabled {
-    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
-    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     cursor: default;
   }
 
   &.button--short {
+    padding: 2px;
+
     .button__text {
       padding: 7.5px 18px;
     }
   }
 }
 
-.button--link {
+.button--purple-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 22px;
   padding: 8.5px 8px;
   width: 100%;
   max-width: 320px;
+  color: #FFF;
+  background: $purple_gradient;
 
   .button__text {
     flex-grow: 1;
@@ -109,7 +112,13 @@
     color: #FFF;
   }
 
-  &:hover {
-    background: $purple_gradient;
+  &:hover,
+  &:disabled {
+    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
+    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   }
+}
+
+.button--short {
+  height: 34px;
 }

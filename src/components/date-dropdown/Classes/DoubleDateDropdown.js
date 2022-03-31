@@ -6,6 +6,7 @@ class DoubleDateDropdown extends DateDropdown {
     this.$inputs[0].value = values[0] ? values[0] : '';
     this.$inputs[1].value = values[1] ? values[1] : '';
     this.close();
+    this.$inputs.change();
   }
 
   clearValue() {
