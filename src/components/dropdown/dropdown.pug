@@ -9,7 +9,7 @@ mixin dropdown(options = {})
 
 
   div(class=classes, data-type=type)
-    .dropdown__header
+    .dropdown__header.js-dropdown__header
       .dropdown__input.js-dropdown__input
         +input({type: "text", label: label, placeholder: placeholder, js: true, readonly: true, textEllipsis: true})
         .dropdown__icon 

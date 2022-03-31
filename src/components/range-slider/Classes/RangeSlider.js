@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import noUiSlider from 'nouislider';
 
+import constants from '../utils/constants';
 import 'nouislider/dist/nouislider.css';
 
 class rangeSlider {
@@ -10,11 +11,10 @@ class rangeSlider {
   }
 
   init() {
-    this.$start = this.$rangeSlider.find('.range-slider__input-start');
-    this.$end = this.$rangeSlider.find('.range-slider__input-end');
-    this.$value = this.$rangeSlider.find('.range-slider__value');
-
-    this.slider = noUiSlider.create(this.$rangeSlider.find('.range-slider__slider')[0], {
+    this.$start = this.$rangeSlider.find(constants.START);
+    this.$end = this.$rangeSlider.find(constants.END);
+    this.$value = this.$rangeSlider.find(constants.VALUE);
+    this.slider = noUiSlider.create(this.$rangeSlider.find(constants.SLIDER)[0], {
       start: [this.$start.attr('value'), this.$end.attr('value')],
       step: 5,
       range: {

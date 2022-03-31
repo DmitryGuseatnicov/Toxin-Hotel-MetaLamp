@@ -22,4 +22,5 @@ const options = {
   inline: true,
   buttons: [template.buttonClearValue, template.buttonAddValue],
 };
+
 export default options;

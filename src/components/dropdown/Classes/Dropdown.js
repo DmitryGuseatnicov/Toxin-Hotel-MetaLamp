@@ -23,7 +23,7 @@ class Dropdown {
   }
 
   clickHandler(e) {
-    if (e.target.closest('.dropdown__header')) this.toggle();
+    if (e.target.closest(constants.DROPDOWN_HEADER)) this.toggle();
   }
 
   toggle() {

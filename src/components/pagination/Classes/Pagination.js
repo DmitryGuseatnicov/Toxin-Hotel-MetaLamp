@@ -5,16 +5,16 @@ const DESCRIPTION = '.js-pagination__description';
 
 const template = {
   getPrev() {
-    return '<span class="pagination__item pagination__action-prev material-icons">arrow_back</span>';
+    return '<span class="pagination__item pagination__action-prev js-pagination__action-prev material-icons">arrow_back</span>';
   },
   getNext() {
-    return '<span class="pagination__item pagination__action-next material-icons">arrow_forward</span>';
+    return '<span class="pagination__item pagination__action-next js-pagination__action-next material-icons">arrow_forward</span>';
   },
   getDots() {
     return '<span class="pagination__item pagination__dots">...</span>';
   },
   getPage(number) {
-    return `<span class="pagination__item pagination__page-number">${number}</span>`;
+    return `<span class="pagination__item pagination__page-number js-pagination__page-number">${number}</span>`;
   },
   getCurrentPage(number) {
     return `<span class="pagination__item pagination__page-number pagination__current-page">${number}</span>`;

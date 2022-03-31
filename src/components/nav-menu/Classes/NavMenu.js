@@ -1,5 +1,7 @@
 import $ from 'jquery';
 
+import constants from '../utils/constants';
+
 class NavMenu {
   constructor($navMenu) {
     this.$navMenu = $navMenu;
@@ -7,7 +9,7 @@ class NavMenu {
   }
 
   init() {
-    this.$navItems = this.$navMenu.find('.js-nav__item');
+    this.$navItems = this.$navMenu.find(constants.NAV_ITEMS);
     this.bindEventListener();
   }
 

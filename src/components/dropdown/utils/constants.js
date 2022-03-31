@@ -8,6 +8,7 @@ const constants = {
   MINUS: '.js-dropdown__calculator-action-minus',
   PLUS: '.js-dropdown__calculator-action-plus',
   CALC_ITEMS: '.js-dropdown__item',
+  DROPDOWN_HEADER: '.js-dropdown__header',
 
   GUESTS: 'guests',
   COMFORTS: 'comforts',
