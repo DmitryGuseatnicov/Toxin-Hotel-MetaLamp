@@ -1,4 +1,5 @@
 const constants = {
+  DROPDOWN: '.js-dropdown',
   INPUT: '.js-dropdown__input input',
   CALCULATOR: '.js-dropdown__drop-items',
   CLEAR: '.js-dropdown__button-clear',

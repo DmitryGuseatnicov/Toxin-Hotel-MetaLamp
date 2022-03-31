@@ -20,6 +20,7 @@ class DateDropdown {
 
   bindEventListener() {
     this.clickHandler = this.clickHandler.bind(this);
+    this.windowClickHandler = this.windowClickHandler.bind(this);
     this.$dateDropdown.on('click', this.clickHandler);
   }
 
@@ -27,6 +28,10 @@ class DateDropdown {
     if (e.target.closest(constants.ICON)) this.toggle();
     if (e.target.closest(constants.APPLY)) this.addValue();
     if (e.target.closest(constants.CLEAR)) this.clearValue();
+  }
+
+  windowClickHandler(e) {
+    if (!e.target.closest(constants.DATE_DROPDOWN)) this.close();
   }
 
   toggle() {
@@ -39,10 +44,12 @@ class DateDropdown {
 
   open() {
     this.$dateDropdown.addClass('date-dropdown_open');
+    $(window).on('click', this.windowClickHandler);
   }
 
   close() {
     this.$dateDropdown.removeClass('date-dropdown_open');
+    $(window).off('click', this.windowClickHandler);
   }
 
   get isOpen() {

@@ -19,11 +19,16 @@ class Dropdown {
 
   bindEventListener() {
     this.clickHandler = this.clickHandler.bind(this);
+    this.windowClickHandler = this.windowClickHandler.bind(this);
     this.$dropdown.on('click', this.clickHandler);
   }
 
   clickHandler(e) {
     if (e.target.closest(constants.DROPDOWN_HEADER)) this.toggle();
+  }
+
+  windowClickHandler(e) {
+    if (!e.target.closest(constants.DROPDOWN)) this.close();
   }
 
   toggle() {
@@ -36,10 +41,12 @@ class Dropdown {
 
   open() {
     this.$dropdown.addClass('dropdown_open');
+    $(window).on('click', this.windowClickHandler);
   }
 
   close() {
     this.$dropdown.removeClass('dropdown_open');
+    $(window).off('click', this.windowClickHandler);
   }
 
   getValue() {
