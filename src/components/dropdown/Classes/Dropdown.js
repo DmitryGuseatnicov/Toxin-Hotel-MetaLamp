@@ -35,11 +35,11 @@ class Dropdown {
   }
 
   open() {
-    this.$dropdown.addClass('dropdown--open');
+    this.$dropdown.addClass('dropdown_open');
   }
 
   close() {
-    this.$dropdown.removeClass('dropdown--open');
+    this.$dropdown.removeClass('dropdown_open');
   }
 
   getValue() {
@@ -47,7 +47,7 @@ class Dropdown {
   }
 
   get isOpen() {
-    return this.$dropdown.hasClass('dropdown--open');
+    return this.$dropdown.hasClass('dropdown_open');
   }
 }
 

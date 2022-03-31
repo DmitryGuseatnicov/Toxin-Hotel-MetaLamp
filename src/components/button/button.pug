@@ -6,9 +6,9 @@ mixin button(options = {})
     let type
 
     if(submit) type = "submit"
-    if(short) classes+= " button--short"
+    if(short) classes+= " button_short"
     if (variantModifiers.includes(modification)) {
-      classes += ` button--${modification}`;
+      classes += ` button_${modification}`;
     }
 
   if (modification === "purple-link")

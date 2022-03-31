@@ -6,11 +6,11 @@ const template = {
   },
   buttonAddValue: {
     content: 'Применить',
-    className: 'button button--simple js-button-action-apply',
+    className: 'button button_simple js-button-action-apply',
   },
   buttonClearValue: {
     content: 'Очистить',
-    className: 'button button--simple js-button-action-clear',
+    className: 'button button_simple js-button-action-clear',
   },
 };
 

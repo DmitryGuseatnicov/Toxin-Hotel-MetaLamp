@@ -17,7 +17,7 @@
     line-height: 12px;
   }
 
-  &--liked {
+  &_liked {
     border: 1px solid $purple;
   }
 }
@@ -28,6 +28,6 @@
   line-height: 12px;
 }
 
-.like-button--liked > span {
+.like-button_liked > span {
   color: $purple;
 }

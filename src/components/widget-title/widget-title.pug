@@ -4,10 +4,10 @@ mixin widget-title(options = {})
     let text = options.text ? options.text : ""
 
   if (level === "1")
-    h1.widget-title.widget-title--big= text
+    h1.widget-title.widget-title_big= text
 
   if (level === "2")
-    h2.widget-title.widget-title--medium= text
+    h2.widget-title.widget-title_medium= text
 
   if (level >= "3")
-    h3.widget-title.widget-title--small= text
+    h3.widget-title.widget-title_small= text

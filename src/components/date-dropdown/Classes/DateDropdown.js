@@ -38,15 +38,15 @@ class DateDropdown {
   }
 
   open() {
-    this.$dateDropdown.addClass('date-dropdown--open');
+    this.$dateDropdown.addClass('date-dropdown_open');
   }
 
   close() {
-    this.$dateDropdown.removeClass('date-dropdown--open');
+    this.$dateDropdown.removeClass('date-dropdown_open');
   }
 
   get isOpen() {
-    return this.$dateDropdown.hasClass('date-dropdown--open');
+    return this.$dateDropdown.hasClass('date-dropdown_open');
   }
 
   getValue() {

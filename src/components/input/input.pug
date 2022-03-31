@@ -7,7 +7,7 @@ mixin input(options = {})
         } = options
 
     let classes =  "input__text-field"
-    if (textEllipsis) classes += ' input__text-field--text-ellipsis'
+    if (textEllipsis) classes += ' input__text-field_text-ellipsis'
 
   if (label && !subscribe)
     label.input
@@ -24,7 +24,7 @@ mixin input(options = {})
       )
 
   if (subscribe)
-    label.input.input--subscribe
+    label.input.input_subscribe
       +widget-title({text: label})
       .input__inner
         input(
@@ -40,7 +40,7 @@ mixin input(options = {})
           span.material-icons arrow_forward
 
   if (label === "" && !subscribe)
-    .input
+    .input  
       input(
         class=classes,
         type=type,

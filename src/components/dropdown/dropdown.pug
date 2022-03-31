@@ -5,7 +5,7 @@ mixin dropdown(options = {})
   -
     const { label, placeholder, open, type = "guests" ,items = [], actionButtons = true } = options
     let classes = "dropdown js-dropdown"
-    if(open) classes += " dropdown--open"
+    if(open) classes += " dropdown_open"
 
 
   div(class=classes, data-type=type)

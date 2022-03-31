@@ -16,7 +16,7 @@
   }
 }
 
-.button--simple {
+.button_simple {
   color: $purple;
 
   &:hover {
@@ -29,7 +29,7 @@
   }
 }
 
-.button--simple > span {
+.button_simple > span {
   display: inline-block;
   font-weight: bold;
   font-size: 12px;
@@ -38,7 +38,7 @@
   color: inherit;
 }
 
-.button--purple {
+.button_purple {
   border-radius: 22px;
   padding: 10px 20px;
   color: #FFF;
@@ -55,12 +55,12 @@
     cursor: default;
   }
 
-  &.button--short {
+  &.button_short {
     padding: 0 20px;
   }
 }
 
-.button--purple-border {
+.button_purple-border {
   border-radius: 22px;
   padding: 2px;
   color: #FFF;
@@ -83,7 +83,7 @@
     cursor: default;
   }
 
-  &.button--short {
+  &.button_short {
     padding: 2px;
 
     .button__text {
@@ -92,7 +92,7 @@
   }
 }
 
-.button--purple-link {
+.button_purple-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -119,6 +119,6 @@
   }
 }
 
-.button--short {
+.button_short {
   height: 34px;
 }

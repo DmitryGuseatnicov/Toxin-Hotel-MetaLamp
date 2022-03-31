@@ -17,7 +17,7 @@ class CheckboxList {
   }
 
   toggle() {
-    this.$checkboxList.toggleClass('checkbox-list--open');
+    this.$checkboxList.toggleClass('checkbox-list_open');
   }
 }
 

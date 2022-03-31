@@ -59,7 +59,7 @@
   }
 }
 
-.nav__item--hav-childrens {
+.nav__item_hav-childrens {
   .nav__item-link {
     display: flex;
   }
@@ -73,14 +73,14 @@
   }
 }
 
-.nav__item--active {
+.nav__item_active {
   .nav__item-link {
     font-weight: bold;
     color: $darkShade-75;
   }
 }
 
-.nav__item--open {
+.nav__item_open {
   .nav__item-childrens {
     display: block;
   }

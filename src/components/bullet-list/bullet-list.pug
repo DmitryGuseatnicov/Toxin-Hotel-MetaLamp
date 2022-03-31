@@ -4,7 +4,7 @@ mixin bullet-list(options = {})
   -
     const { title: { text = "", level = "3" }, items = [], listStyle = false } = options
     let classes = "bullet-list"
-    if(listStyle) classes += " bullet-list--list-style"
+    if(listStyle) classes += " bullet-list_list-style"
 
   div(class=classes)
     .bullet-list__title 
