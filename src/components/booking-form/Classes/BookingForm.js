@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import wNumb from 'wnumb';
+
 import constants from '../utils/constants';
 
 const numFormate = wNumb({

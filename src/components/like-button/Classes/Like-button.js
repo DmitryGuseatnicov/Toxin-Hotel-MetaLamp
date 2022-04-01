@@ -29,19 +29,19 @@ class LikeButton {
   }
 
   unlike() {
-    this.$likeButton.removeClass('like-button--liked');
+    this.$likeButton.removeClass('like-button_liked');
     this.$icon.text('favorite_border');
     this.$count.text(+this.$count.text() - 1);
   }
 
   like() {
-    this.$likeButton.addClass('like-button--liked');
+    this.$likeButton.addClass('like-button_liked');
     this.$icon.text('favorite');
     this.$count.text(+this.$count.text() + 1);
   }
 
   get isLike() {
-    return this.$likeButton.hasClass('like-button--liked');
+    return this.$likeButton.hasClass('like-button_liked');
   }
 }
 
