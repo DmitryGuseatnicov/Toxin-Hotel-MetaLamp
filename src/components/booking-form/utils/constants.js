@@ -5,7 +5,7 @@ const constants = {
   PRICE: '.js-booking-form__price-for-days',
   ADDITIONALLY: '.js-booking-form__price-list-additionally',
   SALE: '.js-booking-form__price-list-sale',
-  PRICE_FOR_DAY: '.js-booking-form__price-for-day'
+  PRICE_FOR_DAY: '.js-booking-form__price-for-day',
 };
 
 export default constants;

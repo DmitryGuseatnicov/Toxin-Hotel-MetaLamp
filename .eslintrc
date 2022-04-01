@@ -18,6 +18,7 @@
   },
   "plugins": ["fsd", "pug"],
   "rules": {
+    "linebreak-style": 0,
     "no-new": "off",
     "import/no-unresolved": "off",
     "prefer-regex-literals": "off"
