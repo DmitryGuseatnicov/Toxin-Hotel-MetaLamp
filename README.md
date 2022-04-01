@@ -79,3 +79,4 @@
   + [inputmask](https://github.com/RobinHerbots/Inputmask) version( 5.0.7 )
   + [nouislider](https://github.com/leongersen/noUiSlider) version(  15.5.0 )
   + [slick-carousel](https://github.com/kenwheeler/slick) version( 1.8.1 )
+  + [wNumb](https://github.com/leongersen/wnumb) version( 1.2.0 )
