@@ -52,7 +52,7 @@ class DateDropdown {
   close() {
     this.$dateDropdown.removeClass('date-dropdown_open');
     $(window).off('click', this.windowClickHandler);
-    this.popup.remove();
+    if (this.popup) this.popup.remove();
   }
 
   get isOpen() {
