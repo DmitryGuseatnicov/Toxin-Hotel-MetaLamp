@@ -8,7 +8,7 @@
     border-color: $purple;
   }
 
-  &:not(:disabled):focus + span::before {
+  &:not(:disabled):focus-visible + span::before {
     box-shadow: 0 0 0 1px $purple;
   }
 

@@ -81,8 +81,8 @@
     color: $darkShade-25;
   }
 
-  &__calculator-action-minus:focus,
-  &__calculator-action-plus:focus {
+  &__calculator-action-minus:focus-visible,
+  &__calculator-action-plus:focus-visible {
     box-shadow: 0 0 0 0.5px $darkShade-75;
   }
 }

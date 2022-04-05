@@ -23,7 +23,7 @@
     border: 1px solid $purple;
   }
 
-  &:focus,
+  &:focus-visible,
   &:hover {
     box-shadow: 0 0 0 1px $purple;
   }
