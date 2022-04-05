@@ -19,12 +19,21 @@ class Dropdown {
 
   bindEventListener() {
     this.clickHandler = this.clickHandler.bind(this);
+    this.keyHandler = this.keyHandler.bind(this);
     this.windowClickHandler = this.windowClickHandler.bind(this);
     this.$dropdown.on('click', this.clickHandler);
+    this.$dropdown.on('keydown', this.keyHandler);
   }
 
   clickHandler(e) {
     if (e.target.closest(constants.DROPDOWN_HEADER)) this.toggle();
+  }
+
+  keyHandler(e) {
+    if (e.keyCode === 32) {
+      e.preventDefault();
+      this.toggle();
+    }
   }
 
   windowClickHandler(e) {

@@ -20,14 +20,23 @@ class DateDropdown {
 
   bindEventListener() {
     this.clickHandler = this.clickHandler.bind(this);
+    this.keyHandler = this.keyHandler.bind(this);
     this.windowClickHandler = this.windowClickHandler.bind(this);
     this.$dateDropdown.on('click', this.clickHandler);
+    this.$dateDropdown.on('keydown', this.keyHandler);
   }
 
   clickHandler(e) {
     if (e.target.closest(constants.ICON)) this.toggle();
     if (e.target.closest(constants.APPLY)) this.addValue();
     if (e.target.closest(constants.CLEAR)) this.clearValue();
+  }
+
+  keyHandler(e) {
+    if (e.keyCode === 32) {
+      e.preventDefault();
+      this.toggle();
+    }
   }
 
   windowClickHandler(e) {

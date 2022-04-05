@@ -64,6 +64,7 @@
 
   &__calculator-action-minus,
   &__calculator-action-plus {
+    outline: none;
     border: 1px solid $darkShade-50;
     border-radius: 22px;
     width: 30px;
@@ -78,6 +79,11 @@
   &__calculator-action-plus:disabled {
     border: 1px solid $darkShade-25;
     color: $darkShade-25;
+  }
+
+  &__calculator-action-minus:focus,
+  &__calculator-action-plus:focus {
+    box-shadow: 0 0 0 0.5px $darkShade-75;
   }
 }
 
