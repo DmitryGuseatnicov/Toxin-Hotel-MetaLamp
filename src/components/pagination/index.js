@@ -28,6 +28,5 @@ function changePageWithTab(e) {
   }
 }
 
-
 $pagination.on('click', changePage);
 $pagination.on('keydown', changePageWithTab);

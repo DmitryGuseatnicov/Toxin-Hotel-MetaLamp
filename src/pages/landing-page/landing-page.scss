@@ -3,7 +3,7 @@
 @import './../../styles/global.scss';
 
 .landing {
-  background: url('./assets/img/lending-img.png') center bottom no-repeat;
+  background: url('./assets/img/lending-img.png') center/cover no-repeat;
 
   &__search-form {
     position: relative;
