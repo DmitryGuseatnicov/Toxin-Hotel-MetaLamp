@@ -3,12 +3,14 @@
 .like-button {
   display: flex;
   align-items: center;
+  outline: none;
   border: 1px solid $darkShade-25;
   border-radius: 10px;
   width: 40px;
   height: 20px;
   box-sizing: border-box;
   background: #FFF;
+  cursor: pointer;
 
   &__count {
     padding-right: 5px;
@@ -19,6 +21,11 @@
 
   &_liked {
     border: 1px solid $purple;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 0 1px $purple;
   }
 }
 
