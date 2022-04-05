@@ -31,16 +31,14 @@
   }
 
   &__widget-link {
+    outline: none;
     text-decoration: none;
     color: $darkShade-50;
 
+    &:focus,
     &:hover {
       color: $darkShade-75;
     }
-  }
-
-  &__social-link:hover {
-    opacity: 0.7;
   }
 
   &__special {
@@ -73,11 +71,17 @@
     gap: 20px;
   }
 
-  &__social-link {
+  &__social-href {
     display: flex;
     align-items: center;
     width: 24px;
     height: 24px;
+  }
+
+  &__social-href:focus,
+  &__social-href:hover {
+    outline: none;
+    opacity: 0.7;
   }
 }
 

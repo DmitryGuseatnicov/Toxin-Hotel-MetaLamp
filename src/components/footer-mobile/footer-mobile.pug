@@ -13,7 +13,7 @@ mixin footer-mobile(options = {})
       each social in socials 
         - classes +=`-${social.name}`
         div(class=classes)
-          a(href='#')
+          a.footer-mobile__social-href(href=social.href)
             img(
               src=social.src,
               alt=social.name
