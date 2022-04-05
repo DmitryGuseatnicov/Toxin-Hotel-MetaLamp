@@ -4,9 +4,15 @@
   margin-right: 20px;
 
   &__item-href {
+    outline: none;
     font-weight: inherit;
     text-decoration: none;
     color: inherit;
+  }
+
+  &__item-href:focus,
+  &__item-href:hover {
+    color: $darkShade-75;
   }
 
   &__list {
@@ -29,10 +35,6 @@
     color: inherit;
   }
 
-  &__item-link:hover {
-    color: $darkShade-75;
-  }
-
   &__item-childrens {
     position: absolute;
     left: -20px;
@@ -49,13 +51,15 @@
   }
 
   &__item-children-href {
+    outline: none;
     font-weight: inherit;
     text-decoration: none;
-    color: inherit;
+    color: $darkShade-50;
   }
 
-  &__item-name {
-    color: inherit;
+  &__item-children-href:focus,
+  &__item-children-href:hover {
+    color: $darkShade-75;
   }
 }
 

@@ -14,7 +14,7 @@ mixin nav-menu(options={})
         if (childrens.length > 0)
           li(class=classes)
             .nav__item-link
-              a.nav__item-href(href=link.href)= link.name
+              a.nav__item-href(href=link.href tabindex="0")= link.name
               span.material-icons.nav__item-arrow
             .nav__item-childrens
               each children in childrens
