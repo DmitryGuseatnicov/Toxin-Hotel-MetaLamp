@@ -21,4 +21,13 @@ function changePage(e) {
   }
 }
 
+function changePageWithTab(e) {
+  if (e.keyCode === 32) {
+    e.preventDefault();
+    changePage(e);
+  }
+}
+
+
 $pagination.on('click', changePage);
+$pagination.on('keydown', changePageWithTab);

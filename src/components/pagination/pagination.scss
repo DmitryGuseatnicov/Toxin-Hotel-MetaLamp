@@ -10,8 +10,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    outline: none;
     width: 40px;
     height: 40px;
+  }
+
+  span:focus-visible {
+    box-shadow: 0 0 0 1px $darkShade-50;
   }
 
   &__page-number {
