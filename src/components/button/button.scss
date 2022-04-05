@@ -17,8 +17,10 @@
 }
 
 .button_simple {
+  outline: none;
   color: $purple;
 
+  &:focus,
   &:hover {
     color: $darkShade-50;
   }
@@ -39,11 +41,13 @@
 }
 
 .button_purple {
+  outline: none;
   border-radius: 22px;
   padding: 10px 20px;
   color: #FFF;
   background: $purple_gradient;
 
+  &:focus,
   &:hover {
     background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
     background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -61,6 +65,7 @@
 }
 
 .button_purple-border {
+  outline: none;
   border-radius: 22px;
   padding: 2px;
   color: #FFF;
@@ -73,6 +78,7 @@
     background: #FFF;
   }
 
+  &:focus,
   &:hover,
   &:disabled {
     background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
@@ -96,6 +102,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  outline: none;
   border-radius: 22px;
   padding: 8.5px 8px;
   width: 100%;
@@ -112,6 +119,7 @@
     color: #FFF;
   }
 
+  &:focus,
   &:hover,
   &:disabled {
     background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
