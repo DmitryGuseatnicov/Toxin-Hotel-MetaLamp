@@ -19,9 +19,20 @@ mixin register-account-form(options = {})
       +radio({ label: "Мужчина", name: "sex", checked: true })
       +radio({ label: "Женщина",name: "sex" })
     .register-account-form__date 
-      +input({ type: "text", label:"дата рождения", placeholder: "ДД.ММ.ГГГГ", mask: "data" , required: true })
+      +input({ 
+        type: "text", 
+        label:"дата рождения",
+        placeholder: "ДД.ММ.ГГГГ", 
+        mask: "data" , 
+        required: true 
+      })
     .register-account-form__mail
-      +input({ type: "mail" ,label: "данные для входа в сервис", placeholder:"Email", required: true })
+      +input({ 
+        type: "mail",
+        label: "данные для входа в сервис", 
+        placeholder:"Email", 
+        required: true 
+      })
     .register-account-form__password
       +input({ type: "password", placeholder:"Пароль", required: true })
     .register-account-form__special

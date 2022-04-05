@@ -17,7 +17,12 @@ mixin booking-form(options = {})
         span.booking-form__price-name в сутки
     .booking-form__date-dropdown
       +date-dropdown({
-        label: "прибытие", secondLabel: "выезд", modification: "double", value: firstDate, secondValue: secondDate, root:root
+        label: "прибытие", 
+        secondLabel: "выезд", 
+        modification: "double", 
+        value: firstDate, 
+        secondValue: secondDate, 
+        root:root
         })
     .booking-form__guest-dropdown
       +dropdown({
