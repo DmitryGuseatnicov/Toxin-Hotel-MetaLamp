@@ -72,7 +72,7 @@ block content
           +dropdown({
             label: "удобства номера", 
             placeholder: "Выберете удобства", 
-            actionButtons: false, type:"comforts",
+            buttonsWithAction: false, type:"comforts",
             items:[ 
               {name: "спальни", value: "2"}, 
               {name: "кровати", value: "2"}, 
@@ -217,9 +217,7 @@ block content
                   src=require('./assets/img/image-10.png'), 
                   src=require('./assets/img/image-10.png'), 
                   src=require('./assets/img/image-10.png'), 
-                  
-                s
-              rc=require('./assets/img/image-10.png'), 
+                  src=require('./assets/img/image-10.png'), 
                 ]
               },
               {
@@ -249,7 +247,7 @@ block content
             ]
           each room in rooms 
             .search-room__item
-              +room-card(room)
+              +room-card(room)  
 
         .search-room__pagination
           +pagination

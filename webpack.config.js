@@ -93,7 +93,6 @@ module.exports = {
       {
         test: /\.pug$/,
         use: [
-
           {
             loader: 'simple-pug-loader',
             options: {
