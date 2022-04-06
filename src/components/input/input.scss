@@ -30,10 +30,11 @@
     max-width: 320px;
   }
 
-  &__button {
+  &__subscribe-arrow {
     position: absolute;
     right: 9px;
     top: 50%;
+    outline: none;
     border: none;
     height: 24px;
     background: inherit;
@@ -41,7 +42,7 @@
     cursor: pointer;
   }
 
-  &__button > span {
+  &__subscribe-arrow > span {
     color: $purple;
   }
 

@@ -53,6 +53,14 @@
   background: $green_gradient;
 }
 
+.noUi-handle {
+  outline: none;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px $green;
+  }
+}
+
 .noUi-handle::before,
 .noUi-handle::after {
   display: none;
