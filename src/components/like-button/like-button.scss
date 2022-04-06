@@ -26,6 +26,8 @@
   &:focus-visible {
     box-shadow: 0 0 0 1px $purple;
   }
+
+  @extend %body_text;
 }
 
 .like-button > span {
