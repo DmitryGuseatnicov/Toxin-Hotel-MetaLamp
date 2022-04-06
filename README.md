@@ -56,15 +56,16 @@
         page-name.pug
         page-name.scss
         page-name.js
+    page-template/ -- шаблоны pug и scss для страниц
     styles/
       -- файлы со шрифтами, переменными и минимальными  глобальными стилями
-  components/
-    component-name/ -- папки компонентов
-        component-name.pug
-        component-name.scss
-        index.js
-        Classes/
-          ClassName-- Классы с логикой относящиеся к данному компоненту
+    components/
+      component-name/ -- папки компонентов
+          component-name.pug
+          component-name.scss
+          index.js
+          Classes/
+            ClassName-- Классы с логикой относящиеся к данному компоненту
 ```          
 ### Инструменты используемые для разработки 
   1. WEBPACK - для сборки и минификации файлов
