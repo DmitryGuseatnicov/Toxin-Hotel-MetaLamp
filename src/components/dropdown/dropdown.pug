@@ -3,7 +3,7 @@ include ./../button/button.pug
 
 mixin dropdown(options = {})
   -
-    const { label, placeholder, open, type = "guests" ,items = [], actionButtons = true } = options
+    const { label, placeholder, open, type = "guests" ,items = [], buttonsWithAction = true } = options
     let classes = "dropdown js-dropdown"
     if(open) classes += " dropdown_open"
 
@@ -29,7 +29,7 @@ mixin dropdown(options = {})
             span.dropdown__calculator-value.js-dropdown__calculator-value= item.value
             button.dropdown__calculator-action-plus.js-dropdown__calculator-action-plus +
 
-      if (actionButtons === true)
+      if (buttonsWithAction)
         .dropdown__buttons
           .dropdown__button-clear.js-dropdown__button-clear
             +button({text: "очиcтить", modification: "simple"})
