@@ -1,3 +1,11 @@
+@import './vars.scss';
+
+html {
+  background: #fff;
+
+  @extend %body_text;
+}
+
 html,
 body {
   margin: 0;

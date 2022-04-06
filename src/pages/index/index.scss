@@ -1,6 +1,5 @@
-@import './../../styles/reset.scss';
-@import './../../styles/fonts.scss';
-@import './../../styles/global.scss';
+@import './../../page-layout/page-template.scss';
+@import './../../styles/vars.scss';
 
 .main {
   padding: 40px 0;
@@ -17,4 +16,9 @@
 
 .ui-kit__link {
   margin-top: 10px;
+}
+
+.pages__link-href,
+.ui-kit__link-href {
+  @extend %body_text;
 }

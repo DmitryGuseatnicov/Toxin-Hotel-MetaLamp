@@ -1,0 +1,25 @@
+@import '../styles/fonts.scss';
+@import '../styles/reset.scss';
+@import '../styles/vars.scss';
+
+.wrapper {
+  @extend %wrapper;
+}
+
+.main {
+  @extend %main;
+}
+
+.footer {
+  @extend %footer;
+}
+
+.container {
+  @extend %container;
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    padding: 0 5px;
+  }
+}
