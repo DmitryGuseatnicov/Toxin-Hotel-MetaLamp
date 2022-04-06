@@ -13,7 +13,16 @@ class CheckboxList {
 
   bindEventListener() {
     this.toggle = this.toggle.bind(this);
+    this.keyHandler = this.keyHandler.bind(this);
     this.$toggleButton.on('click', this.toggle);
+    this.$toggleButton.on('keydown', this.keyHandler);
+  }
+
+  keyHandler(e) {
+    if (e.keyCode === 32) {
+      e.preventDefault();
+      this.toggle();
+    }
   }
 
   toggle() {

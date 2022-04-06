@@ -20,6 +20,11 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    outline: none;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px $purple;
+    }
   }
 
   &__burger-line {
@@ -32,10 +37,16 @@
 
   &__close-button {
     display: none;
+    outline: none;
     border: none;
     font-size: 40px;
+    color: $darkShade-50;
     background: #FFF;
     transform: rotate(45deg);
+
+    &:focus-visible {
+      color: $darkShade-75;
+    }
   }
 
   &__panel {

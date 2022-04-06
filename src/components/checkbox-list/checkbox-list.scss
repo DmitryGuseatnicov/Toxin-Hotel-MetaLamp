@@ -1,3 +1,5 @@
+@import './../../styles/vars.scss'; 
+
 .checkbox-list {
   max-width: 266px;
 
@@ -9,9 +11,14 @@
 
   &__icon {
     margin-right: 8px;
+    outline: none;
     height: 24px;
     transition: 0.4s;
     cursor: pointer;
+
+    &:focus-visible {
+      border: 1px solid $darkShade-50;
+    }
   }
 
   &__items {
