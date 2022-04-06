@@ -1,8 +1,13 @@
 import $ from 'jquery';
 import noUiSlider from 'nouislider';
+import wNumb from 'wnumb';
 
 import constants from '../utils/constants';
 import 'nouislider/dist/nouislider.css';
+
+const numFormate = wNumb({
+  thousand: ' ',
+});
 
 class rangeSlider {
   constructor(nodeElem) {
@@ -35,7 +40,8 @@ class rangeSlider {
   changeHandler(values) {
     this.$start.val(values[0]);
     this.$end.val(values[1]);
-    this.$value.text(`${Math.round(values[0])}₽ - ${Math.round(values[1])}₽`);
+
+    this.$value.text(`${numFormate.to(+values[0])}₽ - ${numFormate.to(+values[1])}₽`);
   }
 }
 
