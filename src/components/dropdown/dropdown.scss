@@ -33,10 +33,10 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 7px;
-  }
 
-  &__item:first-child {
-    margin-top: 0;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   &__item-name {

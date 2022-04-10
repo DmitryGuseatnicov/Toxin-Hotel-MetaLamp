@@ -10,26 +10,28 @@
     position: relative;
     margin-top: 10px;
     padding-left: 21px;
-  }
 
-  &__item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 8px;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background: $darkShade-25;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background: $darkShade-25;
+    }
   }
 }
 
 .bullet-list_list-style {
-  .bullet-list__title {
-    padding-left: 21px;
-  }
+  .bullet-list {
+    &__title {
+      padding-left: 21px;
+    }
 
-  .bullet-list__items {
-    margin-top: 20px;
+    &__items {
+      margin-top: 20px;
+    }
   }
 }

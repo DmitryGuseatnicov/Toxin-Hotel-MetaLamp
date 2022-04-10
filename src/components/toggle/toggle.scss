@@ -37,29 +37,29 @@
     align-items: center;
     padding-left: 50px;
     height: 20px;
-  }
 
-  &-text::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    border: 1px solid $darkShade-25;
-    border-radius: 10px;
-    width: 40px;
-    height: 20px;
-  }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      border: 1px solid $darkShade-25;
+      border-radius: 10px;
+      width: 40px;
+      height: 20px;
+    }
 
-  &-text::after {
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    display: inline-block;
-    border-radius: 10px;
-    width: 12px;
-    height: 12px;
-    background: $darkShade-25;
-    transition: 0.2s;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      display: inline-block;
+      border-radius: 10px;
+      width: 12px;
+      height: 12px;
+      background: $darkShade-25;
+      transition: 0.2s;
+    }
   }
 }

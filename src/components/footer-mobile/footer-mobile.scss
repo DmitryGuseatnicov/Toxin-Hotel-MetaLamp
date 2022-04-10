@@ -29,11 +29,11 @@
 
   &__social-href {
     outline: none;
-  }
 
-  &__social-href:focus,
-  &__social-href:hover {
-    opacity: 0.7;
+    &:focus,
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 

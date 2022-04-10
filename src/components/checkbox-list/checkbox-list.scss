@@ -33,11 +33,13 @@
 }
 
 .checkbox-list_open {
-  .checkbox-list__items {
-    display: block;
-  }
+  .checkbox-list {
+    &__items {
+      display: block;
+    }
 
-  .checkbox-list__icon {
-    transform: rotate(180deg);
+    &__icon {
+      transform: rotate(180deg);
+    }
   }
 }

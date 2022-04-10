@@ -99,12 +99,12 @@
   box-shadow: 0 10px 20px $darkShade-5;
   background: #fff;
 
-  &__images {
+  &__photo {
     min-height: 42px;
+  }
 
-    img {
-      width: 100%;
-    }
+  &__img {
+    width: 100%;
   }
 
   &__info {
@@ -119,13 +119,13 @@
     font-size: 14px;
     line-height: 17px;
     color: $darkShade-100;
+  }
 
-    &-value {
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 17px;
-      color: $darkShade-100;
-    }
+  &__number-value {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 17px;
+    color: $darkShade-100;
   }
 
   &__type {
@@ -146,11 +146,11 @@
     text-align: right;
     color: $darkShade-50;
     background: #fff;
+  }
 
-    &-name {
-      font-size: 12px;
-      color: $darkShade-50;
-    }
+  &__price-name {
+    font-size: 12px;
+    color: $darkShade-50;
   }
 
   &__reviews-items {

@@ -13,22 +13,22 @@
     outline: none;
     width: 40px;
     height: 40px;
-  }
 
-  span:focus-visible {
-    box-shadow: 0 0 0 1px $darkShade-50;
+    &:focus-visible {
+      box-shadow: 0 0 0 1px $darkShade-50;
+    }
   }
 
   &__page-number {
     border-radius: 22px;
     font-size: 12px;
     cursor: pointer;
-  }
 
-  &__page-number:hover {
-    font-weight: 700;
-    color: #FFF;
-    background: $purple_gradient;
+    &:hover {
+      font-weight: 700;
+      color: #FFF;
+      background: $purple_gradient;
+    }
   }
 
   &__current-page {

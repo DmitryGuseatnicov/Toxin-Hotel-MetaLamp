@@ -8,6 +8,11 @@
     font-weight: inherit;
     text-decoration: none;
     color: $darkShade-50;
+
+    &:focus,
+    &:hover {
+      color: $darkShade-75;
+    }
   }
 
   &__list {
@@ -50,16 +55,11 @@
     font-weight: inherit;
     text-decoration: none;
     color: $darkShade-50;
-  }
 
-  &__item-href:focus,
-  &__item-href:hover {
-    color: $darkShade-75;
-  }
-
-  &__item-children-href:focus,
-  &__item-children-href:hover {
-    color: $darkShade-75;
+    &:focus,
+    &:hover {
+      color: $darkShade-75;
+    }
   }
 }
 
@@ -81,12 +81,11 @@
   .nav__item-href {
     font-weight: bold;
     color: $darkShade-75;
-  }
 
-  .nav__item-href:focus,
-  .nav__item-href:hover {
-    font-weight: bold;
-    color: $darkShade-100;
+    &:focus,
+    &:hover {
+      color: $darkShade-75;
+    }
   }
 }
 

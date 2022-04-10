@@ -5,8 +5,8 @@ mixin room-card(options = {})
   .room-card
     .room-card__images.js-room-card__images
       each src in links 
-        .room-card__image
-          img(src=src, alt="room-photo")
+        .room-card__photo
+          img.room-card__img(src=src, alt="room-photo")
     .room-card__info 
       .room-card__number №
         span.room-card__number-value= number
