@@ -46,9 +46,9 @@ class GuestsDropdown extends Dropdown {
       }
     });
 
-    const value = `${guests > 0
-      ? `${guests} ${textHelper('гости', guests)},`
-      : ''}${baby > 0 ? ` ${baby} ${textHelper('младенцы', baby)} ` : ''}`;
+    const value = `${
+      guests > 0 ? `${guests} ${textHelper('гости', guests)},` : ''
+    }${baby > 0 ? ` ${baby} ${textHelper('младенцы', baby)} ` : ''}`;
 
     this.$input.val(value.replace(/.$/, ''));
   }

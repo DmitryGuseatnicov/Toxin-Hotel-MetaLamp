@@ -26,16 +26,18 @@ const createChart = (rating = []) => {
   const counter = {
     id: 'counter',
     beforeDraw(chart) {
-      const { chartArea: { top, width, height } } = chart;
+      const {
+        chartArea: { top, width, height },
+      } = chart;
       ctx.save();
       ctx.font = 'bold 24px Montserrat';
       ctx.textAlign = 'center';
       ctx.fillStyle = purpleGradient;
-      ctx.fillText(`${totalVotes}`, width / 2, top - 2 + (height / 2));
+      ctx.fillText(`${totalVotes}`, width / 2, top - 2 + height / 2);
       ctx.save();
       ctx.font = 'bold 15px Montserrat';
       ctx.textAlign = 'center';
-      ctx.fillText('голосов', width / 2, top + 17 + (height / 2));
+      ctx.fillText('голосов', width / 2, top + 17 + height / 2);
     },
   };
 
@@ -43,19 +45,21 @@ const createChart = (rating = []) => {
     type: 'doughnut',
     data: {
       labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
-      datasets: [{
-        label: '',
-        data: rating,
-        backgroundColor: [
-          darkGradient,
-          purpleGradient,
-          greenGradient,
-          yellowGradient,
-        ],
-        borderWidth: 3,
-        cutout: '89%',
-        reverse: true,
-      }],
+      datasets: [
+        {
+          label: '',
+          data: rating,
+          backgroundColor: [
+            darkGradient,
+            purpleGradient,
+            greenGradient,
+            yellowGradient,
+          ],
+          borderWidth: 3,
+          cutout: '89%',
+          reverse: true,
+        },
+      ],
     },
     options: {
       layout: {

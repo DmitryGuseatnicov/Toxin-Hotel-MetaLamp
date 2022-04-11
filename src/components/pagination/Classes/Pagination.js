@@ -111,7 +111,9 @@ class Pagination {
   }
 
   showDescription() {
-    const interval = `${this.currentPage * this.itemsShowForPage - this.itemsShowForPage + 1} – ${this.currentPage * this.itemsShowForPage}`;
+    const interval = `${
+      this.currentPage * this.itemsShowForPage - this.itemsShowForPage + 1
+    } – ${this.currentPage * this.itemsShowForPage}`;
     const description = `${interval} из ${this.getCountOfItems()} вариантов аренды`;
     this.$description.text(description);
   }

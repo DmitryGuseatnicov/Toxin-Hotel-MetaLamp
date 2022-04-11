@@ -19,15 +19,18 @@ class rangeSlider {
     this.$start = this.$rangeSlider.find(constants.START);
     this.$end = this.$rangeSlider.find(constants.END);
     this.$value = this.$rangeSlider.find(constants.VALUE);
-    this.slider = noUiSlider.create(this.$rangeSlider.find(constants.SLIDER)[0], {
-      start: [this.$start.attr('value'), this.$end.attr('value')],
-      step: 5,
-      range: {
-        min: [parseInt(this.$start.attr('min'), 10)],
-        max: [parseInt(this.$end.attr('max'), 10)],
-      },
-      connect: true,
-    });
+    this.slider = noUiSlider.create(
+      this.$rangeSlider.find(constants.SLIDER)[0],
+      {
+        start: [this.$start.attr('value'), this.$end.attr('value')],
+        step: 5,
+        range: {
+          min: [parseInt(this.$start.attr('min'), 10)],
+          max: [parseInt(this.$end.attr('max'), 10)],
+        },
+        connect: true,
+      }
+    );
 
     this.bindEventListener();
   }
@@ -41,7 +44,9 @@ class rangeSlider {
     this.$start.val(values[0]);
     this.$end.val(values[1]);
 
-    this.$value.text(`${numFormate.to(+values[0])}₽ - ${numFormate.to(+values[1])}₽`);
+    this.$value.text(
+      `${numFormate.to(+values[0])}₽ - ${numFormate.to(+values[1])}₽`
+    );
   }
 }
 

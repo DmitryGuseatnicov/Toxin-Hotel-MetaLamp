@@ -17,18 +17,12 @@ class FilterDateDropdown extends DateDropdown {
     let secondDate = '';
 
     if (values[0]) {
-      firstDate = new Date(values[0]
-        .split('.')
-        .reverse()
-        .join('-'))
+      firstDate = new Date(values[0].split('.').reverse().join('-'))
         .toLocaleString('ru-RU', { day: 'numeric', month: 'short' })
         .replace('.', '');
     }
     if (values[1]) {
-      secondDate = new Date(values[1]
-        .split('.')
-        .reverse()
-        .join('-'))
+      secondDate = new Date(values[1].split('.').reverse().join('-'))
         .toLocaleString('ru-RU', { day: 'numeric', month: 'short' })
         .replace('.', '');
     }

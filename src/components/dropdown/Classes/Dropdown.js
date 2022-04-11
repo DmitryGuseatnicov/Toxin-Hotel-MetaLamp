@@ -12,7 +12,8 @@ class Dropdown {
 
   init() {
     this.$input = this.$dropdown.find(constants.INPUT);
-    [this.calculator] = this.$dropdown.find(constants.CALCULATOR)
+    [this.calculator] = this.$dropdown
+      .find(constants.CALCULATOR)
       .map((i, el) => new DropdownCalculator(el));
     this.bindEventListener();
   }

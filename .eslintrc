@@ -11,16 +11,21 @@
     "jquery": true,
     "node": true
   },
-  "extends": ["airbnb-base","plugin:fsd/all"],
+  "extends": [
+    "airbnb-base",
+    "plugin:fsd/all",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
   "globals": {
     "$": "readonly",
     "jQuery": "readonly"
   },
   "plugins": ["fsd", "pug", "prettier"],
   "rules": {
-    "prettier/prettier": "error",
     "no-new": "off",
     "import/no-unresolved": "off",
     "prefer-regex-literals": "off",
+    "prettier/prettier": "error"
   }
 }

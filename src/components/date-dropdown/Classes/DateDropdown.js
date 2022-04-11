@@ -40,7 +40,10 @@ class DateDropdown {
   }
 
   windowClickHandler(e) {
-    const isOutside = !e.target.closest(constants.DATE_DROPDOWN) && !e.target.closest('.-other-month-');
+    const isOutside =
+      !e.target.closest(constants.DATE_DROPDOWN) &&
+      !e.target.closest('.-other-month-');
+
     if (isOutside) this.close();
   }
 
