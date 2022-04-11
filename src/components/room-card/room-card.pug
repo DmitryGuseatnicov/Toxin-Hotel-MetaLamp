@@ -11,7 +11,7 @@ mixin room-card(options = {})
       .room-card__number №
         span.room-card__number-value= number
       .room-card__type= type
-      .room-card__price= `${price}₽`
+      .room-card__price= `${price}₽ `
         span.room-card__price-name в сутки
     .room-card__reviews-items
       +rate-button({rate: rate})

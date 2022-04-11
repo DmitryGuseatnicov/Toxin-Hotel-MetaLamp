@@ -50,6 +50,7 @@
   margin-top: 27px;
 
   &__items {
+    list-style: none;
     margin-top: 20px;
   }
 
@@ -85,10 +86,10 @@
     line-height: 14px;
     color: rgba(31, 32, 65, 0.5);
   }
-}
 
-.room-reviews-item {
-  margin-top: 22px;
+  &__item {
+    margin-top: 22px;
+  }
 }
 
 .room-rules {

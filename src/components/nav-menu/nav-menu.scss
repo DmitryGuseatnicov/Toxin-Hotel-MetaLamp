@@ -29,25 +29,30 @@
 
   &__item-link {
     color: $darkShade-50;
-  }
 
-  &__item-link > span {
-    color: inherit;
+    & > span {
+      color: inherit;
+    }
   }
 
   &__item-childrens {
     position: absolute;
     left: -20px;
     top: 25px;
+    z-index: 105;
     display: none;
-    padding: 0 20px 20px;
+    padding: 10px 20px 20px;
     box-shadow: 0 10px 20px $darkShade-50;
     white-space: nowrap;
     background: #FFF;
   }
 
-  &__item-children:hover {
-    color: $darkShade-100;
+  &__item-children {
+    list-style: none;
+
+    &:hover {
+      color: $darkShade-100;
+    }
   }
 
   &__item-children-href {

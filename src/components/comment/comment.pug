@@ -1,17 +1,18 @@
 include ./../like-button/like-button.pug
+include ./../widget-title/widget-title.pug
 
 mixin comment(options = {})
   -
     const { src, name, time, comment, count ,liked = false } = options
 
-  .comment
+  article.comment
     .comment__header 
       .comment__avatar
         img.comment__avatar-img(src=src, alt="avatar")
       .comment__info 
-        .comment__person-name= name
-        .comment__time= time
+        h3.comment__person-name= name
+        p.comment__time= time
     .comment__content 
       .comment__like
         +like-button({ count, liked })
-      .comment__text= comment
+      p.comment__text= comment

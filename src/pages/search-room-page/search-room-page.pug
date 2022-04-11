@@ -15,7 +15,7 @@ block head-title
 block content
   .container
     .main-content
-      .sidebar
+      section.sidebar
         .sidebar__date-dropdown 
           +date-dropdown({
             label: "даты пребывания в отеле", 
@@ -93,10 +93,10 @@ block content
             ]
           })
 
-      .search-room 
+      section.search-room 
         .search-room__title
           +widget-title({text: "Номера, которые мы для вас подобрали", level: "1"})
-        .search-room__items 
+        ul.search-room__items 
           -
             const rooms = [
               {
@@ -246,7 +246,7 @@ block content
               }
             ]
           each room in rooms 
-            .search-room__item
+            li.search-room__item
               +room-card(room)  
 
         .search-room__pagination

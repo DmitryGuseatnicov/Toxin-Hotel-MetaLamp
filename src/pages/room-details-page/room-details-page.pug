@@ -11,7 +11,7 @@ block head-title
     const title = "room-details-page"
 
 block content
-  .room-gallery 
+  section.room-gallery 
     .room-gallery__photo.room-gallery__photo--big
       img.room-gallery__img(src=require("./assets/img/room-img-2.png"), alt="room-photo")
     .room-gallery__img 
@@ -20,28 +20,28 @@ block content
       img.room-gallery__img(src=require("./assets/img/room-img-3.png"), alt="room-photo")
 
   .container
-    .room-content
+    section.room-content
       .room-content__container
         .room-description
           .room-benefits 
             .room-benefits__title 
               +widget-title({text: "Сведения о номере", level:"2"})
-            .room-benefits__items
-              .room-benefits__item
+            ul.room-benefits__items
+              li.room-benefits__item
                 +benefits({
                   title: "Комфорт", 
                   description: "Шумопоглощающие стены", 
                   src:require("./assets/img/insert-emoticon.png"), 
                   underlined: true 
                 })
-              .room-benefits__item
+              li.room-benefits__item
                 +benefits({
                   title: "Удобство",
                   description: "Окно в каждой из спален", 
                   src:require("./assets/img/location-city.png"), 
                   underlined: true 
                 }) 
-              .room-benefits__item
+              li.room-benefits__item
                 +benefits({
                   title: "Уют", 
                   description: "Номер оснащён камином", 
@@ -58,8 +58,8 @@ block content
             .room-reviews__title
               +widget-title({text: "Отзывы посетителей номера", level: "2"}) 
               .room-reviews__count 2 отзыва
-            .room-reviews-items
-              .room-reviews-item
+            .room-reviews__items
+              .room-reviews__item
                 +comment({ 
                   name: "Мурад Сарафанов", 
                   time: " 5 дней назад", 
@@ -70,7 +70,7 @@ block content
                   liked: true, 
                   src : require("./assets/img/avatar-1.png") 
                 })
-              .room-reviews-item
+              .room-reviews__item
                 +comment({ 
                   name: "Патрисия Стёклышкова", 
                   time: "Неделю назад", 
@@ -93,7 +93,7 @@ block content
           .room-cancel
             .room-cancel__title 
               +widget-title({text:"Отмена", level: "2"})
-            .room-cancel__description 
+            p.room-cancel__description 
               | Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн.
               | до прибытия вы получите полный возврат за вычетом сбора за услуги.
 

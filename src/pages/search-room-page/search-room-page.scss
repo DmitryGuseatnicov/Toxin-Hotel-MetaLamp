@@ -34,10 +34,10 @@
   &__rules {
     margin-top: 26px;
     max-width: 225px;
+  }
 
-    &-title {
-      margin-bottom: 17px;
-    }
+  &__rules-title {
+    margin-bottom: 17px;
   }
 
   &__rules-item {
@@ -46,10 +46,10 @@
 
   &__availability {
     margin-top: 31px;
+  }
 
-    &-title {
-      margin-bottom: 17px;
-    }
+  &__availability-title {
+    margin-bottom: 17px;
   }
 
   &__availability-item {
@@ -73,6 +73,7 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
+    list-style: none;
     margin-top: 14px;
     gap: 12px;
   }
@@ -99,14 +100,14 @@
     justify-content: space-evenly;
     min-width: 100%;
     gap: 20px;
-  }
 
-  .sidebar > div {
-    min-width: 266px;
-  }
+    & > div {
+      min-width: 266px;
+    }
 
-  .sidebar > div:nth-child(1n+1) {
-    margin-top: 10px;
+    & > div:nth-child(1n+1) {
+      margin-top: 10px;
+    }
   }
 
   .main-content {
@@ -115,13 +116,15 @@
     gap: 60px;
   }
 
-  .search-room__title {
-    text-align: center;
-  }
+  .search-room {
+    &__title {
+      text-align: center;
+    }
 
-  .search-room__items {
-    align-items: center;
-    justify-content: center;
+    &__items {
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 

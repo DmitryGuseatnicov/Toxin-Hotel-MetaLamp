@@ -20,9 +20,9 @@ mixin dropdown(options = {})
         })
         .dropdown__icon 
           span.dropdown__icon-arrow.material-icons expand_more
-    .dropdown__drop-items.js-dropdown__drop-items 
+    ul.dropdown__drop-items.js-dropdown__drop-items 
       each item in items 
-        .dropdown__item.js-dropdown__item
+        li.dropdown__item.js-dropdown__item
           span.dropdown__item-name.js-dropdown__item-name= item.name
           .dropdown__calculator
             button.dropdown__calculator-action-minus.js-dropdown__calculator-action-minus -
