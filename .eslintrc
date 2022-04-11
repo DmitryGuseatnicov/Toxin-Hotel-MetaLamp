@@ -16,10 +16,11 @@
     "$": "readonly",
     "jQuery": "readonly"
   },
-  "plugins": ["fsd", "pug"],
+  "plugins": ["fsd", "pug", "prettier"],
   "rules": {
+    "prettier/prettier": "error",
     "no-new": "off",
     "import/no-unresolved": "off",
-    "prefer-regex-literals": "off"
+    "prefer-regex-literals": "off",
   }
 }
