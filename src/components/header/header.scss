@@ -85,6 +85,10 @@
       height: 100vh;
       box-shadow: -17px 0 12px 3px rgba(0, 0, 0, 0.23);
       background: #FFF;
+
+      &_visible {
+        display: block;
+      }
     }
 
     &__burger-button {
@@ -119,9 +123,5 @@
       padding: 10px 20px;
       color: $darkShade-50;
     }
-  }
-
-  .header__panel-visible {
-    display: block;
   }
 }

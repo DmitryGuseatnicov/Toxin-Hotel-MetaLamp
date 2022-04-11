@@ -12,21 +12,26 @@
     line-height: 18px;
     color: $darkShade-75;
 
+    &_text-ellipsis {
+      overflow: hidden;
+      padding-right: 90px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+
+    &::placeholder {
+      color: $darkShade-25;
+
+      @extend %body_text;
+    }
+
+    &:focus,
+    &:hover {
+      border: 1px solid $darkShade-50;
+    }
+
     @extend %body_text;
-  }
-
-  &__text-field::placeholder {
-    color: $darkShade-25;
-
-    @extend %body_text;
-  }
-
-  &__text-field:focus {
-    border: 1px solid $darkShade-50;
-  }
-
-  &__text-field:hover {
-    border: 1px solid $darkShade-50;
   }
 
   &__inner {
@@ -44,17 +49,9 @@
     background: inherit;
     transform: translateY(-45%);
     cursor: pointer;
-  }
 
-  &__subscribe-arrow > span {
-    color: $purple;
-  }
-
-  &__text-field_text-ellipsis {
-    overflow: hidden;
-    padding-right: 90px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    cursor: pointer;
+    & > span {
+      color: $purple;
+    }
   }
 }

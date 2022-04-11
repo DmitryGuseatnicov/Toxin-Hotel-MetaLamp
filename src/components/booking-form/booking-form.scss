@@ -15,14 +15,14 @@
     line-height: 17px;
     text-transform: uppercase;
     color: $darkShade-100;
+  }
 
-    &-value {
-      font-weight: bold;
-      font-size: 23px;
-      line-height: 18px;
-      text-transform: uppercase;
-      color: $darkShade-100;
-    }
+  &__number-value {
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $darkShade-100;
   }
 
   &__type {

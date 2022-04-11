@@ -16,119 +16,119 @@
 
     @extend %body_text;
   }
-}
 
-.button_simple {
-  outline: none;
-  color: $purple;
-
-  &:focus,
-  &:hover {
-    color: $darkShade-50;
-  }
-
-  &:disabled {
-    color: $darkShade-50;
-    cursor: default;
-  }
-}
-
-.button_simple > span {
-  display: inline-block;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: inherit;
-}
-
-.button_purple {
-  outline: none;
-  border-radius: 22px;
-  padding: 14.5px 20px;
-  color: #FFF;
-  background: $purple_gradient;
-
-  &:focus,
-  &:hover {
-    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
-    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  }
-
-  &:disabled {
-    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
-    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    cursor: default;
-  }
-
-  &.button_short {
-    padding: 0 20px;
-  }
-}
-
-.button_purple-border {
-  outline: none;
-  border-radius: 22px;
-  padding: 2px;
-  color: #FFF;
-  background: $purple_gradient;
-
-  .button__text {
-    border-radius: 22px;
-    padding: 12.5px 18px;
+  &_simple {
+    outline: none;
     color: $purple;
-    background: #FFF;
-  }
 
-  &:focus,
-  &:hover,
-  &:disabled {
-    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
-    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  }
+    &:focus,
+    &:hover {
+      color: $darkShade-50;
+    }
 
-  &:disabled {
-    cursor: default;
-  }
-
-  &.button_short {
-    padding: 2px;
-
-    .button__text {
-      padding: 7.5px 18px;
+    &:disabled {
+      color: $darkShade-50;
+      cursor: default;
     }
   }
-}
 
-.button_purple-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  outline: none;
-  border-radius: 22px;
-  padding: 8.5px 8px;
-  width: 100%;
-  max-width: 320px;
-  color: #FFF;
-  background: $purple_gradient;
-
-  .button__text {
-    flex-grow: 1;
-    padding-left: 25px;
+  &_simple > span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: inherit;
   }
 
-  .button__icon > span {
+  &_purple {
+    outline: none;
+    border-radius: 22px;
+    padding: 14.5px 20px;
     color: #FFF;
+    background: $purple_gradient;
+
+    &.button_short {
+      padding: 0 20px;
+    }
+
+    &:focus,
+    &:hover {
+      background: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, rgba(#8BA4F9, 0.5) 100%);
+      background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+    &:disabled {
+      background: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, rgba(#8BA4F9, 0.5) 100%);
+      background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      cursor: default;
+    }
   }
 
-  &:focus,
-  &:hover,
-  &:disabled {
-    background: linear-gradient(180deg, rgba($color: #BC9CFF, $alpha: 0.5) 0%, rgba($color: #8BA4F9, $alpha: 0.5) 100%);
-    background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  }
-}
+  &_purple-border {
+    outline: none;
+    border-radius: 22px;
+    padding: 2px;
+    color: #FFF;
+    background: $purple_gradient;
 
-.button_short {
-  height: 34px;
+    .button__text {
+      border-radius: 22px;
+      padding: 12.5px 18px;
+      color: $purple;
+      background: #FFF;
+    }
+
+    &.button_short {
+      padding: 2px;
+
+      .button__text {
+        padding: 7.5px 18px;
+      }
+    }
+
+    &:focus,
+    &:hover,
+    &:disabled {
+      background: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, rgba(#8BA4F9, 0.5) 100%);
+      background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+
+  &_purple-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    border-radius: 22px;
+    padding: 8.5px 8px;
+    width: 100%;
+    max-width: 320px;
+    color: #FFF;
+    background: $purple_gradient;
+
+    .button__text {
+      flex-grow: 1;
+      padding-left: 25px;
+    }
+
+    .button__icon > span {
+      color: #FFF;
+    }
+
+    &:focus,
+    &:hover,
+    &:disabled {
+      background: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, rgba(#8BA4F9, 0.5) 100%);
+      background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+  }
+
+  &_short {
+    height: 34px;
+  }
 }

@@ -85,22 +85,22 @@
   &__calculator-action-plus:focus-visible {
     box-shadow: 0 0 0 0.5px $darkShade-75;
   }
-}
 
-.dropdown__button-clear_hidden {
-  position: relative;
-  z-index: -1;
-  opacity: 0;
-}
-
-.dropdown_open {
-  .input__text-field {
-    border-color: $darkShade-50;
-    border-radius: 4px 4px 0 0;
+  &__button-clear_hidden {
+    position: relative;
+    z-index: -1;
+    opacity: 0;
   }
 
-  .dropdown__drop-items {
-    display: block;
-    border-top: none;
+  &_open {
+    .input__text-field {
+      border-color: $darkShade-50;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .dropdown__drop-items {
+      display: block;
+      border-top: none;
+    }
   }
 }

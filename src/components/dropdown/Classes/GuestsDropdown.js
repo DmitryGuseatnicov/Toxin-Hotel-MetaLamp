@@ -28,9 +28,9 @@ class GuestsDropdown extends Dropdown {
 
   hiddenButtonSwitcher() {
     if (this.isZeroTotalCount) {
-      this.$clearBtn.addClass('dropdown__button-clear--hidden');
+      this.$clearBtn.addClass('dropdown__button-clear_hidden');
     } else {
-      this.$clearBtn.removeClass('dropdown__button-clear--hidden');
+      this.$clearBtn.removeClass('dropdown__button-clear_hidden');
     }
   }
 

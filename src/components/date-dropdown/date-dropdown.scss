@@ -40,17 +40,17 @@
       bottom: 0;
     }
   }
-}
 
-.date-dropdown[data-type='filter'] {
-  .input__text-field {
-    cursor: pointer;
+  &[data-type='filter'] {
+    .input__text-field {
+      cursor: pointer;
+    }
   }
-}
 
-.date-dropdown_open {
-  .date-dropdown__calendar {
-    display: block;
+  &_open {
+    .date-dropdown__calendar {
+      display: block;
+    }
   }
 }
 

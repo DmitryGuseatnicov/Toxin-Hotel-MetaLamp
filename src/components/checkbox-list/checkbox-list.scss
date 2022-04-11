@@ -30,16 +30,16 @@
     list-style: none;
     margin-top: 10px;
   }
-}
 
-.checkbox-list_open {
-  .checkbox-list {
-    &__items {
-      display: block;
-    }
+  &_open {
+    .checkbox-list {
+      &__items {
+        display: block;
+      }
 
-    &__icon {
-      transform: rotate(180deg);
+      &__icon {
+        transform: rotate(180deg);
+      }
     }
   }
 }

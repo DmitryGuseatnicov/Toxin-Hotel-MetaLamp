@@ -29,7 +29,7 @@
   }
 
   &:disabled + span::before {
-    background-color: rgba($darkShade-25, $alpha: 0.4);
+    background-color: rgba($darkShade-25, 0.4);
   }
 }
 

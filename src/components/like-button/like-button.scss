@@ -19,8 +19,18 @@
     line-height: 12px;
   }
 
+  & > span {
+    width: 20px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
   &_liked {
     border: 1px solid $purple;
+
+    & > span {
+      color: $purple;
+    }
   }
 
   &:focus-visible {
@@ -28,14 +38,4 @@
   }
 
   @extend %body_text;
-}
-
-.like-button > span {
-  width: 20px;
-  font-size: 10px;
-  line-height: 12px;
-}
-
-.like-button_liked > span {
-  color: $purple;
 }

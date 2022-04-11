@@ -56,14 +56,14 @@
 .noUi-handle {
   outline: none;
 
+  &::before,
+  &::after {
+    display: none;
+  }
+
   &:focus-visible {
     box-shadow: 0 0 0 2px $green;
   }
-}
-
-.noUi-handle::before,
-.noUi-handle::after {
-  display: none;
 }
 
 .noUi-touch-area {

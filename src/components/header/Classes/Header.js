@@ -22,7 +22,7 @@ class Header {
   }
 
   toggle() {
-    this.$menu.toggleClass('header__panel-visible');
+    this.$menu.toggleClass('header__panel_visible');
   }
 }
 

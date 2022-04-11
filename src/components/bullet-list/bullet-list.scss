@@ -22,16 +22,16 @@
       background: $darkShade-25;
     }
   }
-}
 
-.bullet-list_list-style {
-  .bullet-list {
-    &__title {
-      padding-left: 21px;
-    }
+  &_list-style {
+    .bullet-list {
+      &__title {
+        padding-left: 21px;
+      }
 
-    &__items {
-      margin-top: 20px;
+      &__items {
+        margin-top: 20px;
+      }
     }
   }
 }

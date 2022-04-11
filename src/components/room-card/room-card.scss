@@ -24,40 +24,40 @@
   background: transparent;
   opacity: 0;
   transition: 0.5s;
-}
 
-.slick-arrow > span {
-  color: #fff;
-}
+  & > span {
+    color: #fff;
+  }
 
-.slick-arrow.slick-prev {
-  left: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-}
+  &.slick-prev {
+    left: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
 
-.slick-arrow.slick-prev > span {
-  transform: rotate(90deg);
-  cursor: pointer;
-}
+  &.slick-prev > span {
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
 
-.slick-arrow.slick-next {
-  right: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
-}
+  &.slick-next {
+    right: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+  }
 
-.slick-arrow.slick-next > span {
-  transform: rotate(-90deg);
-  cursor: pointer;
+  &.slick-next > span {
+    transform: rotate(-90deg);
+    cursor: pointer;
+  }
 }
 
 .slick-dots {
