@@ -4,7 +4,7 @@
   "description": "Задание номер 2",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development  webpack serve",
+    "start": "cross-env NODE_ENV=development webpack && cross-env NODE_ENV=development webpack serve",
     "dev": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack",
     "deploy": "gh-pages -d dist",

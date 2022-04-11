@@ -22,14 +22,13 @@ module.exports = {
   entry: entryPoints,
   output: {
     filename: '[name].[contenthash].js',
-    assetModuleFilename: "assets/[hash][ext][query]",
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   devServer: {
     static: './dist',
     open: '/index.html',
-    hot: false
+    hot: true
   },
   devtool: 'source-map',
   plugins: [
@@ -73,7 +72,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[name].[hash][ext]',
+          filename: 'assets/images/[name][ext]',
         },
       },
       {
