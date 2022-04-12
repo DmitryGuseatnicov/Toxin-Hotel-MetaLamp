@@ -1,20 +1,23 @@
-const path = require('path')
+const webpack = require('webpack');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const fs = require('fs')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const fs = require('fs');
 
-let mode = 'development'
+let mode = 'development';
 if (process.env.NODE_ENV == 'production') {
-  mode = 'production'
+  mode = 'production';
 }
-console.log(mode + ' mode')
+console.log(mode + ' mode');
 
 const PAGES_DIR = path.resolve(__dirname, 'src/pages');
-const PAGES = fs.readdirSync(path.resolve(__dirname, 'src/pages'))
-const entryPoints = Object.assign({}, ...PAGES.map(page =>
-  ({
+const PAGES = fs.readdirSync(path.resolve(__dirname, 'src/pages'));
+const entryPoints = Object.assign(
+  {},
+  ...PAGES.map((page) => ({
     [page]: `${PAGES_DIR}/${page}/${page}.js`,
-  })));
+  }))
+);
 
 module.exports = {
   mode: mode,
@@ -26,46 +29,60 @@ module.exports = {
     clean: true,
   },
   devServer: {
-    static: './dist',
+    historyApiFallback: true,
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
+    devMiddleware: {
+      index: true,
+      mimeTypes: { phtml: 'text/html' },
+      publicPath: '/publicPathForDevServe',
+      serverSideRender: true,
+      writeToDisk: true,
+    },
     open: '/index.html',
-    hot: true
+    hot: false,
   },
   devtool: 'source-map',
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css'
+      filename: '[name].[contenthash].css',
     }),
-    ...PAGES.map((page) => new HtmlWebpackPlugin({
-      filename: `${page}.html`,
-      template: `${PAGES_DIR}/${page}/${page}.pug`,
-      chunks: [page],
-      inject: 'body'
-    }))
+    ...PAGES.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          filename: `${page}.html`,
+          template: `${PAGES_DIR}/${page}/${page}.pug`,
+          chunks: [page],
+          inject: 'body',
+        })
+    ),
   ],
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          'css-loader',
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 plugins: [
                   [
-                    "autoprefixer",
+                    'autoprefixer',
                     {
-                      'overrideBrowserslist': ['> 1%', 'last 2 versions']
+                      overrideBrowserslist: ['> 1%', 'last 2 versions'],
                     },
-                    "postcss-preset-env",
+                    'postcss-preset-env',
                   ],
                 ],
               },
             },
           },
-          "resolve-url-loader",
-          "sass-loader",
+          'resolve-url-loader',
+          'sass-loader',
         ],
       },
       {
@@ -95,9 +112,9 @@ module.exports = {
           {
             loader: 'simple-pug-loader',
             options: {
-              "pretty": true
-            }
-          }
+              pretty: true,
+            },
+          },
         ],
       },
       {
@@ -106,10 +123,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
   },
-}
+};

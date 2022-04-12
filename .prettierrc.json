@@ -4,5 +4,16 @@
   "max-len": ["error", 80, 2],
   "printWidth": 80,
   "tabWidth": 2,
-  "useTabs": false
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.pug",
+      "options": {
+        "parser": "pug",
+        "singleQuote": true,
+        "max-len": ["error", 80, 2],
+        "printWidth": 80
+      }
+    }
+  ]
 }
