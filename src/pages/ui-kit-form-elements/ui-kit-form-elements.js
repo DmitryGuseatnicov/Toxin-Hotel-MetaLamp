@@ -1,3 +1,4 @@
+import '../../page-layout/page-template';
 import '../../components/input';
 import '../../components/dropdown';
 import '../../components/button';

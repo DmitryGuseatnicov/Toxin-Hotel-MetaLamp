@@ -1,5 +1,6 @@
 import $ from 'jquery';
 
+import '../../page-layout/page-template';
 import '../../components/header';
 import '../../components/footer';
 import '../../components/room-card';
