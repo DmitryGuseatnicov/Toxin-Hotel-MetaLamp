@@ -2,15 +2,15 @@
 @import './../../styles/vars.scss';
 
 .main {
-  border-bottom: 1px solid $darkShade-25;
   padding-bottom: 70px;
+  border-bottom: 1px solid $darkShade-25;
 }
 
 .main-content {
   display: flex;
+  gap: 60px;
   justify-content: space-between;
   margin-top: 30px;
-  gap: 60px;
 }
 
 .sidebar {
@@ -32,8 +32,8 @@
   }
 
   &__rules {
-    margin-top: 26px;
     max-width: 225px;
+    margin-top: 26px;
   }
 
   &__rules-title {
@@ -73,20 +73,20 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    margin-top: 14px;
     gap: 12px;
+    margin-top: 14px;
+    list-style: none;
   }
 
   &__item {
-    margin-top: 8.5px;
     max-width: 270px;
+    margin-top: 8.5px;
   }
 }
 
 .search-room__pagination {
-  margin: 40px auto 0;
   width: fit-content;
+  margin: 40px auto 0;
 
   .pagination {
     margin-right: 15px;
@@ -97,23 +97,23 @@
   .sidebar {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-evenly;
     min-width: 100%;
-    gap: 20px;
 
     & > div {
       min-width: 266px;
     }
 
-    & > div:nth-child(1n+1) {
+    & > div:nth-child(1n + 1) {
       margin-top: 10px;
     }
   }
 
   .main-content {
     flex-direction: column;
-    justify-content: center;
     gap: 60px;
+    justify-content: center;
   }
 
   .search-room {

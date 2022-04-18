@@ -2,8 +2,8 @@
 @import './../../page-layout/page-ui-kit.scss';
 
 body {
-  padding: 100px 0;
   min-width: 1200px;
+  padding: 100px 0;
 }
 
 .container {
@@ -21,9 +21,9 @@ body {
   margin-top: 20px;
 
   &__square {
-    border-radius: 6px;
     width: 70px;
     height: 70px;
+    border-radius: 6px;
   }
 
   &__description {
@@ -80,8 +80,8 @@ body {
 }
 
 .ui-kit-typography {
-  margin-right: 25px;
   max-width: 440px;
+  margin-right: 25px;
 
   &__container {
     display: flex;
@@ -93,15 +93,15 @@ body {
   }
 
   &__container:last-child {
-    margin-top: 48px;
     max-width: 380px;
+    margin-top: 48px;
   }
 
   &__type {
     min-width: 37px;
+    color: rgba(31, 32, 65, 0.25);
     text-align: right;
     text-transform: capitalize;
-    color: rgba(31, 32, 65, 0.25);
 
     &--h1 {
       font-size: 24px;

@@ -10,11 +10,11 @@
   }
 
   &__icon {
+    height: 24px;
     margin-right: 8px;
     outline: none;
-    height: 24px;
-    transition: 0.4s;
     cursor: pointer;
+    transition: 0.4s;
 
     &:focus-visible {
       border: 1px solid $darkShade-50;
@@ -27,8 +27,8 @@
   }
 
   &__item {
-    list-style: none;
     margin-top: 10px;
+    list-style: none;
   }
 
   &_open {

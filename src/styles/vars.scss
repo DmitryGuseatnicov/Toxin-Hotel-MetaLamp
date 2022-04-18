@@ -1,13 +1,13 @@
-$darkShade-100: #1F2041;
+$darkShade-100: #1f2041;
 $darkShade-75: rgba(31, 32, 65, 0.75);
 $darkShade-50: rgba(31, 32, 65, 0.5);
 $darkShade-25: rgba(31, 32, 65, 0.25);
 $darkShade-5: rgba(31, 32, 65, 0.05);
 $darkShade-1: rgba(31, 32, 65, 0.1);
-$purple: #BC9CFF;
-$green: #6FCF97;
-$purple_gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-$green_gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$purple: #bc9cff;
+$green: #6fcf97;
+$purple_gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$green_gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 $montserrat: 'Montserrat', 'Arial', sans-serif;
 
 %card-border-shadow {
@@ -17,39 +17,39 @@ $montserrat: 'Montserrat', 'Arial', sans-serif;
 }
 
 %widget_title-big {
-  font-family: $montserrat;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 29px;
   color: $darkShade-100;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: $montserrat;
+  font-style: normal;
+  line-height: 29px;
 }
 
 %widget_title-medium {
-  font-family: $montserrat;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 19px;
-  line-height: 23px;
   color: $darkShade-100;
+  font-weight: 700;
+  font-size: 19px;
+  font-family: $montserrat;
+  font-style: normal;
+  line-height: 23px;
 }
 
 %widget_title-small {
-  font-family: $montserrat;
+  color: $darkShade-100;
   font-weight: 700;
   font-size: 12px;
+  font-family: $montserrat;
   line-height: 15px;
   text-transform: uppercase;
-  color: $darkShade-100;
 }
 
 %body_text {
-  font-family: $montserrat;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
   color: $darkShade-75;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: $montserrat;
+  font-style: normal;
+  line-height: 24px;
 }
 
 %wrapper {
@@ -67,13 +67,13 @@ $montserrat: 'Montserrat', 'Arial', sans-serif;
 }
 
 %container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1200px;
 }
 
 %container-fluid {
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1440px;
 }

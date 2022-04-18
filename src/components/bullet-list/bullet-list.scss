@@ -2,8 +2,8 @@
 
 .bullet-list {
   &__items {
-    list-style: none;
     margin-top: 12px;
+    list-style: none;
   }
 
   &__item {
@@ -12,14 +12,14 @@
     padding-left: 21px;
 
     &::before {
-      content: '';
       position: absolute;
-      left: 0;
       top: 8px;
-      border-radius: 50%;
+      left: 0;
       width: 10px;
       height: 10px;
       background: $darkShade-25;
+      border-radius: 50%;
+      content: '';
     }
   }
 

@@ -2,16 +2,16 @@
 
 .footer-mobile {
   display: none;
-  margin: 0 auto;
-  padding: 120px 0;
   width: 100%;
   max-width: 768px;
+  margin: 0 auto;
+  padding: 120px 0;
+  background: #fff;
   box-shadow: 0 10px 20px $darkShade-50;
-  background: #FFF;
 
   &__logo {
-    margin: 0 auto;
     width: fit-content;
+    margin: 0 auto;
   }
 
   &__copy-right {
@@ -21,11 +21,11 @@
 
   &__social {
     display: flex;
-    list-style: none;
-    margin: 25px auto 0;
+    gap: 20px;
     width: fit-content;
     height: 24px;
-    gap: 20px;
+    margin: 25px auto 0;
+    list-style: none;
   }
 
   &__social-href {

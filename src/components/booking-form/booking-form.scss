@@ -1,47 +1,49 @@
 @import './../../styles/vars.scss';
 
 .booking-form {
-  padding: 45px 30px 30px;
   max-width: 380px;
-  background: #FFF;
+  padding: 45px 30px 30px;
+  background: #fff;
+
+  @extend %card-border-shadow;
 
   &__header {
     display: flex;
   }
 
   &__number {
+    color: $darkShade-100;
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
     text-transform: uppercase;
-    color: $darkShade-100;
   }
 
   &__number-value {
+    color: $darkShade-100;
     font-weight: bold;
     font-size: 23px;
     line-height: 18px;
     text-transform: uppercase;
-    color: $darkShade-100;
   }
 
   &__type {
     margin-top: 2px;
     margin-left: 10px;
+    color: $purple;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
-    color: $purple;
   }
 
   &__price-for-day {
     flex-grow: 1;
     margin-top: 2px;
+    color: $darkShade-50;
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
     text-align: end;
-    color: $darkShade-50;
   }
 
   &__price-name {
@@ -74,15 +76,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 4px;
-    border: 1px solid $darkShade-25;
-    border-radius: 50%;
     width: 20px;
-    height: 20px;
     min-width: 20px;
+    height: 20px;
+    margin: 0 4px;
+    color: $darkShade-25;
     font-weight: bold;
     font-size: 12px;
-    color: $darkShade-25;
+    border: 1px solid $darkShade-25;
+    border-radius: 50%;
   }
 
   &__price-list-value {
@@ -100,8 +102,8 @@
 
   &__total-dots {
     flex-grow: 1;
-    border-bottom: 1px dashed $darkShade-25;
     height: 20px;
+    border-bottom: 1px dashed $darkShade-25;
   }
 
   &__booking-button {
@@ -110,11 +112,9 @@
 
   &__total-text,
   &__total-price {
+    color: $darkShade-100;
     font-weight: bold;
     font-size: 19px;
     line-height: 23px;
-    color: $darkShade-100;
   }
-
-  @extend %card-border-shadow;
 }

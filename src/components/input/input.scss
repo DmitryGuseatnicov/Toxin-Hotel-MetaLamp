@@ -2,19 +2,21 @@
 
 .input {
   &__text-field {
-    margin-top: 5px;
-    outline: none;
-    border: 1px solid $darkShade-25;
-    border-radius: 4px;
-    padding: 12px 14px;
     width: 100%;
     max-width: 320px;
-    line-height: 18px;
+    margin-top: 5px;
+    padding: 12px 14px;
     color: $darkShade-75;
+    line-height: 18px;
+    border: 1px solid $darkShade-25;
+    border-radius: 4px;
+    outline: none;
+
+    @extend %body_text;
 
     &_text-ellipsis {
-      overflow: hidden;
       padding-right: 90px;
+      overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
       cursor: pointer;
@@ -30,8 +32,6 @@
     &:hover {
       border: 1px solid $darkShade-50;
     }
-
-    @extend %body_text;
   }
 
   &__inner {
@@ -41,12 +41,12 @@
 
   &__subscribe-arrow {
     position: absolute;
-    right: 9px;
     top: 50%;
-    outline: none;
-    border: none;
+    right: 9px;
     height: 24px;
     background: inherit;
+    border: none;
+    outline: none;
     transform: translateY(-45%);
     cursor: pointer;
 

@@ -1,13 +1,14 @@
 @import './../../page-layout/page-template.scss';
 
 .main {
-  background: url('./assets/img/registration-page.png') center center/cover no-repeat;
+  background: url('./assets/img/registration-page.png') center center/cover
+    no-repeat;
 }
 
 .registration {
-  margin: 19px auto;
   width: 100%;
   max-width: 380px;
+  margin: 19px auto;
 }
 
 @media screen and (max-width: 420px) {

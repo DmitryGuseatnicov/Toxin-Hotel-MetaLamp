@@ -37,20 +37,20 @@
 }
 
 .noUi-target {
+  background: #fafafa;
   border: 1px solid $darkShade-25;
   border-radius: 3px;
-  background: #fafafa;
 }
 
 .noUi-horizontal .noUi-handle {
-  right: -6px;
   top: -6px;
-  border: 2px solid #fff;
-  border-radius: 10px;
+  right: -6px;
   width: 15px;
   height: 15px;
-  box-shadow: none;
   background: $green_gradient;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: none;
 }
 
 .noUi-handle {
@@ -67,8 +67,8 @@
 }
 
 .noUi-touch-area {
-  border-radius: 10px;
   background: $green_gradient;
+  border-radius: 10px;
 }
 
 .noUi-connect {

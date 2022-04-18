@@ -1,8 +1,8 @@
 @import './../../styles/vars.scss';
 
 .header {
+  background: #fff;
   box-shadow: 0 10px 20px $darkShade-5;
-  background: #FFF;
 
   &__inner {
     display: flex;
@@ -28,20 +28,20 @@
   }
 
   &__burger-line {
-    margin: 2px 0;
-    border: 1px solid #FFF;
-    border-radius: 5px;
     width: 25px;
     height: 3px;
+    margin: 2px 0;
+    border: 1px solid #fff;
+    border-radius: 5px;
   }
 
   &__close-button {
     display: none;
-    outline: none;
-    border: none;
-    font-size: 40px;
     color: $darkShade-50;
-    background: #FFF;
+    font-size: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
     transform: rotate(45deg);
 
     &:focus-visible {
@@ -60,9 +60,9 @@
   }
 
   &__login-name {
-    border-left: 1px solid $darkShade-1;
     padding-left: 20px;
     color: $darkShade-50;
+    border-left: 1px solid $darkShade-1;
   }
 }
 
@@ -74,17 +74,17 @@
 
     &__panel {
       position: fixed;
-      right: 0;
       top: 0;
+      right: 0;
       bottom: 0;
       z-index: 200;
       display: none;
-      overflow: scroll;
-      padding-bottom: 20px;
       width: 300px;
       height: 100vh;
+      padding-bottom: 20px;
+      overflow: scroll;
+      background: #fff;
       box-shadow: -17px 0 12px 3px rgba(0, 0, 0, 0.23);
-      background: #FFF;
 
       &_visible {
         display: block;
@@ -93,11 +93,11 @@
 
     &__burger-button {
       display: flex;
-      border: none;
-      border-radius: 22px;
       width: 40px;
       height: 40px;
       background: $purple_gradient;
+      border: none;
+      border-radius: 22px;
     }
 
     &__close-button {
@@ -107,21 +107,21 @@
 
     &__nav {
       display: flex;
-      margin: 40px auto;
       width: fit-content;
+      margin: 40px auto;
     }
 
     &__login {
       flex-wrap: wrap;
-      margin: 0 auto;
       width: 50%;
+      margin: 0 auto;
     }
 
     &__login-name {
-      border-top: 1px solid $darkShade-1;
-      border-left: none;
       padding: 10px 20px;
       color: $darkShade-50;
+      border-top: 1px solid $darkShade-1;
+      border-left: none;
     }
   }
 }

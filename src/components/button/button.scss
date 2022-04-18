@@ -1,25 +1,25 @@
 @import './../../styles/vars.scss';
 
 .button {
+  background-color: #fff;
   border: none;
-  background-color: #FFF;
   cursor: pointer;
 
   &__text,
   &__icon {
     display: inline-block;
+    color: inherit;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: inherit;
 
     @extend %body_text;
   }
 
   &_simple {
-    outline: none;
     color: $purple;
+    outline: none;
 
     &:focus,
     &:hover {
@@ -34,19 +34,19 @@
 
   &_simple > span {
     display: inline-block;
+    color: inherit;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: inherit;
   }
 
   &_purple {
-    outline: none;
-    border-radius: 22px;
     padding: 14.5px 20px;
-    color: #FFF;
+    color: #fff;
     background: $purple_gradient;
+    border-radius: 22px;
+    outline: none;
 
     &.button_short {
       padding: 0 20px;
@@ -54,29 +54,37 @@
 
     &:focus,
     &:hover {
-      background: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, rgba(#8BA4F9, 0.5) 100%);
-      background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(#bc9cff, 0.5) 0%,
+        rgba(#8ba4f9, 0.5) 100%
+      );
+      background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
 
     &:disabled {
-      background: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, rgba(#8BA4F9, 0.5) 100%);
-      background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(#bc9cff, 0.5) 0%,
+        rgba(#8ba4f9, 0.5) 100%
+      );
+      background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
       cursor: default;
     }
   }
 
   &_purple-border {
-    outline: none;
-    border-radius: 22px;
     padding: 2px;
-    color: #FFF;
+    color: #fff;
     background: $purple_gradient;
+    border-radius: 22px;
+    outline: none;
 
     .button__text {
-      border-radius: 22px;
       padding: 12.5px 18px;
       color: $purple;
-      background: #FFF;
+      background: #fff;
+      border-radius: 22px;
     }
 
     &.button_short {
@@ -90,8 +98,12 @@
     &:focus,
     &:hover,
     &:disabled {
-      background: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, rgba(#8BA4F9, 0.5) 100%);
-      background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(#bc9cff, 0.5) 0%,
+        rgba(#8ba4f9, 0.5) 100%
+      );
+      background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
 
     &:disabled {
@@ -103,13 +115,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    outline: none;
-    border-radius: 22px;
-    padding: 8.5px 8px;
     width: 100%;
     max-width: 320px;
-    color: #FFF;
+    padding: 8.5px 8px;
+    color: #fff;
     background: $purple_gradient;
+    border-radius: 22px;
+    outline: none;
 
     .button__text {
       flex-grow: 1;
@@ -117,14 +129,18 @@
     }
 
     .button__icon > span {
-      color: #FFF;
+      color: #fff;
     }
 
     &:focus,
     &:hover,
     &:disabled {
-      background: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, rgba(#8BA4F9, 0.5) 100%);
-      background-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(#bc9cff, 0.5) 0%,
+        rgba(#8ba4f9, 0.5) 100%
+      );
+      background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
   }
 

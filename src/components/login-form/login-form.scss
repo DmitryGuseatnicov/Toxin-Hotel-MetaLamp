@@ -2,7 +2,9 @@
 
 .login-form {
   padding: 40px 30px 30px;
-  background: #FFF;
+  background: #fff;
+
+  @extend %card-border-shadow;
 
   &__mail {
     margin-top: 16px;
@@ -28,6 +30,4 @@
       padding: 12.5px 16px;
     }
   }
-
-  @extend %card-border-shadow;
 }

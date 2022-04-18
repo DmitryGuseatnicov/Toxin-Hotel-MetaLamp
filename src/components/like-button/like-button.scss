@@ -3,18 +3,20 @@
 .like-button {
   display: flex;
   align-items: center;
-  outline: none;
-  border: 1px solid $darkShade-25;
-  border-radius: 10px;
+  box-sizing: border-box;
   width: 40px;
   height: 20px;
-  box-sizing: border-box;
-  background: #FFF;
+  background: #fff;
+  border: 1px solid $darkShade-25;
+  border-radius: 10px;
+  outline: none;
   cursor: pointer;
 
+  @extend %body_text;
+
   &__count {
-    padding-right: 5px;
     width: 20px;
+    padding-right: 5px;
     font-size: 10px;
     line-height: 12px;
   }
@@ -36,6 +38,4 @@
   &:focus-visible {
     box-shadow: 0 0 0 1px $purple;
   }
-
-  @extend %body_text;
 }

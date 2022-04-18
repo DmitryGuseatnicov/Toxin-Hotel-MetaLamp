@@ -4,10 +4,10 @@
   margin-right: 20px;
 
   &__item-href {
-    outline: none;
+    color: $darkShade-50;
     font-weight: inherit;
     text-decoration: none;
-    color: $darkShade-50;
+    outline: none;
 
     &:focus,
     &:hover {
@@ -17,8 +17,8 @@
 
   &__list {
     display: flex;
-    list-style: none;
     gap: 21px;
+    list-style: none;
   }
 
   &__item {
@@ -37,14 +37,14 @@
 
   &__item-childrens {
     position: absolute;
-    left: -20px;
     top: 25px;
+    left: -20px;
     z-index: 105;
     display: none;
     padding: 10px 20px 20px;
-    box-shadow: 0 10px 20px $darkShade-50;
     white-space: nowrap;
-    background: #FFF;
+    background: #fff;
+    box-shadow: 0 10px 20px $darkShade-50;
   }
 
   &__item-children {
@@ -56,10 +56,10 @@
   }
 
   &__item-children-href {
-    outline: none;
+    color: $darkShade-50;
     font-weight: inherit;
     text-decoration: none;
-    color: $darkShade-50;
+    outline: none;
 
     &:focus,
     &:hover {
@@ -85,8 +85,8 @@
 
   &__item_active {
     .nav__item-href {
-      font-weight: bold;
       color: $darkShade-75;
+      font-weight: bold;
 
       &:focus,
       &:hover {
@@ -114,8 +114,8 @@
 
     &__item-childrens {
       position: relative;
-      left: 10px;
       top: 0;
+      left: 10px;
       padding: 0;
       box-shadow: none;
     }

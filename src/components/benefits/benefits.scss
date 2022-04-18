@@ -3,8 +3,8 @@
 .benefits {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
   max-width: 280px;
+  padding-bottom: 20px;
 
   &__img {
     display: flex;
@@ -15,8 +15,8 @@
   }
 
   &__title {
-    font-weight: bold;
     color: $darkShade-75;
+    font-weight: bold;
   }
 
   &__description {

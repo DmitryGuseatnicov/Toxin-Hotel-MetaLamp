@@ -6,8 +6,8 @@ body {
 
 .ui-kit {
   display: flex;
-  padding: 80px 0;
   gap: 40px;
+  padding: 80px 0;
 
   &__register-account-form {
     margin-top: 40px;
@@ -18,8 +18,8 @@ body {
   }
 
   &__room-card {
-    margin-top: 40px;
     max-width: 270px;
+    margin-top: 40px;
   }
 
   &__calendar {

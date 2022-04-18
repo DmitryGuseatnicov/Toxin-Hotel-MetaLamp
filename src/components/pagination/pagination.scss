@@ -10,9 +10,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    outline: none;
     width: 40px;
     height: 40px;
+    outline: none;
 
     &:focus-visible {
       box-shadow: 0 0 0 1px $darkShade-50;
@@ -20,20 +20,20 @@
   }
 
   &__page-number {
-    border-radius: 22px;
     font-size: 12px;
+    border-radius: 22px;
     cursor: pointer;
 
     &:hover {
+      color: #fff;
       font-weight: 700;
-      color: #FFF;
       background: $purple_gradient;
     }
   }
 
   &__current-page {
+    color: #fff;
     font-weight: 700;
-    color: #FFF;
     background: $purple_gradient;
   }
 
@@ -44,9 +44,9 @@
 
   &__action-next,
   &__action-prev {
-    border-radius: 22px;
-    color: #FFF;
+    color: #fff;
     background: $green_gradient;
+    border-radius: 22px;
     cursor: pointer;
   }
 }
