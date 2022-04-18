@@ -1,0 +1,71 @@
+.sidebar {
+  width: 100%;
+  min-width: 266px;
+  max-width: 266px;
+
+  & > div {
+    width: 266px;
+
+    @media screen and (max-width: 920px) {
+      min-width: 266px;
+
+      &:nth-child(1n + 1) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__guest-dropdown {
+    margin-top: 20px;
+  }
+
+  &__range-slider {
+    margin-top: 30px;
+  }
+
+  &__range-description {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  &__rules {
+    max-width: 225px;
+    margin-top: 26px;
+  }
+
+  &__rules-title {
+    margin-bottom: 17px;
+  }
+
+  &__rules-item {
+    margin-top: 10px;
+  }
+
+  &__availability {
+    margin-top: 31px;
+  }
+
+  &__availability-title {
+    margin-bottom: 17px;
+  }
+
+  &__availability-item {
+    margin-top: 9px;
+  }
+
+  &__comforts-dropdown {
+    margin-top: 29px;
+  }
+
+  &__checkbox-list {
+    margin-top: 25px;
+  }
+
+  @media screen and (max-width: 920px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    min-width: 100%;
+  }
+}
