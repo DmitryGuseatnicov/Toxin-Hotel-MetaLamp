@@ -34,7 +34,7 @@ $blockName: 'checkbox-list';
   }
 
   &_open {
-    #{$blockName} {
+    .#{$blockName} {
       &__items {
         display: block;
       }

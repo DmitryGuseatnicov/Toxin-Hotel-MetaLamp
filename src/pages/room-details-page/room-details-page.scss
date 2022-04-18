@@ -1,42 +1,42 @@
 @import './../../styles/vars.scss';
 
-.main {
+.room-details {
   border-bottom: 1px solid $darkShade-25;
-}
 
-.room-gallery {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  &__gallery {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-  &__photo--big {
+    @media screen and (max-width: 420px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__gallery-photo_big {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 3;
   }
 
-  &__photo {
+  &__gallery-photo {
     width: 100%;
     height: 100%;
   }
 
-  &__img {
+  &__gallery-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  @media screen and (max-width: 420px) {
-    grid-template-columns: repeat(2, 1fr);
+  &__content {
+    margin-top: 44px;
+    margin-bottom: 71px;
   }
-}
 
-.room-content {
-  margin-top: 44px;
-  margin-bottom: 71px;
-
-  &__container {
+  &__content-container {
     display: flex;
     gap: 70px;
     justify-content: space-between;
@@ -45,24 +45,28 @@
       flex-wrap: wrap;
     }
   }
-}
 
-.room-description {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  @media screen and (max-width: 992px) {
+  &__description {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media screen and (max-width: 992px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
-}
 
-.room-benefits {
-  margin-top: 27px;
+  &__benefits {
+    margin-top: 27px;
 
-  &__items {
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__benefits-items {
     margin-top: 20px;
     list-style: none;
 
@@ -73,19 +77,19 @@
     }
   }
 
-  &__item {
+  &__benefits-item {
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
+  &__grade {
+    margin: 27px 103px 27px 0;
+
+    @media screen and (max-width: 420px) {
+      margin-left: 0;
+    }
   }
-}
 
-.room-grade {
-  margin: 27px 103px 27px 0;
-
-  &__title {
+  &__grade-title {
     margin-left: 3px;
 
     @media screen and (max-width: 992px) {
@@ -93,64 +97,60 @@
     }
   }
 
-  &__chart {
+  &__grade-chart {
     margin-top: 19px;
   }
 
-  @media screen and (max-width: 420px) {
-    margin-left: 0;
+  &__reviews {
+    margin-top: 12px;
   }
-}
 
-.room-reviews {
-  margin-top: 12px;
-
-  &__title {
+  &__reviews-title {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
   }
 
-  &__count {
+  &__reviews-count {
     padding-left: 10px;
     color: rgba(31, 32, 65, 0.5);
     line-height: 14px;
   }
 
-  &__item {
+  &__reviews-item {
     margin-top: 22px;
   }
-}
 
-.room-rules {
-  width: 37%;
-  margin-top: 32px;
+  &__rules {
+    width: 37%;
+    margin-top: 32px;
 
-  @media screen and (max-width: 992px) {
-    width: 100%;
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
   }
-}
 
-.room-cancel {
-  width: 47%;
-  margin-top: 32px;
-  margin-right: 15px;
+  &__cancel {
+    width: 47%;
+    margin-top: 32px;
+    margin-right: 15px;
 
-  &__description {
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  &__cancel-description {
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 992px) {
-    width: 100%;
-  }
-}
+  &__booking-form {
+    min-width: 380px;
+    margin-top: 27px;
 
-.room-booking-form {
-  min-width: 380px;
-  margin-top: 27px;
-
-  @media screen and (max-width: 420px) {
-    min-width: 300px;
+    @media screen and (max-width: 420px) {
+      min-width: 300px;
+    }
   }
 }

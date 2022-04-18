@@ -1,10 +1,7 @@
-body {
-  min-width: 1200px;
-}
-
 .ui-kit {
   display: flex;
   gap: 40px;
+  min-width: 1200px;
   padding: 80px 0;
 
   &__register-account-form {

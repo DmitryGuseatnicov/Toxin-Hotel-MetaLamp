@@ -1,23 +1,18 @@
 @import './../../styles/vars.scss';
 
-.main {
+.project-links {
   padding: 40px 0;
   text-align: center;
-}
 
-.pages__link {
-  margin-top: 10px;
-}
+  &__item {
+    margin-top: 10px;
+  }
 
-.ui-kit {
-  margin-top: 40px;
-}
+  &__item-href {
+    @extend %body_text;
+  }
 
-.ui-kit__link {
-  margin-top: 10px;
-}
-
-.pages__link-href,
-.ui-kit__link-href {
-  @extend %body_text;
+  &__ui-kit {
+    margin-top: 40px;
+  }
 }

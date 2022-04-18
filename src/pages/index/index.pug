@@ -7,31 +7,31 @@ block page-title
 
 block content
   .container
-    .pages
-      .pages__title
-        +widget-title({text: "Страницы сайта TOXIN"})
-    .pages__link
-      a.pages__link-href(href="./landing-page.html") landing-page
-    .pages__link
-      a.pages__link-href(href="./search-room-page.html") search-room-page
-    .pages__link
-      a.pages__link-href(href="./registration-page.html") registration-page
-    .pages__link
-      a.pages__link-href(href="./sing-in-page.html") sign-in-page
-    .pages__link
-      a.pages__link-href(href="./room-details-page.html") room-details-page
+    .project-links
+      .project-links__pages
+        .project-links__title
+          +widget-title({text: "Страницы сайта TOXIN"})
+        .project-links__item
+          a.project-links__item-href(href="./landing-page.html") landing-page
+        .project-links__item
+          a.project-links__item-href(href="./search-room-page.html") search-room-page
+        .project-links__item
+          a.project-links__item-href(href="./registration-page.html") registration-page
+        .project-links__item
+          a.project-links__item-href(href="./sing-in-page.html") sign-in-page
+        .project-links__item
+          a.project-links__item-href(href="./room-details-page.html") room-details-page
 
-  .container 
-    .ui-kit
-      .ui-kit__title
-        +widget-title({text: "Страницы ui-kit"})
-    .ui-kit__link
-      a.ui-kit__link-href(href="./ui-kit-colors-type.html") ui-kit-colors-type
-    .ui-kit__link
-      a.ui-kit__link-href(href="./ui-kit-form-elements.html") ui-kit-form-elements
-    .ui-kit__link
-      a.ui-kit__link-href(href="./ui-kit-cards.html") ui-kit-cards
-    .ui-kit__link
-      a.ui-kit__link-href(href="./ui-kit-header-footer.html") ui-kit-header-footer
+      .project-links__ui-kit
+        .project-links__title
+          +widget-title({text: "Страницы ui-kit"})
+        .project-links__item
+          a.project-links__item-href(href="./ui-kit-colors-type.html") ui-kit-colors-type
+        .project-links__item
+          a.project-links__item-href(href="./ui-kit-form-elements.html") ui-kit-form-elements
+        .project-links__item
+          a.project-links__item-href(href="./ui-kit-cards.html") ui-kit-cards
+        .project-links__item
+          a.project-links__item-href(href="./ui-kit-header-footer.html") ui-kit-header-footer
 
     footer.footer 

@@ -1,11 +1,7 @@
 extends ./../../page-layout/page-template.pug
-include ./../../components/room-card/room-card.pug
+include ./../../components/sidebar/sidebar.pug
 include ./../../components/widget-title/widget-title.pug
-include ./../../components/date-dropdown/date-dropdown.pug
-include ./../../components/dropdown/dropdown.pug
-include ./../../components/range-slider/range-slider.pug
-include ./../../components/checkbox/checkbox.pug
-include ./../../components/checkbox-list/checkbox-list.pug
+include ./../../components/room-card/room-card.pug
 include ./../../components/pagination/pagination.pug
 
 block head-title 
@@ -14,89 +10,12 @@ block head-title
 
 block content
   .container
-    .main-content
-      section.sidebar
-        .sidebar__date-dropdown 
-          +date-dropdown({
-            label: "даты пребывания в отеле", 
-            root:"ui-kit-filter-date-dropdown", 
-            modification:"filter",
-            value:"19 авг - 23 авг"
-          })
-
-        .sidebar__guest-dropdown
-          +dropdown({
-            label: "гости", 
-            placeholder: "Сколько гостей", 
-            items:[ 
-              {name: "взрослые", value: "2"}, 
-              {name: "дети", value: "1"}, 
-              {name: "младенцы", value: "1"} 
-            ]
-          })
-
-        .sidebar__range-slider
-          +range-slider({label: "диапазон цены", min:"0", max:"15500", start:"5000", end:"10000"})
-          .sidebar__range-slider-description Стоимость за сутки пребывания в номере
-
-        .sidebar__rules
-          .sidebar__rules-title
-            +widget-title({text: "правила дома"})
-          .sidebar__rules-item
-            +checkbox({label :"Можно курить"})
-
-          .sidebar__rules-item
-            +checkbox({label :"Можно с питомцами", checked: true})
-
-          .sidebar__rules-item
-            +checkbox({label :"Можно пригласить гостей (до 10 человек)", checked: true})
-
-        .sidebar__availability
-          .sidebar__availability-item
-            .sidebar__availability-title
-              +widget-title({text: "доступность"})
-            +checkbox({
-              label:"Широкий коридор", 
-              description: "Ширина коридоров в номере не менее 91 см.",
-              modification:"rich"
-            })
-
-          .sidebar__availability-item
-            +checkbox({
-              label:"Помощник для инвалидов",
-              description: "На 1 этаже вас встретит специалист и проводит до номера.",
-              modification:"rich"
-            })
-
-        .sidebar__comforts-dropdown
-          +dropdown({
-            label: "удобства номера", 
-            placeholder: "Выберете удобства", 
-            buttonsWithAction: false, type:"comforts",
-            items:[ 
-              {name: "спальни", value: "2"}, 
-              {name: "кровати", value: "2"}, 
-              {name: "ванные комнаты", value: "1"} 
-            ]
-          })
-
-        .sidebar__checkbox-list
-          +checkbox-list({
-            title: "дополнительные удобства", 
-            items:[ 
-              {label: "Завтрак"},
-              {label: "Письменный стол", checked: true}, 
-              {label: "Стул для кормления", checked: true}, 
-              {label: "Кроватка", checked: true}, 
-              {label: "Телевизор"}, 
-              {label: "Шампунь"}, 
-            ]
-          })
-
-      section.search-room 
-        .search-room__title
+    .search-rooms
+      +sidebar
+      section.search-rooms__items
+        .search-rooms__title
           +widget-title({text: "Номера, которые мы для вас подобрали", level: "1"})
-        ul.search-room__items 
+        ul.search-rooms__items 
           -
             const rooms = [
               {
@@ -246,8 +165,8 @@ block content
               }
             ]
           each room in rooms 
-            li.search-room__item
+            li.search-rooms__item
               +room-card(room)  
 
-        .search-room__pagination
+        .search-rooms__pagination
           +pagination

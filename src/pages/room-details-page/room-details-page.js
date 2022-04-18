@@ -1,8 +1,6 @@
 import $ from 'jquery';
 
 import '../../page-layout/page-template';
-import '../../components/header';
-import '../../components/footer';
 import '../../components/booking-form';
 import '../../components/bullet-list';
 import '../../components/benefits';

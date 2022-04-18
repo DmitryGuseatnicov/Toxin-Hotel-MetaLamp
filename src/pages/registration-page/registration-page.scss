@@ -1,14 +1,15 @@
-.main {
+.registration {
+  padding: 19px 0;
   background: url('./assets/img/registration-page.png') center center/cover
     no-repeat;
-}
 
-.registration {
-  width: 100%;
-  max-width: 380px;
-  margin: 19px auto;
+  &__form {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
 
   @media screen and (max-width: 420px) {
-    padding: 5px;
+    padding: 30px 5px;
   }
 }

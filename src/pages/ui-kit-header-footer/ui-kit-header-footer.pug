@@ -21,7 +21,22 @@ body
           ]} 
         ]})
     .ui-kit-header-auth
-      +header({auth: "Юлий Цезарь",items:[ {link:{ name: "О нас" }, active: true}, {link:{ name: "Услуги" }, childrens:[ {name:"Услуги 1", href:"/change-me"}, {name:"Услуги 2", href:"/change-me"}, ]}, {link: {name: "Вакансии", href: "/change-me"}}, {link:{ name: "Новости", href: "/change-me"}}, {link:{ name: "Соглашения", href: "/change-me"}, childrens:[ {name:"Соглашения 1", href: "/change-me"}, {name:"Соглашения 2", href: "/change-me"}, {name:"Соглашения 3", href: "/change-me"}, ]}, ]})
+      +header({
+        auth: "Юлий Цезарь",
+        items:[ 
+          {link:{ name: "О нас" }, active: true}, 
+          {link:{ name: "Услуги" }, childrens:[ 
+            {name:"Услуги 1", href:"/change-me"}, 
+            {name:"Услуги 2", href:"/change-me"}, 
+            ]}, 
+          {link: {name: "Вакансии", href: "/change-me"}}, 
+          {link:{ name: "Новости", href: "/change-me"}}, 
+          {link:{ name: "Соглашения", href: "/change-me"}, childrens:[ 
+            {name:"Соглашения 1", href: "/change-me"}, 
+            {name:"Соглашения 2", href: "/change-me"}, 
+            {name:"Соглашения 3", href: "/change-me"}, 
+            ]}, 
+          ]})
     main.main
     .footer-in-desktop
       +footer({

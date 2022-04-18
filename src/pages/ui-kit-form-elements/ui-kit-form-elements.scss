@@ -1,12 +1,13 @@
 body {
-  min-width: 1200px;
 }
 
 .main {
-  padding: 100px 0;
 }
 
 .ui-kit {
+  min-width: 1200px;
+  padding: 100px 0;
+
   &__colum {
     width: 33%;
   }
