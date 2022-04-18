@@ -18,6 +18,7 @@
       "border-in-box-model": false,
       "empty-line-between-groups": false
     }],
+		"max-nesting-depth": 3,
 		"declaration-property-value-blacklist": null,
 		"rule-empty-line-before": [
 			"always-multi-line",
@@ -29,7 +30,6 @@
 					"after-comment"
 				]
 			}
-		],
-
+		]
 	}
 }
