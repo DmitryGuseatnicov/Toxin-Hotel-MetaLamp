@@ -5,8 +5,6 @@
   padding: 40px 30px 30px;
   background: #fff;
 
-  @extend %card-border-shadow;
-
   &__date-dropdown {
     z-index: 105;
     margin-top: 21px;
@@ -19,4 +17,5 @@
   &__submit-button {
     margin-top: 31px;
   }
+  @extend %card-border-shadow;
 }

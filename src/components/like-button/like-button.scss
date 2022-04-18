@@ -12,8 +12,6 @@
   outline: none;
   cursor: pointer;
 
-  @extend %body_text;
-
   &__count {
     width: 20px;
     padding-right: 5px;
@@ -38,4 +36,5 @@
   &:focus-visible {
     box-shadow: 0 0 0 1px $purple;
   }
+  @extend %body_text;
 }

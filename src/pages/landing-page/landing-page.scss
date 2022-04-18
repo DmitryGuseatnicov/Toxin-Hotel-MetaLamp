@@ -13,10 +13,7 @@
     padding-bottom: 18px;
     text-align: right;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .landing {
+  @media screen and (max-width: 768px) {
     &__description {
       margin: 150px 0 0 auto;
     }

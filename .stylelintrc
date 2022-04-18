@@ -30,6 +30,17 @@
 					"after-comment"
 				]
 			}
+		],
+		"order/order": [
+			"custom-properties",
+			"dollar-variables",
+			"declarations",
+			"rules",
+			"at-rules",
+			{
+				"type": "at-rule",
+				"name": "media"
+			}
 		]
 	}
 }

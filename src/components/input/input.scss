@@ -12,8 +12,6 @@
     border-radius: 4px;
     outline: none;
 
-    @extend %body_text;
-
     &_text-ellipsis {
       padding-right: 90px;
       overflow: hidden;
@@ -24,7 +22,6 @@
 
     &::placeholder {
       color: $darkShade-25;
-
       @extend %body_text;
     }
 
@@ -32,6 +29,7 @@
     &:hover {
       border: 1px solid $darkShade-50;
     }
+    @extend %body_text;
   }
 
   &__inner {

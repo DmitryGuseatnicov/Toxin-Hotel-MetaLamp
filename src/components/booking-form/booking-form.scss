@@ -5,8 +5,6 @@
   padding: 45px 30px 30px;
   background: #fff;
 
-  @extend %card-border-shadow;
-
   &__header {
     display: flex;
   }
@@ -117,4 +115,5 @@
     font-size: 19px;
     line-height: 23px;
   }
+  @extend %card-border-shadow;
 }
