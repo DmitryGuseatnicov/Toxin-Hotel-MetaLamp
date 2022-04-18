@@ -10,6 +10,12 @@
   gap: 60px;
   justify-content: space-between;
   margin-top: 30px;
+
+  @media screen and (max-width: 920px) {
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+  }
 }
 
 .sidebar {
@@ -17,17 +23,29 @@
   min-width: 266px;
   max-width: 266px;
 
+  & > div {
+    width: 266px;
+
+    @media screen and (max-width: 920px) {
+      min-width: 266px;
+
+      &:nth-child(1n + 1) {
+        margin-top: 10px;
+      }
+    }
+  }
+
   &__guest-dropdown {
     margin-top: 20px;
   }
 
   &__range-slider {
     margin-top: 30px;
+  }
 
-    &-description {
-      margin-top: 10px;
-      font-size: 12px;
-    }
+  &__range-description {
+    margin-top: 10px;
+    font-size: 12px;
   }
 
   &__rules {
@@ -62,10 +80,14 @@
   &__checkbox-list {
     margin-top: 25px;
   }
-}
 
-.sidebar > div {
-  width: 266px;
+  @media screen and (max-width: 920px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    min-width: 100%;
+  }
 }
 
 .search-room {
@@ -75,66 +97,40 @@
     gap: 12px;
     margin-top: 14px;
     list-style: none;
+
+    @media screen and (max-width: 920px) {
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__item {
     max-width: 270px;
     margin-top: 8.5px;
+
+    @media screen and (max-width: 585px) {
+      max-width: 400px;
+    }
+
+    @media screen and (max-width: 420px) {
+      max-width: 300px;
+    }
   }
-}
 
-.search-room__pagination {
-  width: fit-content;
-  margin: 40px auto 0;
-
-  .pagination {
-    margin-right: 15px;
+  &__pagination {
+    width: fit-content;
+    margin: 40px auto 0;
   }
-}
 
-@media screen and (max-width: 920px) {
-  .sidebar {
+  @media screen and (max-width: 920px) {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
     min-width: 100%;
 
-    & > div {
-      min-width: 266px;
-    }
-
-    & > div:nth-child(1n + 1) {
-      margin-top: 10px;
-    }
-  }
-
-  .main-content {
-    flex-direction: column;
-    gap: 60px;
-    justify-content: center;
-  }
-
-  .search-room {
     &__title {
       text-align: center;
     }
-
-    &__items {
-      align-items: center;
-      justify-content: center;
-    }
-  }
-}
-
-@media screen and (max-width: 585px) {
-  .search-room__item {
-    max-width: 400px;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .search-room__item {
-    max-width: 300px;
   }
 }

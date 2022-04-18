@@ -15,6 +15,10 @@
       flex-direction: column;
       justify-content: flex-end;
       list-style: none;
+
+      @media screen and (max-width: 420px) {
+        right: 30px;
+      }
     }
 
     &-item {
@@ -47,14 +51,6 @@
       &:nth-child(4)::before {
         background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
       }
-    }
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .chart__label {
-    &-list {
-      right: 30px;
     }
   }
 }

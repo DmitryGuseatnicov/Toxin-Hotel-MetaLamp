@@ -7,6 +7,10 @@
     display: flex;
     gap: 20px;
     justify-content: space-between;
+
+    @media screen and (max-width: 420px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__input {
@@ -39,6 +43,19 @@
       bottom: 0;
       left: 0;
     }
+
+    @media screen and (max-width: 420px) {
+      .calendar {
+        position: fixed;
+        top: 80px;
+        right: auto;
+        bottom: 0;
+        left: 30px;
+        width: 80%;
+        margin-right: 15px;
+        overflow: scroll;
+      }
+    }
   }
 
   &[data-type='filter'] {
@@ -52,14 +69,8 @@
       display: block;
     }
   }
-}
 
-@media screen and (max-width: 420px) {
-  .date-dropdown {
-    &__header {
-      flex-wrap: wrap;
-    }
-
+  @media screen and (max-width: 420px) {
     &__popup {
       position: fixed;
       top: 0;
@@ -68,19 +79,6 @@
       left: 0;
       z-index: 98;
       background: $darkShade-75;
-    }
-
-    &__calendar {
-      .calendar {
-        position: fixed;
-        top: 80px;
-        right: auto;
-        bottom: 0;
-        left: 30px;
-        width: 80%;
-        margin-right: 15px;
-        overflow: scroll;
-      }
     }
   }
 }

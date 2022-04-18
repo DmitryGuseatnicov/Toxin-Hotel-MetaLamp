@@ -8,10 +8,22 @@
     display: flex;
     align-items: center;
     height: 70px;
+
+    @media screen and (max-width: 900px) {
+      padding: 10px 0;
+    }
   }
 
   &__logo {
     flex-grow: 1;
+  }
+
+  &__nav {
+    @media screen and (max-width: 900px) {
+      display: flex;
+      width: fit-content;
+      margin: 40px auto;
+    }
   }
 
   &__burger-button {
@@ -24,6 +36,15 @@
 
     &:focus-visible {
       box-shadow: 0 0 0 2px $purple;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      background: $purple_gradient;
+      border: none;
+      border-radius: 22px;
     }
   }
 
@@ -47,32 +68,18 @@
     &:focus-visible {
       color: $darkShade-75;
     }
+
+    @media screen and (max-width: 900px) {
+      display: block;
+      margin: 10px 10px 10px auto;
+    }
   }
 
   &__panel {
     display: flex;
     align-items: center;
-  }
 
-  &__login {
-    display: flex;
-    gap: 20px;
-  }
-
-  &__login-name {
-    padding-left: 20px;
-    color: $darkShade-50;
-    border-left: 1px solid $darkShade-1;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .header {
-    &__inner {
-      padding: 10px 0;
-    }
-
-    &__panel {
+    @media screen and (max-width: 900px) {
       position: fixed;
       top: 0;
       right: 0;
@@ -90,34 +97,25 @@
         display: block;
       }
     }
+  }
 
-    &__burger-button {
-      display: flex;
-      width: 40px;
-      height: 40px;
-      background: $purple_gradient;
-      border: none;
-      border-radius: 22px;
-    }
+  &__login {
+    display: flex;
+    gap: 20px;
 
-    &__close-button {
-      display: block;
-      margin: 10px 10px 10px auto;
-    }
-
-    &__nav {
-      display: flex;
-      width: fit-content;
-      margin: 40px auto;
-    }
-
-    &__login {
+    @media screen and (max-width: 900px) {
       flex-wrap: wrap;
       width: 50%;
       margin: 0 auto;
     }
+  }
 
-    &__login-name {
+  &__login-name {
+    padding-left: 20px;
+    color: $darkShade-50;
+    border-left: 1px solid $darkShade-1;
+
+    @media screen and (max-width: 900px) {
       padding: 10px 20px;
       color: $darkShade-50;
       border-top: 1px solid $darkShade-1;

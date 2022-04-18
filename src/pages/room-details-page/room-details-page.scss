@@ -26,6 +26,10 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @media screen and (max-width: 420px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .room-content {
@@ -36,6 +40,10 @@
     display: flex;
     gap: 70px;
     justify-content: space-between;
+
+    @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -43,6 +51,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media screen and (max-width: 992px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .room-benefits {
@@ -51,10 +65,20 @@
   &__items {
     margin-top: 20px;
     list-style: none;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   &__item {
     margin-top: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 }
 
@@ -63,10 +87,18 @@
 
   &__title {
     margin-left: 3px;
+
+    @media screen and (max-width: 992px) {
+      margin-left: 0;
+    }
   }
 
   &__chart {
     margin-top: 19px;
+  }
+
+  @media screen and (max-width: 420px) {
+    margin-left: 0;
   }
 }
 
@@ -94,6 +126,10 @@
 .room-rules {
   width: 37%;
   margin-top: 32px;
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
 }
 
 .room-cancel {
@@ -104,66 +140,17 @@
   &__description {
     margin-top: 20px;
   }
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
 }
 
 .room-booking-form {
   min-width: 380px;
   margin-top: 27px;
-}
 
-@media screen and (max-width: 992px) {
-  .room-content {
-    &__container {
-      flex-wrap: wrap;
-    }
-  }
-
-  .room-description {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .room-grade {
-    &__title {
-      margin-left: 0;
-    }
-  }
-
-  .room-rules,
-  .room-cancel {
-    width: 100%;
-  }
-
-  .bullet-list--listStyle {
-    .bullet-list__title {
-      padding-left: 0;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .room-benefits {
-    width: 100%;
-  }
-
-  .room-benefits__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .room-booking-form {
+  @media screen and (max-width: 420px) {
     min-width: 300px;
-  }
-
-  .room-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .room-grade {
-    margin-left: 0;
   }
 }

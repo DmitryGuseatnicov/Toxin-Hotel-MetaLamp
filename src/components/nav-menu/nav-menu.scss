@@ -100,10 +100,8 @@
       display: block;
     }
   }
-}
 
-@media screen and (max-width: 900px) {
-  .nav {
+  @media screen and (max-width: 900px) {
     &__list {
       display: block;
     }

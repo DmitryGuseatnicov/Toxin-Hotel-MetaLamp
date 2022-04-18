@@ -49,10 +49,8 @@
     border-radius: 22px;
     cursor: pointer;
   }
-}
 
-@media screen and (max-width: 420px) {
-  .pagination {
+  @media screen and (max-width: 420px) {
     span {
       width: 30px;
       height: 30px;
