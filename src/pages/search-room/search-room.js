@@ -5,7 +5,7 @@ import '../../components/sidebar';
 import '../../components/room-card';
 import '../../components/widget-title';
 import '../../components/pagination';
-import './search-room-page.scss';
+import './search-room.scss';
 
 function stopSubmit(e) {
   e.preventDefault();

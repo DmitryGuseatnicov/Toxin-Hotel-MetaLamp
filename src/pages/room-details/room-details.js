@@ -6,7 +6,7 @@ import '../../components/bullet-list';
 import '../../components/benefits';
 import '../../components/comment';
 import '../../components/chart';
-import './room-details-page.scss';
+import './room-details.scss';
 
 function stopSubmit(e) {
   e.preventDefault();
