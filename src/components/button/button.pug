@@ -1,7 +1,7 @@
 mixin button(options = {})
   -
     const { 
-      text, modification, icon = '' ,size = 'small', height='standard' , disabled, submit = false
+      text, modification, icon = "" ,size = "small", height="standard" , disabled, submit = false
       } = options 
 
     let classes = "button"
@@ -17,10 +17,10 @@ mixin button(options = {})
     if (icon) {
       classes += ` button_with-icon`
     }
-    if (variantSizes.includes(size) && modification !== 'simple') {
+    if (variantSizes.includes(size) && modification !== "simple") {
       classes += ` button_${size}-size`;
     }
-    if (variantHeights.includes(height) && modification !== 'simple') {
+    if (variantHeights.includes(height) && modification !== "simple") {
       classes += ` button_${height}-height`;
     }
 

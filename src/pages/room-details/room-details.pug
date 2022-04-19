@@ -81,7 +81,7 @@ block content
                     src : require("./assets/img/avatar-2.png") 
                   })
 
-            .room-details__rules 
+            section.room-details__rules 
               +bullet-list({
                 title:{text:"Правила", level: "2"}, 
                 listStyle: true ,items:[ 
@@ -91,7 +91,7 @@ block content
                   ]
                 })
 
-            .room-details__cancel
+            section.room-details__cancel
               .room-details__cancel-title 
                 +widget-title({text:"Отмена", level: "2"})
               p.room-details__cancel-description 

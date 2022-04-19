@@ -15,7 +15,7 @@ block content
       section.search-rooms__items
         .search-rooms__title
           +widget-title({text: "Номера, которые мы для вас подобрали", level: "1"})
-        ul.search-rooms__items 
+        .search-rooms__items 
           -
             const rooms = [
               {
@@ -165,7 +165,7 @@ block content
               }
             ]
           each room in rooms 
-            li.search-rooms__item
+            .search-rooms__item
               +room-card(room)  
 
         .search-rooms__pagination
