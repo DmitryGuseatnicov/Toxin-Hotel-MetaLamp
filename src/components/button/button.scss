@@ -73,10 +73,17 @@ $blockName: 'button';
     }
   }
 
-  &_medium-size {
+  &_small-size {
     .#{$blockName}__text {
       padding-right: 18px;
       padding-left: 18px;
+    }
+  }
+
+  &_medium-size {
+    .#{$blockName}__text {
+      padding-right: 26px;
+      padding-left: 26px;
     }
   }
 
@@ -85,6 +92,7 @@ $blockName: 'button';
     max-width: 320px;
 
     .#{$blockName}__text {
+      width: 100%;
       padding-right: 0;
       padding-left: 0;
     }
@@ -111,7 +119,6 @@ $blockName: 'button';
     background: $purple_gradient;
 
     .#{$blockName}__text {
-      min-width: 99px;
       color: $purple;
       background: #fff;
     }
