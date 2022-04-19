@@ -29,6 +29,15 @@
     &:hover {
       border: 1px solid $darkShade-50;
     }
+
+    &_focused {
+      border-color: $darkShade-50;
+    }
+
+    &_flat_bottom {
+      border-radius: 4px 4px 0 0;
+    }
+
     @extend %body_text;
   }
 

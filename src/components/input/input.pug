@@ -3,11 +3,14 @@ include ./../widget-title/widget-title.pug
 mixin input(options = {})
   -
     const {
-      type, placeholder, value, mask, disabled, readonly, required ,subscribe = false, label = "", textEllipsis = false
+      type, placeholder, value, mask, disabled, readonly, 
+      required ,subscribe = false, label = "", textEllipsis = false,
+      border
         } = options
 
     let classes =  "input__text-field"
     if (textEllipsis) classes += ' input__text-field_text-ellipsis'
+    if (border === "flat-bottom") classes += ' input__text-field_flat-bottom'
 
   if (label && !subscribe)
     label.input

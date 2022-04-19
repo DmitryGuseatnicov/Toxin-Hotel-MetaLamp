@@ -51,11 +51,19 @@ class Dropdown {
 
   open() {
     this.$dropdown.addClass('dropdown_open');
+    this.$input.addClass(
+      'input__text-field_focused',
+      'input__text-field_flat-bottom'
+    );
     $(window).on('click', this.windowClickHandler);
   }
 
   close() {
     this.$dropdown.removeClass('dropdown_open');
+    this.$input.removeClass(
+      'input__text-field_focused',
+      'input__text-field_flat-bottom'
+    );
     $(window).off('click', this.windowClickHandler);
   }
 

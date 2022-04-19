@@ -17,6 +17,11 @@
     &:focus-visible {
       box-shadow: 0 0 0 1px $darkShade-50;
     }
+
+    @media screen and (max-width: 420px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__page-number {
@@ -48,12 +53,5 @@
     background: $green_gradient;
     border-radius: 22px;
     cursor: pointer;
-  }
-
-  @media screen and (max-width: 420px) {
-    span {
-      width: 30px;
-      height: 30px;
-    }
   }
 }

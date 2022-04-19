@@ -1,6 +1,8 @@
 @import './../../styles/vars.scss';
 
-.dropdown {
+$blockName: 'dropdown';
+
+.#{$blockName} {
   position: relative;
   max-width: 320px;
 
@@ -92,12 +94,7 @@
   }
 
   &_open {
-    .input__text-field {
-      border-color: $darkShade-50;
-      border-radius: 4px 4px 0 0;
-    }
-
-    .dropdown__drop-items {
+    .#{$blockName}__drop-items {
       display: block;
       border-top: none;
     }
