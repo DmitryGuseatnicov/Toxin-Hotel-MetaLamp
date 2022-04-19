@@ -1,22 +1,36 @@
 mixin button(options = {})
   -
-    const { text, modification, disabled, short = false, submit = false} = options 
+    const { 
+      text, modification, icon = '' ,size = 'medium', height='standard' , disabled, submit = false
+      } = options 
+
     let classes = "button"
-    const variantModifiers = ["simple", "purple", "purple-link", "purple-border"]
+    const variantModifiers = ["simple", "purple", "purple-border"]
+    const variantSizes = ["medium", "big"]
+    const variantHeights = ["short", "standard" ]
     let type
 
-    if(submit) type = "submit"
-    if(short) classes+= " button_short"
+    if (submit) type = "submit"
     if (variantModifiers.includes(modification)) {
       classes += ` button_${modification}`;
     }
+    if (icon) {
+      classes += ` button_with-icon`
+    }
+    if (variantSizes.includes(size) && modification !== 'simple') {
+      classes += ` button_${size}-size`;
+    }
+    if (variantHeights.includes(height) && modification !== 'simple') {
+      classes += ` button_${height}-height`;
+    }
 
-  if (modification === "purple-link")
-    button(class=classes, disabled=disabled, type=type)
-      span.button__text= text
-      span.button__icon
-        span.material-icons arrow_forward
 
-  else
+  if(icon) 
+    button(class=classes, disabled=disabled)
+      span.button__inner
+        span.button__text= text
+        span.button__icon
+            span.material-icons= icon
+  else 
     button(class=classes, disabled=disabled)
       span.button__text= text

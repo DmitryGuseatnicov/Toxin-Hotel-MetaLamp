@@ -1,9 +1,24 @@
-@import './../../styles/vars.scss';
+@import '../../styles/vars.scss';
 
-.button {
+$blockName: 'button';
+
+.#{$blockName} {
+  padding: 2px;
   background-color: #fff;
   border: none;
+  border-radius: 22px;
+  outline: none;
   cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &__inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   &__text,
   &__icon {
@@ -17,8 +32,19 @@
   }
 
   &_simple {
+    padding: 0;
     color: $purple;
+    border-radius: none;
     outline: none;
+
+    span {
+      color: inherit;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      @extend %body_text;
+    }
 
     &:focus,
     &:hover {
@@ -31,67 +57,63 @@
     }
   }
 
-  &_simple > span {
-    display: inline-block;
-    color: inherit;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
+  &_standard-height {
+    .#{$blockName}__text {
+      padding-top: 12.5px;
+      padding-bottom: 12.5px;
+      border-radius: 22px;
+    }
+  }
+
+  &_short-height {
+    .#{$blockName}__text {
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+      border-radius: 22px;
+    }
+  }
+
+  &_medium-size {
+    .#{$blockName}__text {
+      padding-right: 18px;
+      padding-left: 18px;
+    }
+  }
+
+  &_big-size {
+    width: 100%;
+    max-width: 320px;
+
+    .#{$blockName}__text {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   &_purple {
-    padding: 14.5px 20px;
     color: #fff;
     background: $purple_gradient;
-    border-radius: 22px;
-    outline: none;
 
-    &.button_short {
-      padding: 0 20px;
+    .#{$blockName}__text {
+      color: #fff;
+      background: inherit;
     }
 
     &:focus,
-    &:hover {
-      background: linear-gradient(
-        180deg,
-        rgba(#bc9cff, 0.5) 0%,
-        rgba(#8ba4f9, 0.5) 100%
-      );
-      background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    }
-
+    &:hover,
     &:disabled {
-      background: linear-gradient(
-        180deg,
-        rgba(#bc9cff, 0.5) 0%,
-        rgba(#8ba4f9, 0.5) 100%
-      );
-      background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-      cursor: default;
+      opacity: 0.5;
     }
   }
 
   &_purple-border {
-    padding: 2px;
     color: #fff;
     background: $purple_gradient;
-    border-radius: 22px;
-    outline: none;
 
-    .button__text {
-      padding: 12.5px 18px;
+    .#{$blockName}__text {
+      min-width: 99px;
       color: $purple;
       background: #fff;
-      border-radius: 22px;
-    }
-
-    &.button_short {
-      padding: 2px;
-
-      .button__text {
-        padding: 7.5px 18px;
-      }
     }
 
     &:focus,
@@ -102,48 +124,21 @@
         rgba(#bc9cff, 0.5) 0%,
         rgba(#8ba4f9, 0.5) 100%
       );
-      background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    }
-
-    &:disabled {
-      cursor: default;
     }
   }
 
-  &_purple-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 320px;
-    padding: 8.5px 8px;
-    color: #fff;
-    background: $purple_gradient;
-    border-radius: 22px;
-    outline: none;
+  &_with-icon {
+    position: relative;
 
-    .button__text {
+    .#{$blockName}__text {
       flex-grow: 1;
-      padding-left: 25px;
+      padding-right: 30px;
+      padding-left: 30px;
     }
 
-    .button__icon > span {
-      color: #fff;
+    .#{$blockName}__icon {
+      position: absolute;
+      right: 8px;
     }
-
-    &:focus,
-    &:hover,
-    &:disabled {
-      background: linear-gradient(
-        180deg,
-        rgba(#bc9cff, 0.5) 0%,
-        rgba(#8ba4f9, 0.5) 100%
-      );
-      background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    }
-  }
-
-  &_short {
-    height: 34px;
   }
 }

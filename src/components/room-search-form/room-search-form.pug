@@ -22,4 +22,10 @@ mixin room-search-form
           { name: "младенцы", value: "0" } 
         ]})
     .room-search-form__submit-button
-      +button({ text: "подобрать номер", modification:"purple-link", submit: true })
+      +button({ 
+        text: "подобрать номер", 
+        modification: "purple", 
+        size: "big",
+        icon: "arrow_forward",
+        submit: true 
+      })

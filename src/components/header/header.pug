@@ -23,5 +23,5 @@ mixin header(options = {})
             if (auth)
               .header__login-name= auth
             else
-              +button({ text: "войти", modification: "purple-border", short: true }) 
-              +button({ text: "зарегистрироваться", modification: "purple", short: true })
+              +button({ text: "войти", modification: "purple-border", height: "short" }) 
+              +button({ text: "зарегистрироваться", modification: "purple", height: "short" })

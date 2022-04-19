@@ -11,7 +11,12 @@ mixin login-form
     .login-form__password 
       +input({type: "password", placeholder: "Пароль", required: true})
     .login-form__button-login
-      +button({text: "войти", modification:"purple-link"})
+      +button({
+        text: "войти", 
+        modification:"purple",
+        size: "big",
+        icon: "arrow_forward"
+      })
     .login-form__button-create 
       span Нет аккаунта на Toxin?
       +button({text: "создать", modification:"purple-border"})

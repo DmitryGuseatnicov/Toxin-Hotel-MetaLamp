@@ -44,10 +44,6 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-
-    .button__text {
-      padding: 12.5px 24px;
-    }
   }
 
   @extend %card-border-shadow;

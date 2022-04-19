@@ -54,4 +54,9 @@ mixin booking-form(options = {})
       .booking-form__total-price.js-booking-form__total-price 38 081₽
 
     .booking-form__booking-button
-      +button({text: "забронировать", modification: "purple-link"})
+      +button({
+        text: "забронировать", 
+        modification: "purple", 
+        icon: "arrow_forward", 
+        size: "big"
+      })
