@@ -5,7 +5,8 @@ include ./../../components/footer-mobile/footer-mobile.pug
 
 +head({title: "ui-kit-header-footer"})
 body
-    .ui-kit-header
+  .iu-kit
+    .ui-kit__header
       +header({items:[ 
         {link:{ name: "О нас", href: "/change-me" }, active: true}, 
         {link:{ name: "Услуги" }, childrens:[ 
@@ -20,7 +21,7 @@ body
           {name:"Соглашения 3", href: "/change-me"}, 
           ]} 
         ]})
-    .ui-kit-header-auth
+    .ui-kit__header-auth
       +header({
         auth: "Юлий Цезарь",
         items:[ 
@@ -38,7 +39,7 @@ body
             ]}, 
           ]})
     main.main
-    .footer-in-desktop
+    .ui-kit__footer-in-desktop
       +footer({
         items: [ 
           {title: "навигация", links: [ 
@@ -66,7 +67,7 @@ body
             ]
           })
 
-    .footer-in-mobile
+    .ui-kit__footer-in-mobile
       +footer-mobile({
         socials: [
           {name: "twitter", href: "/change-me", src: require("./assets/img/twitter.png")},

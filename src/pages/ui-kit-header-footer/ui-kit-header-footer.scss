@@ -1,20 +1,22 @@
-.ui-kit-header-auth {
-  margin-top: 40px;
-}
-
 body {
   background: #e5e5e5;
 }
 
-.main {
-  margin-top: 40px;
-}
+.ui-kit {
+  &__header-auth {
+    margin-top: 40px;
+  }
 
-.footer-in-mobile {
-  padding: 40px 0;
-  background: #e5e5e5;
+  &__footer-in-desktop {
+    margin-top: 40px;
+  }
 
-  .footer-mobile {
-    display: block;
+  &__footer-in-mobile {
+    padding: 40px 0;
+    background: #e5e5e5;
+
+    .footer-mobile {
+      display: block;
+    }
   }
 }
