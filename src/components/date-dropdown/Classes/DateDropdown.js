@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
-import AirDatepicker from 'air-datepicker';
-import options from '../../calendar/calendar';
+import Calendar from '../../../libs/AirDatapicker';
 import constants from '../utils/constants';
 
 class DateDropdown {
@@ -14,7 +13,7 @@ class DateDropdown {
     this.$rootInput = this.$dateDropdown.find(constants.ROOT__INPUT);
     this.id = `#${this.$rootInput.attr('id')}`;
     this.$inputs = this.$dateDropdown.find(constants.INPUTS);
-    this.calendar = new AirDatepicker(this.id, options);
+    this.calendar = new Calendar(this.id);
     this.bindEventListener();
   }
 

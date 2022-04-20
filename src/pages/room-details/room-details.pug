@@ -4,7 +4,7 @@ include ./../../components/comment/comment.pug
 include ./../../components/booking-form/booking-form.pug
 include ./../../components/bullet-list/bullet-list.pug
 include ./../../components/widget-title/widget-title.pug
-include ./../../components/chart/chart.pug
+include ./../../components/diagram/diagram.pug
 
 block head-title 
   -
@@ -53,7 +53,7 @@ block content
               .room-details__grade-title 
                 +widget-title({text: "Впечатления от номера", level: "2"})
               .room-details__grade-chart 
-                +chart
+                +diagram
 
             .room-details__reviews
               .room-details__reviews-title

@@ -1,11 +1,8 @@
 import $ from 'jquery';
-import AirDatepicker from 'air-datepicker';
 
-import options from './calendar';
+import Calendar from '../../libs/AirDatapicker';
 import './calendar.scss';
 
 $('.js-ui-kit__calendar').each(() => {
-  new AirDatepicker('.js-ui-kit__calendar', options).setViewDate(
-    new Date('2019-08')
-  );
+  new Calendar('.js-ui-kit__calendar');
 });

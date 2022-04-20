@@ -1,0 +1,198 @@
+@import './../../styles/vars.scss';
+
+.air-datepicker {
+  padding: 20px;
+  border: 1px solid $darkShade-25;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px $darkShade-5;
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-nav--title {
+    cursor: pointer;
+    @extend %widget_title-medium;
+  }
+
+  &-nav--action > span {
+    color: $purple;
+    cursor: pointer;
+  }
+
+  &-body.-hidden- {
+    display: none;
+  }
+
+  &-body--day-names {
+    margin-top: 20px;
+  }
+
+  &-body--day-name {
+    color: $purple;
+    font-weight: bold;
+  }
+
+  &-cell.-day- {
+    color: $darkShade-50;
+  }
+
+  &-cell.-day-.-other-month- {
+    color: $darkShade-25;
+  }
+
+  &-cell.-day-.-focus- {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &-cell.-day-.-focus-::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: $green_gradient;
+    border-radius: 22px;
+    content: '';
+  }
+
+  &-cell.-day-.-selected- {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  &-cell.-day-.-selected-::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: $purple_gradient;
+    border-radius: 22px;
+    content: '';
+  }
+
+  &-cell.-day-.-selected-.-range-from- {
+    background: linear-gradient(
+      90deg,
+      #fff 0%,
+      #fff 50%,
+      rgba($purple, 0.25) 50%,
+      rgba($purple, 0.25) 100%
+    );
+  }
+
+  &-cell.-day-.-focus-.-selected-.-range-from- {
+    position: relative;
+    z-index: 0;
+    background: #fff;
+  }
+
+  &-cell.-day-.-focus-.-range-from- {
+    position: relative;
+    z-index: 0;
+    background: linear-gradient(
+      90deg,
+      #fff 0%,
+      #fff 50%,
+      rgba($purple, 0.25) 50%,
+      rgba($purple, 0.25) 100%
+    );
+  }
+
+  &-cell.-day-.-selected-.-range-to- {
+    background: linear-gradient(
+      90deg,
+      rgba($purple, 0.25) 0%,
+      rgba($purple, 0.25) 50%,
+      #fff 50%,
+      #fff 100%
+    );
+  }
+
+  &-cell.-day-.-focus-.-range-to- {
+    position: relative;
+    z-index: 0;
+    background: linear-gradient(
+      90deg,
+      rgba($purple, 0.25) 0%,
+      rgba($purple, 0.25) 50%,
+      #fff 50%,
+      #fff 100%
+    );
+  }
+
+  &-cell.-day-.-selected-.-focus-.-range-from-.-range-to- {
+    background: #fff;
+  }
+
+  &-cell.-day-.-in-range- {
+    position: relative;
+    z-index: 0;
+    background: rgba($purple, 0.25);
+    border-radius: 0;
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+
+  &.-inline- {
+    background: #fff;
+  }
+
+  &-body--day-names,
+  &-body--cells.-days- {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  &-body--day-name,
+  &-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+
+    @media screen and(max-width: 420px) {
+      height: 30px;
+    }
+  }
+
+  &-body--cells.-years-,
+  &-body--cells.-months- {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &-cell.-year-,
+  &-cell.-month- {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &-cell.-year-.-focus-,
+  &-cell.-month-.-focus- {
+    background: rgba($purple, 0.25);
+  }
+
+  &-cell.-year-.-selected-,
+  &-cell.-month-.-selected- {
+    background: rgba($purple, 0.25);
+  }
+}

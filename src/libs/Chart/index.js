@@ -1,27 +1,23 @@
 import Chart from 'chart.js/auto';
 
-const createChart = (rating = []) => {
+const createChart = (id, charsItems) => {
   let totalVotes = 0;
-  rating.forEach((el) => {
-    totalVotes += el;
+  charsItems.forEach((el) => {
+    totalVotes += el.rate;
   });
 
-  const ctx = document.getElementById('room-chart').getContext('2d');
-  const yellowGradient = ctx.createLinearGradient(0, 0, 0, 125);
-  yellowGradient.addColorStop(0, '#FFE39C');
-  yellowGradient.addColorStop(1, '#FFBA9C');
+  const ctx = document.getElementById(id).getContext('2d');
 
-  const greenGradient = ctx.createLinearGradient(0, 0, 0, 125);
-  greenGradient.addColorStop(0, '#6FCF97');
-  greenGradient.addColorStop(1, '#66D2EA');
+  const colorCreator = (colors) => {
+    const color = ctx.createLinearGradient(0, 0, 0, 125);
+    color.addColorStop(0, colors[0]);
+    color.addColorStop(1, colors[1]);
+    return color;
+  };
 
   const purpleGradient = ctx.createLinearGradient(0, 0, 0, 125);
   purpleGradient.addColorStop(0, '#BC9CFF');
   purpleGradient.addColorStop(1, '#8BA4F9');
-
-  const darkGradient = ctx.createLinearGradient(0, 0, 0, 125);
-  darkGradient.addColorStop(0, '#919191');
-  darkGradient.addColorStop(1, '#3D4975');
 
   const counter = {
     id: 'counter',
@@ -44,17 +40,12 @@ const createChart = (rating = []) => {
   return new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
+      labels: charsItems.map((el) => el.name),
       datasets: [
         {
           label: '',
-          data: rating,
-          backgroundColor: [
-            darkGradient,
-            purpleGradient,
-            greenGradient,
-            yellowGradient,
-          ],
+          data: charsItems.map((el) => el.rate),
+          backgroundColor: charsItems.map((el) => colorCreator(el.colors)),
           borderWidth: 3,
           cutout: '89%',
           reverse: true,

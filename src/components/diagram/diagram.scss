@@ -1,0 +1,40 @@
+#room-chart {
+  width: 140px;
+  max-height: 125px;
+}
+
+.chart {
+  display: flex;
+  max-width: 160px;
+
+  &__label {
+    &-list {
+      position: relative;
+      right: 7px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      list-style: none;
+
+      @media screen and (max-width: 420px) {
+        right: 30px;
+      }
+    }
+
+    &-name {
+      margin-left: 5px;
+    }
+
+    &-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      line-height: 24px;
+    }
+  }
+}

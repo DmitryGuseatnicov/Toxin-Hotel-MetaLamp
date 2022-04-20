@@ -1,9 +1,8 @@
 import $ from 'jquery';
-import noUiSlider from 'nouislider';
 import wNumb from 'wnumb';
+import Slider from '../../../libs/NoUiSlider';
 
 import constants from '../utils/constants';
-import 'nouislider/dist/nouislider.css';
 
 const numFormate = wNumb({
   thousand: ' ',
@@ -19,18 +18,12 @@ class rangeSlider {
     this.$start = this.$rangeSlider.find(constants.START);
     this.$end = this.$rangeSlider.find(constants.END);
     this.$value = this.$rangeSlider.find(constants.VALUE);
-    this.slider = noUiSlider.create(
-      this.$rangeSlider.find(constants.SLIDER)[0],
-      {
-        start: [this.$start.attr('value'), this.$end.attr('value')],
-        step: 5,
-        range: {
-          min: [parseInt(this.$start.attr('min'), 10)],
-          max: [parseInt(this.$end.attr('max'), 10)],
-        },
-        connect: true,
-      }
-    );
+
+    this.slider = new Slider($(constants.SLIDER)[0], {
+      start: [this.$start.attr('value'), this.$end.attr('value')],
+      min: this.$start.attr('min'),
+      max: this.$end.attr('max'),
+    });
 
     this.bindEventListener();
   }
