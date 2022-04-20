@@ -1,11 +1,11 @@
-#room-chart {
-  width: 140px;
-  max-height: 125px;
-}
-
 .chart {
   display: flex;
   max-width: 160px;
+
+  &__diagram {
+    width: 140px;
+    max-height: 125px;
+  }
 
   &__label {
     &-list {

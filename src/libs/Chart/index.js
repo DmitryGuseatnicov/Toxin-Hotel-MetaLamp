@@ -1,12 +1,12 @@
 import Chart from 'chart.js/auto';
 
-const createChart = (id, charsItems) => {
+const createChart = (canvasNode, charsItems) => {
   let totalVotes = 0;
   charsItems.forEach((el) => {
     totalVotes += el.rate;
   });
 
-  const ctx = document.getElementById(id).getContext('2d');
+  const ctx = canvasNode.getContext('2d');
 
   const colorCreator = (colors) => {
     const color = ctx.createLinearGradient(0, 0, 0, 125);

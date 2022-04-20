@@ -9,6 +9,7 @@ class DiagramCreator {
   }
 
   init(charsItems) {
+    this.canvasNode = this.nodeElem.querySelector('.js-chart__diagram');
     this.createLabels(charsItems);
     this.createDiagram(charsItems);
   }
@@ -38,7 +39,7 @@ class DiagramCreator {
   }
 
   createDiagram(charsItems) {
-    createChart('room-chart', charsItems);
+    createChart(this.canvasNode, charsItems);
   }
 }
 
