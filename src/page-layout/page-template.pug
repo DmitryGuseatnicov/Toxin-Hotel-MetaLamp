@@ -5,6 +5,8 @@ include ./../components/room-search-form/room-search-form.pug
 
 block head-title 
 
+block variables
+
 +head({title: title})
 body
   block header
@@ -62,5 +64,6 @@ body
             name: "instagram", 
             href: "change-me", 
             src: require("../../page-layout/assets/img/instagram.png")},
-          ]
+          ],
+        separator: separator
         })

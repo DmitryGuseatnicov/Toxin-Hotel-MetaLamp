@@ -1,8 +1,6 @@
 @import './../../styles/vars.scss';
 
 .room-details {
-  border-bottom: 1px solid $darkShade-25;
-
   &__gallery {
     display: grid;
     grid-template-rows: repeat(2, 1fr);

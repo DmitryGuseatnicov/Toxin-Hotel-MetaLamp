@@ -1,8 +1,6 @@
-body {
-  background: #e5e5e5;
-}
-
 .ui-kit {
+  background: #e5e5e5;
+
   &__header-auth {
     margin-top: 40px;
   }
@@ -14,9 +12,5 @@ body {
   &__footer-in-mobile {
     padding: 40px 0;
     background: #e5e5e5;
-
-    .footer-mobile {
-      display: block;
-    }
   }
 }

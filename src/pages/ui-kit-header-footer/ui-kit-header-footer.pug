@@ -5,7 +5,7 @@ include ./../../components/footer-mobile/footer-mobile.pug
 
 +head({title: "ui-kit-header-footer"})
 body
-  .iu-kit
+  .ui-kit
     .ui-kit__header
       +header({items:[ 
         {link:{ name: "О нас", href: "/change-me" }, active: true}, 
@@ -73,5 +73,5 @@ body
           {name: "twitter", href: "/change-me", src: require("./assets/img/twitter.png")},
           {name: "facebook", href: "/change-me", src: require("./assets/img/facebook.png")},
           {name: "instagram", href: "/change-me", src: require("./assets/img/instagram.png")},
-        ]
+        ], isShow: true
         })

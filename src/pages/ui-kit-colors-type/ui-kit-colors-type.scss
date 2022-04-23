@@ -1,120 +1,117 @@
 @import './../../styles/vars.scss';
 
-body {
-  min-width: 1200px;
-  padding: 100px 0;
-}
-
-.ui-kit-colors-type {
+.ui-kit {
   display: flex;
   justify-content: space-between;
-}
+  min-width: 1200px;
+  padding: 100px 0;
 
-.ui-kit-color {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-
-  &__square {
-    width: 70px;
-    height: 70px;
-    border-radius: 6px;
-  }
-
-  &__description {
-    margin-left: 40px;
-  }
-
-  &__hex {
-    margin-top: 3px;
-    font-size: 19px;
-    line-height: 28px;
-  }
-}
-
-.ui-kit-color.dark-shade-100 {
-  .ui-kit-color__square {
-    background-color: $darkShade-100;
-  }
-}
-
-.ui-kit-color.dark-shade-75 {
-  .ui-kit-color__square {
-    background-color: $darkShade-75;
-  }
-}
-
-.ui-kit-color.dark-shade-50 {
-  .ui-kit-color__square {
-    background-color: $darkShade-50;
-  }
-}
-
-.ui-kit-color.dark-shade-25 {
-  .ui-kit-color__square {
-    background-color: $darkShade-25;
-  }
-}
-
-.ui-kit-color.dark-shade-5 {
-  .ui-kit-color__square {
-    background-color: $darkShade-5;
-  }
-}
-
-.ui-kit-color.purple {
-  .ui-kit-color__square {
-    background-color: $purple;
-  }
-}
-
-.ui-kit-color.green {
-  .ui-kit-color__square {
-    background-color: $green;
-  }
-}
-
-.ui-kit-typography {
-  max-width: 440px;
-  margin-right: 25px;
-
-  &__container {
+  &__color {
     display: flex;
-    margin-top: 51px;
-  }
-
-  &__container:first-child {
+    align-items: center;
     margin-top: 20px;
-  }
 
-  &__container:last-child {
-    max-width: 380px;
-    margin-top: 48px;
-  }
-
-  &__type {
-    min-width: 37px;
-    color: rgba(31, 32, 65, 0.25);
-    text-align: right;
-    text-transform: capitalize;
-
-    &--h1 {
-      font-size: 24px;
-      line-height: 29px;
+    &-square {
+      width: 70px;
+      height: 70px;
+      border-radius: 6px;
     }
 
-    &--h2 {
+    &-description {
+      margin-left: 40px;
+    }
+
+    &-hex {
+      margin-top: 3px;
       font-size: 19px;
-      line-height: 23px;
-    }
-
-    &--h3 {
-      font-size: 12px;
-      line-height: 15px;
+      line-height: 28px;
     }
   }
 
-  &__text {
-    margin-left: 30px;
+  .ui-kit__color_dark-shade-100 {
+    .ui-kit__color-square {
+      background-color: $darkShade-100;
+    }
+  }
+
+  .ui-kit__color_dark-shade-75 {
+    .ui-kit__color-square {
+      background-color: $darkShade-75;
+    }
+  }
+
+  .ui-kit__color_dark-shade-50 {
+    .ui-kit__color-square {
+      background-color: $darkShade-50;
+    }
+  }
+
+  .ui-kit__color_dark-shade-25 {
+    .ui-kit__color-square {
+      background-color: $darkShade-25;
+    }
+  }
+
+  .ui-kit__color_dark-shade-5 {
+    .ui-kit__color-square {
+      background-color: $darkShade-5;
+    }
+  }
+
+  .ui-kit__color_purple {
+    .ui-kit__color-square {
+      background-color: $purple;
+    }
+  }
+
+  .ui-kit__color_green {
+    .ui-kit__color-square {
+      background-color: $green;
+    }
+  }
+
+  &__typography {
+    max-width: 440px;
+    margin-right: 25px;
+
+    &-container {
+      display: flex;
+      margin-top: 51px;
+    }
+
+    &-container:first-child {
+      margin-top: 20px;
+    }
+
+    &-container:last-child {
+      max-width: 380px;
+      margin-top: 48px;
+    }
+
+    &-type {
+      min-width: 37px;
+      color: rgba(31, 32, 65, 0.25);
+      text-align: right;
+      text-transform: capitalize;
+
+      &_h1 {
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      &_h2 {
+        font-size: 19px;
+        line-height: 23px;
+      }
+
+      &_h3 {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+
+    &-text {
+      margin-left: 30px;
+    }
   }
 }

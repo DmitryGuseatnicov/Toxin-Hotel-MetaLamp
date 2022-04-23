@@ -1,15 +1,11 @@
 @import './../../styles/vars.scss';
 
-.main {
-  padding-bottom: 70px;
-  border-bottom: 1px solid $darkShade-25;
-}
-
 .search-rooms {
   display: flex;
   gap: 60px;
   justify-content: space-between;
   margin-top: 30px;
+  margin-bottom: 70px;
 
   &__items {
     display: flex;

@@ -5,8 +5,10 @@ include ./../../components/room-card/room-card.pug
 include ./../../components/pagination/pagination.pug
 
 block head-title 
-  -
-    const title = "search-room-page"
+  - const title = "search-room-page"
+
+block variables 
+  -  const separator = true
 
 block content
   .container

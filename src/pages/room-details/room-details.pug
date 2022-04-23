@@ -7,8 +7,10 @@ include ./../../components/widget-title/widget-title.pug
 include ./../../components/diagram/diagram.pug
 
 block head-title 
-  -
-    const title = "room-details-page"
+  - const title = "room-details-page"
+
+block variables 
+  - const separator = true
 
 block content
   .room-details
