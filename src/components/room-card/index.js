@@ -1,4 +1,4 @@
-import Carousel from '../../libs/SlickSlider';
+import Carousel from '../../libs/Carousel';
 import '../rate-button';
 import './room-card.scss';
 

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import wNumb from 'wnumb';
-import Slider from '../../../libs/NoUiSlider';
+import Slider from '../../../libs/Slider';
 
 import constants from '../utils/constants';
 

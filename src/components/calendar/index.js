@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import Calendar from '../../libs/AirDatapicker';
+import Calendar from '../../libs/Calendar';
 import './calendar.scss';
 
 $('.js-ui-kit__calendar').each(() => {

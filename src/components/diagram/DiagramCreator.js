@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import createChart from '../../libs/Chart';
+import createChart from '../../libs/createChart';
 
 class DiagramCreator {
   constructor(selector, charsItems) {

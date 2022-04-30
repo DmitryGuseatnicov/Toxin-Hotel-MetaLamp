@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import Calendar from '../../../libs/AirDatapicker';
+import Calendar from '../../../libs/Calendar';
 import constants from '../utils/constants';
 
 class DateDropdown {
