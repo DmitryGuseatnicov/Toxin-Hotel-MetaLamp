@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import createChart from '../../libs/createChart';
+import PiaChartCreator from '../../libs/PiaChartCreator';
 
 class DiagramCreator {
   constructor(selector, charsItems) {
@@ -39,7 +39,8 @@ class DiagramCreator {
   }
 
   createDiagram(charsItems) {
-    createChart(this.canvasNode, charsItems);
+    this.piaChart = new PiaChartCreator();
+    this.piaChart.init(this.canvasNode, charsItems);
   }
 }
 
