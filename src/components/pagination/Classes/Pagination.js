@@ -33,8 +33,8 @@ class Pagination {
   init() {
     this.$nav = this.$pagination.find(BUTTONS);
     this.$description = this.$pagination.find(DESCRIPTION);
-    this.renderPagination();
-    this.showDescription();
+    this._renderPagination();
+    this._showDescription();
   }
 
   update(options = {}) {
@@ -42,11 +42,11 @@ class Pagination {
 
     if (totalItems) this.totalItems = totalItems;
     if (currentPage) this.currentPage = currentPage;
-    this.renderPagination();
-    this.showDescription();
+    this._renderPagination();
+    this._showDescription();
   }
 
-  renderPagination() {
+  _renderPagination() {
     let fragment = '';
     let before = +this.currentPage - 1;
     let after = +this.currentPage + 1;
@@ -103,18 +103,18 @@ class Pagination {
     this.$nav.html(fragment);
   }
 
-  getCountOfItems() {
+  _getCountOfItems() {
     if (this.totalItems > 100) {
       return ` ${Math.floor(this.totalItems / 100) * 100}+ `;
     }
     return this.totalItems;
   }
 
-  showDescription() {
+  _showDescription() {
     const interval = `${
       this.currentPage * this.itemsShowForPage - this.itemsShowForPage + 1
     } – ${this.currentPage * this.itemsShowForPage}`;
-    const description = `${interval} из ${this.getCountOfItems()} вариантов аренды`;
+    const description = `${interval} из ${this._getCountOfItems()} вариантов аренды`;
     this.$description.text(description);
   }
 

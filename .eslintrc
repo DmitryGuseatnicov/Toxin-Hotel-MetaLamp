@@ -26,6 +26,7 @@
     "no-new": "off",
     "import/no-unresolved": "off",
     "prefer-regex-literals": "off",
+    "no-underscore-dangle": ["off", { "allow": true }],
     "prettier/prettier": "error"
   }
 }

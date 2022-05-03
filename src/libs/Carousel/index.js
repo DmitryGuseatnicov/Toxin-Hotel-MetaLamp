@@ -7,10 +7,10 @@ import './index.scss';
 class Carousel {
   init(selector) {
     this.selector = selector;
-    this.createSliders();
+    this._createSliders();
   }
 
-  createSliders() {
+  _createSliders() {
     $(this.selector).slick(options);
   }
 }

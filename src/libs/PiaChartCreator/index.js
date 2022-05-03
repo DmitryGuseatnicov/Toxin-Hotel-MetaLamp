@@ -3,10 +3,10 @@ import Chart from 'chart.js/auto';
 
 class PiaChartCreator {
   init(canvasNode, charsItems) {
-    return this.createChart(canvasNode, charsItems);
+    return this._createChart(canvasNode, charsItems);
   }
 
-  createChart(canvasNode, charsItems) {
+  _createChart(canvasNode, charsItems) {
     let totalVotes = 0;
     charsItems.forEach((el) => {
       totalVotes += el.rate;

@@ -15,38 +15,7 @@ class Dropdown {
     [this.calculator] = this.$dropdown
       .find(constants.CALCULATOR)
       .map((i, el) => new DropdownCalculator(el));
-    this.bindEventListener();
-  }
-
-  bindEventListener() {
-    this.clickHandler = this.clickHandler.bind(this);
-    this.keyHandler = this.keyHandler.bind(this);
-    this.windowClickHandler = this.windowClickHandler.bind(this);
-    this.$dropdown.on('click', this.clickHandler);
-    this.$dropdown.on('keydown', this.keyHandler);
-  }
-
-  clickHandler(e) {
-    if (e.target.closest(constants.DROPDOWN_HEADER)) this.toggle();
-  }
-
-  keyHandler(e) {
-    if (e.keyCode === 32) {
-      e.preventDefault();
-      this.toggle();
-    }
-  }
-
-  windowClickHandler(e) {
-    if (!e.target.closest(constants.DROPDOWN)) this.close();
-  }
-
-  toggle() {
-    if (this.isOpen) {
-      this.close();
-    } else {
-      this.open();
-    }
+    this._bindEventListener();
   }
 
   open() {
@@ -55,7 +24,7 @@ class Dropdown {
       'input__text-field_focused',
       'input__text-field_flat-bottom'
     );
-    $(window).on('click', this.windowClickHandler);
+    $(window).on('click', this._windowClickHandler);
   }
 
   close() {
@@ -64,7 +33,7 @@ class Dropdown {
       'input__text-field_focused',
       'input__text-field_flat-bottom'
     );
-    $(window).off('click', this.windowClickHandler);
+    $(window).off('click', this._windowClickHandler);
   }
 
   getValue() {
@@ -73,6 +42,37 @@ class Dropdown {
 
   get isOpen() {
     return this.$dropdown.hasClass('dropdown_open');
+  }
+
+  _bindEventListener() {
+    this._clickHandler = this._clickHandler.bind(this);
+    this._keyHandler = this._keyHandler.bind(this);
+    this._windowClickHandler = this._windowClickHandler.bind(this);
+    this.$dropdown.on('click', this._clickHandler);
+    this.$dropdown.on('keydown', this._keyHandler);
+  }
+
+  _clickHandler(e) {
+    if (e.target.closest(constants.DROPDOWN_HEADER)) this._toggle();
+  }
+
+  _keyHandler(e) {
+    if (e.keyCode === 32) {
+      e.preventDefault();
+      this._toggle();
+    }
+  }
+
+  _windowClickHandler(e) {
+    if (!e.target.closest(constants.DROPDOWN)) this.close();
+  }
+
+  _toggle() {
+    if (this.isOpen) {
+      this.close();
+    } else {
+      this.open();
+    }
   }
 }
 

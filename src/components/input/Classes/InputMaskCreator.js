@@ -9,15 +9,15 @@ class InputMaskCreator {
   }
 
   init() {
-    this.maskHandler();
+    this._maskHandler();
   }
 
-  maskHandler() {
-    if (this.mask === 'data') this.createDataMask();
-    if (this.mask === 'tel') this.createTelMask();
+  _maskHandler() {
+    if (this.mask === 'data') this._createDataMask();
+    if (this.mask === 'tel') this._createTelMask();
   }
 
-  createDataMask() {
+  _createDataMask() {
     const im = new Inputmask('datetime', {
       inputFormat: 'dd.mm.yyyy',
       placeholder: 'ДД.ММ.ГГГГ',
@@ -27,7 +27,7 @@ class InputMaskCreator {
     im.mask(this.$input);
   }
 
-  createTelMask() {
+  _createTelMask() {
     const im = new Inputmask('+7(999) 999-9999');
     im.mask(this.$input);
   }

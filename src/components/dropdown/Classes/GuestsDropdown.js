@@ -7,34 +7,34 @@ class GuestsDropdown extends Dropdown {
     this.$clearBtn = this.$dropdown.find(constants.CLEAR);
     this.$applyBtn = this.$dropdown.find(constants.APPLY);
     super.init();
-    this.hiddenButtonSwitcher();
-    this.showValue();
-  }
-
-  clickHandler(e) {
-    super.clickHandler(e);
-    if (e.target.closest(constants.CLEAR)) this.clearValue();
-    if (e.target.closest(constants.APPLY)) {
-      this.showValue();
-      this.close();
-    }
-    this.hiddenButtonSwitcher();
+    this._hiddenButtonSwitcher();
+    this._showValue();
   }
 
   clearValue() {
     this.calculator.clearValue();
-    this.showValue();
+    this._showValue();
   }
 
-  hiddenButtonSwitcher() {
-    if (this.isZeroTotalCount) {
+  _clickHandler(e) {
+    super._clickHandler(e);
+    if (e.target.closest(constants.CLEAR)) this.clearValue();
+    if (e.target.closest(constants.APPLY)) {
+      this._showValue();
+      this.close();
+    }
+    this._hiddenButtonSwitcher();
+  }
+
+  _hiddenButtonSwitcher() {
+    if (this._isZeroTotalCount) {
       this.$clearBtn.addClass('dropdown__button-clear_hidden');
     } else {
       this.$clearBtn.removeClass('dropdown__button-clear_hidden');
     }
   }
 
-  showValue() {
+  _showValue() {
     let guests = 0;
     let baby = 0;
 
@@ -53,7 +53,7 @@ class GuestsDropdown extends Dropdown {
     this.$input.val(value.replace(/.$/, ''));
   }
 
-  get isZeroTotalCount() {
+  get _isZeroTotalCount() {
     let totalCount = 0;
     this.getValue().forEach((el) => {
       totalCount += +el.value;

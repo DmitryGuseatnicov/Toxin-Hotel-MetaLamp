@@ -33,36 +33,11 @@ class BookingForm {
       .replace(/[^+\d]/g, '');
 
     this.calculatePrice();
-    this.bindEventListener();
-  }
-
-  getDays() {
-    const dates = this.$daysInputs.map((i, el) => el.value);
-
-    const firstDate = new Date(dates[0].split('.').reverse().join('-'));
-
-    const secondDate = new Date(dates[1].split('.').reverse().join('-'));
-
-    const timeDiff = Math.abs(secondDate.getTime() - firstDate.getTime());
-    const days = Math.ceil(timeDiff / (1000 * 3600 * 24));
-
-    return days;
-  }
-
-  bindEventListener() {
-    this.formHandler = this.formHandler.bind(this);
-    this.$bookingForm.on('submit', this.formHandler);
-    this.$daysInputs.on('change', this.formHandler);
-    this.$daysInputs.on('input', this.formHandler);
-  }
-
-  formHandler(e) {
-    e.preventDefault();
-    if (e.target.closest(constants.INPUTS)) this.calculatePrice();
+    this._bindEventListener();
   }
 
   calculatePrice() {
-    const days = this.getDays();
+    const days = this._getDays();
     const isCorrectDaysValue = typeof days === 'number' && !Number.isNaN(days);
 
     if (isCorrectDaysValue) {
@@ -75,6 +50,31 @@ class BookingForm {
       this.$price.text(`${numFormate.to(totalPrice)}₽`);
       this.$totalPrice.text(`${numFormate.to(correctPrice)}₽`);
     }
+  }
+
+  _getDays() {
+    const dates = this.$daysInputs.map((i, el) => el.value);
+
+    const firstDate = new Date(dates[0].split('.').reverse().join('-'));
+
+    const secondDate = new Date(dates[1].split('.').reverse().join('-'));
+
+    const timeDiff = Math.abs(secondDate.getTime() - firstDate.getTime());
+    const days = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+    return days;
+  }
+
+  _bindEventListener() {
+    this._formHandler = this._formHandler.bind(this);
+    this.$bookingForm.on('submit', this._formHandler);
+    this.$daysInputs.on('change', this._formHandler);
+    this.$daysInputs.on('input', this._formHandler);
+  }
+
+  _formHandler(e) {
+    e.preventDefault();
+    if (e.target.closest(constants.INPUTS)) this.calculatePrice();
   }
 }
 

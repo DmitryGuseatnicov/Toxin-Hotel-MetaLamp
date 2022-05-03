@@ -11,46 +11,8 @@ class DropdownCalculator {
 
   init() {
     this.$calcItems = this.$calculator.find(constants.CALC_ITEMS);
-    this.$calcItems.each((i, el) => this.disabledButtonSwitcher(el));
-    this.bindEventListener();
-  }
-
-  bindEventListener() {
-    this.clickHandler = this.clickHandler.bind(this);
-    this.changeHandler = this.changeHandler.bind(this);
-    this.$calcItems.on('click', this.clickHandler);
-    this.$calcItems.on('DOMSubtreeModified', this.changeHandler);
-  }
-
-  clickHandler(e) {
-    if (e.target.closest(constants.PLUS)) this.plus(e.currentTarget);
-    if (e.target.closest(constants.MINUS)) this.minus(e.currentTarget);
-  }
-
-  changeHandler(e) {
-    this.disabledButtonSwitcher(e.currentTarget);
-  }
-
-  plus(target) {
-    const $value = $(target).find(constants.VALUE);
-    $value.text(+$value.text() + 1);
-  }
-
-  minus(target) {
-    const $value = $(target).find(constants.VALUE);
-    $value.text(+$value.text() - 1);
-  }
-
-  disabledButtonSwitcher(nodeElem) {
-    if (this.getIsZeroValue(nodeElem)) {
-      $(nodeElem).find(constants.MINUS).attr('disabled', 'disabled');
-      return;
-    }
-    $(nodeElem).find(constants.MINUS).removeAttr('disabled');
-  }
-
-  getIsZeroValue(nodeElem) {
-    return $(nodeElem).find(constants.VALUE).text() <= 0;
+    this.$calcItems.each((i, el) => this._disabledButtonSwitcher(el));
+    this._bindEventListener();
   }
 
   getValue() {
@@ -68,6 +30,44 @@ class DropdownCalculator {
 
   clearValue() {
     this.$calculator.find(constants.VALUE).text(0);
+  }
+
+  _bindEventListener() {
+    this._clickHandler = this._clickHandler.bind(this);
+    this._changeHandler = this._changeHandler.bind(this);
+    this.$calcItems.on('click', this._clickHandler);
+    this.$calcItems.on('DOMSubtreeModified', this._changeHandler);
+  }
+
+  _clickHandler(e) {
+    if (e.target.closest(constants.PLUS)) this._plus(e.currentTarget);
+    if (e.target.closest(constants.MINUS)) this._minus(e.currentTarget);
+  }
+
+  _changeHandler(e) {
+    this._disabledButtonSwitcher(e.currentTarget);
+  }
+
+  _plus(target) {
+    const $value = $(target).find(constants.VALUE);
+    $value.text(+$value.text() + 1);
+  }
+
+  _minus(target) {
+    const $value = $(target).find(constants.VALUE);
+    $value.text(+$value.text() - 1);
+  }
+
+  _disabledButtonSwitcher(nodeElem) {
+    if (this._getIsZeroValue(nodeElem)) {
+      $(nodeElem).find(constants.MINUS).attr('disabled', 'disabled');
+      return;
+    }
+    $(nodeElem).find(constants.MINUS).removeAttr('disabled');
+  }
+
+  _getIsZeroValue(nodeElem) {
+    return $(nodeElem).find(constants.VALUE).text() <= 0;
   }
 }
 

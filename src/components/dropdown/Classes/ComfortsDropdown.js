@@ -4,20 +4,20 @@ import textHelper from '../utils/textHelper';
 class ComfortsDropdown extends Dropdown {
   init() {
     super.init();
-    this.showValue();
+    this._showValue();
   }
 
   close() {
     super.close();
-    this.showValue();
+    this._showValue();
   }
 
   clearValue() {
     this.calculator.clearValue();
-    this.showValue();
+    this._showValue();
   }
 
-  showValue() {
+  _showValue() {
     let value = '';
     this.getValue().forEach((el) => {
       value += ` ${el.value} ${textHelper(el.name, el.value)},`;

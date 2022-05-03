@@ -10,37 +10,37 @@ class NavMenu {
 
   init() {
     this.$navItems = this.$navMenu.find(constants.NAV_ITEMS);
-    this.bindEventListener();
+    this._bindEventListener();
   }
 
-  bindEventListener() {
-    this.clickHandler = this.clickHandler.bind(this);
-    this.$navItems.on('click', this.clickHandler);
+  toggle(target) {
+    this._bindWindowEventListener();
+    $(target).toggleClass('nav__item_open');
   }
 
-  bindWindowEventListener() {
-    this.windowClickHandler = this.windowClickHandler.bind(this);
-    $(window).on('click', this.windowClickHandler);
+  _bindEventListener() {
+    this._clickHandler = this._clickHandler.bind(this);
+    this.$navItems.on('click', this._clickHandler);
   }
 
-  windowClickHandler(e) {
+  _bindWindowEventListener() {
+    this._windowClickHandler = this._windowClickHandler.bind(this);
+    $(window).on('click', this._windowClickHandler);
+  }
+
+  _windowClickHandler(e) {
     if (!e.target.closest('.nav__item_hav-childrens')) {
       this.$navItems.removeClass('nav__item_open');
-      $(window).off('click', this.windowClickHandler);
+      $(window).off('click', this._windowClickHandler);
     }
   }
 
-  clickHandler(e) {
+  _clickHandler(e) {
     if (e.target.closest('.nav__item_hav-childrens')) {
       if (e.target.closest('.nav__item-link')) {
         this.toggle(e.currentTarget);
       }
     }
-  }
-
-  toggle(target) {
-    this.bindWindowEventListener();
-    $(target).toggleClass('nav__item_open');
   }
 }
 

@@ -25,15 +25,15 @@ class rangeSlider {
       max: this.$end.attr('max'),
     });
 
-    this.bindEventListener();
+    this._bindEventListener();
   }
 
-  bindEventListener() {
-    this.changeHandler = this.changeHandler.bind(this);
-    this.slider.on('update.one', this.changeHandler);
+  _bindEventListener() {
+    this._changeHandler = this._changeHandler.bind(this);
+    this.slider.on('update.one', this._changeHandler);
   }
 
-  changeHandler(values) {
+  _changeHandler(values) {
     this.$start.val(values[0]);
     this.$end.val(values[1]);
 

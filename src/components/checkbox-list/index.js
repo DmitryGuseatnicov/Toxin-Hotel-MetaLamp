@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import CheckboxList from './CheckboxList';
+import CheckboxList from './Classes/CheckboxList';
 import '../widget-title';
 import './checkbox-list.scss';
 

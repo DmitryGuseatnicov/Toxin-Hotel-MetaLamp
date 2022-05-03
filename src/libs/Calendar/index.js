@@ -6,13 +6,14 @@ import './index.scss';
 class Calendar {
   constructor(nodeElem) {
     this.init(nodeElem);
+    return this.calendar;
   }
 
   init(nodeElem) {
-    return this.createCalender(nodeElem);
+    this._createCalender(nodeElem);
   }
 
-  createCalender(nodeElem) {
+  _createCalender(nodeElem) {
     this.calendar = new AirDatepicker(nodeElem, options);
   }
 }

@@ -1,4 +1,4 @@
-import DiagramCreator from './DiagramCreator';
+import DiagramCreator from './Classes/DiagramCreator';
 import './diagram.scss';
 
 new DiagramCreator('.js-chart', [

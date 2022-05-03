@@ -12,29 +12,29 @@ class LikeButton {
   init() {
     this.$icon = this.$likeButton.find(ICON);
     this.$count = this.$likeButton.find(COUNT);
-    this.bindEventListener();
+    this._bindEventListener();
   }
 
-  bindEventListener() {
-    this.likeToggle = this.likeToggle.bind(this);
+  _bindEventListener() {
+    this._likeToggle = this._likeToggle.bind(this);
     this.$likeButton.on('click', this.likeToggle);
   }
 
-  likeToggle() {
+  _likeToggle() {
     if (this.isLike) {
-      this.unlike();
+      this._unlike();
     } else {
-      this.like();
+      this._like();
     }
   }
 
-  unlike() {
+  _unlike() {
     this.$likeButton.removeClass('like-button_liked');
     this.$icon.text('favorite_border');
     this.$count.text(+this.$count.text() - 1);
   }
 
-  like() {
+  _like() {
     this.$likeButton.addClass('like-button_liked');
     this.$icon.text('favorite');
     this.$count.text(+this.$count.text() + 1);
