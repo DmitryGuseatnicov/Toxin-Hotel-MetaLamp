@@ -17,7 +17,7 @@ class LikeButton {
 
   _bindEventListener() {
     this._likeToggle = this._likeToggle.bind(this);
-    this.$likeButton.on('click', this.likeToggle);
+    this.$likeButton.on('click', this._likeToggle);
   }
 
   _likeToggle() {
