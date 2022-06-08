@@ -14,7 +14,8 @@ mixin input(options = {})
 
   if (label && !subscribe)
     label.input
-      +widget-title({text: label})
+      .input__label 
+        +widget-title({text: label})
       input(
         class=classes,
         type=type,
