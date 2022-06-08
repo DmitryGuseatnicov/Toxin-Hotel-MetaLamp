@@ -1,12 +1,13 @@
 include ./../rate-button/rate-button.pug
 
 mixin room-card(options = {})
-  - const { number, price, reviews = "0", rate = "0", type, links = [] } = options;
+  - const { number, price, reviews = "0", rate = "0", type, linksImages = []} = options;
   .room-card
     .room-card__images.js-room-card__images
-      each src in links 
-        .room-card__photo
-          img.room-card__img(src=src, alt="room-photo")
+      each linkImage in linksImages
+        - const { img = "", link = ""} = linkImage
+        a(class="room-card__photo" href=link)
+          img.room-card__img(src=img, alt="room-photo") 
     .room-card__info 
       .room-card__number №
         span.room-card__number-value= number

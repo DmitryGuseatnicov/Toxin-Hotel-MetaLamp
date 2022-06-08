@@ -46,4 +46,9 @@ mixin register-account-form(options = {})
       })
     .register-account-form__login-button
       span.register-account-form__question Уже есть аккаунт на Toxin
-      +button({ text: "войти", modification:"purple-border", size: "medium" })
+      +button({ 
+        text: "войти", 
+        modification:"purple-border", 
+        size: "medium",
+        link: "/sing-in.html"
+        })

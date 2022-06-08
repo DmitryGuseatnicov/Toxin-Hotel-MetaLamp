@@ -15,7 +15,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: 100;
   width: 42px;
   height: calc(100% - 6px);
   background: transparent;
@@ -60,7 +60,7 @@
   position: absolute;
   right: 15px;
   bottom: 9px;
-  z-index: 11;
+  z-index: 101;
   display: flex;
   gap: 4px;
   list-style: none;

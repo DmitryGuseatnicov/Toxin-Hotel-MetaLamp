@@ -1,9 +1,12 @@
 mixin button(options = {})
   -
     const { 
-      text, modification, icon = "" ,size = "small", height="standard" , disabled, submit = false
+      text, modification, icon = "" ,size = "small", 
+      height = "standard" , disabled, submit = false,
+      link = ""
       } = options 
 
+    const tag = link ? "a" : "button"
     let classes = "button"
     const variantModifiers = ["simple", "purple", "purple-border"]
     const variantSizes = ["small", "medium", "big"]
@@ -26,11 +29,11 @@ mixin button(options = {})
 
 
   if(icon) 
-    button(class=classes, disabled=disabled)
+    #{tag}(class=classes, disabled=disabled, href=link)
       span.button__inner
         span.button__text= text
         span.button__icon
             span.material-icons= icon
   else 
-    button(class=classes, disabled=disabled)
+    #{tag}(class=classes, disabled=disabled href=link)
       span.button__text= text
