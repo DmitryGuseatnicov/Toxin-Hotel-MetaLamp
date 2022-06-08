@@ -23,6 +23,7 @@
 
 .noUi-handle {
   outline: none;
+  cursor: grab;
 
   &::before,
   &::after {
@@ -37,6 +38,10 @@
 .noUi-touch-area {
   background: $green_gradient;
   border-radius: 10px;
+}
+
+.noUi-base, .noUi-connect {
+  cursor: pointer;
 }
 
 .noUi-connect {
