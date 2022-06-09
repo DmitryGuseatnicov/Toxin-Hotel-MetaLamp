@@ -6,11 +6,13 @@ const template = {
   },
   buttonAddValue: {
     content: 'Применить',
-    className: 'button button_simple js-button-action-apply',
+    className:
+      'button button_short button_text-purple calendar__button js-button-action-apply',
   },
   buttonClearValue: {
     content: 'Очистить',
-    className: 'button button_simple js-button-action-clear',
+    className:
+      'button button_short button_text-purple calendar__button js-button-action-clear',
   },
 };
 

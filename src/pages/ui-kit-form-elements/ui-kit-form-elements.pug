@@ -135,31 +135,62 @@ block content
 
             .ui-kit__buttons-purple
               .ui-kit__button
-                +button({text:"click me",  modification: "purple"})
+                +button({
+                  text:"click me", 
+                  textColor: 'white',
+                  height: "high",
+                  size: "small",
+                  color: "purple-gradient"
+                })
 
               .ui-kit__button
-                +button({text:"click me",  modification: "purple", disabled: true})
+                +button({
+                  text:"click me", 
+                  textColor: "white", 
+                  height: "high",
+                  size: "small",
+                  color: "purple-gradient",
+                  disabled: true
+                })
 
             .ui-kit__buttons-purple-border
               .ui-kit__button
-                +button({text:"click me",  modification: "purple-border"})
+                +button({
+                  text:"click me", 
+                  textColor: "purple", 
+                  height: "high",
+                  color: "white",
+                  size: "small",
+                  border:"purple-gradient"
+                })
 
               .ui-kit__button
-                +button({text:"click me",  modification: "purple-border", disabled: true})
+                +button({
+                  text:"click me", 
+                  textColor: "purple", 
+                  height: "high", 
+                  color: "white",
+                  size: "small",
+                  border:"purple-gradient",
+                  disabled: true
+                })
 
             .ui-kit__buttons-simple
               .ui-kit__button
-                +button({text:"click me",  modification: "simple"})
+                +button({text:"click me",  textColor: "purple", height: "short"})
 
               .ui-kit__button
-                +button({text:"click me",  modification: "simple", disabled: true})
+                +button({text:"click me", textColor: "purple", height: "short", disabled: true})
 
             .ui-kit__buttons-purple-link
               +button({
                 text:'перейти к оплате',  
-                modification: "purple",
+                textColor: "white",
+                color: "purple-gradient",
                 size: "big", 
-                icon: "arrow_forward"})
+                height: "high",
+                icon: "arrow_forward"
+              })
 
           .ui-kit__pagination 
             .ui-kit__pagination-title 

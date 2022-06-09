@@ -1,32 +1,47 @@
 mixin button(options = {})
   -
     const { 
-      text, modification, icon = "" ,size = "small", 
-      height = "standard" , disabled, submit = false,
-      link = ""
+      text, textColor, color, size,  height, link,
+      border, icon, disabled, submit = false
       } = options 
 
     const tag = link ? "a" : "button"
-    let classes = "button"
-    const variantModifiers = ["simple", "purple", "purple-border"]
-    const variantSizes = ["small", "medium", "big"]
-    const variantHeights = ["short", "standard" ]
-    let type
 
-    if (submit) type = "submit"
-    if (variantModifiers.includes(modification)) {
-      classes += ` button_${modification}`;
-    }
-    if (icon) {
-      classes += ` button_with-icon`
-    }
-    if (variantSizes.includes(size) && modification !== "simple") {
-      classes += ` button_${size}-size`;
-    }
-    if (variantHeights.includes(height) && modification !== "simple") {
-      classes += ` button_${height}-height`;
+    const textColors = {
+      white: "button_text-white",
+      purple: "button_text-purple"
     }
 
+    const buttonColors = {
+      "purple-gradient": "button_purple-gradient",
+      white: "button_white",
+    }
+
+    const borders = {
+      "purple-gradient": "button_border-purple-gradient",
+    }
+
+    const heights = {
+      short: "button_height-short",
+      medium: "button_height-medium",
+      high: "button_height-high"
+    }
+
+    const sizes = {
+      small: "button_size-small",
+      medium: "button_size-medium",
+      big: "button_size-big",
+    }
+
+    const classes = [
+      "button",
+      icon ? 'button_with-icon' : '',
+      textColors[textColor],
+      buttonColors[color],
+      borders[border],
+      heights[height],
+      sizes[size], 
+    ]
 
   if(icon) 
     #{tag}(class=classes, disabled=disabled, href=link)

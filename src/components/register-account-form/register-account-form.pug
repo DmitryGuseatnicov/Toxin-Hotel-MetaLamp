@@ -40,7 +40,9 @@ mixin register-account-form(options = {})
     .register-account-form__pay-button 
       +button({ 
         text: buttonText, 
-        modification: "purple",
+        textColor: "white",
+        color: "purple-gradient",
+        height: "high",
         size: "big",
         icon: "arrow_forward"
       })
@@ -48,7 +50,10 @@ mixin register-account-form(options = {})
       span.register-account-form__question Уже есть аккаунт на Toxin
       +button({ 
         text: "войти", 
-        modification:"purple-border", 
+        textColor: "purple",
+        color: "white",
+        border: "purple-gradient",
+        height: "high",
         size: "medium",
         link: "/sing-in.html"
         })

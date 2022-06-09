@@ -13,10 +13,20 @@ mixin login-form
     .login-form__button-login
       +button({
         text: "войти", 
-        modification: "purple",
+        textColor: "white",
+        color: "purple-gradient",
+        height: "high",
         size: "big",
         icon: "arrow_forward"
       })
     .login-form__button-create 
       span Нет аккаунта на Toxin?
-      +button({text: "создать", modification: "purple-border", link: "/registration.html"})
+      +button({
+        text: "создать", 
+        textColor: "purple",
+        color: "white",
+        border: "purple-gradient",
+        height: "high",
+        size: "medium",
+        link: "/registration.html"
+      })

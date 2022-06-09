@@ -25,13 +25,18 @@ mixin header(options = {})
             else
               +button({ 
                 text: "войти",
-                modification: "purple-border",
-                height: "short",
+                textColor: "purple",
+                color: "white",
+                border: "purple-gradient",
+                height: "medium",
+                size: "small",
                 link: "/sing-in.html" 
               }) 
               +button({ 
                 text: "зарегистрироваться",
-                modification: "purple",
-                height: "short" ,
+                textColor: "white",
+                color: "purple-gradient",
+                height: "medium",
+                size: "small",
                 link: "/registration.html"
               })

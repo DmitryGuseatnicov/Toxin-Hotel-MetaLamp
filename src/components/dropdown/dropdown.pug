@@ -32,6 +32,14 @@ mixin dropdown(options = {})
       if (buttonsWithAction)
         .dropdown__buttons
           .dropdown__button-clear.js-dropdown__button-clear
-            +button({text: "очиcтить", modification: "simple"})
+            +button({
+              text: "очиcтить",
+              textColor: "purple",
+              height: "short"
+            })
           .dropdown__button-apply.js-dropdown__button-apply
-            +button({text: "применить", modification: "simple"})
+            +button({
+              text: "применить", 
+              textColor: "purple",
+              height: "short"
+            })

@@ -1,3 +1,5 @@
+@import '../../styles/vars.scss';
+
 .calendar {
   width: 320px;
 
@@ -5,6 +7,19 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
+  }
+
+  &__button {
+    span {
+      font-weight: bold;
+    }
+
+    &:focus,
+    &:hover {
+      span {
+        color: $darkShade-50;
+      }
+    }
   }
 
   @media screen and(max-width: 420px) {

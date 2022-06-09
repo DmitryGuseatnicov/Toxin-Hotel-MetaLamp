@@ -8,6 +8,8 @@ $blockName: 'button';
   border: none;
   border-radius: 22px;
   outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
 
   &:disabled {
@@ -18,95 +20,32 @@ $blockName: 'button';
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    text-align: center;
   }
 
   &__text,
   &__icon {
     display: inline-block;
+    border-radius: 22px;
     color: inherit;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    text-transform: uppercase;
     @extend %body_text;
   }
 
-  &_simple {
-    padding: 0;
+  &_text-purple {
     color: $purple;
-    border-radius: none;
-    outline: none;
-
-    span {
-      color: inherit;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 15px;
-      text-transform: uppercase;
-      @extend %body_text;
-    }
-
-    &:focus,
-    &:hover {
-      color: $darkShade-50;
-    }
-
-    &:disabled {
-      color: $darkShade-50;
-      cursor: default;
-    }
   }
 
-  &_standard-height {
-    .#{$blockName}__text {
-      padding-top: 12.5px;
-      padding-bottom: 12.5px;
-      border-radius: 22px;
-    }
+  &_text-white {
+    color: #FFF;
   }
 
-  &_short-height {
-    .#{$blockName}__text {
-      padding-top: 7.5px;
-      padding-bottom: 7.5px;
-      border-radius: 22px;
-    }
-  }
 
-  &_small-size {
-    .#{$blockName}__text {
-      padding-right: 18px;
-      padding-left: 18px;
-    }
-  }
-
-  &_medium-size {
-    .#{$blockName}__text {
-      padding-right: 26px;
-      padding-left: 26px;
-    }
-  }
-
-  &_big-size {
-    width: 100%;
-    max-width: 320px;
-
-    .#{$blockName}__text {
-      width: 100%;
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-
-  &_purple {
-    color: #fff;
+  &_purple-gradient {
     background: $purple_gradient;
-
-    .#{$blockName}__text {
-      color: #fff;
-      background: inherit;
-    }
-
     &:focus,
     &:hover,
     &:disabled {
@@ -114,28 +53,91 @@ $blockName: 'button';
     }
   }
 
-  &_purple-border {
-    color: #fff;
-    background: $purple_gradient;
-
+  &_white {
     .#{$blockName}__text {
-      color: $purple;
       background: #fff;
     }
+  }
 
-    &:focus,
-    &:hover,
-    &:disabled {
-      background: linear-gradient(
-        180deg,
-        rgba(#bc9cff, 0.5) 0%,
-        rgba(#8ba4f9, 0.5) 100%
-      );
+  &_height {
+    &-short {
+      .#{$blockName}__text {
+        &:focus,
+        &:hover {
+          color: $darkShade-50;
+        }
+      }
+
+      &:disabled {
+        .#{$blockName}__text {
+          color: $darkShade-50;
+        }
+      }
+    }
+
+    &-medium {
+      .#{$blockName}__text {
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+        border-radius: 22px;
+      }
+    }
+
+    &-high {
+      .button__text {
+        padding-top: 12.5px;
+        padding-bottom: 12.5px;
+        border-radius: 22px;
+      }
+    }
+  }
+
+  &_size {
+    &-small {
+      .#{$blockName}__text {
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+    }
+  
+    &-medium {
+      .#{$blockName}__text {
+        padding-right: 26px;
+        padding-left: 26px;
+      }
+    }
+  
+    &-big {
+      width: 100%;
+      max-width: 320px;
+  
+      .#{$blockName}__text {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &_border {
+    &-purple-gradient {
+      background: $purple_gradient;
+  
+      &:focus,
+      &:hover,
+      &:disabled {
+        background: linear-gradient(
+          180deg,
+          rgba(#bc9cff, 0.5) 0%,
+          rgba(#8ba4f9, 0.5) 100%
+        );
+      }
     }
   }
 
   &_with-icon {
     position: relative;
+    display: block;
 
     .#{$blockName}__text {
       flex-grow: 1;
