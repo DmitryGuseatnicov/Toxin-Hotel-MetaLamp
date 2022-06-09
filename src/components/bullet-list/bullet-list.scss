@@ -1,8 +1,8 @@
 @import './../../styles/vars.scss';
 
-$nameBlock: 'bullet-list';
+$blockName,: 'bullet-list';
 
-.#{$nameBlock} {
+.#{$blockName} {
   &__items {
     margin-top: 12px;
     list-style: none;
@@ -26,7 +26,7 @@ $nameBlock: 'bullet-list';
   }
 
   &_list-style {
-    .#{$nameBlock} {
+    .#{$blockName} {
       &__title {
         padding-left: 21px;
       }
