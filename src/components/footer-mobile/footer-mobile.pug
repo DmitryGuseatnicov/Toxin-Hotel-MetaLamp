@@ -16,11 +16,11 @@ mixin footer-mobile(options = {})
     .footer-mobile__copy-right Copyright © 2018 Toxin отель. Все права защищены.
     ul.footer-mobile__social 
       each social in socials 
-        - classesSocial +=`-${social.name}`
-        li(class=classesSocial)
-          a.footer-mobile__social-href(href=social.href)
+        - const { href = "", src = "", name = "" } = social
+        li.footer-mobile__social-item
+          a.footer-mobile__social-href(href=href)
             img(
-              src=social.src,
-              alt=social.name
+              src=src,
+              alt=name
             )
 

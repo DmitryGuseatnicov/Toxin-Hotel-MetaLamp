@@ -6,7 +6,6 @@ include ./../footer-mobile/footer-mobile.pug
 mixin footer(options = {})
   -
     const {items = [], socials = [], separator = false } = options
-    let classesSocial = 'footer__social'
 
     const classes = [
       "footer",
@@ -46,12 +45,12 @@ mixin footer(options = {})
   
           ul.footer__social
             each social in socials
-              - classesSocial += `-${social.name}`
-              li(class=classesSocial)
-                a.footer__social-href(href=social.href)
+              - const { href = "", src = "", name = "" } = social
+              li.footer__social-item
+                a.footer__social-href(href=href)
                   img.footer__social-img(
-                    src=social.src,
-                    alt=social.name
+                    src=src,
+                    alt=name
                   )
   +footer-mobile({socials: socials})
   

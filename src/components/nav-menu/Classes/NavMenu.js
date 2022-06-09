@@ -29,14 +29,14 @@ class NavMenu {
   }
 
   _windowClickHandler(e) {
-    if (!e.target.closest('.nav__item_hav-childrens')) {
+    if (!e.target.closest('.nav__item_hav-children')) {
       this.$navItems.removeClass('nav__item_open');
       $(window).off('click', this._windowClickHandler);
     }
   }
 
   _clickHandler(e) {
-    if (e.target.closest('.nav__item_hav-childrens')) {
+    if (e.target.closest('.nav__item_hav-children')) {
       if (e.target.closest('.nav__item-link')) {
         this.toggle(e.currentTarget);
       }

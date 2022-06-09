@@ -1,7 +1,6 @@
 mixin widget-title(options = {})
   -
-    let level = options.level ? options.level : "3"
-    let text = options.text ? options.text : ""
+    const { level = "3", text = "" } = options
 
   if (level === "1")
     h1.widget-title.widget-title_big= text
