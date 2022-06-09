@@ -3,8 +3,12 @@ include ./../logo/logo.pug
 mixin footer-mobile(options = {})
   -
     const { socials = [], isShow = false } = options 
-    let classes = `footer-mobile ${isShow ? 'footer-mobile_showed' : ''}`
-    let classesSocial = 'footer-mobile__social'
+
+    const classes = [
+      "footer-mobile", 
+      isShow ? "footer-mobile_showed" : ""
+    ]
+    let classesSocial = "footer-mobile__social"
 
   footer(class=classes)
     .footer-mobile__logo

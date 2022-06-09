@@ -8,7 +8,12 @@ mixin footer(options = {})
     const {items = [], socials = [], separator = false } = options
     let classesSocial = 'footer__social'
 
-  footer(class = `footer ${separator ? "footer_with-separator" : ""}`)
+    const classes = [
+      "footer",
+      separator ? "footer_with-separator" : ""
+    ]
+
+  footer(class = classes)
     .container 
       .footer__inner 
         .footer__inner-item

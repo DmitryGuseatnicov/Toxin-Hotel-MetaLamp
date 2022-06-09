@@ -7,10 +7,16 @@ mixin input(options = {})
       required ,subscribe = false, label = "", textEllipsis = false,
       border
         } = options
+    
+    const borderModifications = {
+      "flat-bottom" : "input__text-field_flat-bottom"
+    }
 
-    let classes =  "input__text-field"
-    if (textEllipsis) classes += ' input__text-field_text-ellipsis'
-    if (border === "flat-bottom") classes += ' input__text-field_flat-bottom'
+    const classes = [
+      "input__text-field",
+      textEllipsis ? "input__text-field_text-ellipsis" : "",
+      borderModifications[border]
+    ]
 
   if (label && !subscribe)
     label.input
