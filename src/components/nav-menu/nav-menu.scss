@@ -35,7 +35,7 @@
     }
   }
 
-  &__item-childrens {
+  &__item-children {
     position: absolute;
     top: 25px;
     left: -20px;
@@ -67,7 +67,7 @@
     }
   }
 
-  &__item_hav-childrens {
+  &__item_hav-children {
     .nav__item {
       &-link {
         display: flex;
@@ -96,7 +96,7 @@
   }
 
   &__item_open {
-    .nav__item-childrens {
+    .nav__item-children {
       display: block;
     }
   }
@@ -110,7 +110,7 @@
       margin-top: 10px;
     }
 
-    &__item-childrens {
+    &__item-children {
       position: relative;
       top: 0;
       left: 10px;
