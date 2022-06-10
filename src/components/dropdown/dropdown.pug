@@ -4,10 +4,13 @@ include ./../button/button.pug
 mixin dropdown(options = {})
   -
     const { label, placeholder, open, type = "guests" ,items = [], buttonsWithAction = true } = options
-    let classes = "dropdown js-dropdown"
-    if(open) classes += " dropdown_open"
 
-
+    const classes = [
+      "dropdown",
+      "js-dropdown",
+      open ? " dropdown_open" : ""
+    ]
+    
   div(class=classes, data-type=type)
     .dropdown__header.js-dropdown__header
       .dropdown__input.js-dropdown__input
