@@ -2,12 +2,12 @@ mixin button(options = {})
   -
     const { 
       text, textColor, color, size,  height, link,
-      border, icon, disabled, submit = false
+      border, icon, disabled, submit = false, outline = false
       } = options 
 
     const tag = link ? "a" : "button"
 
-    const textColors = {
+    /*const textColors = {
       white: "button_text-white",
       purple: "button_text-purple"
     }
@@ -15,10 +15,6 @@ mixin button(options = {})
     const buttonColors = {
       "purple-gradient": "button_purple-gradient",
       white: "button_white",
-    }
-
-    const borders = {
-      "purple-gradient": "button_border-purple-gradient",
     }
 
     const heights = {
@@ -31,16 +27,26 @@ mixin button(options = {})
       small: "button_size-small",
       medium: "button_size-medium",
       big: "button_size-big",
+    }*/
+
+    const colors = {
+      purple: ["button_purple", "button_text-white"],
+      white: ["button_white", "button_text-purple"]
+    }
+
+    const sizes = {
+      none: "button_size-none",
+      small: "button_small",
+      medium: "button_medium",
+      big: "button_big",
     }
 
     const classes = [
       "button",
-      icon ? 'button_with-icon' : '',
-      textColors[textColor],
-      buttonColors[color],
-      borders[border],
-      heights[height],
+      outline ? "button_outlined" : "",
+      icon ? "button_with-icon" : "",
       sizes[size], 
+      colors[color]
     ]
 
   if(icon) 

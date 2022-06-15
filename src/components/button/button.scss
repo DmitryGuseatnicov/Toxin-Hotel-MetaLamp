@@ -44,7 +44,7 @@ $blockName: 'button';
   }
 
 
-  &_purple-gradient {
+  &_purple {
     background: $purple_gradient;
     &:focus,
     &:hover,
@@ -54,73 +54,7 @@ $blockName: 'button';
   }
 
   &_white {
-    .#{$blockName}__text {
-      background: #fff;
-    }
-  }
-
-  &_height {
-    &-short {
-      .#{$blockName}__text {
-        &:focus,
-        &:hover {
-          color: $darkShade-50;
-        }
-      }
-
-      &:disabled {
-        .#{$blockName}__text {
-          color: $darkShade-50;
-        }
-      }
-    }
-
-    &-medium {
-      .#{$blockName}__text {
-        padding-top: 7.5px;
-        padding-bottom: 7.5px;
-        border-radius: 22px;
-      }
-    }
-
-    &-high {
-      .button__text {
-        padding-top: 12.5px;
-        padding-bottom: 12.5px;
-        border-radius: 22px;
-      }
-    }
-  }
-
-  &_size {
-    &-small {
-      .#{$blockName}__text {
-        padding-right: 18px;
-        padding-left: 18px;
-      }
-    }
-  
-    &-medium {
-      .#{$blockName}__text {
-        padding-right: 26px;
-        padding-left: 26px;
-      }
-    }
-  
-    &-big {
-      width: 100%;
-      max-width: 320px;
-  
-      .#{$blockName}__text {
-        width: 100%;
-        padding-right: 0;
-        padding-left: 0;
-      }
-    }
-  }
-
-  &_border {
-    &-purple-gradient {
+    &.#{$blockName}_outlined {
       background: $purple_gradient;
   
       &:focus,
@@ -132,6 +66,49 @@ $blockName: 'button';
           rgba(#8ba4f9, 0.5) 100%
         );
       }
+    }
+    
+    .#{$blockName}__text {
+      background: #fff;
+    }
+  }
+
+  &_size-none {
+    margin: 0;
+    padding: 0;
+
+    &:focus,
+    &:hover {
+      color: $darkShade-50;
+    }
+
+    &:disabled {
+      color: $darkShade-50;
+    }
+  }
+
+  &_small {
+    .#{$blockName}__text {
+      padding: 7.5px 18px;
+      border-radius: 26px;
+    }
+  }
+
+  &_medium {
+    .#{$blockName}__text {
+      padding: 12.5px 18px;
+      border-radius: 26px;
+    }
+  }
+
+  &_big {
+    width: 100%;
+    max-width: 320px;
+
+    .#{$blockName}__text {
+      width: 100%;
+      padding: 12.5px 0;
+      border-radius: 22px;
     }
   }
 
