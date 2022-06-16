@@ -1,37 +1,15 @@
 mixin button(options = {})
   -
     const { 
-      text, textColor, color, size,  height, link,
-      border, icon, disabled, submit = false, outline = false
+      text, color, size, link, icon, 
+      disabled, submit = false, outline = false
       } = options 
 
     const tag = link ? "a" : "button"
 
-    /*const textColors = {
-      white: "button_text-white",
-      purple: "button_text-purple"
-    }
-
-    const buttonColors = {
-      "purple-gradient": "button_purple-gradient",
-      white: "button_white",
-    }
-
-    const heights = {
-      short: "button_height-short",
-      medium: "button_height-medium",
-      high: "button_height-high"
-    }
-
-    const sizes = {
-      small: "button_size-small",
-      medium: "button_size-medium",
-      big: "button_size-big",
-    }*/
-
     const colors = {
-      purple: ["button_purple", "button_text-white"],
-      white: ["button_white", "button_text-purple"]
+      main: ["button_color-main", "button_text-color-secondary"],
+      secondary: ["button_color-secondary", "button_text-color-main"]
     }
 
     const sizes = {

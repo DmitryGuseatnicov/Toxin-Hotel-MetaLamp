@@ -35,16 +35,16 @@ $blockName: 'button';
     @extend %body_text;
   }
 
-  &_text-purple {
+  &_text-color-main {
     color: $purple;
   }
 
-  &_text-white {
+  &_text-color-secondary {
     color: #FFF;
   }
 
 
-  &_purple {
+  &_color-main {
     background: $purple_gradient;
     &:focus,
     &:hover,
@@ -53,7 +53,7 @@ $blockName: 'button';
     }
   }
 
-  &_white {
+  &_color-secondary {
     &.#{$blockName}_outlined {
       background: $purple_gradient;
   
