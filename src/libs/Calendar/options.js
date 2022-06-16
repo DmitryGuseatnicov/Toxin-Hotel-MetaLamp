@@ -7,12 +7,12 @@ const template = {
   buttonAddValue: {
     content: 'Применить',
     className:
-      'button button_size-none button_text-purple calendar__button js-button-action-apply',
+      'button button_size-none button_text-color-main calendar__button js-button-action-apply',
   },
   buttonClearValue: {
     content: 'Очистить',
     className:
-      'button button_size-none button_text-purple calendar__button js-button-action-clear',
+      'button button_size-none button_text-color-main calendar__button js-button-action-clear',
   },
 };
 
