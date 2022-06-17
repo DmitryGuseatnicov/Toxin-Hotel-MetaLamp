@@ -1,7 +1,7 @@
 mixin button(options = {})
   -
     const { 
-      text, color, size, link, icon, 
+      text, color, size = 'default', link, icon, 
       disabled, submit = false, outline = false
       } = options 
 
@@ -13,7 +13,7 @@ mixin button(options = {})
     }
 
     const sizes = {
-      none: "button_size-none",
+      default: "button_default",
       small: "button_small",
       medium: "button_medium",
       big: "button_big",
