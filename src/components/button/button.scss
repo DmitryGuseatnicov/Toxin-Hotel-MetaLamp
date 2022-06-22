@@ -73,7 +73,8 @@ $blockName: 'button';
     }
   }
 
-  &_default {
+
+  &_size-default {
     margin: 0;
     padding: 0;
 
@@ -87,21 +88,21 @@ $blockName: 'button';
     }
   }
 
-  &_small {
+  &_size-small {
     .#{$blockName}__text {
       padding: 7.5px 18px;
       border-radius: 26px;
     }
   }
 
-  &_medium {
+  &_size-medium {
     .#{$blockName}__text {
       padding: 12.5px 18px;
       border-radius: 26px;
     }
   }
 
-  &_big {
+  &_size-big {
     width: 100%;
     max-width: 320px;
 
