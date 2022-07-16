@@ -7,7 +7,7 @@ class CheckboxList {
   }
 
   init() {
-    this.$toggleButton = this.$checkboxList.find('.js-checkbox-list__icon');
+    this.$toggleButton = this.$checkboxList.find('.js-checkbox-list__header');
     this._bindEventListener();
   }
 
