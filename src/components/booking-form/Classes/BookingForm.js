@@ -66,15 +66,18 @@ class BookingForm {
   }
 
   _bindEventListener() {
-    this._formHandler = this._formHandler.bind(this);
-    this.$bookingForm.on('submit', this._formHandler);
-    this.$daysInputs.on('change', this._formHandler);
-    this.$daysInputs.on('input', this._formHandler);
+    this._handleDateDropdownChange = this._handleDateDropdownChange.bind(this);
+    this._handleDateDropdownInput = this._handleDateDropdownInput.bind(this);
+    this.$daysInputs.on('change', this._handleDateDropdownChange);
+    this.$daysInputs.on('input', this._handleDateDropdownInput);
   }
 
-  _formHandler(e) {
-    e.preventDefault();
-    if (e.target.closest(constants.INPUTS)) this.calculatePrice();
+  _handleDateDropdownChange() {
+    this.calculatePrice();
+  }
+
+  _handleDateDropdownInput() {
+    this.calculatePrice();
   }
 }
 

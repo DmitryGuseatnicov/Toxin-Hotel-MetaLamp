@@ -7,7 +7,9 @@ class CheckboxList {
   }
 
   init() {
-    this.$toggleButton = this.$checkboxList.find('.js-checkbox-list__header');
+    this.$visibilityToggle = this.$checkboxList.find(
+      '.js-checkbox-list__visibility-toggle'
+    );
     this._bindEventListener();
   }
 
@@ -16,13 +18,20 @@ class CheckboxList {
   }
 
   _bindEventListener() {
-    this.toggle = this.toggle.bind(this);
-    this._keyHandler = this._keyHandler.bind(this);
-    this.$toggleButton.on('click', this.toggle);
-    this.$toggleButton.on('keydown', this._keyHandler);
+    this._handleVisibilityToggleClick =
+      this._handleVisibilityToggleClick.bind(this);
+    this._handleVisibilityToggleKeyDown =
+      this._handleVisibilityToggleKeyDown.bind(this);
+
+    this.$visibilityToggle.on('click', this._handleVisibilityToggleClick);
+    this.$visibilityToggle.on('keydown', this._handleVisibilityToggleKeyDown);
   }
 
-  _keyHandler(e) {
+  _handleVisibilityToggleClick() {
+    this.toggle();
+  }
+
+  _handleVisibilityToggleKeyDown(e) {
     if (e.keyCode === 32) {
       e.preventDefault();
       this.toggle();

@@ -16,11 +16,11 @@ class LikeButton {
   }
 
   _bindEventListener() {
-    this._likeToggle = this._likeToggle.bind(this);
-    this.$likeButton.on('click', this._likeToggle);
+    this._handleLikeButtonClick = this._handleLikeButtonClick.bind(this);
+    this.$likeButton.on('click', this._handleLikeButtonClick);
   }
 
-  _likeToggle() {
+  _handleLikeButtonClick() {
     if (this.isLike) {
       this._unlike();
     } else {

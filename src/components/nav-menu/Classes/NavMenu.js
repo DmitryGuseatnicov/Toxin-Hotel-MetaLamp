@@ -19,27 +19,31 @@ class NavMenu {
   }
 
   _bindEventListener() {
-    this._clickHandler = this._clickHandler.bind(this);
-    this.$navItems.on('click', this._clickHandler);
+    this._handleNavItemClick = this._handleNavItemClick.bind(this);
+    this.$navItems.on('click', this._handleNavItemClick);
   }
 
   _bindWindowEventListener() {
-    this._windowClickHandler = this._windowClickHandler.bind(this);
-    $(window).on('click', this._windowClickHandler);
+    this._handleWindowClick = this._handleWindowClick.bind(this);
+    $(window).on('click', this._handleWindowClick);
   }
 
-  _windowClickHandler(e) {
+  _handleWindowClick(e) {
     if (!e.target.closest('.nav__item_hav-children')) {
       this.$navItems.removeClass('nav__item_open');
-      $(window).off('click', this._windowClickHandler);
+      $(window).off('click', this._handleWindowClick);
     }
   }
 
-  _clickHandler(e) {
-    if (e.target.closest('.nav__item_hav-children')) {
-      if (e.target.closest('.nav__item-link')) {
-        this.toggle(e.currentTarget);
-      }
+  _handleNavItemClick(e) {
+    const $target = $(e.currentTarget);
+
+    if ($target.hasClass('nav__item_open')) {
+      this.$navItems.removeClass('nav__item_open');
+    } else {
+      this.$navItems.removeClass('nav__item_open');
+      $target.addClass('nav__item_open');
+      this._bindWindowEventListener();
     }
   }
 }

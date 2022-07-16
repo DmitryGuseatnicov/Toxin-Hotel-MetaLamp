@@ -10,7 +10,7 @@ class DateDropdown {
   }
 
   init() {
-    this.$inputs = this.$dateDropdown.find(constants.INPUTS);
+    this.$inputs = this.$dateDropdown.find(constants.INPUT);
     this.calendar = new Calendar(this.$dateDropdown.find(constants.ROOT)[0]);
     this._bindEventListener();
   }
@@ -41,20 +41,22 @@ class DateDropdown {
   }
 
   _bindEventListener() {
-    this._clickHandler = this._clickHandler.bind(this);
-    this._keyHandler = this._keyHandler.bind(this);
     this._windowClickHandler = this._windowClickHandler.bind(this);
-    this.$dateDropdown.on('click', this._clickHandler);
-    this.$dateDropdown.on('keydown', this._keyHandler);
+    this._handleDateDropdownClick = this._handleDateDropdownClick.bind(this);
+    this._handleDateDropdownKeydown =
+      this._handleDateDropdownKeydown.bind(this);
+
+    this.$dateDropdown.on('click', this._handleDateDropdownClick);
+    this.$dateDropdown.on('keydown', this._handleDateDropdownKeydown);
   }
 
-  _clickHandler(e) {
+  _handleDateDropdownClick(e) {
     if (e.target.closest(constants.ICON)) this._toggle();
     if (e.target.closest(constants.APPLY)) this._addValue();
     if (e.target.closest(constants.CLEAR)) this.clearValue();
   }
 
-  _keyHandler(e) {
+  _handleDateDropdownKeydown(e) {
     if (e.keyCode === 32) {
       e.preventDefault();
       this._toggle();

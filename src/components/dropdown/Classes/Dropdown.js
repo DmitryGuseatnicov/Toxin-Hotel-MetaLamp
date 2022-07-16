@@ -12,28 +12,28 @@ class Dropdown {
 
   init() {
     this.$input = this.$dropdown.find(constants.INPUT);
-    [this.calculator] = this.$dropdown
-      .find(constants.CALCULATOR)
-      .map((i, el) => new DropdownCalculator(el));
+    this.$inputWrapper = this.$dropdown.find(constants.INPUT_WRAPPER);
+
+    this.$calcItems = this.$dropdown.find(constants.CALCULATOR);
+    this.calculator = new DropdownCalculator(this.$calcItems[0]);
+
     this._bindEventListener();
   }
 
   open() {
     this.$dropdown.addClass('dropdown_open');
     this.$input.addClass(
-      'input__text-field_focused',
-      'input__text-field_flat-bottom'
+      'input__text-field_focused input__text-field_flat-bottom'
     );
-    $(window).on('click', this._windowClickHandler);
+    $(window).on('click', this._handleWindowClick);
   }
 
   close() {
     this.$dropdown.removeClass('dropdown_open');
     this.$input.removeClass(
-      'input__text-field_focused',
-      'input__text-field_flat-bottom'
+      'input__text-field_focused input__text-field_flat-bottom'
     );
-    $(window).off('click', this._windowClickHandler);
+    $(window).off('click', this._handleWindowClick);
   }
 
   getValue() {
@@ -45,25 +45,27 @@ class Dropdown {
   }
 
   _bindEventListener() {
-    this._clickHandler = this._clickHandler.bind(this);
-    this._keyHandler = this._keyHandler.bind(this);
-    this._windowClickHandler = this._windowClickHandler.bind(this);
-    this.$dropdown.on('click', this._clickHandler);
-    this.$dropdown.on('keydown', this._keyHandler);
+    this._handleWindowClick = this._handleWindowClick.bind(this);
+    this._handleInputWrapperClick = this._handleInputWrapperClick.bind(this);
+    this._handleInputWrapperKeydown =
+      this._handleInputWrapperKeydown.bind(this);
+
+    this.$inputWrapper.on('click', this._handleInputWrapperClick);
+    this.$inputWrapper.on('keydown', this._handleInputWrapperKeydown);
   }
 
-  _clickHandler(e) {
-    if (e.target.closest(constants.DROPDOWN_HEADER)) this._toggle();
+  _handleInputWrapperClick() {
+    this._toggle();
   }
 
-  _keyHandler(e) {
+  _handleInputWrapperKeydown(e) {
     if (e.keyCode === 32) {
       e.preventDefault();
       this._toggle();
     }
   }
 
-  _windowClickHandler(e) {
+  _handleWindowClick(e) {
     if (!e.target.closest(constants.DROPDOWN)) this.close();
   }
 

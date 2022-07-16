@@ -5,10 +5,14 @@ $blockName: 'checkbox-list';
 .#{$blockName} {
   max-width: 266px;
 
-  &__header {
+  &__visibility-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__title {
+    cursor: pointer;
   }
 
   &__icon {

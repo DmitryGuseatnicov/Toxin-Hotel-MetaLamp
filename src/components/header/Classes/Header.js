@@ -20,9 +20,18 @@ class Header {
   }
 
   _bindEventListener() {
-    this.toggle = this.toggle.bind(this);
-    this.$burgerButton.on('click', this.toggle);
-    this.$closeButton.on('click', this.toggle);
+    this._handleBurgerButtonClick = this._handleBurgerButtonClick.bind(this);
+    this._handleCloseButtonClick = this._handleCloseButtonClick.bind(this);
+    this.$burgerButton.on('click', this._handleBurgerButtonClick);
+    this.$closeButton.on('click', this._handleCloseButtonClick);
+  }
+
+  _handleBurgerButtonClick() {
+    this.toggle();
+  }
+
+  _handleCloseButtonClick() {
+    this.toggle();
   }
 }
 

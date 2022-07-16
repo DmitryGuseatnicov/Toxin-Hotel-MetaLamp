@@ -12,14 +12,16 @@ mixin dropdown(options = {})
     ]
     
   div(class=classes, data-type=type)
-    .dropdown__header.js-dropdown__header
+    .dropdown__input-wrapper.js-dropdown__input-wrapper
       .dropdown__input.js-dropdown__input
         +input({
           type: "text", 
           label: label, 
           placeholder: placeholder, 
           readonly: true, 
-          textEllipsis: true
+          textEllipsis: true,
+          isFocused: open,
+          border: open ? "flat-bottom": ''
         })
         .dropdown__icon 
           span.dropdown__icon-arrow.material-icons expand_more

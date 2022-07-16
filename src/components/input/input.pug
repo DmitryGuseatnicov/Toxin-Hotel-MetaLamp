@@ -4,8 +4,8 @@ mixin input(options = {})
   -
     const {
       type, placeholder, value, mask, disabled, readonly, 
-      required ,subscribe = false, label = "", textEllipsis = false,
-      border
+      required,border, subscribe = false, label = "", textEllipsis = false,
+      isFocused = false
         } = options
     
     const borderModifications = {
@@ -15,6 +15,7 @@ mixin input(options = {})
     const classes = [
       "input__text-field",
       textEllipsis ? "input__text-field_text-ellipsis" : "",
+      isFocused ? "input__text-field_focused" : "",
       borderModifications[border]
     ]
 

@@ -10,7 +10,7 @@ class DropdownCalculator {
   }
 
   init() {
-    this.$calcItems = this.$calculator.find(constants.CALC_ITEMS);
+    this.$calcItems = this.$calculator.find(constants.DROP_ITEM);
     this.$calcItems.each((i, el) => this._disabledButtonSwitcher(el));
     this._bindEventListener();
   }
@@ -33,29 +33,25 @@ class DropdownCalculator {
   }
 
   _bindEventListener() {
-    this._clickHandler = this._clickHandler.bind(this);
-    this._changeHandler = this._changeHandler.bind(this);
-    this.$calcItems.on('click', this._clickHandler);
-    this.$calcItems.on('DOMSubtreeModified', this._changeHandler);
+    this._handleItemClick = this._handleItemClick.bind(this);
+    this.$calcItems.on('click', this._handleItemClick);
   }
 
-  _clickHandler(e) {
+  _handleItemClick(e) {
     if (e.target.closest(constants.PLUS)) this._plus(e.currentTarget);
     if (e.target.closest(constants.MINUS)) this._minus(e.currentTarget);
-  }
-
-  _changeHandler(e) {
-    this._disabledButtonSwitcher(e.currentTarget);
   }
 
   _plus(target) {
     const $value = $(target).find(constants.VALUE);
     $value.text(+$value.text() + 1);
+    this._disabledButtonSwitcher(target);
   }
 
   _minus(target) {
     const $value = $(target).find(constants.VALUE);
     $value.text(+$value.text() - 1);
+    this._disabledButtonSwitcher(target);
   }
 
   _disabledButtonSwitcher(nodeElem) {

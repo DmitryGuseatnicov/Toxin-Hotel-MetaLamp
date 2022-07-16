@@ -33,6 +33,7 @@
     align-items: center;
     justify-content: center;
     outline: none;
+    cursor: pointer;
 
     &:focus-visible {
       box-shadow: 0 0 0 2px $purple;
@@ -64,6 +65,7 @@
     border: none;
     outline: none;
     transform: rotate(45deg);
+    cursor: pointer;
 
     &:focus-visible {
       color: $darkShade-75;

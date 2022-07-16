@@ -16,13 +16,27 @@ class GuestsDropdown extends Dropdown {
     this._showValue();
   }
 
-  _clickHandler(e) {
-    super._clickHandler(e);
-    if (e.target.closest(constants.CLEAR)) this.clearValue();
-    if (e.target.closest(constants.APPLY)) {
-      this._showValue();
-      this.close();
-    }
+  _bindEventListener() {
+    super._bindEventListener();
+    this._handleClearButtonClick = this._handleClearButtonClick.bind(this);
+    this._handleApplyButtonClick = this._handleApplyButtonClick.bind(this);
+    this._handleDropItemsClick = this._handleDropItemsClick.bind(this);
+
+    this.$clearBtn.on('click', this._handleClearButtonClick);
+    this.$applyBtn.on('click', this._handleApplyButtonClick);
+    this.$calcItems.on('click', this._handleDropItemsClick);
+  }
+
+  _handleClearButtonClick() {
+    this.clearValue();
+  }
+
+  _handleApplyButtonClick() {
+    this._showValue();
+    this.close();
+  }
+
+  _handleDropItemsClick() {
     this._hiddenButtonSwitcher();
   }
 

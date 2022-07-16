@@ -29,11 +29,11 @@ class rangeSlider {
   }
 
   _bindEventListener() {
-    this._changeHandler = this._changeHandler.bind(this);
-    this.slider.on('update.one', this._changeHandler);
+    this._handleSliderOnUpdated = this._handleSliderOnUpdated.bind(this);
+    this.slider.on('update.one', this._handleSliderOnUpdated);
   }
 
-  _changeHandler(values) {
+  _handleSliderOnUpdated(values) {
     this.$start.val(values[0]);
     this.$end.val(values[1]);
 
