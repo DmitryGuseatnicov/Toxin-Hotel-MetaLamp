@@ -10,10 +10,8 @@ class DateDropdown {
   }
 
   init() {
-    this.$rootInput = this.$dateDropdown.find(constants.ROOT__INPUT);
-    this.id = `#${this.$rootInput.attr('id')}`;
     this.$inputs = this.$dateDropdown.find(constants.INPUTS);
-    this.calendar = new Calendar(this.id);
+    this.calendar = new Calendar(this.$dateDropdown.find(constants.ROOT)[0]);
     this._bindEventListener();
   }
 
@@ -30,7 +28,7 @@ class DateDropdown {
   }
 
   getValue() {
-    return this.$rootInput.val();
+    return this.calendar.selectedDates;
   }
 
   get isOpen() {
@@ -39,6 +37,7 @@ class DateDropdown {
 
   clearValue() {
     this.calendar.clear();
+    this.$inputs.val('');
   }
 
   _bindEventListener() {
@@ -81,10 +80,6 @@ class DateDropdown {
   _createPopup() {
     this.popup = $('<div class="date-dropdown__popup"></div>');
     $('body').append(this.popup);
-  }
-
-  _addValue() {
-    this.$inputs.val(this.getValue());
   }
 }
 

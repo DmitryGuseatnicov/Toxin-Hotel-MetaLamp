@@ -1,6 +1,6 @@
 const constants = {
   DATE_DROPDOWN: '.js-date-dropdown',
-  ROOT__INPUT: '.js-calendar input',
+  ROOT: '.js-calendar',
   INPUTS: '.js-date-dropdown__input input',
   INPUT: '.js-date-dropdown__input',
   ICON: '.js-date-dropdown__input-icon',
