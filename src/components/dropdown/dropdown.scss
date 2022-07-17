@@ -14,6 +14,8 @@ $blockName: 'dropdown';
     position: absolute;
     top: 50%;
     right: 12px;
+    user-select: none;
+    touch-action: none;
     cursor: pointer;
   }
 
@@ -61,6 +63,8 @@ $blockName: 'dropdown';
     display: flex;
     justify-content: space-between;
     padding: 17px 0 0;
+    user-select: none;
+    touch-action: none;
   }
 
   &__calculator-action-minus,
@@ -73,6 +77,8 @@ $blockName: 'dropdown';
     border: 1px solid $color-main-50;
     border-radius: 22px;
     outline: none;
+    user-select: none;
+    touch-action: none;
     cursor: pointer;
   }
 
@@ -91,6 +97,8 @@ $blockName: 'dropdown';
     position: relative;
     z-index: -1;
     opacity: 0;
+    user-select: none;
+    touch-action: none;
   }
 
   &_open {

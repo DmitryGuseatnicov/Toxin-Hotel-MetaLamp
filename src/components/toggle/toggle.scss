@@ -1,6 +1,8 @@
 @import './../../styles/vars.scss';
 
 .toggle {
+  user-select: none;
+
   &__label {
     display: inline-block;
     line-height: initial;

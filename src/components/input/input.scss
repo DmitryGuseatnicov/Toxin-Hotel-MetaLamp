@@ -58,6 +58,7 @@
     border: none;
     outline: none;
     transform: translateY(-45%);
+    user-select: none;
     cursor: pointer;
 
     & > span {

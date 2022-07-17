@@ -9,6 +9,13 @@ $blockName: 'checkbox-list';
     display: flex;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
+    touch-action: none;
+    outline: none;
+
+    &:focus-visible {
+      opacity: 0.5;
+    }
   }
 
   &__title {
@@ -21,10 +28,6 @@ $blockName: 'checkbox-list';
     outline: none;
     cursor: pointer;
     transition: 0.4s;
-
-    &:focus-visible {
-      border: 1px solid $color-main-50;
-    }
   }
 
   &__items {
