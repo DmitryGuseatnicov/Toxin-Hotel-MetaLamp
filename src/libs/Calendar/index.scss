@@ -32,6 +32,11 @@
   &-body--day-name {
     color: $color-bright-main;
     font-weight: bold;
+    font-size: 12px;
+  }
+
+  &-cell {
+    font-size: 12px;
   }
 
   &-cell.-day- {
@@ -193,5 +198,11 @@
   &-cell.-year-.-selected-,
   &-cell.-month-.-selected- {
     background: rgba($color-bright-main, 0.25);
+  }
+
+  &-button {
+    font-family: $font-main;
+    font-style: normal;
+    font-size: 12px;
   }
 }
