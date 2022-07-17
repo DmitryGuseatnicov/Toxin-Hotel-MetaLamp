@@ -58,8 +58,8 @@
     border: none;
     outline: none;
     transform: translateY(-45%);
-    user-select: none;
     cursor: pointer;
+    user-select: none;
 
     & > span {
       color: $color-bright-main;

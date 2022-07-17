@@ -29,12 +29,12 @@
     border: 1px solid $color-bright-main;
 
     & > span {
-      color: $color-bright-main
+      color: $color-bright-main;
     }
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 1px $color-bright-main
+    box-shadow: 0 0 0 1px $color-bright-main;
   }
   @extend %body-text;
 }
