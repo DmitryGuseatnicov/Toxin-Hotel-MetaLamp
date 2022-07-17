@@ -2,7 +2,7 @@
 
 .footer {
   background: #fff;
-  box-shadow: 0 1px 0 $darkShade-1;
+  box-shadow: 0 1px 0 $color-main-1;
 
   &__inner {
     display: flex;
@@ -49,13 +49,13 @@
   }
 
   &__widget-link {
-    color: $darkShade-50;
+    color: $color-main-50;
     text-decoration: none;
     outline: none;
 
     &:focus,
     &:hover {
-      color: $darkShade-75;
+      color: $color-main-75;
     }
   }
 
@@ -73,7 +73,7 @@
   }
 
   &__copy-right {
-    border-top: 1px solid $darkShade-25;
+    border-top: 1px solid $color-main-25;
   }
 
   &__copy-right-inner {
@@ -104,7 +104,7 @@
   }
 
   &_with-separator {
-    border-top: 1px solid $darkShade-25;
+    border-top: 1px solid $color-main-25;
   }
 
   @media screen and (max-width: 768px) {

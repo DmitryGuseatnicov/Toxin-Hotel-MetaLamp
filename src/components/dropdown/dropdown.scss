@@ -25,9 +25,9 @@ $blockName: 'dropdown';
     display: none;
     padding: 5px 7px 7px 15px;
     background-color: #fff;
-    border: 1px solid $darkShade-50;
+    border: 1px solid $color-main-50;
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 10px 20px $darkShade-5;
+    box-shadow: 0 10px 20px $color-main-05;
   }
 
   &__item {
@@ -42,7 +42,7 @@ $blockName: 'dropdown';
   }
 
   &__item-name {
-    @extend %widget_title-small;
+    @extend %widget-title-small;
   }
 
   &__calculator {
@@ -54,7 +54,7 @@ $blockName: 'dropdown';
     display: inline-block;
     width: 32px;
     text-align: center;
-    @extend %widget_title-small;
+    @extend %widget-title-small;
   }
 
   &__buttons {
@@ -67,10 +67,10 @@ $blockName: 'dropdown';
   &__calculator-action-plus {
     width: 30px;
     height: 30px;
-    color: $darkShade-50;
+    color: $color-main-50;
     font-size: 18px;
     background-color: #fff;
-    border: 1px solid $darkShade-50;
+    border: 1px solid $color-main-50;
     border-radius: 22px;
     outline: none;
     cursor: pointer;
@@ -78,13 +78,13 @@ $blockName: 'dropdown';
 
   &__calculator-action-minus:disabled,
   &__calculator-action-plus:disabled {
-    color: $darkShade-25;
-    border: 1px solid $darkShade-25;
+    color: $color-main-25;
+    border: 1px solid $color-main-25;
   }
 
   &__calculator-action-minus:focus-visible,
   &__calculator-action-plus:focus-visible {
-    box-shadow: 0 0 0 0.5px $darkShade-75;
+    box-shadow: 0 0 0 0.5px $color-main-75;
   }
 
   &__button-clear_hidden {

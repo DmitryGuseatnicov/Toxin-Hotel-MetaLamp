@@ -32,11 +32,11 @@ $blockName: 'button';
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    @extend %body_text;
+    @extend %body-text;
   }
 
   &_text-color-main {
-    color: $purple;
+    color: $color-bright-main;
   }
 
   &_text-color-secondary {
@@ -45,7 +45,7 @@ $blockName: 'button';
 
 
   &_color-main {
-    background: $purple_gradient;
+    background: $gradient-main;
     &:focus,
     &:hover,
     &:disabled {
@@ -55,16 +55,12 @@ $blockName: 'button';
 
   &_color-secondary {
     &.#{$blockName}_outlined {
-      background: $purple_gradient;
+      background: $gradient-main;
   
       &:focus,
       &:hover,
       &:disabled {
-        background: linear-gradient(
-          180deg,
-          rgba(#bc9cff, 0.5) 0%,
-          rgba(#8ba4f9, 0.5) 100%
-        );
+        background: $gradient-main-transparent;
       }
     }
     
@@ -80,11 +76,11 @@ $blockName: 'button';
 
     &:focus,
     &:hover {
-      color: $darkShade-50;
+      color: $color-main-50;
     }
 
     &:disabled {
-      color: $darkShade-50;
+      color: $color-main-50;
     }
   }
 

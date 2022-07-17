@@ -11,7 +11,7 @@
     height: 48px;
     border: 2px solid #fff;
     border-radius: 32px;
-    filter: drop-shadow(0 10px 20px $darkShade-1);
+    filter: drop-shadow(0 10px 20px $color-main-1);
   }
 
   &__avatar-img {
@@ -26,7 +26,7 @@
   }
 
   &__person-name {
-    color: $darkShade-75;
+    color: $color-main-75;
     font-weight: bold;
     font-size: 14px;
   }

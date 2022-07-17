@@ -15,7 +15,7 @@
   }
 
   &__title {
-    color: $darkShade-75;
+    color: $color-main-75;
     font-weight: bold;
   }
 
@@ -24,6 +24,6 @@
   }
 
   &_underlined {
-    border-bottom: 1px solid $darkShade-1;
+    border-bottom: 1px solid $color-main-1;
   }
 }

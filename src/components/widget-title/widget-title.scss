@@ -2,14 +2,14 @@
 
 .widget-title {
   &_small {
-    @extend %widget_title-small;
+    @extend %widget-title-small;
   }
 
   &_medium {
-    @extend %widget_title-medium;
+    @extend %widget-title-medium;
   }
 
   &_big {
-    @extend %widget_title-big;
+    @extend %widget-title-big;
   }
 }

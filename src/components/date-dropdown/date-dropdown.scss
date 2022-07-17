@@ -20,7 +20,7 @@
   }
 
   .input__text-field::placeholder {
-    color: $darkShade-75;
+    color: $color-main-75;
   }
 
   &__input-icon {
@@ -78,7 +78,7 @@
       bottom: 0;
       left: 0;
       z-index: 98;
-      background: $darkShade-75;
+      background: $color-main-75;
     }
   }
 }

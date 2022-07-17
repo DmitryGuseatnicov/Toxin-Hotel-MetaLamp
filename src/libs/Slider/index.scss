@@ -6,7 +6,7 @@
 
 .noUi-target {
   background: #fafafa;
-  border: 1px solid $darkShade-25;
+  border: 1px solid $color-main-25;
   border-radius: 3px;
 }
 
@@ -15,7 +15,7 @@
   right: -6px;
   width: 15px;
   height: 15px;
-  background: $green_gradient;
+  background: $gradient-second;
   border: 2px solid #fff;
   border-radius: 10px;
   box-shadow: none;
@@ -31,12 +31,12 @@
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 2px $green;
+    box-shadow: 0 0 0 2px $color-bright-second;
   }
 }
 
 .noUi-touch-area {
-  background: $green_gradient;
+  background: $gradient-second;
   border-radius: 10px;
 }
 
@@ -46,5 +46,5 @@
 }
 
 .noUi-connect {
-  background: $green_gradient;
+  background: $gradient-second;
 }

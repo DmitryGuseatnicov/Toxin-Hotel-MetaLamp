@@ -1,14 +1,27 @@
-$darkShade-100: #1f2041;
-$darkShade-75: rgba(31, 32, 65, 0.75);
-$darkShade-50: rgba(31, 32, 65, 0.5);
-$darkShade-25: rgba(31, 32, 65, 0.25);
-$darkShade-5: rgba(31, 32, 65, 0.05);
-$darkShade-1: rgba(31, 32, 65, 0.1);
-$purple: #bc9cff;
-$green: #6fcf97;
-$purple_gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-$green_gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-$montserrat: 'Montserrat', 'Arial', sans-serif;
+$color-main: #1f2041;
+$color-main-75: rgba(31, 32, 65, 0.75);
+$color-main-50: rgba(31, 32, 65, 0.5);
+$color-main-25: rgba(31, 32, 65, 0.25);
+$color-main-1: rgba(31, 32, 65, 0.1);
+$color-main-05: rgba(31, 32, 65, 0.05);
+$color-bright-main: #bc9cff;
+$color-bright-second: #6fcf97;
+$gradient-main: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$gradient-main-transparent: linear-gradient(
+  180deg,
+  rgba(#bc9cff, 0.5) 0%,
+  rgba(#8ba4f9, 0.5) 100%
+);
+$gradient-second: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+$gradient-second-transparent: linear-gradient(
+  90deg,
+  rgba($color-bright-main, 0.25) 0%,
+  rgba($color-bright-main, 0.25) 50%,
+  #fff 50%,
+  #fff 100%
+);
+
+$font-main: 'Montserrat', 'Arial', sans-serif;
 
 %card-border-shadow {
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -16,38 +29,38 @@ $montserrat: 'Montserrat', 'Arial', sans-serif;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
-%widget_title-big {
-  color: $darkShade-100;
+%widget-title-big {
+  color: $color-main;
   font-weight: 700;
   font-size: 24px;
-  font-family: $montserrat;
+  font-family: $font-main;
   font-style: normal;
   line-height: 29px;
 }
 
-%widget_title-medium {
-  color: $darkShade-100;
+%widget-title-medium {
+  color: $color-main;
   font-weight: 700;
   font-size: 19px;
-  font-family: $montserrat;
+  font-family: $font-main;
   font-style: normal;
   line-height: 23px;
 }
 
-%widget_title-small {
-  color: $darkShade-100;
+%widget-title-small {
+  color: $color-main;
   font-weight: 700;
   font-size: 12px;
-  font-family: $montserrat;
+  font-family: $font-main;
   line-height: 15px;
   text-transform: uppercase;
 }
 
-%body_text {
-  color: $darkShade-75;
+%body-text {
+  color: $color-main-75;
   font-weight: 400;
   font-size: 14px;
-  font-family: $montserrat;
+  font-family: $font-main;
   font-style: normal;
   line-height: 24px;
 }

@@ -23,7 +23,7 @@ $blockName: 'checkbox-list';
     transition: 0.4s;
 
     &:focus-visible {
-      border: 1px solid $darkShade-50;
+      border: 1px solid $color-main-50;
     }
   }
 

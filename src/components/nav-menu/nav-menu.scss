@@ -4,14 +4,14 @@
   margin-right: 20px;
 
   &__item-href {
-    color: $darkShade-50;
+    color: $color-main-50;
     font-weight: inherit;
     text-decoration: none;
     outline: none;
 
     &:focus,
     &:hover {
-      color: $darkShade-75;
+      color: $color-main-75;
     }
   }
 
@@ -28,7 +28,7 @@
   }
 
   &__item-link {
-    color: $darkShade-50;
+    color: $color-main-50;
 
     & > span {
       color: inherit;
@@ -45,22 +45,22 @@
     white-space: nowrap;
     list-style: none;
     background: #fff;
-    box-shadow: 0 10px 20px $darkShade-50;
+    box-shadow: 0 10px 20px $color-main-50;
 
     &:hover {
-      color: $darkShade-100;
+      color: $color-main;
     }
   }
 
   &__item-children-item-href {
-    color: $darkShade-50;
+    color: $color-main-50;
     font-weight: inherit;
     text-decoration: none;
     outline: none;
 
     &:focus,
     &:hover {
-      color: $darkShade-75;
+      color: $color-main-75;
     }
   }
 
@@ -82,12 +82,12 @@
 
   &__item_active {
     .nav__item-href {
-      color: $darkShade-75;
+      color: $color-main-75;
       font-weight: bold;
 
       &:focus,
       &:hover {
-        color: $darkShade-75;
+        color: $color-main-75;
       }
     }
   }

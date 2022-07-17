@@ -9,9 +9,9 @@
     width: 100%;
     max-width: 320px;
     padding: 12px 14px;
-    color: $darkShade-75;
+    color: $color-main-75;
     line-height: 18px;
-    border: 1px solid $darkShade-25;
+    border: 1px solid $color-main-25;
     border-radius: 4px;
     outline: none;
 
@@ -24,7 +24,7 @@
     }
 
     &_focused {
-      border-color: $darkShade-50;
+      border-color: $color-main-50;
     }
 
     &_flat-bottom {
@@ -32,16 +32,16 @@
     }
 
     &::placeholder {
-      color: $darkShade-25;
-      @extend %body_text;
+      color: $color-main-25;
+      @extend %body-text;
     }
 
     &:focus,
     &:hover {
-      border: 1px solid $darkShade-50;
+      border: 1px solid $color-main-50;
     }
 
-    @extend %body_text;
+    @extend %body-text;
   }
 
   &__inner {
@@ -61,7 +61,7 @@
     cursor: pointer;
 
     & > span {
-      color: $purple;
+      color: $color-bright-main;
     }
   }
 }
