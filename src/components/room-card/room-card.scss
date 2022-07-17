@@ -19,8 +19,9 @@
 
   &__info {
     display: flex;
+    align-items: baseline;;
     margin: 0 20px 0 18px;
-    padding: 15px 0 7px;
+    padding: 13px 0 7px;
     border-bottom: 1px solid $color-main-1;
   }
 
@@ -28,14 +29,13 @@
     color: $color-main;
     font-weight: bold;
     font-size: 14px;
-    line-height: 17px;
   }
 
   &__number-value {
+    margin-left: 5px;
     color: $color-main;
     font-weight: bold;
     font-size: 20px;
-    line-height: 17px;
   }
 
   &__type {
@@ -61,12 +61,13 @@
   &__price-name {
     color: $color-main-50;
     font-size: 12px;
+    font-weight: normal;
   }
 
   &__reviews-items {
     display: flex;
     justify-content: space-between;
-    padding: 8px 20px 13px;
+    padding: 7.5px 20px 13px;
     background: #fff;
   }
 }

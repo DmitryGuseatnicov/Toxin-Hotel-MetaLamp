@@ -5,13 +5,13 @@
   gap: 60px;
   justify-content: space-between;
   margin-top: 30px;
-  margin-bottom: 70px;
+  margin-bottom: 72px;
 
   &__items {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 14px;
+    gap: 20px 12px;
+    margin-top: 21px;
 
     @media screen and (max-width: 920px) {
       align-items: center;
@@ -21,8 +21,6 @@
 
   &__item {
     max-width: 270px;
-    margin-top: 8.5px;
-
     @media screen and (max-width: 585px) {
       max-width: 400px;
     }
@@ -34,7 +32,8 @@
 
   &__pagination {
     width: fit-content;
-    margin: 40px auto 0;
+    margin: 42px auto 0;
+    padding-right: 20px;
   }
 
   @media screen and (max-width: 920px) {

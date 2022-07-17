@@ -1,8 +1,16 @@
 .logo {
-  display: flex;
-  align-items: center;
+  width: 106px;
+  height: 40px;
+
+  &__link {
+    display: inline-block;
+    width: inherit;
+    height: 40px;
+  }
 
   &__img {
+    width: inherit;
+    height: inherit;
     cursor: pointer;
   }
 }

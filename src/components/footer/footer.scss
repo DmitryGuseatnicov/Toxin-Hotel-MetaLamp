@@ -10,6 +10,12 @@
   }
 
   &__inner-item {
+    margin-top: 4px;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+
     &:nth-child(2) {
       margin-left: 40px;
     }
@@ -36,7 +42,6 @@
   }
 
   &__widget {
-    margin-top: 4px;
   }
 
   &__widget-list {
@@ -61,7 +66,6 @@
 
   &__special {
     max-width: 260px;
-    margin-top: 4px;
   }
 
   &__special-text {
@@ -69,7 +73,7 @@
   }
 
   &__subscribe-form {
-    margin-top: 18px;
+    margin-top: 21px;
   }
 
   &__copy-right {

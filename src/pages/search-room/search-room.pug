@@ -14,10 +14,10 @@ block content
   .container
     .search-rooms
       +sidebar
-      section.search-rooms__items
+      section.search-rooms__filtered-items
         .search-rooms__title
           +widget-title({text: "Номера, которые мы для вас подобрали", level: "1"})
-        .search-rooms__items 
+        .search-rooms__items
           -
             const rooms = [
               {
