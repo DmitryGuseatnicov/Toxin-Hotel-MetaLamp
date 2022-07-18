@@ -18,12 +18,12 @@ class DateDropdown {
   open() {
     this.$dateDropdown.addClass('date-dropdown_open');
     if (window.innerWidth <= 420) this._createPopup();
-    $(window).on('click', this._windowClickHandler);
+    $(window).on('click', this._handleWindowClick);
   }
 
   close() {
     this.$dateDropdown.removeClass('date-dropdown_open');
-    $(window).off('click', this._windowClickHandler);
+    $(window).off('click', this._handleWindowClick);
     if (this.popup) this.popup.remove();
   }
 
@@ -41,7 +41,7 @@ class DateDropdown {
   }
 
   _bindEventListener() {
-    this._windowClickHandler = this._windowClickHandler.bind(this);
+    this._handleWindowClick = this._handleWindowClick.bind(this);
     this._handleDateDropdownClick = this._handleDateDropdownClick.bind(this);
     this._handleDateDropdownKeydown =
       this._handleDateDropdownKeydown.bind(this);
@@ -63,7 +63,7 @@ class DateDropdown {
     }
   }
 
-  _windowClickHandler(e) {
+  _handleWindowClick(e) {
     const isOutside =
       !e.target.closest(constants.DATE_DROPDOWN) &&
       !e.target.closest('.-other-month-');
