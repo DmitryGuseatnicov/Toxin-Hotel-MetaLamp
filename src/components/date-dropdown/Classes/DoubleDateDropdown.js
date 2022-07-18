@@ -2,7 +2,7 @@ import toLocaleStringOptions from '../utils/toLocaleStringOptions';
 import DateDropdown from './DateDropdown';
 
 class DoubleDateDropdown extends DateDropdown {
-  _addValue() {
+  addValue() {
     const [firstDate = '', secondDate = ''] = this.getValue();
 
     this.$inputs[0].value = firstDate.toLocaleString(

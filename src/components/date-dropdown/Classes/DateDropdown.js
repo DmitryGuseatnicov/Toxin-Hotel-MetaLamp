@@ -10,8 +10,13 @@ class DateDropdown {
   }
 
   init() {
-    this.$inputs = this.$dateDropdown.find(constants.INPUT);
     this.calendar = new Calendar(this.$dateDropdown.find(constants.ROOT)[0]);
+
+    this.$inputs = this.$dateDropdown.find(constants.INPUT);
+    this.$icon = this.$dateDropdown.find(constants.ICON);
+    this.$clearButton = this.$dateDropdown.find(constants.CLEAR);
+    this.$applyButton = this.$dateDropdown.find(constants.APPLY);
+
     this._bindEventListener();
   }
 
@@ -40,20 +45,36 @@ class DateDropdown {
     this.$inputs.val('');
   }
 
+  addValue() {
+    const values = this.getValue();
+    this.$inputs.val(`${values.join(' ')}`);
+  }
+
   _bindEventListener() {
     this._handleWindowClick = this._handleWindowClick.bind(this);
-    this._handleDateDropdownClick = this._handleDateDropdownClick.bind(this);
+    this._handleInputIconClick = this._handleInputIconClick.bind(this);
+    this._handleClearButtonClick = this._handleClearButtonClick.bind(this);
+    this._handleApplyButtonClick = this._handleApplyButtonClick.bind(this);
     this._handleDateDropdownKeydown =
       this._handleDateDropdownKeydown.bind(this);
 
-    this.$dateDropdown.on('click', this._handleDateDropdownClick);
+    this.$icon.on('click', this._handleInputIconClick);
+    this.$clearButton.on('click', this._handleClearButtonClick);
+    this.$applyButton.on('click', this._handleApplyButtonClick);
     this.$dateDropdown.on('keydown', this._handleDateDropdownKeydown);
   }
 
-  _handleDateDropdownClick(e) {
-    if (e.target.closest(constants.ICON)) this._toggle();
-    if (e.target.closest(constants.APPLY)) this._addValue();
-    if (e.target.closest(constants.CLEAR)) this.clearValue();
+  _handleInputIconClick(e) {
+    e.stopPropagation();
+    this._toggle();
+  }
+
+  _handleClearButtonClick() {
+    this.clearValue();
+  }
+
+  _handleApplyButtonClick() {
+    this.addValue();
   }
 
   _handleDateDropdownKeydown(e) {
