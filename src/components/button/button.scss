@@ -76,11 +76,11 @@ $blockName: 'button';
 
     &:focus,
     &:hover {
-      color: $color-main-50;
+      color: $color-main-dark;
     }
 
     &:disabled {
-      color: $color-main-50;
+      color: $color-main-dark;
     }
   }
 

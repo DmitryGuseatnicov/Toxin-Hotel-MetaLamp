@@ -37,7 +37,7 @@
   &__price-for-day {
     flex-grow: 1;
     margin-top: 2px;
-    color: $color-main-50;
+    color: $color-main-dark;
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
@@ -78,10 +78,10 @@
     min-width: 20px;
     height: 20px;
     margin: 0 4px;
-    color: $color-main-25;
+    color: $color-main-light;
     font-weight: bold;
     font-size: 12px;
-    border: 1px solid $color-main-25;
+    border: 1px solid $color-main-light;
     border-radius: 50%;
   }
 
@@ -101,7 +101,7 @@
   &__total-dots {
     flex-grow: 1;
     height: 20px;
-    border-bottom: 1px dashed $color-main-25;
+    border-bottom: 1px dashed $color-main-light;
   }
 
   &__booking-button {

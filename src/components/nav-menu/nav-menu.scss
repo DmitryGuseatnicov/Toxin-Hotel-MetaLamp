@@ -4,14 +4,14 @@
   margin-right: 20px;
 
   &__item-href {
-    color: $color-main-50;
+    color: $color-main-dark;
     font-weight: inherit;
     text-decoration: none;
     outline: none;
 
     &:focus,
     &:hover {
-      color: $color-main-75;
+      color: $color-main-darker;
     }
   }
 
@@ -28,7 +28,7 @@
   }
 
   &__item-link {
-    color: $color-main-50;
+    color: $color-main-dark;
 
     & > span {
       color: inherit;
@@ -45,7 +45,7 @@
     white-space: nowrap;
     list-style: none;
     background: #fff;
-    box-shadow: 0 10px 20px $color-main-50;
+    box-shadow: 0 10px 20px $color-main-dark;
 
     &:hover {
       color: $color-main;
@@ -53,14 +53,14 @@
   }
 
   &__item-children-item-href {
-    color: $color-main-50;
+    color: $color-main-dark;
     font-weight: inherit;
     text-decoration: none;
     outline: none;
 
     &:focus,
     &:hover {
-      color: $color-main-75;
+      color: $color-main-darker;
     }
   }
 
@@ -82,12 +82,12 @@
 
   &__item_active {
     .nav__item-href {
-      color: $color-main-75;
+      color: $color-main-darker;
       font-weight: bold;
 
       &:focus,
       &:hover {
-        color: $color-main-75;
+        color: $color-main-darker;
       }
     }
   }

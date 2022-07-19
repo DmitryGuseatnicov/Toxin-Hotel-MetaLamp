@@ -9,9 +9,9 @@
     width: 100%;
     max-width: 320px;
     padding: 12px 14px;
-    color: $color-main-75;
+    color: $color-main-darker;
     line-height: 18px;
-    border: 1px solid $color-main-25;
+    border: 1px solid $color-main-light;
     border-radius: 4px;
     outline: none;
 
@@ -24,7 +24,7 @@
     }
 
     &_focused {
-      border-color: $color-main-50;
+      border-color: $color-main-dark;
     }
 
     &_flat-bottom {
@@ -32,13 +32,13 @@
     }
 
     &::placeholder {
-      color: $color-main-25;
+      color: $color-main-light;
       @extend %body-text;
     }
 
     &:focus,
     &:hover {
-      border: 1px solid $color-main-50;
+      border: 1px solid $color-main-dark;
     }
 
     @extend %body-text;

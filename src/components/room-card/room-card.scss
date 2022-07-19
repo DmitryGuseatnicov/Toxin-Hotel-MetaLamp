@@ -3,7 +3,7 @@
 .room-card {
   background: #fff;
   border-radius: 4px;
-  box-shadow: 0 10px 20px $color-main-05;
+  box-shadow: 0 10px 20px $color-main-lightest;
 
   &__photo {
     min-height: 42px;
@@ -22,7 +22,7 @@
     align-items: baseline;;
     margin: 0 20px 0 18px;
     padding: 13px 0 7px;
-    border-bottom: 1px solid $color-main-1;
+    border-bottom: 1px solid $color-main-lighter;
   }
 
   &__number {
@@ -50,7 +50,7 @@
   &__price {
     flex-grow: 1;
     width: 90px;
-    color: $color-main-50;
+    color: $color-main-dark;
     font-weight: bold;
     font-size: 14px;
     line-height: 18px;
@@ -59,7 +59,7 @@
   }
 
   &__price-name {
-    color: $color-main-50;
+    color: $color-main-dark;
     font-size: 12px;
     font-weight: normal;
   }

@@ -2,7 +2,7 @@
 
 .header {
   background: #fff;
-  box-shadow: 0 10px 20px $color-main-05;
+  box-shadow: 0 10px 20px $color-main-lightest;
 
   &__inner {
     display: flex;
@@ -59,7 +59,7 @@
 
   &__close-button {
     display: none;
-    color: $color-main-50;
+    color: $color-main-dark;
     font-size: 40px;
     background: #fff;
     border: none;
@@ -68,7 +68,7 @@
     cursor: pointer;
 
     &:focus-visible {
-      color: $color-main-75;
+      color: $color-main-darker;
     }
 
     @media screen and (max-width: 900px) {
@@ -114,13 +114,13 @@
 
   &__login-name {
     padding-left: 20px;
-    color: $color-main-50;
-    border-left: 1px solid $color-main-1;
+    color: $color-main-dark;
+    border-left: 1px solid $color-main-lighter;
 
     @media screen and (max-width: 900px) {
       padding: 10px 20px;
-      color: $color-main-50;
-      border-top: 1px solid $color-main-1;
+      color: $color-main-dark;
+      border-top: 1px solid $color-main-lighter;
       border-left: none;
     }
   }

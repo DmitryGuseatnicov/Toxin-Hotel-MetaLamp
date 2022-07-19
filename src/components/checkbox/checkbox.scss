@@ -26,7 +26,7 @@
     }
 
     &:disabled + span::before {
-      background-color: rgba($color-main-25, $alpha: 0.4);
+      background-color: rgba($color-main-light, $alpha: 0.4);
     }
   }
 
@@ -37,7 +37,7 @@
 
     & > span {
       padding-left: 30px;
-      color: $color-main-50;
+      color: $color-main-dark;
       line-height: initial;
       cursor: pointer;
 
@@ -46,7 +46,7 @@
         left: 0;
         width: 20px;
         height: 20px;
-        border: 1px solid $color-main-25;
+        border: 1px solid $color-main-light;
         border-radius: 4px;
         content: '';
       }
@@ -58,7 +58,7 @@
     flex-direction: column;
 
     &-text {
-      color: $color-main-75;
+      color: $color-main-darker;
       font-weight: bold;
       font-size: 14px;
       line-height: 18px;
@@ -66,7 +66,7 @@
 
     &-sub-text {
       margin-top: 7px;
-      color: $color-main-50;
+      color: $color-main-dark;
       font-size: 12px;
       line-height: 14px;
     }

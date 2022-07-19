@@ -2,9 +2,9 @@
 
 .air-datepicker {
   padding: 20px;
-  border: 1px solid $color-main-25;
+  border: 1px solid $color-main-light;
   border-radius: 4px;
-  box-shadow: 0 10px 20px $color-main-05;
+  box-shadow: 0 10px 20px $color-main-lightest;
 
   &-nav {
     display: flex;
@@ -40,11 +40,11 @@
   }
 
   &-cell.-day- {
-    color: $color-main-50;
+    color: $color-main-dark;
   }
 
   &-cell.-day-.-other-month- {
-    color: $color-main-25;
+    color: $color-main-light;
   }
 
   &-cell.-day-.-focus- {

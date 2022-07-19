@@ -27,9 +27,9 @@ $blockName: 'dropdown';
     display: none;
     padding: 5px 7px 7px 15px;
     background-color: #fff;
-    border: 1px solid $color-main-50;
+    border: 1px solid $color-main-dark;
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 10px 20px $color-main-05;
+    box-shadow: 0 10px 20px $color-main-lightest;
   }
 
   &__item {
@@ -71,10 +71,10 @@ $blockName: 'dropdown';
   &__calculator-action-plus {
     width: 30px;
     height: 30px;
-    color: $color-main-50;
+    color: $color-main-dark;
     font-size: 18px;
     background-color: #fff;
-    border: 1px solid $color-main-50;
+    border: 1px solid $color-main-dark;
     border-radius: 22px;
     outline: none;
     user-select: none;
@@ -84,13 +84,13 @@ $blockName: 'dropdown';
 
   &__calculator-action-minus:disabled,
   &__calculator-action-plus:disabled {
-    color: $color-main-25;
-    border: 1px solid $color-main-25;
+    color: $color-main-light;
+    border: 1px solid $color-main-light;
   }
 
   &__calculator-action-minus:focus-visible,
   &__calculator-action-plus:focus-visible {
-    box-shadow: 0 0 0 0.5px $color-main-75;
+    box-shadow: 0 0 0 0.5px $color-main-darker;
   }
 
   &__button-clear_hidden {

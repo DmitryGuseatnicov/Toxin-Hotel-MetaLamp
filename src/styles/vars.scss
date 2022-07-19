@@ -1,9 +1,9 @@
 $color-main: #1f2041;
-$color-main-75: rgba(31, 32, 65, 0.75);
-$color-main-50: rgba(31, 32, 65, 0.5);
-$color-main-25: rgba(31, 32, 65, 0.25);
-$color-main-1: rgba(31, 32, 65, 0.1);
-$color-main-05: rgba(31, 32, 65, 0.05);
+$color-main-darker: rgba(31, 32, 65, 0.75);
+$color-main-dark: rgba(31, 32, 65, 0.5);
+$color-main-light: rgba(31, 32, 65, 0.25);
+$color-main-lighter: rgba(31, 32, 65, 0.1);
+$color-main-lightest: rgba(31, 32, 65, 0.05);
 $color-bright-main: #bc9cff;
 $color-bright-second: #6fcf97;
 $gradient-main: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
@@ -57,7 +57,7 @@ $font-main: 'Montserrat', 'Arial', sans-serif;
 }
 
 %body-text {
-  color: $color-main-75;
+  color: $color-main-darker;
   font-weight: 400;
   font-size: 14px;
   font-family: $font-main;

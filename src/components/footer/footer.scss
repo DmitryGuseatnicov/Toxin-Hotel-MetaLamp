@@ -2,7 +2,7 @@
 
 .footer {
   background: #fff;
-  box-shadow: 0 1px 0 $color-main-1;
+  box-shadow: 0 1px 0 $color-main-lighter;
 
   &__inner {
     display: flex;
@@ -54,13 +54,13 @@
   }
 
   &__widget-link {
-    color: $color-main-50;
+    color: $color-main-dark;
     text-decoration: none;
     outline: none;
 
     &:focus,
     &:hover {
-      color: $color-main-75;
+      color: $color-main-darker;
     }
   }
 
@@ -77,7 +77,7 @@
   }
 
   &__copy-right {
-    border-top: 1px solid $color-main-25;
+    border-top: 1px solid $color-main-light;
   }
 
   &__copy-right-inner {
@@ -108,7 +108,7 @@
   }
 
   &_with-separator {
-    border-top: 1px solid $color-main-25;
+    border-top: 1px solid $color-main-light;
   }
 
   @media screen and (max-width: 768px) {
