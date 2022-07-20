@@ -52,6 +52,7 @@ class Dropdown {
 
     this.$inputWrapper.on('click', this._handleInputWrapperClick);
     this.$inputWrapper.on('keydown', this._handleInputWrapperKeydown);
+    this.$input.on('mousedown', this._handelInputMouseDown);
   }
 
   _handleInputWrapperClick() {
@@ -63,6 +64,11 @@ class Dropdown {
       e.preventDefault();
       this._toggle();
     }
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  _handelInputMouseDown(e) {
+    e.preventDefault();
   }
 
   _handleWindowClick(e) {
