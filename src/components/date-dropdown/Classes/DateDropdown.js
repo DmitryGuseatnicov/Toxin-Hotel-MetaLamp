@@ -64,8 +64,7 @@ class DateDropdown {
     this.$dateDropdown.on('keydown', this._handleDateDropdownKeydown);
   }
 
-  _handleInputIconClick(e) {
-    e.stopPropagation();
+  _handleInputIconClick() {
     this._toggle();
   }
 
